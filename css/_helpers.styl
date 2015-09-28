@@ -1,0 +1,17 @@
+content-align(align = both)
+  display: flex
+  
+  if align == both
+    align-items: center
+    justify-content: center
+
+  if align == vertical
+    align-items: center
+  else
+    if align == horizontal
+      justify-content: center
+
+
+full-background(image)
+  background-image: url(image)
+  background-size: cover

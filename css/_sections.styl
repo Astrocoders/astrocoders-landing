@@ -1,0 +1,52 @@
+/**
+* Global stuff shared for all sections
+*/
+
+section
+  height: 100%
+  h1, h2, h3, h5, h5, h6
+    font-family: Oswald, sans-serif;
+  aside 
+    padding: 20px
+
+section.content-centered
+  content-align()
+  text-align: center
+  
+section.with-asides
+  content-align(vertical)
+  
+  aside
+    column(1/2)
+
+/**
+* Specifics
+*/
+section#index
+  background-color: red
+
+section#our-services
+  background-color: blue
+  
+section#about-us
+  background-color: yellow
+
+section#why-meteor
+  background-color: orange
+  
+section#testimonials
+  content-align(vertical)
+  
+  > div
+    display: flex
+    flex-direction: row 
+  aside
+    column(1/3)
+    img 
+      width: 80%
+  
+  @media(max-width: 600px)
+    > div
+      flex-direction: column
+    aside
+      column(1)
