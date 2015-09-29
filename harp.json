@@ -1,0 +1,27 @@
+{
+  "globals": {
+    "title": "Astrocoders - Go Beyond",
+    "description": "Go Beyond",
+    "keywords": "Go Beyond",
+    "author": "Astrocoders",
+    "analytics": "XXXXXX",
+    "site": "astrocoders.com",
+    "nameGoogle": "Astrocoders - Go Beyond",
+    "descriptionGoogle": "Astrocoders - Go Beyond",
+    "imageGoogle": "https://astrocoders.com/images/logo.png",
+    "cardTwitter": "summary",
+    "siteTwitter": "@astrocoders",
+    "creatorTwitter": "@astrocoders",
+    "titleTwitter": "Astrocoders - Go Beyond",
+    "descriptionTwitter": "Go Beyond",
+    "imageTwitter": "https://astrocoders.com/images/logo.png",
+    "titleFacebook": "Astrocoders - Go Beyond",
+    "site_nameFacebook": "Astrocoders",
+    "typeFacebook": "website",
+    "urlFacebook": "https://astrocoders.com/",
+    "descriptionFacebook": "Go Beyond",
+    "imageFacebook": "https://astrocoders.com/images/logo.png",
+    "site_nameFacebook": "Astrocoders",
+    "app_idFacebook": "XXXXXXXXXXX"
+  }
+}

@@ -1,0 +1,33 @@
+header
+  position fixed
+  top 0
+  left 0
+  right 0
+  height 54px
+  nav
+    font-size 1rem
+    display flex
+    flex-direction row
+    justify-content space-between
+    align-content center
+    .logo
+      flex-grow 1
+      img, p
+        padding-left 10px
+    .links
+      justify-content flex-end
+      display flex
+      flex-grow 1
+      a
+        align-self center
+        padding-right 10px
+    a, a:hover, a:active
+      text-decoration none
+      color: #fff
+
+
+@media (max-width: 400px)
+  .links
+    display none !important
+
+
