@@ -3,6 +3,7 @@
 
 body, html
   color #222
+  background-color #fafafa
   font-size 1em
   font-family 'Open Sans', sans-serif
   line-height 1.4
@@ -11,26 +12,55 @@ body, html
 
 section, article
   height: 100%
+  width 100%
 
-article
+article:not(:first-child)
   display flex
-  flex-direction row
   justify-content center
-  align-content center
-  p
-    padding 10px
+  flex-wrap wrap
 
-.stretch-item
-  align-items stretch
+  h1
+    padding-top 45px
+    flex 0 1 100%
+    max-width 80%
 
-.center-item
-  align-items center
+  .flex
+    display flex
+    flex-direction row
+    justify-content center
+    align-content center
+    height: 100%
+    width: 100%
+    max-width 80%
 
-.article-image
-  align-self center
+  .stretch
+    align-items stretch
+
+  .center
+    align-items center
+
+  .center-self
+    align-self center
+
+  .text-right
+    text-align right
+
+  .text-left
+    text-align left
+
+  .padding-top
+    padding-top 45px
+
+  .padding-right
+    padding-right 20px
+
+  .padding-left
+    padding-left 20px
+
 
 @import "_header.styl"
 @import "_hero.styl"
 @import "_about_us.styl"
+@import "_404.styl"
 
 

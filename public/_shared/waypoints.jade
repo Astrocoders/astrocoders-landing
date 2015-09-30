@@ -1,13 +1,11 @@
 script.
+  changeHeaderColor();
   window.onscroll = changeHeaderColor;
   function changeHeaderColor() {
-    var servicesTop = document.getElementById('services').offsetTop;
+    var servicesTop = document.getElementById('services').offsetTop - 15;
     if (document.body.scrollTop  > servicesTop) {
-      console.log('add the classname dark');
       document.getElementsByTagName('nav')[0].className = "dark";
     } else {
-    console.log('remove the classname dark');
       document.getElementsByTagName('nav')[0].className = "";
-
     }
   }
