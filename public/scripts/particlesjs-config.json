@@ -20,7 +20,7 @@
         "nb_sides": 5
       },
       "image": {
-        "src": "img/github.svg",
+        "src": "",
         "width": 100,
         "height": 100
       }
@@ -30,7 +30,7 @@
       "random": true,
       "anim": {
         "enable": true,
-        "speed": 0.16241544246026904,
+        "speed": 4.710047831347802,
         "opacity_min": 0,
         "sync": false
       }
@@ -54,8 +54,8 @@
     },
     "move": {
       "enable": true,
-      "speed": 10,
-      "direction": "top",
+      "speed": 6.413648243462092,
+      "direction": "top-right",
       "random": false,
       "straight": true,
       "out_mode": "out",
@@ -76,7 +76,7 @@
       },
       "onclick": {
         "enable": false,
-        "mode": "bubble"
+        "mode": "repulse"
       },
       "resize": true
     },
