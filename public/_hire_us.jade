@@ -1,10 +1,38 @@
-article#contact.padding-top
-  h1.text-right Hire Us
-  .flex
-    .item
-      img(src="/images/launch.jpg", width="400", alt="Astrocoders Hire Us")
-    .item.padding-left
-      p At Astrocoders, your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.
+#contact-wrapper
+  #ytplayer.contact-item
+
+  article#contact.padding-top.contact-item
+    h1.text-right Hire Us
+    .flex
+      .item.padding-left
+        p At Astrocoders, your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.
 
 != partial("/_shared/analytics")
 != partial("/_shared/waypoints")
+
+script.
+  // Load the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // Replace the 'ytplayer' element with an <iframe> and
+  // YouTube player after the API code downloads.
+  var player;
+  var playerWrapper = document.querySelector('#contact-wrapper');
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: playerWrapper.clientHeight,
+      width: playerWrapper.clientWidth,
+      videoId: 'OnoNITE-CLc',
+      playerVars: {
+        controls: 0,
+        rel: 0,
+        showinfo: 0
+      }
+    });
+
+    playerWrapper = null;
+  }
+script(src="/scripts/hire-us-video.js")
