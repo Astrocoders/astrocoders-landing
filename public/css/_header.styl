@@ -4,12 +4,15 @@ header
   left 0
   right 0
   height 54px
+  
   nav
     font-size 1rem
     display flex
     flex-direction row
     justify-content space-between
     align-content center
+    transition background-color .3s ease-in
+    
     .logo
       flex-grow 1
       img, p
@@ -24,6 +27,7 @@ header
     a, a:hover, a:active
       text-decoration none
       color #fff
+    
   nav.dark
     background-color #fff !important
     a, a:hover, a:active
