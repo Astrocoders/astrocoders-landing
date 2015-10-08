@@ -1,0 +1,33 @@
+form
+  display flex
+  flex-direction column
+  
+  input, button
+    flex-grow 1
+    padding 20px
+    margin 5px 0 5px 0
+    color #fff
+    font-weight bold
+    background none
+    border 2px solid #fff
+    
+  button
+    margin-top 25px
+    overflow hidden
+    position relative
+    
+    &:before
+      content 'Yes. I want the best.'
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      content-full-align()
+      background-color #4bf
+      transform translateY(100%)
+      transition transform .3s ease-out
+  
+  button:hover
+    &:before
+      transform translateY(0%)
