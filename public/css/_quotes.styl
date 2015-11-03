@@ -1,0 +1,21 @@
+#team-wrapper, #testimonials-wrapper
+  article
+    .flex-grid-item
+      text-align center
+      transform scale(0.9)
+      transition transform 0.3s ease-out
+      max-width 20%
+
+      &:hover
+        transform scale(1)
+
+      img
+        max-width 100%
+        border-radius 50%
+
+      @media all and (max-width: medium-screen)
+        max-height 20%
+        max-width 100%
+
+        img
+          max-width 20%
