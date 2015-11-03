@@ -2,8 +2,8 @@ script.
   changeHeaderColor();
   window.onscroll = changeHeaderColor;
   function changeHeaderColor() {
-    var servicesTop = document.getElementById('services').offsetTop - 15;
-    if (document.body.scrollTop  > servicesTop) {
+    var servicesTop = document.getElementById('services-article').offsetTop - 64;
+    if (window.scrollY  > servicesTop) {
       document.getElementsByTagName('nav')[0].className = "dark";
     } else {
       document.getElementsByTagName('nav')[0].className = "";
