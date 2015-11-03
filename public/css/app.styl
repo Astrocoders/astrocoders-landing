@@ -1,7 +1,10 @@
+medium-screen = 600px
+
 @import "_nib"
 @import "_html5_clean_up"
 @import "_helpers"
 @import "_form"
+@import "_flex"
 
 body, html
   color #222
@@ -12,8 +15,16 @@ body, html
   height 100%
   width 100%
 
-section, article
-  height: 100%
+@media all and (max-width: medium-screen)
+  html
+    font-size 10px
+
+h1, h2, h3
+  text-transform uppercase
+  letter-spacing 10px
+
+section, article, .article-wrapper
+  height 100%
   width 100%
 
 article:not(:first-child)
@@ -22,25 +33,11 @@ article:not(:first-child)
   flex-wrap wrap
 
   h1
-    padding-top 45px
     flex 0 1 100%
     max-width 80%
 
-  .flex
-    content-full-align()
-    flex-direction row
-    height: 100%
-    width: 100%
-    max-width 80%
-
-  .stretch
-    align-items stretch
-
-  .center
-    align-items center
-
-  .center-self
-    align-self center
+  .text-center
+    text-align center
 
   .text-right
     text-align right
@@ -57,10 +54,26 @@ article:not(:first-child)
   .padding-left
     padding-left 20px
 
+  .padding
+    padding 15px
+
+.items-container
+  padding 20px
+  width 100%
+  display: flex
+  flex-direction row
+  flex-wrap no-wrap
+  justify-content space-around
+
+  .item-50
+    width 50%
+    flex 1
+
 @import "_header"
 @import "_hero"
 @import "_about_us"
 @import "_hire_us"
 @import "_404"
 @import "_why_meteor"
-
+@import "_services"
+@import "_quotes"
