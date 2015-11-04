@@ -1,24 +1,28 @@
 anim-time = .5s
-translate-base = 100px
+translate-base = 300px
 
 #team-wrapper
   full-background('/images/starful-night-sky.jpg')
   color #fff
 
+#team-wrapper, #services-article
+  overflow hidden
+
   .flex-grid-item
-    transition transform anim-time , opacity anim-time
-    transition-timing-function cubic-bezier(0.56,-0.05, 0.38, 0.91)
-    opacity 0
+    @media (min-width: medium-screen)
+      transition transform anim-time , opacity anim-time
+      transition-timing-function cubic-bezier(0.56,-0.05, 0.38, 0.91)
+      opacity 0
 
-    &:first-child
-      transform translate3d(-1 * translate-base, 0, 0) scale(.5)
+      &:first-child
+        transform translate3d(-1 * translate-base, 0, 0) scale(.5)
 
-    &:last-child
-      transform translate3d(translate-base, 0, 0) scale(.5)
+      &:last-child
+        transform translate3d(translate-base, 0, 0) scale(.5)
 
-    &:not(:first-child):not(:last-child)
-      transform translate3d(0, translate-base, 0) scale(.5)
+      &:not(:first-child):not(:last-child)
+        transform translate3d(0, translate-base, 0) scale(.5)
 
   .flex-grid-item.active
-      transform translate3d(0, 0, 0) scale(1) !important 
+      transform translate3d(0, 0, 0) scale(1) !important
       opacity 1 !important
