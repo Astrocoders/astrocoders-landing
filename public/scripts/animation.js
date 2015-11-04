@@ -12,9 +12,9 @@
     var hasOut = false;
 
     window.addEventListener('scroll', function(event){
-      var isIn = window.scrollY >= offsetTop;
+      var isIn = window.scrollY >= offsetTop && window.scrollY < offsetTop + 50;
       var isOut = window.scrollY >= beyondHeight;
-      if(isIn && !isOut && !hasIn){
+      if(isIn && !hasIn){
         onIn(el);
         hasOut = false;
         hasIn = true;
