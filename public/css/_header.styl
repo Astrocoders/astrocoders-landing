@@ -4,7 +4,7 @@ header
   left 0
   right 0
   height 54px
-  z-index: 10000
+  z-index 10000
 
   nav
     font-size 1rem
@@ -12,13 +12,14 @@ header
     flex-direction row
     justify-content space-between
     align-content center
-    transition background-color .3s ease-in
-    display none
+    transform translate3d(0, -100%, 0)
+    transition transform .6s ease-out
 
     .logo
       flex-grow 1
       img, p
         padding-left 20px
+
     .links
       justify-content flex-end
       display flex
@@ -26,14 +27,16 @@ header
       a
         align-self center
         padding-right 20px
+
     a, a:hover, a:active
       text-decoration none
       color #fff
 
-  nav.dark
+  nav.active
     @media (min-width: medium-screen)
       display flex
       background-color #fff !important
+      transform translate3d(0, 0, 0)
 
       a, a:hover, a:active
         color #000
