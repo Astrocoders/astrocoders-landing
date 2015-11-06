@@ -5,9 +5,29 @@
     .content
       h1.padding-left Hire Us
       .padding-left
-        form
-          input(name="name" placeholder="Your name")
-          input(name="email" placeholder="Email")
+        form(action="//astrocoders.us12.list-manage.com/subscribe/post?u=879b30f75d4d96b22dbe83352&amp;id=ab708a6bc8" 
+            method="post" id="mc-embedded-subscribe-form" 
+            name="mc-embedded-subscribe-form" 
+            class="validate" target="_blank")
+  
+          input(name="FNAME" placeholder="First name" required)
+          input(name="LNAME" placeholder="Last name" required)
+          input(name="EMAIL" placeholder="Email" required)
+          label.select.fake
+            div.fake-select-label Budget
+            div.fake-select
+              span.selected 5k
+              span 10k
+              span 15k
+
+            //- select(name="BUDGET" required)
+            //-   option(value="" disabled selected) Choose your budget
+            //-   option(value="5k") $ 5k
+            //-   option(value="10k") $ 10k
+            //-   option(value="15k") $ 15k
+            //-   option(value="More") More
+          input(type="hidden" name="b_879b30f75d4d96b22dbe83352_ab708a6bc8" tabindex="-1" value="")
+          
           button Send
 
 != partial("/_shared/analytics")
