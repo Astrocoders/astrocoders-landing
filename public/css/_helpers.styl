@@ -2,8 +2,21 @@ content-full-align()
   display flex
   justify-content center
   align-items center
-  
+
 full-background(bg-url)
   background-image url(bg-url)
   background-size cover
   background-attachment fixed
+
+placeholder-color($color)
+  ::-webkit-input-placeholder
+     color $color
+
+  :-moz-placeholder  /* Firefox 18- */
+     color $color
+
+  ::-moz-placeholder   /* Firefox 19+ */
+     color $color
+
+  :-ms-input-placeholder
+     color $color
