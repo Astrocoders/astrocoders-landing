@@ -37,7 +37,7 @@
 
         return this;
       }
-    }
+    };
   }
 
   (function(window, when){
