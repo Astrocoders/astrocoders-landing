@@ -51,7 +51,19 @@ $bg-color-skew = rgba(8, 12, 102, 0.71)
 
 
   @media all and (max-width: medium-screen)
+    margin-top 15px
+    
     .flex-grid-item
       flex 1 0%
+      width 100%
+      margin 0 !important
+      padding 0 !important
+
       &:first-child
         margin-top 30px
+
+      &:before
+        left -20%
+
+      *:not(img)
+        opacity 1
