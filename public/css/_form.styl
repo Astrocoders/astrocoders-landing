@@ -49,14 +49,14 @@ form
     position relative
 
     &:before
-      content 'Yes. I want the best.'
+      content attr(data-txt-hover)
       position absolute
       top 0
       left 0
       width 100%
       height 100%
       content-full-align()
-      background-color #4bf
+      background-color $bg-color-hire-us-submit-btn
       transform translateY(100%)
       transition transform .3s ease-out
 
