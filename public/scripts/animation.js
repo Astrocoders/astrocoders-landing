@@ -41,7 +41,7 @@
   }
 
   (function(window, when){
-    window.addEventListener('load', function(){
+    window.addEventListener('DOMContentLoaded', function(){
       when('#team-wrapper')
         .in(function(el){
           var items = el.querySelectorAll('.flex-grid-item');
