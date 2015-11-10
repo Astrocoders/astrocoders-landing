@@ -4,7 +4,7 @@ header
   left 0
   right 0
   height 54px
-  z-index 10000
+  z-index $z-index-max
 
   nav
     font-size 1rem
@@ -30,13 +30,9 @@ header
 
     a, a:hover, a:active
       text-decoration none
-      color #fff
+      color $text-color-nav-links
 
   nav.active
     @media (min-width: medium-screen)
-      display flex
-      background-color #fff !important
+      background-color $bg-color-navbar !important
       transform translate3d(0, 0, 0)
-
-      a, a:hover, a:active
-        color #000
