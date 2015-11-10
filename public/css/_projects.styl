@@ -1,0 +1,60 @@
+$anim-skew-time = .5s
+$anim-sayings-time = .2s
+$items-width = 40%
+$bg-color-skew = rgba(8, 12, 102, 0.71)
+
+#projects .flex-grid
+  .flex-grid-item:before
+    content ''
+    position absolute
+    top 0
+    left -200%
+    width 150%
+    height 100%
+    transform skew(-20deg, 0)
+    background-color $bg-color-skew
+    z-index z-index-2
+    transition-property left, transform
+    transition-duration $anim-skew-time
+
+  .flex-grid-item
+    width $items-width
+    flex 1 $items-width
+    content-full-align()
+    flex-direction column
+    position relative
+    color rgb(255, 255, 255)
+    overflow hidden
+
+    &:nth-child(odd)
+      border-right 1px #ffffff solid
+    &:nth-child(even)
+      border-left 1px #ffffff solid
+
+    *:not(img)
+      z-index z-index-3
+      opacity 0
+      transition opacity $anim-sayings-time ease-out
+      transition-delay $anim-skew-time * .6
+
+    img
+      width 100%
+      height 100%
+      position absolute
+      top 0
+      left 0
+      z-index z-index-1
+
+  .flex-grid-item:hover
+    *:not(img)
+      opacity 1
+
+    &:before
+      left -20%
+
+
+  @media all and (max-width: medium-screen)
+    .flex-grid-item
+      flex 1 0%
+      &:first-child
+        margin-top 30px
