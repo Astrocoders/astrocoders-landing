@@ -3,22 +3,8 @@
   
   article#projects
     .flex-grid.flex-grid-no-wrap
-      a(href="http://google.com" target="_blank").flex-grid-item.text-center
-        img(src="http://lorempixel.com/450/250/")
-        h1 Ativi.me
-        p Payrolls made easy
-      
-      a(href="http://google.com" target="_blank").flex-grid-item.text-center 
-        img(src="http://lorempixel.com/450/250/")
-        h1 Trendyshop
-        p Your social marketplace
-      
-      a(href="http://google.com" target="_blank").flex-grid-item.text-center
-        img(src="http://lorempixel.com/450/250/")
-        h1 Cleanio
-        p Pressing à domicile
-        
-      a(href="http://google.com" target="_blank").flex-grid-item.text-center
-        img(src="http://lorempixel.com/450/250/")
-        h1 Typezy
-        p Head-to-head typing game
+      for project in projects
+        a(href=project.href target="_blank").flex-grid-item.text-center
+          img(src=project.image)
+          h1= project.title
+          p= project.subtitle

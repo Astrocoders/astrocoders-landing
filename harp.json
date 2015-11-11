@@ -23,6 +23,32 @@
     "imageFacebook": "https://astrocoders.com/images/logo.png",
     "site_nameFacebook": "Astrocoders",
     "app_idFacebook": "XXXXXXXXXXX",
-    "hireUsFormAction": "http://localhost:3000/mail/SEqmaqbrhanfKEzpk"
+    "hireUsFormAction": "http://localhost:3000/mail/SEqmaqbrhanfKEzpk",
+    "projects": [
+      {
+        "title": "Trendyshop",
+        "subtitle": "Your social marketplace",
+        "image": "http://lorempixel.com/450/250/",
+        "href": "http://google.com"
+      },
+      {
+        "title": "Ativi.me",
+        "subtitle": "Payrolls made easy",
+        "image": "http://lorempixel.com/450/250/",
+        "href": "http://google.com"
+      },
+      {
+        "title": "Cleanio",
+        "subtitle": "Pressing à domicile",
+        "image": "http://lorempixel.com/450/250/",
+        "href": "http://google.com"
+      },
+      {
+        "title": "Typezy",
+        "subtitle": "Head-to-head typing game",
+        "image": "http://lorempixel.com/450/250/",
+        "href": "http://google.com"
+      }
+    ]
   }
 }
