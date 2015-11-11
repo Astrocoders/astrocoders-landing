@@ -12,6 +12,7 @@
           !played
       ){
         player.playVideo();
+        player.setLoop(true);
         played = true;
       }
     });
@@ -19,7 +20,6 @@
 
   function setupPlayer(){
     player.mute();
-    player.setLoop(true);
     player.loadVideoById({
       videoId: 'OnoNITE-CLc',
       startSeconds: 87,

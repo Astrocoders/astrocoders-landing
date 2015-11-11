@@ -22,6 +22,7 @@
     "descriptionFacebook": "Go Beyond",
     "imageFacebook": "https://astrocoders.com/images/logo.png",
     "site_nameFacebook": "Astrocoders",
-    "app_idFacebook": "XXXXXXXXXXX"
+    "app_idFacebook": "XXXXXXXXXXX",
+    "hireUsFormAction": "http://localhost:3000/mail/SEqmaqbrhanfKEzpk"
   }
 }
