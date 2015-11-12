@@ -49,6 +49,44 @@
         "image": "http://lorempixel.com/450/250/",
         "href": "http://google.com"
       }
+    ],
+
+    "testimonials": [
+      {
+        "photo": "/images/testimonials/rt.jpg",
+        "name": "Rafael Teixeira",
+        "quote": "Astrocoders reminds me fast response and awesome solutions",
+        "from": "Trendyshop",
+        "link": "http://www.apptrendyshop.com/"
+      },
+      {
+        "photo": "/images/testimonials/richard.jpg",
+        "name": "Richard Gozlan",
+        "quote": "Astrocoders have stellar solutions for earthling problems",
+        "from": "Cleanio",
+        "link": "https://getcleanio.com/"
+      },
+      {
+        "photo": "/images/testimonials/polis.jpeg",
+        "name": "William Polis",
+        "quote": "Work with Astrocoders means quality and fast development of our needs",
+        "from": "Tegra",
+        "link": "http://tegra.me/"
+      }
+    ],
+
+    "socialLinks": [
+      {
+        "name": "GitHub"
+      },
+
+      {
+        "name": "Facebook"
+      },
+
+      {
+        "name": "Twitter"
+      }
     ]
   }
 }
