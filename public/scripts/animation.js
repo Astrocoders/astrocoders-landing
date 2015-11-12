@@ -65,6 +65,18 @@
 
             klass(items, 'remove', 'active');
           });
+
+        when('#testimonials')
+          .in(function(el){
+            var items = el.querySelectorAll('.flex-grid-item');
+
+            klass(items, 'add', 'active');
+          })
+          .out(function(el){
+            var items = el.querySelectorAll('.flex-grid-item');
+
+            klass(items, 'remove', 'active');
+          });
     });
 
     function klass(items, action, klass){
