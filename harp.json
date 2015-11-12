@@ -28,26 +28,38 @@
       {
         "title": "Trendyshop",
         "subtitle": "Your social marketplace",
-        "image": "http://lorempixel.com/450/250/",
-        "href": "http://google.com"
+        "image": "/images/projects/trendyshop.png",
+        "href": "http://apptrendyshop.com"
       },
       {
         "title": "Ativi.me",
         "subtitle": "Payrolls made easy",
-        "image": "http://lorempixel.com/450/250/",
-        "href": "http://google.com"
+        "image": "/images/projects/ativi.png",
+        "href": "http://ativi.me/"
       },
       {
         "title": "Cleanio",
         "subtitle": "Pressing à domicile",
-        "image": "http://lorempixel.com/450/250/",
-        "href": "http://google.com"
+        "image": "/images/projects/cleanio.png",
+        "href": "https://getcleanio.com"
       },
       {
         "title": "Typezy",
         "subtitle": "Head-to-head typing game",
-        "image": "http://lorempixel.com/450/250/",
+        "image": "/images/projects/typezy.png",
         "href": "http://google.com"
+      },
+      {
+        "title": "Sedimently",
+        "subtitle": "Knowledge base for startups without wikicomplications",
+        "image": "/images/projects/sedimently.png",
+        "href": "http://sedimently.com"
+      },
+      {
+        "title": "Your project",
+        "subtitle": "Hire us and get your idea made real.",
+        "image": "/images/projects/you.png",
+        "href": "#contact-wrapper"
       }
     ],
 
