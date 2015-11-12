@@ -8,9 +8,18 @@
         max-width 100%
         border-radius 50%
 
-      @media all and (max-width: medium-screen)
+    @media all and (max-width: medium-screen)
+      .flex-grid
+        padding 0 20px 0 20px
+        height auto
+
+      .flex-grid-item
         max-height 20%
         max-width 100%
+
+        &, p
+          margin 0
+          padding 0
 
         img
           max-width 20%
