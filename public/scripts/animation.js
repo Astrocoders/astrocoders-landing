@@ -66,7 +66,7 @@
             klass(items, 'remove', 'active');
           });
 
-        when('#testimonials')
+        when('#testimonials-wrapper')
           .in(function(el){
             var items = el.querySelectorAll('.flex-grid-item');
 
