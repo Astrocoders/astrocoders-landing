@@ -2,19 +2,13 @@
   h1 Testimonials
   
   article#testimonials
-    .flex-grid.flex-grid-center
-      .flex-grid-item.text-center
-        img(src="/images/testimonials/person.png", alt="Astrocoders Testimonials Person")
-        h2 Gandalf
-        p Something right isn't wrong, and that something is Astrocoders
-        
-      .flex-grid-item.text-center
-        img(src="/images/testimonials/person.png", alt="Astrocoders Testimonials Person")
-        h2 Obi-Wan
-        p Astrocoders used the Source in a way that I've never seen
-      
-      .flex-grid-item.text-center
-        img(src="/images/testimonials/person.png", alt="Astrocoders Testimonials Person")
-        h2 Palpatine
-        p I got unlimited awesome projects from Astrocoders
-        
+    .flex-grid.flex-grid-baseline
+      for testimonial in testimonials
+        .flex-grid-item.text-center.padding
+          img(src=testimonial.photo, alt="Astrocoders Testimonials Person")
+          h2= testimonial.name 
+          a(href=testimonial.link target="_blank" alt=testimonial.from)
+            small=testimonial.from
+          
+          p 
+            span= testimonial.quote
