@@ -4,7 +4,7 @@
   article#testimonials
     .flex-grid.flex-grid-baseline
       for testimonial in testimonials
-        .flex-grid-item.text-center.padding
+        .flex-grid-item.text-center
           img(src=testimonial.photo, alt="Astrocoders Testimonials Person")
           h2= testimonial.name 
           a(href=testimonial.link target="_blank" alt=testimonial.from)
