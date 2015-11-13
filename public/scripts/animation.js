@@ -41,6 +41,8 @@
   }
 
   (function(window, when){
+    if('ontouchstart' in window) return;
+    
     window.addEventListener('DOMContentLoaded', function(){
       when('#team-wrapper')
         .in(function(el){

@@ -33,6 +33,8 @@
   }
 
   window.addEventListener('load', function(){
+    if('ontouchstart' in window) return;
+    
     setupPlayer();
     playOnScroll();
   });
