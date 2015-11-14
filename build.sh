@@ -12,4 +12,5 @@ rm -rf www
 cd ../astrocoders
 git add --all
 git commit -m "$update"
+git push
 
