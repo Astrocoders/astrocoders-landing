@@ -1,3 +1,8 @@
+script.
+  var host = "astrocoders.com";
+  if ((host == window.location.host) && (window.location.protocol != "https:")){
+    window.location.protocol = "https";
+  }
 header
   nav
     .logo
