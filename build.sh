@@ -1,8 +1,8 @@
 #!/bin/sh
 
-echo "\033[1;33m What have you done in astrocoders landing page?"
-
-read update
+CMMT_MSG=$(git log -1 --pretty=%B)
+echo "\033[1;33mWhat have you done in astrocoders landing page?"
+read -p $CMMT_MSG update
 
 rm -rf ../astrocoders/*.html
 rm -rf ../astrocoders/*/
