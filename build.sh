@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "\033[1;33m What have you done in astrocoders landing page?\33[0m"
+echo "\033[1;33m What have you done in astrocoders landing page?"
 
 read update
 
@@ -13,4 +13,4 @@ cd ../astrocoders
 git add --all
 git commit -m "$update"
 echo "\033[1;31mPushing new site to GitHub repo\n\033[0m"
-git push --force
+git push
