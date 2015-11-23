@@ -1,32 +1,19 @@
 #contact-wrapper
   #ytplayer.contact-item
-    
+
   article#contact.padding-top.contact-item
     .content
       h1 Hire Us
       .hire-us-form-container
         form(action=hireUsFormAction
-            method="post" id="mc-embedded-subscribe-form" 
-            name="mc-embedded-subscribe-form" 
+            method="post" id="mc-embedded-subscribe-form"
+            name="mc-embedded-subscribe-form"
             class="validate" target="_blank")
-  
-          input(name="firstName" placeholder="First name" required)
-          input(name="lastName" placeholder="Last name" required)
+
+          input(name="name" placeholder="Name" required)
           input(name="email" placeholder="Email" required)
-          //- label.select.fake
-          //-   div.fake-select-label Budget
-          //-   div.fake-select
-          //-     span.selected 5k
-          //-     span 10k
-          //-     span 15k
-          //- 
-          //-   //- select(name="BUDGET" required)
-          //-   //-   option(value="" disabled selected) Choose your budget
-          //-   //-   option(value="5k") $ 5k
-          //-   //-   option(value="10k") $ 10k
-          //-   //-   option(value="15k") $ 15k
-          //-   //-   option(value="More") More
-          
+          textarea(name="subject" placeholder="What do you want to build ?" required)
+
           button(data-txt-hover="Yes. I want the best.") Send
 
 != partial("/_shared/analytics")
@@ -47,15 +34,43 @@ script.
     player = new YT.Player('ytplayer', {
       height: playerWrapper.clientHeight,
       width: playerWrapper.clientWidth,
-      videoId: 'OnoNITE-CLc',
       playerVars: {
         controls: 0,
         rel: 0,
-        showinfo: 0,
-        loop: true
+        showinfo: 0
+      },
+      events: {
+        'onReady': playPlayer,
+        'onStateChange': playOnStateChange,
+
       }
     });
 
     playerWrapper = null;
   }
+
+  function playPlayer(event) {
+    if(checkMobile()) return false;
+    event.target.loadVideoById({
+      videoId: 'OnoNITE-CLc',
+      startSeconds: 87,
+      endSeconds: 115,
+      suggestedQuality: 'large'
+    });
+    event.target.setVolume(0);
+  }
+
+  function playOnStateChange(event) {
+    if(event.data === YT.PlayerState.ENDED){
+      playPlayer(event);
+    }
+  }
+
+  function checkMobile() {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent)) {
+     return true;
+    }
+  }
+
 script(src="/scripts/hire-us-video.js")
