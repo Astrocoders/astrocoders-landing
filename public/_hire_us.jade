@@ -6,9 +6,9 @@
       h1 Hire Us
       .hire-us-form-container
         form(action=hireUsFormAction
-            method="post" id="mc-embedded-subscribe-form"
-            name="mc-embedded-subscribe-form"
-            class="validate" target="_blank")
+          method="post" id="hireUsForm"
+          name="mc-embedded-subscribe-form"
+          class="validate" target="_blank")
 
           input(name="name" placeholder="Name" required)
           input(name="email" placeholder="Email" required)
@@ -31,6 +31,7 @@ script.
   var player;
   var playerWrapper = document.querySelector('#contact-wrapper');
   function onYouTubePlayerAPIReady() {
+    if(checkMobile()) return false;
     player = new YT.Player('ytplayer', {
       height: playerWrapper.clientHeight,
       width: playerWrapper.clientWidth,
@@ -50,7 +51,6 @@ script.
   }
 
   function playPlayer(event) {
-    if(checkMobile()) return false;
     event.target.loadVideoById({
       videoId: 'OnoNITE-CLc',
       startSeconds: 87,

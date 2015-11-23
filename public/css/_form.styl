@@ -59,6 +59,10 @@ form
       transform translateY(100%)
       transition transform .3s ease-out
 
+    &:disabled
+      &:before
+        content "We'll reach you soon!"
+
   button:hover
     &:before
       transform translateY(0%)
