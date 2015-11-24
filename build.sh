@@ -10,6 +10,7 @@ harp compile
 mv www/* ../astrocoders/
 rm -rf www
 cd ../astrocoders
+git pull
 git add --all
 git commit -m "$update"
 echo "\033[1;31mPushing new site to GitHub repo\n\033[0m"
