@@ -23,43 +23,49 @@
     "imageFacebook": "https://astrocoders.com/images/logo.png",
     "site_nameFacebook": "Astrocoders",
     "app_idFacebook": "XXXXXXXXXXX",
-    "hireUsFormAction": "https://astromail.meteor.com/mail/kAGu38vSsJe4i546T",
+    "hireUsFormAction": "https://astromail.astrocoders.com/mail/kAGu38vSsJe4i546T",
     "projects": [
       {
         "title": "Trendyshop",
         "subtitle": "Your social marketplace",
         "image": "/images/projects/trendyshop.png",
-        "href": "http://apptrendyshop.com"
+        "href": "http://apptrendyshop.com",
+        "targetLink": "_blank"
       },
       {
         "title": "Ativi.me",
         "subtitle": "Payrolls made easy",
         "image": "/images/projects/ativi.png",
-        "href": "http://ativi.me/"
+        "href": "http://ativi.me/",
+        "targetLink": "_blank"
       },
       {
         "title": "Cleanio",
         "subtitle": "Pressing à domicile",
         "image": "/images/projects/cleanio.png",
-        "href": "https://getcleanio.com"
+        "href": "https://getcleanio.com",
+        "targetLink": "_blank"
       },
       {
         "title": "Typezy",
         "subtitle": "Head-to-head typing game",
         "image": "/images/projects/typezy.png",
-        "href": "http://google.com"
+        "href": "http://google.com",
+        "targetLink": "_blank"
       },
       {
         "title": "Sedimently",
         "subtitle": "Knowledge base for startups without wikicomplications",
         "image": "/images/projects/sedimently.png",
-        "href": "http://sedimently.com"
+        "href": "http://sedimently.com",
+        "targetLink": "_blank"
       },
       {
         "title": "Your project",
         "subtitle": "Hire us and get your idea made real.",
         "image": "/images/projects/you.png",
-        "href": "#contact-wrapper"
+        "href": "#contact-wrapper",
+        "targetLink": ""
       }
     ],
 
