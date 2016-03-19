@@ -1,10 +1,10 @@
 .article-wrapper#projects-wrapper.padding-top
   h1 Our Projects
-  
+
   article#projects
     .flex-grid.flex-grid-no-wrap
       for project in projects
-        a(href=project.href target="_blank").flex-grid-item.text-center
+        a(href=project.href target=project.targetLink).flex-grid-item.text-center
           img(src=project.image)
           h1= project.title
           p= project.subtitle
