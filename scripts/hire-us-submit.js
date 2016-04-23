@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', function(){
   var fields = inputs.concat(textarea);
   var xmlhttp = new XMLHttpRequest();
   var postURL = "https://astromail.astrocoders.com/mail/kAGu38vSsJe4i546T";
-  document.domain = 'astromail.astrocoders.com';
+  document.domain = 'astrocoders.com';
 
   form.addEventListener('submit', function(){
     event.preventDefault();
