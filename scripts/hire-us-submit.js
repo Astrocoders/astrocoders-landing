@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
 
   xmlhttp.open("POST", postURL);
+  xmlhttp.setRequestHeader('Content-type', 'text/plain');
   xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == XMLHttpRequest.DONE) {
       if(xmlhttp.status == 200){
