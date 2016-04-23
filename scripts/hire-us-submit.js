@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function(){
   var postURL = "https://astromail.astrocoders.com/mail/kAGu38vSsJe4i546T";
   document.domain = 'astrocoders.com';
 
-  form.addEventListener('submit', function(){
+  form.addEventListener('submit', function(event){
     event.preventDefault();
     var data = fields.reduce(function(acc, field) {
       acc[field.name] = field.value;
