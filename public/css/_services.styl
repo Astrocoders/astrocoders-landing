@@ -1,5 +1,4 @@
 #services-article
-  // full-background('/images/starful-night-sky-1.jpg')
   color $text-color-services
   background-color $bg-color-services
 
@@ -12,3 +11,26 @@
     font-size 1rem
     text-align center
     margin 20px
+    max-width 25%
+
+    @media (max-width: medium-screen)
+      max-width none
+
+  .service
+    height 300px
+    background-size 80% auto
+    background-repeat no-repeat
+    background-position center
+
+    @media (max-width: medium-screen)
+      background-size 60% auto
+      height 100px
+
+  .mobile-apps
+    background-image url($bg-image-mobile-apps)
+
+  .web-apps
+    background-image url($bg-image-web-apps)
+
+  .both-apps
+    background-image url($bg-image-both-apps)

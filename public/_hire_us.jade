@@ -5,14 +5,10 @@
     .content
       h1 Hire Us
       .hire-us-form-container
-        form(action=hireUsFormAction
-          method="post" id="hireUsForm"
-          name="mc-embedded-subscribe-form"
-          class="validate" target="_blank")
-
+        form(id="hireUsForm" class="validate" target="_blank")
           input(name="name" placeholder="Name" required)
           input(name="email" placeholder="Email" required)
-          textarea(name="subject" placeholder="What do you want to build ?" required)
+          textarea(name="subject" placeholder="What do you want to build ?  What is your budget ?" required)
 
           button(data-txt-hover="Yes. I want the best.") Send
 
