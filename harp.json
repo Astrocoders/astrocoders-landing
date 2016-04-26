@@ -29,7 +29,7 @@
         "title": "Trendyshop",
         "subtitle": "Your social marketplace",
         "image": "/images/projects/trendyshop.png",
-        "href": "http://apptrendyshop.com",
+        "href": "https://store.apptrendyshop.com",
         "targetLink": "_blank"
       },
       {
@@ -50,7 +50,7 @@
         "title": "Typezy",
         "subtitle": "Head-to-head typing game",
         "image": "/images/projects/typezy.png",
-        "href": "http://google.com",
+        "href": "https://github.com/Astrocoders/typezy",
         "targetLink": "_blank"
       },
       {
