@@ -22,13 +22,13 @@ a
   text-decoration none
   color #92B9BD
   transition color .3s ease-out
-  
+
   &:hover
     color #731DD8
 
 h1, h2, h3, small
   text-transform uppercase
-  letter-spacing 10px
+  letter-spacing 7px
 
 section, article, .article-wrapper
   height 100%
@@ -64,6 +64,9 @@ article:not(:first-child)
   .padding
     padding 15px
 
+    @media (max-width: medium-screen)
+      padding 5px
+
 .items-container
   padding 20px
   width 100%
@@ -81,7 +84,7 @@ article:not(:first-child)
 @import "_about_us"
 @import "_hire_us"
 @import "_404"
-@import "_why_meteor"
+@import "_our_stack"
 @import "_services"
 @import "_quotes"
 @import "_projects"

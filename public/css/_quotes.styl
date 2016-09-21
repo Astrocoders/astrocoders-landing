@@ -2,10 +2,13 @@
   article
     .flex-grid-item
       text-align center
-      max-width 20%
+      width 28%
+
+      @media (max-width: medium-screen)
+        width initial
 
       img
-        max-width 100%
+        max-width 190px
         border-radius 50%
 
   @media all and (max-width: medium-screen)

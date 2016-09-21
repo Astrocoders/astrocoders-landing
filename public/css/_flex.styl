@@ -13,6 +13,17 @@
   flex-flow row wrap
   justify-content space-around
 
+.flex-only
+  display flex
+  width: 100%;
+  justify-content: space-between;
+
+  @media (max-width: medium-screen)
+    flex-direction column
+
+.flex-column
+  flex-direction column
+
 .flex-wrip-no-wrap
   flex-flow row no-wrap
 
