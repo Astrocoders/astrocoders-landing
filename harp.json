@@ -26,10 +26,10 @@
     "hireUsFormAction": "https://astromail.astrocoders.com/mail/kAGu38vSsJe4i546T",
     "projects": [
       {
-        "title": "Trendyshop",
+        "title": "LojasApp",
         "subtitle": "Your social marketplace",
         "image": "/images/projects/trendyshop.png",
-        "href": "https://store.apptrendyshop.com",
+        "href": "https://lojasapp.com.br",
         "targetLink": "_blank"
       },
       {
