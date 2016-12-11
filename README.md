@@ -1,8 +1,8 @@
 Astrocoders landing
 ===================
 
-Hello! For our landing page we used Harpjs!
-Pretty cool static generator build on top of node.
+Hello! For our landing page we are using a React application powered by Webpack.
+Pretty cool static site build with the hotest techs in JS lands.
 
 Follow the instructions bellow to build our landing page in your computer.
 
@@ -10,31 +10,29 @@ If you find any typo or bug please submit a PR or an Issue.
 
 We embrace all the help.
 
-###Install
+### Install
 
 ```
-npm install -g harpjs
+$ yarn install
 ```
 
-###Run harp locally
+### Run 
 
 ```
-harp server
+$ npm start
 ```
 
-###Deploy
-
-compile first
+### Deploy
 
 ```
-harp compile . ./_site
+$ ./build.sh
 ```
 
 Things we need to improve:
 
-###TODO
+### TODO
 
-- Add favicon on root of public
+- Add favicon
 - For now getting pictures from [Isaac](https://www.facebook.com/IsaacGautschiPhotography/photos_stream)
 
 
