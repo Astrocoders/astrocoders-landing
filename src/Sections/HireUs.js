@@ -1,26 +1,29 @@
 import React from 'react'
+import withState from 'recompose/withState'
 
-export default function HireUs(props){
-  let form = null
-  const onSubmit = () => {
-    const postURL = "https://astromail.astrocoders.com/mail/kAGu38vSsJe4i546T";
-    document.domain = 'astrocoders.com';
+const onSubmit = (e, setIsSending) => {
+  const form = e.currentTarget
+  e.preventDefault()
+  const postURL = "https://astromail.astrocoders.com/mail/kAGu38vSsJe4i546T";
 
-    fetch(postURL, {
-      body: new FormData(form),
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/x-www-form-urlencoded',
-      },
-    })
-    .then(r => {
-      console.log('R', r.text())
-    })
-    .catch(r => {
-      console.log(r)
-    })
-  }
+  debugger
+  fetch(postURL, {
+    body: new FormData(form),
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/x-www-form-urlencoded',
+    },
+  })
+  .then(r => {
+    console.log('R', r.text())
+  })
+  .catch(r => {
+    setIsSending(false)
+    console.log(r)
+  })
+}
 
+function HireUs({ isSending, setIsSending }){
   return (
     <div id="contact-wrapper">
       <div id="ytplayer" className="contact-item"></div>
@@ -29,16 +32,28 @@ export default function HireUs(props){
           <h1>Hire Us</h1>
           <div className="hire-us-form-container">
             <form
-              ref={(ref) => form = ref}
               id="hireUsForm"
               target="_blank"
               className="validate"
-              onSubmit={onSubmit}
+              onSubmit={e => {
+                setIsSending(true)
+                onSubmit(e, setIsSending)
+              }}
             >
               <input name="name" placeholder="Name" required="required"/>
               <input name="email" placeholder="Email" required="required"/>
-              <textarea name="subject" placeholder="What do you want to build ? How much is your budget?" required="required"></textarea>
-              <button data-txt-hover="Yes. I want the best.">Send</button>
+              <textarea
+                name="subject"
+                placeholder="What do you want to build ? How much is your budget?"
+                required="required"
+              >
+              </textarea>
+              <button
+                data-txt-hover="Yes. I want the best."
+                disabled={isSending}
+              >
+                {!isSending ? 'Send' : 'Sending...'}
+              </button>
             </form>
           </div>
         </div>
@@ -46,3 +61,5 @@ export default function HireUs(props){
     </div>
   )
 }
+
+export default withState('isSending', 'setIsSending', false)(HireUs)
