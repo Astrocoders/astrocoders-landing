@@ -1,0 +1,43 @@
+import React from 'react'
+
+export default function AboutUs(){
+  return (
+    <div id="team-wrapper" className="article-wrapper">
+      <h1>Team</h1>
+      <article id="aboutus" className="about_us padding-top">
+        <div className="flex-grid">
+          <div className="flex-grid-item padding">
+            <img src="/images/about_us/guilherme.jpg" alt="Guilheme Decampo" className="max-width"/>
+            <h2>Guilherme Decampo</h2>
+            <p>Head of Business Development</p>
+          </div>
+          <div className="flex-grid-item padding">
+            <img src="/images/about_us/yuri.jpg" alt="Yuri Fabris" className="max-width"/>
+            <h2>Yuri Fabris</h2>
+            <p>Fullstack JavaScript Developer</p>
+          </div>
+          <div className="flex-grid-item padding">
+            <img src="/images/about_us/gabriel.jpg" alt="Gabriel Rubens" className="max-width"/>
+            <h2>Gabriel Rubens</h2>
+            <p>Head of Research and Development</p>
+          </div>
+          <div className="flex-grid-item padding">
+            <img src="/images/about_us/hugo.jpg" alt="Hugo Luigi" className="max-width"/>
+            <h2>Hugo Luigi</h2>
+            <p>Designer UX/UI</p>
+          </div>
+          <div className="flex-grid-item padding">
+            <img src="/images/about_us/judson.jpg" alt="Judson Silva" className="max-width"/>
+            <h2>Judson Silva</h2>
+            <p>Front end developer</p>
+          </div>
+          <div className="flex-grid-item padding">
+            <img src="/images/about_us/max.jpg" alt="Max Josino" className="max-width"/>
+            <h2>Max Josino</h2>
+            <p>Designer UX/UI</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  )
+}
