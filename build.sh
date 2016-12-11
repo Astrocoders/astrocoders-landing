@@ -1,17 +1,27 @@
 #!/bin/sh
 
-CMMT_MSG=$(git log -1 --pretty=%B)
-echo "\033[1;33mWhat have you done in astrocoders landing page?\033[0m"
-read $CMMT_MSG
+echo "\033[1;33m What have you done to the site?"
+read update
 
-rm -rf ../astrocoders/*.html
-rm -rf ../astrocoders/*/
-harp compile
-mv www/* ../astrocoders/
-rm -rf www
-cd ../astrocoders
-git pull
-git add --all
-git commit -m "$CMMT_MSG"
+npm run build
+git commit -am "Create new bundle"
+
+TMP_DIR=/tmp/astrocoders-landing
+mkdir $TMP_DIR
+cp ./build/** $TMP_DIR -r
+buildFiles=`ls ./build`
+
+git checkout master
+
+git rm -rf .
+mv $TMP_DIR/** ./ -f
+echo "astrocoders.com" > CNAME
+git add CNAME
+git add $buildFiles
+git commit -m "$update"
+
 echo "\033[1;31mPushing new site to GitHub repo\n\033[0m"
-git push --force
+git push origin master --force
+git checkout develop
+
+rm -rf $TMP_DIR
