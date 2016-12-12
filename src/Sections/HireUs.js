@@ -6,7 +6,6 @@ const onSubmit = (e, setIsSending) => {
   e.preventDefault()
   const postURL = "https://astromail.astrocoders.com/mail/kAGu38vSsJe4i546T";
 
-  debugger
   fetch(postURL, {
     body: new FormData(form),
     method: 'POST',
@@ -26,7 +25,7 @@ const onSubmit = (e, setIsSending) => {
 function HireUs({ isSending, setIsSending }){
   return (
     <div id="contact-wrapper">
-      <div id="ytplayer" className="contact-item"></div>
+      <div id="hire-us-video" className="contact-item"></div>
       <article id="contact" className="padding-top contact-item">
         <div className="content">
           <h1>Hire Us</h1>
