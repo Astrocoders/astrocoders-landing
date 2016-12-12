@@ -1,43 +1,36 @@
 import React from 'react'
 import withState from 'recompose/withState'
+import compose from 'recompose/compose'
+import isMobile from 'ismobilejs'
+import VisibilitySensor from 'react-visibility-sensor'
 
-const onSubmit = (e, setIsSending) => {
-  const form = e.currentTarget
-  e.preventDefault()
-  const postURL = "https://astromail.astrocoders.com/mail/kAGu38vSsJe4i546T";
-
-  fetch(postURL, {
-    body: new FormData(form),
-    method: 'POST',
-    headers: {
-      'Content-type': 'application/x-www-form-urlencoded',
-    },
-  })
-  .then(r => {
-    console.log('R', r.text())
-  })
-  .catch(r => {
-    setIsSending(false)
-    console.log(r)
-  })
-}
+import shuttleVideoBg from './shuttle_launch_bg.mp4'
 
 function HireUs({ isSending, setIsSending }){
+  let video = null
+
   return (
-    <div id="contact-wrapper">
-      <div id="hire-us-video" className="contact-item"></div>
+    <div id="contact-wrapper" className={isMobile.any ? 'mobile' : null}>
+      <div id="hire-us-video" className="contact-item">
+        <video muted ref={ref => video = ref}>
+          <source src={shuttleVideoBg} type="video/mp4" />
+        </video>
+      </div>
       <article id="contact" className="padding-top contact-item">
         <div className="content">
           <h1>Hire Us</h1>
           <div className="hire-us-form-container">
+            <VisibilitySensor
+              onChange={isVisible => isVisible && video ? video.play() : (video && video.pause()) }
+            />
             <form
               id="hireUsForm"
               target="_blank"
               className="validate"
-              onSubmit={e => {
-                setIsSending(true)
-                onSubmit(e, setIsSending)
-              }}
+              action="https://astromail.astrocoders.com/mail/kAGu38vSsJe4i546T"
+              method="POST"
+              target="_blank"
+              onSubmit={() => setIsSending(true)}
             >
               <input name="name" placeholder="Name" required="required"/>
               <input name="email" placeholder="Email" required="required"/>
@@ -51,7 +44,7 @@ function HireUs({ isSending, setIsSending }){
                 data-txt-hover="Yes. I want the best."
                 disabled={isSending}
               >
-                {!isSending ? 'Send' : 'Sending...'}
+                {!isSending ? 'Send' : 'Sent'}
               </button>
             </form>
           </div>
@@ -61,4 +54,6 @@ function HireUs({ isSending, setIsSending }){
   )
 }
 
-export default withState('isSending', 'setIsSending', false)(HireUs)
+export default compose(
+  withState('isSending', 'setIsSending', false),
+)(HireUs)

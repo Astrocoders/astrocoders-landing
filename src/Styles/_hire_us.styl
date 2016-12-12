@@ -1,3 +1,10 @@
+#contact-wrapper.mobile
+  &:before
+    background-image none
+
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder
+    color #fff
+
 #contact-wrapper
   position relative
   width 100%
@@ -23,6 +30,17 @@
 
   #hire-us-video
     z-index 0
+    pointer-events none
+    height 100%
+    width 100%
+    overflow-x hidden
+    align-items center
+    justify-content center
+
+    & > video
+      width auto
+      height 100%
+      min-width 100%
 
   #contact
     z-index 1
