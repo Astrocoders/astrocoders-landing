@@ -36,7 +36,7 @@ function HireUs({ isSending, setIsSending }){
               <input name="email" placeholder="Email" required="required"/>
               <textarea
                 name="subject"
-                placeholder="What do you want to build ? How much is your budget?"
+                placeholder="What do you want to build? How much is your budget?"
                 required="required"
               >
               </textarea>
