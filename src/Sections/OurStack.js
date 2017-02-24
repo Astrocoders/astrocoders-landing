@@ -83,7 +83,7 @@ export default function OurStack(props){
           </div>
           <div className="text-center">
             <p>
-              At Astrocoders we develop the most modern and beautiful applications at a fast pace. We use the most appropriate frameworks to help us build with quality and not compromising our ability to delivery in a short period of time.
+              At Astrocoders we develop the most modern and beautiful applications at a fast pace. We use the most appropriate frameworks to help us build with quality and not compromising our ability to deliver in a short period of time.
             </p>
           </div>
           <a href="#contact-wrapper" className="hire-us">Hire us
