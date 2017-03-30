@@ -5,7 +5,6 @@ import 'normalize.css/normalize.css'
 import './Styles/app.styl'
 
 import Header from './Header'
-import Footer from './Footer'
 
 import Hero from './Sections/Hero'
 import AboutUs from './Sections/AboutUs'

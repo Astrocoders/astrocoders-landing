@@ -10,7 +10,7 @@ export default function OurStack(props){
           <div className="flex-only">
             <div className="flex-grid-item padding text-center">
               <div className="stack-logo">
-                <img src="/images/stack/meteor.png" alt="Meteor" />
+                <img src="/images/stack/meteor-partner.png" alt="Meteor" />
               </div>
               <h4>Meteor
               </h4>

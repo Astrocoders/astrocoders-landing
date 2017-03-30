@@ -6,7 +6,7 @@ read update
 npm run build
 git commit -am "Create new bundle"
 
-TMP_DIR=/tmp/astrocoders-landing
+TMP_DIR=../tmp/astrocoders-landing
 mkdir $TMP_DIR
 cp ./build/** $TMP_DIR -r
 buildFiles=`ls ./build`

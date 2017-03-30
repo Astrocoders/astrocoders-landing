@@ -16,7 +16,7 @@ export default function Testimonials({ testimonials }){
     <div id="testimonials-wrapper" className="article-wrapper">
       <h1>Testimonials</h1>
       <article id="testimonials">
-        <div className="flex-grid flex-grid-baseline">
+        <div className="flex-grid flex-grid-center">
           {
             testimonials.map(testimonial => (
               <Testimonial key={testimonial.link} {...testimonial} />
