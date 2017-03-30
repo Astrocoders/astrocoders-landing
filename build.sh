@@ -10,7 +10,7 @@ npm run build
 git commit -am "Create new bundle"
 
 # Copy build to temp folder
-cp ./build/ $TMP_DIR/build -r
+cp -r ./build/ $TMP_DIR/build
 BUILD_FILES=`ls ./build`
 
 # Wipe out current site
