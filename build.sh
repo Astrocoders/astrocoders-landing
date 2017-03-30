@@ -14,7 +14,7 @@ buildFiles=`ls ./build`
 git checkout master
 
 git rm -rf .
-mv $TMP_DIR/** ./ -f
+mv -f $TMP_DIR/** ./
 echo "astrocoders.com" > CNAME
 git add CNAME
 git add $buildFiles
