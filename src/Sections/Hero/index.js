@@ -7,7 +7,7 @@ function Hero(props){
     <div id="hero-wrapper">
       <article id="hero" className="hero">
         <div className="content">
-          <img src="/images/hero/logo.png" alt="Astrocoders Logo"/>
+          <img src="/images/hero/logo.png" className="logo" alt="Astrocoders Logo"/>
           <h1>Astrocoders - Go Beyond</h1>
           <h4>Outerspace innovation in web and mobile application development</h4>
         </div>
