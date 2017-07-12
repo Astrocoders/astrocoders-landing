@@ -16,9 +16,12 @@ BUILD_FILES=`ls ./build`
 # Wipe out current site
 git checkout master
 git rm -rf .
+mv .git $TMP_DIR/.git
+rm -rf .
+mv $TMP_DIR/.git .git
 
 # Move new bundle to master
-mv $TMP_DIR/build/** ./ -f
+mv -f $TMP_DIR/build/** ./
 
 # Create CNAME
 echo "astrocoders.com" > CNAME
@@ -28,7 +31,7 @@ git add $BUILD_FILES
 # Commit and push changes
 git commit -m "$update"
 echo "\033[1;31mPushing new site to GitHub repo\n\033[0m"
-git push origin master --force
+git push --force origin master
 
 # Get back to develop
 git checkout develop
