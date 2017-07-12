@@ -27,9 +27,9 @@ export default function AboutUs(){
             <p>Designer UX/UI</p>
           </div>
           <div className="flex-grid-item padding">
-            <img src="/images/about_us/judson.jpg" alt="Judson Silva" className="max-width"/>
-            <h2>Judson Silva</h2>
-            <p>Front end developer</p>
+            <img src="/images/about_us/george.jpg" alt="Judson Silva" className="max-width"/>
+            <h2>George Lima</h2>
+            <p>Fullstack JavaScript Developer</p>
           </div>
           <div className="flex-grid-item padding">
             <img src="/images/about_us/max.jpg" alt="Max Josino" className="max-width"/>
