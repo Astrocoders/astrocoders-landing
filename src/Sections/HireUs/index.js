@@ -27,7 +27,7 @@ function HireUs({ isSending, setIsSending }){
               id="hireUsForm"
               target="_blank"
               className="validate"
-              action="https://astromail.astrocoders.com/mail/kAGu38vSsJe4i546T"
+              action="https://astromail.astrocoders.com/mail"
               method="POST"
               target="_blank"
               onSubmit={() => setIsSending(true)}
