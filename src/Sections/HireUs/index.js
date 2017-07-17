@@ -1,18 +1,18 @@
 import React from 'react'
-import withState from 'recompose/withState'
+import { withState, withProps } from 'recompose'
 import compose from 'recompose/compose'
 import isMobile from 'ismobilejs'
 import VisibilitySensor from 'react-visibility-sensor'
 
 import shuttleVideoBg from './shuttle_launch_bg.mp4'
 
-function HireUs({ isSending, setIsSending }){
+function HireUs({ isSending, handleSubmit }) {
   let video = null
 
   return (
     <div id="contact-wrapper" className={isMobile.any ? 'mobile' : null}>
       <div id="hire-us-video" className="contact-item">
-        <video muted ref={ref => video = ref}>
+        <video muted ref={ref => (video = ref)}>
           <source src={shuttleVideoBg} type="video/mp4" />
         </video>
       </div>
@@ -20,30 +20,16 @@ function HireUs({ isSending, setIsSending }){
         <div className="content">
           <h1>Hire Us</h1>
           <div className="hire-us-form-container">
-            <VisibilitySensor
-              onChange={isVisible => isVisible && video ? video.play() : (video && video.pause()) }
-            />
-            <form
-              id="hireUsForm"
-              target="_blank"
-              className="validate"
-              action="https://astromail.astrocoders.com/mail"
-              method="POST"
-              target="_blank"
-              onSubmit={() => setIsSending(true)}
-            >
-              <input name="name" placeholder="Name" required="required"/>
-              <input name="email" placeholder="Email" required="required"/>
+            <VisibilitySensor onChange={isVisible => (isVisible && video ? video.play() : video && video.pause())} />
+            <form id="hireUsForm" className="validate" onSubmit={handleSubmit}>
+              <input name="name" placeholder="Name" required="required" />
+              <input name="email" placeholder="Email" required="required" />
               <textarea
                 name="subject"
                 placeholder="What do you want to build? How much is your budget?"
                 required="required"
-              >
-              </textarea>
-              <button
-                data-txt-hover="Yes. I want the best."
-                disabled={isSending}
-              >
+              />
+              <button data-txt-hover="Yes. I want the best." disabled={isSending}>
                 {!isSending ? 'Send' : 'Sent'}
               </button>
             </form>
@@ -56,4 +42,16 @@ function HireUs({ isSending, setIsSending }){
 
 export default compose(
   withState('isSending', 'setIsSending', false),
+  withProps(props => ({
+    handleSubmit(event) {
+      event.preventDefault()
+      props.setIsSending(true)
+      fetch('https://astromail.astrocoders.com/mail', {
+        method: 'POST',
+        body: new FormData(event.target),
+      })
+      .then(() => props.setIsSending(true))
+      .catch(err => console.log(err))
+    },
+  })),
 )(HireUs)
