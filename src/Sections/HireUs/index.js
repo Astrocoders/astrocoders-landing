@@ -49,6 +49,7 @@ export default compose(
       fetch('https://astromail.astrocoders.com/mail', {
         method: 'POST',
         body: new FormData(event.target),
+        mode: 'no-cors',
       })
       .then(() => props.setIsSending(true))
       .catch(err => console.log(err))
