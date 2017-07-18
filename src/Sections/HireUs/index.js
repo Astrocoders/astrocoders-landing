@@ -3,6 +3,8 @@ import { withState, withProps } from 'recompose'
 import compose from 'recompose/compose'
 import isMobile from 'ismobilejs'
 import VisibilitySensor from 'react-visibility-sensor'
+import { createApolloFetch } from 'apollo-fetch'
+import { stripIndent } from 'common-tags'
 
 import shuttleVideoBg from './shuttle_launch_bg.mp4'
 
@@ -46,13 +48,28 @@ export default compose(
     handleSubmit(event) {
       event.preventDefault()
       props.setIsSending(true)
-      fetch('https://astromail.astrocoders.com/mail', {
-        method: 'POST',
-        body: new FormData(event.target),
-        mode: 'no-cors',
+      const form = (formData => {
+        const obj = {}
+        for (const [key, value] of formData) {
+          obj[key] = value
+        }
+        return obj
+      })(new FormData(event.target))
+      createApolloFetch({ uri: 'http://localhost:9000/graphql' })({
+        query: stripIndent(`
+            mutation {
+              SendEmailToAstro(
+                name: "${form.name}",
+                email: "${form.email}",
+                subject: "${form.subject}"
+              ) {
+                success
+              }
+            }
+        `),
       })
-      .then(() => props.setIsSending(true))
-      .catch(err => console.log(err))
+        .then(() => props.setIsSending(true))
+        .catch(err => console.log(err))
     },
   })),
 )(HireUs)
