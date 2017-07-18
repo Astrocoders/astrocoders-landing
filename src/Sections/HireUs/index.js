@@ -23,15 +23,19 @@ function HireUs({ isSending, handleSubmit }) {
           <div className="hire-us-form-container">
             <VisibilitySensor onChange={isVisible => (isVisible && video ? video.play() : video && video.pause())} />
             <form id="hireUsForm" className="validate" onSubmit={handleSubmit}>
-              <input name="name" placeholder="Name" required="required" />
-              <input name="email" placeholder="Email" required="required" />
-              <textarea
-                name="subject"
-                placeholder="What do you want to build? How much is your budget?"
-                required="required"
-              />
+              {
+                !isSending && [
+                  <input name="name" placeholder="Name" required="required" />,
+                  <input name="email" placeholder="Email" required="required" />,
+                  <textarea
+                    name="subject"
+                    placeholder="What do you want to build? How much is your budget?"
+                    required="required"
+                  />,
+                ]
+              }
               <button data-txt-hover="Yes. I want the best." disabled={isSending}>
-                {!isSending ? 'Send' : 'Sent'}
+                {isSending ? 'Sent' : 'Send'}
               </button>
             </form>
           </div>
@@ -74,8 +78,7 @@ export default compose(
         `,
         }),
       })
-        .then(() => props.setIsSending(true))
-        .catch(err => console.log(err))
+        .catch(err => props.isSending(false))
     },
   })),
 )(HireUs)
