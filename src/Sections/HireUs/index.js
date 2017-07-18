@@ -54,7 +54,7 @@ export default compose(
         }
         return obj
       })(new FormData(event.target))
-      fetch('http://localhost:9000/graphql', {
+      fetch('https://astromail.now.sh/graphql', {
         method: 'POST',
         headers: {
           Accept: '*/*',
