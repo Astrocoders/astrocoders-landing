@@ -3,6 +3,7 @@ import { withState, withProps } from 'recompose'
 import compose from 'recompose/compose'
 import isMobile from 'ismobilejs'
 import VisibilitySensor from 'react-visibility-sensor'
+import { stripIndent } from 'common-tags'
 
 import shuttleVideoBg from './shuttle_launch_bg.mp4'
 
