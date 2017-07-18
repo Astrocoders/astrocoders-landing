@@ -50,6 +50,8 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "apollo-fetch": "^0.3.0",
+    "common-tags": "^1.4.0",
     "ismobilejs": "^0.4.0",
     "normalize.css": "^5.0.0",
     "particles.js": "^2.0.0",
