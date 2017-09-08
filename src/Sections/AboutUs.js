@@ -22,9 +22,9 @@ export default function AboutUs(){
             <p>Head of Research and Development</p>
           </div>
           <div className="flex-grid-item padding">
-            <img src="/images/about_us/hugo.jpg" alt="Hugo Luigi" className="max-width"/>
-            <h2>Hugo Luigi</h2>
-            <p>Designer UX/UI</p>
+            <img src="/images/about_us/jabur.jpg" alt="Guilherme Jabur" className="max-width"/>
+            <h2>Guilherme Jabur</h2>
+            <p>Fullstack JavaScript Developer</p>
           </div>
           <div className="flex-grid-item padding">
             <img src="/images/about_us/george.jpg" alt="Judson Silva" className="max-width"/>
