@@ -2,9 +2,6 @@
 
 TMP_DIR=$(mktemp -d)
 
-echo "\033[1;33m What have you done to the site?\033[0m"
-read update
-
 # Create bundle
 npm run build
 git commit -am "Create new bundle"
@@ -29,7 +26,7 @@ git add CNAME
 git add $BUILD_FILES
 
 # Commit and push changes
-git commit -m "$update"
+git commit -m "New bundle"
 echo "\033[1;31mPushing new site to GitHub repo\n\033[0m"
 git push --force origin master
 
