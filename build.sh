@@ -1,6 +1,7 @@
 #!/bin/sh
 
-TMP_DIR=$(mktemp -d)
+TMP_DIR=/tmp/site-bundle
+mkdir $TMP_DIR
 
 # Create bundle
 npm run build
