@@ -33,6 +33,4 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - deploy:
-        name: 'Deploy to GH pages'
-        command: '../build.sh'
+      - run: ../build.sh
