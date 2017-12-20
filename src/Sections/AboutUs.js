@@ -35,6 +35,11 @@ export default function AboutUs(){
             <img src="/images/about_us/max.jpg" alt="Max Josino" className="max-width"/>
             <h2>Max Josino</h2>
             <p>Designer UX/UI</p>
+          <div className="flex-grid-item padding">
+            <img src="/images/about_us/rafael.jpg" alt="Rafael Ramblas" className="max-width"/>
+            <h2>Rafael Ramblas</h2>
+            <p>Intern Fullstack JavaScript Developer</p>
+          </div>
           </div>
         </div>
       </article>
