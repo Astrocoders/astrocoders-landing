@@ -6,6 +6,7 @@ echo "\033[1;33m What have you done to the site?\033[0m"
 read update
 
 # Create bundle
+npm install
 npm run build
 git commit -am "Create new bundle"
 
