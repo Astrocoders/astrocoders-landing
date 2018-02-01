@@ -5,6 +5,9 @@
 version: 2
 jobs:
   build:
+    branches:
+      only:
+        - develop
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
