@@ -68,16 +68,16 @@ export default function OurStack(props){
             </div>
             <div className="flex-grid-item padding text-center">
               <div className="stack-logo">
-                <img src="/images/stack/rethinkdb.png" alt="RethinkDB" />
+                <img src="/images/stack/re.png" alt="Reason" />
               </div>
-              <h4>RethinkDB
+              <h4>Reason
               </h4>
             </div>
             <div className="flex-grid-item padding text-center">
               <div className="stack-logo">
-                <img src="/images/stack/horizon.png" alt="Horizon" />
+                <img src="/images/stack/styled.png" alt="Styled Components" />
               </div>
-              <h4>Horizon
+              <h4>Styled Components
               </h4>
             </div>
           </div>
