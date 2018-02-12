@@ -76,24 +76,27 @@
 
   "testimonials": [
     {
-      "photo": "/images/testimonials/rt.jpg",
-      "name": "Rafael Teixeira",
+      "photo": "/images/testimonials/pam.jpg",
+      "name": "Pamela Borges",
       "quote": "Astrocoders reminds me fast response and awesome solutions",
-      "from": "LojasApp",
-      "link": "https://lojasapp.com.br/"
+      "company": "Lion Tax",
+      "from": "São Paulo - Brazil",
+      "link": "https://lion-tax.com/"
     },
     {
       "photo": "/images/testimonials/ky-js.jpg",
       "name": "Kylie and Jess McBeath",
       "quote": "Astrocoders helps us to transform ideas in reality",
-      "from": "Zura Health",
+      "company": "Zura Health",
+      "from": "Las Vegas - USA",
       "link": "https://zurahealth.com/"
     },
     {
       "photo": "/images/testimonials/imad.jpg",
       "name": "Imad Abdallah",
       "quote": "Work with Astrocoders means quality and fast development of our needs",
-      "from": "Fractal Flows",
+      "company": "Fractal Flows",
+      "from": "Roskilde - Denmark",
       "link": "https://fractalflows.com/"
     }
   ],
