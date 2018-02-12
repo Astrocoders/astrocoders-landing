@@ -60,10 +60,10 @@ export default function OurStack(props){
               </h4>
             </div>
             <div className="flex-grid-item padding text-center">
-              <div className="stack-logo">
+              <div className="stack-logo white-wall">
                 <img src="/images/stack/graphql.svg" alt="Graphql" />
               </div>
-              <h4>Graphql
+              <h4>GraphQL
               </h4>
             </div>
             <div className="flex-grid-item padding text-center">
@@ -74,7 +74,7 @@ export default function OurStack(props){
               </h4>
             </div>
             <div className="flex-grid-item padding text-center">
-              <div className="stack-logo">
+              <div className="stack-logo white-wall">
                 <img src="/images/stack/styled.png" alt="Styled Components" />
               </div>
               <h4>Styled Components
