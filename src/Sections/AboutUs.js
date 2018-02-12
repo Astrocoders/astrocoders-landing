@@ -11,9 +11,9 @@ export default function AboutUs(){
             <h2>Guilherme Decampo</h2>
             <p>Head of Business Development</p>
           </div>
-          <div className="flex-grid-item padding">
-            <img src="/images/about_us/sandro.jpeg" alt="Sandro Queiroz Jr." className="max-width"/>
-            <h2>Sandro Queiroz Jr.</h2>
+          <div className="flex-grid-item padding medson-picture">
+            <img src="/images/about_us/medson.jpg" alt="Medson Oliveira" className="max-width"/>
+            <h2>Medson Oliveira</h2>
             <p>Fullstack JavaScript Developer</p>
           </div>
           <div className="flex-grid-item padding">
