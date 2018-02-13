@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Testimonial = ({ name, from, quote, link, photo }) => (
+const Testimonial = ({ name, company, from, quote, link, photo }) => (
   <div className="flex-grid-item text-center">
     <img src={photo} alt="Astrocoders Testimonials Person" />
     <h2>{name}</h2>
     <a href={link} target="_blank" alt={from}>
-      <small>{from}</small>
+      <p><small>{company}</small></p>
+      <p><small>{from}</small></p>
       <p><span>{quote}</span></p>
     </a>
   </div>
