@@ -12,7 +12,7 @@ export default function AboutUs(){
             <p>Head of Business Development</p>
           </div>
           <div className="flex-grid-item padding medson-picture">
-            <img src="/images/about_us/medson.jpg" alt="Medson Oliveira" className="max-width"/>
+            <img src="/images/about_us/medson.png" alt="Medson Oliveira" className="max-width"/>
             <h2>Medson Oliveira</h2>
             <p>Fullstack JavaScript Developer</p>
           </div>
