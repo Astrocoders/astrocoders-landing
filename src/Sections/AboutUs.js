@@ -27,7 +27,7 @@ export default function AboutUs(){
             <p>Intern Fullstack JavaScript Developer</p>
           </div>
           <div className="flex-grid-item padding">
-            <img src="/images/about_us/george.jpg" alt="Judson Silva" className="max-width"/>
+            <img src="/images/about_us/george.jpg" alt="George Lima" className="max-width"/>
             <h2>George Lima</h2>
             <p>Fullstack JavaScript Developer</p>
           </div>
@@ -35,6 +35,11 @@ export default function AboutUs(){
             <img src="/images/about_us/max.jpg" alt="Max Josino" className="max-width"/>
             <h2>Max Josino</h2>
             <p>Designer UX/UI</p>
+          </div>
+          <div className="flex-grid-item padding">
+            <img src="/images/about_us/eliabejr.jpg" alt="Eliabe Junior" className="max-width" />
+            <h2>Eliabe Junior</h2>
+            <p>Fullstack JavaScript Developer</p>
           </div>
         </div>
       </article>
