@@ -7,7 +7,7 @@ const Project = ({ image, title, subtitle, href, targetLink, backgroundColor }) 
     className="flex-grid-item flex-grid-center text-center"
     style={{ backgroundColor }}
   >
-    <img src={image} />
+    <img src={image} alt={title}/>
     <h1>{title}</h1>
     <p>{subtitle}</p>
   </a>
