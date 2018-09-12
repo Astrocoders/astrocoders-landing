@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Logo from '../../components/Logo'
+import Logo from '../components/Logo'
 
-import galaxy from '../../img/galaxy.jpg'
+import galaxy from '../img/galaxy.jpg'
 
 const HeroWrapper = styled.section`
   align-items: center;

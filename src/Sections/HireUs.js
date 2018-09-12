@@ -4,13 +4,13 @@ import compose from 'recompose/compose'
 import styled from 'styled-components'
 import { stripIndent } from 'common-tags'
 
-import Wrapper from '../../components/Wrapper'
-import Title from '../../components/Title'
-import FormField    from '../../components/FormField'
-import Textarea from '../../components/Textarea'
-import Button from '../../components/Button'
+import Wrapper from '../components/Wrapper'
+import Title from '../components/Title'
+import FormField    from '../components/FormField'
+import Textarea from '../components/Textarea'
+import Button from '../components/Button'
 
-import footerBg from '../../img/galaxy-footer.jpg'
+import footerBg from '../img/galaxy-footer.jpg'
 
 const HireUsWrapper = styled.section`
   align-items: center;
@@ -30,6 +30,10 @@ const HireUsWrapper = styled.section`
 const FormWrapper = styled.div`
   display: block;
   width: 50%;
+
+  @media (max-width: 960px) {
+    width: 100%;
+  }
 `
 
 function HireUs({ isSending, handleSubmit }) {
