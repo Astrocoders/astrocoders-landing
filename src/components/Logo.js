@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import HGroup from './HGroup'
 import VGroup from './VGroup'
 import logoImg from '../img/logo.png'
@@ -16,21 +16,11 @@ const TitleWrapper = styled(VGroup)`
     align-items: center;
   }
 `
-const spin = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-`
 
 const Image = styled.img`
   width: 200px;
   height: auto;
   margin-bottom: 30px;
-  // animation: ${spin} 10s infinite linear;
 
   @media (min-width: 960px) {
     margin-right: 30px;
