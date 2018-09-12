@@ -18,6 +18,7 @@ const HireUsWrapper = styled.section`
   background-image: url(${footerBg});
   background-repeat: no-repeat;
   background-position: left center;
+  clear:both;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -29,9 +30,11 @@ const HireUsWrapper = styled.section`
 
 const FormWrapper = styled.div`
   display: block;
+  clear: both;
   width: 50%;
 
   @media (max-width: 960px) {
+    margin-bottom: 100px;
     width: 100%;
   }
 `

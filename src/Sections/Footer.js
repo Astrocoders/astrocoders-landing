@@ -19,6 +19,7 @@ const FooterWrapper = styled.footer`
 `
 
 const MapWrapper = styled.div`
+  clear: both;
   height: 400px;
   width: 100%;
 `
