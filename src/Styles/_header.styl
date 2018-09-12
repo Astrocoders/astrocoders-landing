@@ -7,6 +7,7 @@ header
   z-index $z-index-max
 
   nav
+    background-color #000
     font-size 1rem
     display flex
     flex-direction row
@@ -25,6 +26,7 @@ header
       display flex
       flex-grow 1
       a
+        color #fff
         align-self center
         padding-right 20px
 
@@ -34,5 +36,4 @@ header
 
   nav.active
     @media (min-width: medium-screen)
-      background-color $bg-color-navbar !important
       transform translate3d(0, 0, 0)
