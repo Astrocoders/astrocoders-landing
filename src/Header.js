@@ -1,13 +1,20 @@
 import React from 'react'
 import { componentDidMount } from 'react-lifecycle-hoc'
+import styled from 'styled-components'
+
+import logo from './img/navLogo.svg'
+
+const NavbarWrapper = styled.nav`
+  background: #000;
+`
 
 function Header(){
   return (
     <header>
-      <nav>
+      <NavbarWrapper>
         <div className="logo">
           <a href="#hero" className="scroll">
-            <p>Astrocoders</p>
+            <img src={logo}/>
           </a>
         </div>
         <div className="links">
@@ -17,7 +24,7 @@ function Header(){
           <a href="#projects-wrapper" className="scroll">Projects</a>
           <a href="#contact-wrapper" className="scroll">Contact</a>
         </div>
-      </nav>
+      </NavbarWrapper>
     </header>
   )
 }
@@ -25,7 +32,7 @@ function Header(){
 export default componentDidMount(
   () => {
     window.addEventListener('scroll', () => {
-      const servicesTop = document.getElementById('services-article').offsetTop - 64;
+      const servicesTop = document.getElementById('ourStack').offsetTop - 64;
       if (window.scrollY > servicesTop) {
         document.getElementsByTagName('nav')[0].className = "active";
       } else {
