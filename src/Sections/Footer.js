@@ -49,6 +49,7 @@ const Copyrights = styled(VGroup)`
   width: calc(80% - 200px);
 
   img {
+    margin-top: 20px;
     width: 24px;
   }
 
@@ -75,7 +76,7 @@ const Footer = () => (
             </a>
           </SocialLinks>
           <Copyrights>
-            Copyright 2018 © Astrocoders desenvolvimento LTDA
+            Copyright 2018 © Astrocoders Desenvolvimento LTDA
             <img src={logo}/>
           </Copyrights>
         </HGroup>

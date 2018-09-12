@@ -4,6 +4,8 @@ import compose from 'recompose/compose'
 import styled from 'styled-components'
 import { stripIndent } from 'common-tags'
 
+import {FormattedMessage} from 'react-intl'
+
 import Wrapper from '../components/Wrapper'
 import Title from '../components/Title'
 import FormField    from '../components/FormField'
@@ -43,7 +45,7 @@ function HireUs({ isSending, handleSubmit }) {
 
   return (
     <HireUsWrapper>
-      <Title marginBottom="100px" textTransform="uppercase">Hire Us</Title>
+      <Title marginBottom="100px" textTransform="uppercase"><FormattedMessage id="hireUs" /></Title>
       <Wrapper alignItems="flex-end">
         <FormWrapper>
           <form id="hireUsForm" className="validate" onSubmit={handleSubmit}>
@@ -65,7 +67,7 @@ function HireUs({ isSending, handleSubmit }) {
           </form>
         </FormWrapper>
       </Wrapper>
-      <Title marginTop="50px" textTransform="uppercase" textAlign="center">Feel free to reach us by email via <em>contact@astrocoders.com</em></Title>
+      <Title marginTop="50px" textTransform="uppercase" textAlign="center"><FormattedMessage id="hireUsCta" /></Title>
     </HireUsWrapper>
   )
 }

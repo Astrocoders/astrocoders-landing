@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import {FormattedMessage} from 'react-intl'
+
 import Logo from '../components/Logo'
 
 import galaxy from '../img/galaxy.jpg'
@@ -46,7 +48,7 @@ const Description = styled.h3`
 const Hero = () => (
     <HeroWrapper>
       <Logo />
-      <Description>Outerspace <em>innovation</em> in <em>web</em> and <em>mobile</em> applications</Description>
+      <Description><FormattedMessage id="headerTitle"/></Description>
     </HeroWrapper>
   )
 

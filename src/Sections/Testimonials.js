@@ -1,9 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import {FormattedMessage} from 'react-intl'
+
 import Title from '../components/Title'
 import Wrapper from '../components/Wrapper'
 import HGroup from '../components/HGroup'
 import Testimonial from '../components/Testimonial'
+
 
 const TestimonialsWrapper = styled.section`
   align-items: center;
@@ -21,7 +24,7 @@ const TestimonialsList = styled(HGroup)`
 const Testimonials = ({ testimonials }) => (
   <TestimonialsWrapper>
     <Wrapper alignItems="center">
-      <Title textAlign="center" textTransform="uppercase" marginBottom="50px">what our customers say about us</Title>
+      <Title textAlign="center" textTransform="uppercase" marginBottom="50px"><FormattedMessage id="testimonialsTitle" /></Title>
       <TestimonialsList>
         {
           testimonials.map(testimonial => (
