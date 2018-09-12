@@ -18,11 +18,11 @@ function Header(){
           </a>
         </div>
         <div className="links">
-          <a href="#services-article" className="scroll">Services</a>
-          <a href="#team-wrapper" className="scroll">Team</a>
-          <a href="#testimonials-wrapper" className="scroll">Testimonials</a>
-          <a href="#projects-wrapper" className="scroll">Projects</a>
-          <a href="#contact-wrapper" className="scroll">Contact</a>
+          <a href="#services-article" className="scroll">HOW WE WORK</a>
+          <a href="#team-wrapper" className="scroll">OPEN SOURCE</a>
+          <a href="#testimonials-wrapper" className="scroll">JOIN US</a>
+          <a href="#projects-wrapper" className="scroll">CASES</a>
+          <a href="#contact-wrapper" className="scroll">CONTACT</a>
         </div>
       </NavbarWrapper>
     </header>
