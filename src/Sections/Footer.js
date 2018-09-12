@@ -21,6 +21,7 @@ const FooterWrapper = styled.footer`
 const MapWrapper = styled.div`
   clear: both;
   height: 400px;
+  margin-top: 100px;
   width: 100%;
 `
 

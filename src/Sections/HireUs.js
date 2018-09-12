@@ -44,8 +44,8 @@ const FormWrapper = styled.div`
 const TitleCta = styled(Title)`
   clear: both;
   margin: 50px 0;
-  
-  @media (max-width: 960px) {
+
+  @media (max-width: 600px) {
     margin: 100px 0;
   }
 `
@@ -70,7 +70,7 @@ function HireUs({ isSending, handleSubmit }) {
                 />,
               ]
             }
-            <Button data-txt-hover="Yes. I want the best." disabled={isSending}>
+            <Button disabled={isSending}>
               {isSending ? 'Sent' : 'Send'}
             </Button>
           </form>

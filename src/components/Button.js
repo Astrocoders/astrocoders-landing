@@ -11,7 +11,7 @@ const ButtonWrapper = styled.button`
   font-family: Ubuntu;
   font-weight: normal;
   outline: none;
-  padding: 15px 20px;
+  padding: 15px 25px;
   touch-action: manipulation;
   text-align: center;
   transition: all 0.17s ease-in-out;
