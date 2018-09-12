@@ -18,6 +18,16 @@ const OurStackWrapper = styled.section`
   background-color: #000;
   display: flex;
   padding-bottom: 50px;
+
+  @media (max-width: 960px) {
+    &> div {
+      justify-content: normal;
+    }
+
+    img {
+      padding-left: 10px;
+    }
+  }
 `
 
 const OurStack = () => (
