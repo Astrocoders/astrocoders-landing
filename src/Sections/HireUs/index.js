@@ -1,47 +1,64 @@
 import React from 'react'
 import { withState, withProps } from 'recompose'
 import compose from 'recompose/compose'
-import isMobile from 'ismobilejs'
-import VisibilitySensor from 'react-visibility-sensor'
+import styled from 'styled-components'
 import { stripIndent } from 'common-tags'
 
-import shuttleVideoBg from './shuttle_launch_bg.mp4'
+import Wrapper from '../../components/Wrapper'
+import Title from '../../components/Title'
+import FormField    from '../../components/FormField'
+import Textarea from '../../components/Textarea'
+import Button from '../../components/Button'
+
+import footerBg from '../../img/galaxy-footer.jpg'
+
+const HireUsWrapper = styled.section`
+  align-items: center;
+  background-color: #000;
+  background-image: url(${footerBg});
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  padding-left: 7.5vw;
+  padding-right: 7.5vw;
+  width: 100%;
+`
+
+const FormWrapper = styled.div`
+  display: block;
+  width: 50%;
+`
 
 function HireUs({ isSending, handleSubmit }) {
-  let video = null
 
   return (
-    <div id="contact-wrapper" className={isMobile.any ? 'mobile' : null}>
-      <div id="hire-us-video" className="contact-item">
-        <video muted ref={ref => (video = ref)}>
-          <source src={shuttleVideoBg} type="video/mp4" />
-        </video>
-      </div>
-      <article id="contact" className="padding-top contact-item">
-        <div className="content">
-          <h1>Hire Us</h1>
-          <div className="hire-us-form-container">
-            <VisibilitySensor onChange={isVisible => (isVisible && video ? video.play() : video && video.pause())} />
-            <form id="hireUsForm" className="validate" onSubmit={handleSubmit}>
-              {
-                !isSending && [
-                  <input name="name" placeholder="Name" required="required" />,
-                  <input name="email" placeholder="Email" required="required" />,
-                  <textarea
-                    name="subject"
-                    placeholder="What do you want to build? How much is your budget?"
-                    required="required"
-                  />,
-                ]
-              }
-              <button data-txt-hover="Yes. I want the best." disabled={isSending}>
-                {isSending ? 'Sent' : 'Send'}
-              </button>
-            </form>
-          </div>
-        </div>
-      </article>
-    </div>
+    <HireUsWrapper>
+      <Title marginBottom="100px" textTransform="uppercase">Hire Us</Title>
+      <Wrapper alignItems="flex-end">
+        <FormWrapper>
+          <form id="hireUsForm" className="validate" onSubmit={handleSubmit}>
+            {
+              !isSending && [
+                <FormField label="Name" name="name" placeholder="John Doe" required="required" />,
+                <FormField label="Email" name="email" placeholder="email@provider.co" required="required" />,
+                <Textarea
+                  name="subject"
+                  label="Your Message"
+                  placeholder="What do you want to build? How much is your budget?"
+                  required="required"
+                />,
+              ]
+            }
+            <Button data-txt-hover="Yes. I want the best." disabled={isSending}>
+              {isSending ? 'Sent' : 'Send'}
+            </Button>
+          </form>
+        </FormWrapper>
+      </Wrapper>
+    </HireUsWrapper>
   )
 }
 

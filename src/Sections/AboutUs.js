@@ -1,48 +1,32 @@
 import React from 'react'
+import styled from 'styled-components'
+import Title from '../components/Title'
+import Wrapper from '../components/Wrapper'
+import Text from '../components/Text'
 
-export default function AboutUs(){
-  return (
-    <div id="team-wrapper" className="article-wrapper">
-      <h1>Team</h1>
-      <article id="aboutus" className="about_us padding-top">
-        <div className="flex-grid">
-          <div className="flex-grid-item padding">
-            <img src="/images/about_us/guilherme.jpg" alt="Guilheme Decampo" className="max-width"/>
-            <h2>Guilherme Decampo</h2>
-            <p>Head of Business Development</p>
-          </div>
-          <div className="flex-grid-item padding medson-picture">
-            <img src="/images/about_us/medson.png" alt="Medson Oliveira" className="max-width"/>
-            <h2>Medson Oliveira</h2>
-            <p>Fullstack JavaScript Developer</p>
-          </div>
-          <div className="flex-grid-item padding">
-            <img src="/images/about_us/gabriel.png" alt="Gabriel Rubens" className="max-width"/>
-            <h2>Gabriel Rubens</h2>
-            <p>Head of Research and Development</p>
-          </div>
-          <div className="flex-grid-item padding">
-            <img src="/images/about_us/rafael.jpg" alt="Rafael Ramblas" className="max-width"/>
-            <h2>Rafael Ramblas</h2>
-            <p>Intern Fullstack JavaScript Developer</p>
-          </div>
-          <div className="flex-grid-item padding">
-            <img src="/images/about_us/george.jpg" alt="George Lima" className="max-width"/>
-            <h2>George Lima</h2>
-            <p>Fullstack JavaScript Developer</p>
-          </div>
-          <div className="flex-grid-item padding">
-            <img src="/images/about_us/max.jpg" alt="Max Josino" className="max-width"/>
-            <h2>Max Josino</h2>
-            <p>Designer UX/UI</p>
-          </div>
-          <div className="flex-grid-item padding">
-            <img src="/images/about_us/eliabejr.jpg" alt="Eliabe Junior" className="max-width" />
-            <h2>Eliabe Junior</h2>
-            <p>Fullstack JavaScript Developer</p>
-          </div>
-        </div>
-      </article>
-    </div>
+const AboutUsWrapper = styled.section`
+  align-items: center;
+  background-color: #000;
+  display: flex;
+  padding: 50px 0;
+`
+
+const AboutUs = () => (
+    <AboutUsWrapper>
+      <Wrapper alignItems="center">
+        <Title textAlign="center" textTransform="uppercase" marginBottom="100px">Who we are</Title>
+        <Text>
+          Astrocoders builds <em>apps</em>, <em>systems</em> and <em>platforms</em> in a different way. <em>Simple</em>, <em>quick</em> and <em>made to last</em>. No unnecessary lines, no bends or obstacles along the way.
+          <br/><br/>
+          We use technology <em>to the limit</em>. For us, innovation is about learning from the past and doing better, doing it fast, doing more.
+          <br/><br/>
+          Solid, simple, modular and timeless software without taking forever. We <em>focus</em> on <em>speed</em> and <em>efficiency</em> to first deliver a realistic navigable prototype and, after validation, the masterpiece, avoiding rework.
+          <br/><br/>
+          If programming is to use languages, we use a precise, straightforward vocabulary without flourishes, that solves problems and accepts challenges.
+          <br/><br/>
+          If you program create <em>new worlds</em>, that they are - at least - from <em>another dimension</em>.</Text>
+      </Wrapper>
+    </AboutUsWrapper>
   )
-}
+
+export default AboutUs

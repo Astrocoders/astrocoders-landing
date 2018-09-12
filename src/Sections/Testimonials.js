@@ -1,30 +1,36 @@
 import React from 'react'
+import styled from 'styled-components'
+import Title from '../components/Title'
+import Wrapper from '../components/Wrapper'
+import HGroup from '../components/HGroup'
+import Testimonial from '../components/Testimonial'
 
-const Testimonial = ({ name, company, from, quote, link, photo }) => (
-  <div className="flex-grid-item text-center">
-    <img src={photo} alt="Astrocoders Testimonials Person" />
-    <h2>{name}</h2>
-    <a href={link} target="_blank" alt={from}>
-      <p><small>{company}</small></p>
-      <p><small>{from}</small></p>
-      <p><span>{quote}</span></p>
-    </a>
-  </div>
-)
+const TestimonialsWrapper = styled.section`
+  align-items: center;
+  background-color: #000;
+  display: flex;
+  padding: 80px 0;
+`
 
-export default function Testimonials({ testimonials }){
-  return (
-    <div id="testimonials-wrapper" className="article-wrapper">
-      <h1>Testimonials</h1>
-      <article id="testimonials">
-        <div className="flex-grid flex-grid-center">
-          {
-            testimonials.map(testimonial => (
-              <Testimonial key={testimonial.link} {...testimonial} />
-            ))
-          }
-        </div>
-      </article>
-    </div>
+const TestimonialsList = styled(HGroup)`
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+`
+
+const Testimonials = ({ testimonials }) => (
+  <TestimonialsWrapper>
+    <Wrapper alignItems="center">
+      <Title textAlign="center" textTransform="uppercase" marginBottom="50px">what our customers say about us</Title>
+      <TestimonialsList>
+        {
+          testimonials.map(testimonial => (
+            <Testimonial key={testimonial.link} {...testimonial} />
+          ))
+        }
+      </TestimonialsList>
+      </Wrapper>
+    </TestimonialsWrapper>
   )
-}
+
+export default Testimonials
