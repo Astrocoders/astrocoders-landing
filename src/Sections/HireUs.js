@@ -46,7 +46,7 @@ const TitleCta = styled(Title)`
   margin: 50px 0;
 
   @media (max-width: 600px) {
-    margin: 100px 0;
+    display: none;
   }
 `
 
