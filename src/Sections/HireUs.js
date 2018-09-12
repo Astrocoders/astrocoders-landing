@@ -41,6 +41,15 @@ const FormWrapper = styled.div`
   }
 `
 
+const TitleCta = styled(Title)`
+  clear: both;
+  margin: 50px 0;
+  
+  @media (max-width: 960px) {
+    margin: 100px 0;
+  }
+`
+
 function HireUs({ isSending, handleSubmit }) {
 
   return (
@@ -67,7 +76,7 @@ function HireUs({ isSending, handleSubmit }) {
           </form>
         </FormWrapper>
       </Wrapper>
-      <Title marginTop="50px" textTransform="uppercase" textAlign="center"><FormattedMessage id="hireUsCta" /></Title>
+      <TitleCta><FormattedMessage id="hireUsCta" /></TitleCta>
     </HireUsWrapper>
   )
 }
