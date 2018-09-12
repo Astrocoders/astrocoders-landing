@@ -25,8 +25,8 @@ const OurStack = () => (
       <Wrapper alignItems="center" direction="row" justifyContent="space-between" wrap="wrap">
         <img src={ocamlLogo} alt="OCaml"/>
         <img src={reasonLogo} alt="ReasonML"/>
-        <img src={jsLogo} alt="Javascript"/>
-        <img src={graphqlLogo} alt="GraphQl"/>
+        <img src={jsLogo} alt="JavaScript"/>
+        <img src={graphqlLogo} alt="GraphQL"/>
         <img src={apolloLogo} alt="Apollo"/>
         <img src={rnLogo} alt="React Native"/>
         <img src={styledLogo} alt="Styled Components"/>
