@@ -10,7 +10,7 @@ import Hero from './Sections/Hero'
 import AboutUs from './Sections/AboutUs'
 import HireUs from './Sections/HireUs'
 import OurStack from './Sections/OurStack'
-import Projects from './Sections/Projects'
+import Footer from './Sections/Footer'
 import Services from './Sections/Services'
 import Testimonials from './Sections/Testimonials'
 
@@ -49,17 +49,18 @@ function App(){
         ]}
         link={[
           { href: 'https://fonts.googleapis.com/css?family=Open+Sans', rel: 'stylesheet' },
+          { href: 'https://fonts.googleapis.com/css?family=Ubuntu:300,400,700', rel: 'stylesheet' },
+          { href: 'https://fonts.googleapis.com/css?family=Roboto:300,400', rel: 'stylesheet' },
         ]}
       />
 
       <Header/>
       <Hero {...data} />
-      <Services {...data} />
-      <AboutUs {...data} />
       <OurStack {...data} />
+      <AboutUs {...data} />
       <Testimonials {...data} />
-      <Projects {...data} />
       <HireUs {...data} />
+      <Footer />
     </section>
   )
 }
