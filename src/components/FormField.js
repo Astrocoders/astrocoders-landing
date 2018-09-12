@@ -13,12 +13,13 @@ const FieldWrapper = styled.div`
     transform: translateY(-20px);
   }
 
-  input:focus~.form-bar {
+  input:focus~.form-bar,
+  input:not(:placeholder-shown)~.form-bar {
     transform: scaleX(5);
   }
 
-  input::-webkit-input-placeholder {opacity:0}
-  input:focus::-webkit-input-placeholder {opacity:1}
+  input::placeholder {opacity:0}
+  input:focus::placeholder {opacity:1}
 `
 
 const Input = styled.input`
@@ -34,12 +35,16 @@ const Input = styled.input`
   transition: all .2s;
   width: 100%;
   z-index: 1;
+
+  &:invalid {
+    box-shadow: none;
+  }
 `
 
 const Label = styled.label`
   color: #835FE2;
   font-size: 1em;
-  margin-top: -30px;
+  margin-top: -35px;
   position: absolute;
   transition: .2s;
   z-index: 0;

@@ -13,7 +13,8 @@ const FieldWrapper = styled.div`
     transform: translateY(-30px);
   }
 
-  textarea:focus~.form-bar {
+  textarea:focus~.form-bar,
+  textarea:not(:placeholder-shown)~.form-bar {
     transform: scaleX(5);
   }
 
@@ -36,6 +37,10 @@ const Input = styled.textarea`
   transition: all .2s;
   width: 100%;
   z-index: 1;
+
+  &:invalid {
+    box-shadow: none;
+  }
 `
 
 const Label = styled.label`
