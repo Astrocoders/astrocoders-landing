@@ -9,8 +9,8 @@ const FieldWrapper = styled.div`
   width: 100%;
 
   textarea:focus~label, textarea:not(:placeholder-shown)~label {
-    font-size: 15px;
-    transform: translateY(-35px);
+    font-size: 1em;
+    transform: translateY(-30px);
   }
 
   textarea:focus~.form-bar {
@@ -28,19 +28,26 @@ const Input = styled.textarea`
   display: block;
   font-family: Open Sans,sans-serif;
   outline:none;
+  min-height: 100px;
   padding: 5px 10px;
   position: relative;
+  resize: none;
   transition: all .2s;
   width: 100%;
   z-index: 1;
 `
 
 const Label = styled.label`
-  z-index: 0;
-  transition: .2s;
-  margin-top: -60px;
-  position: absolute;
   color: #835FE2;
+  font-size: 1em;
+  margin-top: -100px;
+  position: absolute;
+  transition: .2s;
+  z-index: 0;
+
+  @media (max-width: 960px) {
+    font-size: 1.4em;
+  }
 `
 
 const HelperText = styled.span`

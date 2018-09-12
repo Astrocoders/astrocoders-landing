@@ -9,8 +9,8 @@ const FieldWrapper = styled.div`
   width: 100%;
 
   input:focus~label, input:not(:placeholder-shown)~label {
-    font-size: 15px;
-    transform: translateY(-35px);
+    font-size: 1em;
+    transform: translateY(-15px);
   }
 
   input:focus~.form-bar {
@@ -36,11 +36,16 @@ const Input = styled.input`
 `
 
 const Label = styled.label`
-  z-index: 0;
-  transition: .2s;
+  color: #835FE2;
+  font-size: 1em;
   margin-top: -30px;
   position: absolute;
-  color: #835FE2;
+  transition: .2s;
+  z-index: 0;
+
+  @media (max-width: 960px) {
+    font-size: 1.4em;
+  }
 `
 
 const HelperText = styled.span`
