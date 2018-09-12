@@ -62,6 +62,7 @@ function HireUs({ isSending, handleSubmit }) {
           </form>
         </FormWrapper>
       </Wrapper>
+      <Title marginTop="50px" textTransform="uppercase" textAlign="center">Feel free to reach us by email via <em>contact@astrocoders.com</em></Title>
     </HireUsWrapper>
   )
 }

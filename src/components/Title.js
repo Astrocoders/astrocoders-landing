@@ -13,4 +13,9 @@ export default styled.h2`
   font-size: ${props => props.fontSize || '2em'};
   text-align: ${props => props.textAlign || 'inherit'};
   text-transform: ${props => props.textTransform || 'none'};
+
+  em {
+    color: #835FE2;
+    font-style: normal;
+  }
 `
