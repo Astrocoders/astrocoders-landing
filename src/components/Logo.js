@@ -18,12 +18,13 @@ const TitleWrapper = styled(VGroup)`
 `
 
 const Image = styled.img`
-  width: 200px;
+  width: 130px;
   height: auto;
   margin-bottom: 30px;
 
   @media (min-width: 960px) {
     margin-right: 30px;
+    width: 200px;
   }
 `
 
