@@ -52,6 +52,25 @@
     drift.load('bkbfytvikwtr');
   </script>
   <!-- End of Async Drift Code -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>        
+  <script type="text/javascript">
+      google.maps.event.addDomListener(window, 'load', init);
+
+      function init() {
+          var mapOptions = {
+              zoom: 15,
+              center: new google.maps.LatLng(-23.5007102, -47.4709702),
+              styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#a8afbf"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#373d48"},{"weight":2},{"gamma":"1"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"weight":0.6},{"color":"#4c576f"},{"gamma":"0"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#424c65"},{"gamma":"1"},{"weight":"10"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#4c576f"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#424d66"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#37425c"},{"lightness":"0"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#4c576f"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#2b364f"}]}]
+          };
+          var mapElement = document.getElementById('map');
+          var map = new google.maps.Map(mapElement, mapOptions);
+          var marker = new google.maps.Marker({
+              position: new google.maps.LatLng(-23.5007102, -47.4709702),
+              map: map,
+              title: 'Astro Base!'
+          });
+      }
+  </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122635460-1"></script>
 <script>
@@ -61,5 +80,4 @@
 
   gtag('config', 'UA-122635460-1');
 </script>
-
 </html>
