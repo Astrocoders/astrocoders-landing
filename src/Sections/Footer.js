@@ -5,7 +5,7 @@ const FooterWrapper = styled.footer`
   align-items: center;
   background-color: #000;
   display: flex;
-  margin-top: 100px;
+  padding-top: 100px;
 `
 
 const MapWrapper = styled.div`
