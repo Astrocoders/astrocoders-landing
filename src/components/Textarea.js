@@ -25,6 +25,7 @@ const Input = styled.textarea`
   background: transparent;
   border: none;
   border-bottom: 1px solid #ccc;
+  border-radius: 0;
   display: block;
   font-family: Open Sans,sans-serif;
   outline:none;

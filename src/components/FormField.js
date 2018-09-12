@@ -10,7 +10,7 @@ const FieldWrapper = styled.div`
 
   input:focus~label, input:not(:placeholder-shown)~label {
     font-size: 1em;
-    transform: translateY(-15px);
+    transform: translateY(-20px);
   }
 
   input:focus~.form-bar {
@@ -25,6 +25,7 @@ const Input = styled.input`
   background: transparent;
   border: none;
   border-bottom: 1px solid #ccc;
+  border-radius: 0;
   display: block;
   font-family: Open Sans,sans-serif;
   outline:none;
