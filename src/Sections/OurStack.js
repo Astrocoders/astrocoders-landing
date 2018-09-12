@@ -23,26 +23,35 @@ const OurStackWrapper = styled.section`
     &> div {
       justify-content: normal;
     }
+  }
+`
 
-    img {
-      padding-left: 10px;
-    }
+const StackLogo = styled.img`
+  filter: grayscale(100%);
+  transition: all .4s;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+
+  @media (max-width: 960px) {
+    padding-left: 10px;
   }
 `
 
 const OurStack = () => (
     <OurStackWrapper id="ourStack">
       <Wrapper alignItems="center" direction="row" justifyContent="space-between" wrap="wrap">
-        <img src={ocamlLogo} alt="OCaml"/>
-        <img src={reasonLogo} alt="ReasonML"/>
-        <img src={jsLogo} alt="JavaScript"/>
-        <img src={graphqlLogo} alt="GraphQL"/>
-        <img src={apolloLogo} alt="Apollo"/>
-        <img src={rnLogo} alt="React Native"/>
-        <img src={styledLogo} alt="Styled Components"/>
-        <img src={webpackLogo} alt="Webpack"/>
-        <img src={mongoLogo} alt="MongoDB"/>
-        <img src={meteorLogo} alt="Meteor"/>
+        <StackLogo src={ocamlLogo} alt="OCaml" title="OCaml"/>
+        <StackLogo src={reasonLogo} alt="ReasonML" title="ReasonML"/>
+        <StackLogo src={jsLogo} alt="JavaScript" title="JavaScript"/>
+        <StackLogo src={graphqlLogo} alt="GraphQL" title="GraphQL"/>
+        <StackLogo src={apolloLogo} alt="Apollo" title="Apollo"/>
+        <StackLogo src={rnLogo} alt="React Native" title="React Native"/>
+        <StackLogo src={styledLogo} alt="Styled Components"  title="Styled Components"/>
+        <StackLogo src={webpackLogo} alt="Webpack" title="Webpack"/>
+        <StackLogo src={mongoLogo} alt="MongoDB" title="MongoDB"/>
+        <StackLogo src={meteorLogo} alt="Meteor" title="Meteor"/>
       </Wrapper>
     </OurStackWrapper>
   )
