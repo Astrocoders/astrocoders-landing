@@ -20,7 +20,6 @@
   "urlFacebook": "https://astrocoders.com/",
   "descriptionFacebook": "Go Beyond",
   "imageFacebook": "https://astrocoders.com/images/logo.png",
-  "site_nameFacebook": "Astrocoders",
   "app_idFacebook": "XXXXXXXXXXX",
   "hireUsFormAction": "https://astromail.astrocoders.com/mail/kAGu38vSsJe4i546T",
   "projects": [
@@ -76,7 +75,7 @@
 
   "testimonials": [
     {
-      "photo": "/images/testimonials/pam.jpg",
+      "photo": "./img/testimonials/pam.jpg",
       "name": "Pamela Borges",
       "quote": "Astrocoders reminds me fast response and awesome solutions",
       "company": "Lion Tax",
@@ -84,7 +83,7 @@
       "link": "https://lion-tax.com/"
     },
     {
-      "photo": "/images/testimonials/ky-js.jpg",
+      "photo": "/img/testimonials/ky-js.jpg",
       "name": "Kylie and Jess McBeath",
       "quote": "Astrocoders helps us to transform ideas in reality",
       "company": "Zura Health",
@@ -92,7 +91,7 @@
       "link": "https://zurahealth.com/"
     },
     {
-      "photo": "/images/testimonials/imad.jpg",
+      "photo": "/img/testimonials/imad.jpg",
       "name": "Imad Abdallah",
       "quote": "Work with Astrocoders means quality and fast development of our needs",
       "company": "Fractal Flows",

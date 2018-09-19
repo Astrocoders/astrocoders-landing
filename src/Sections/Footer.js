@@ -7,6 +7,7 @@ import Github from 'react-icons/lib/io/social-github'
 import Instagram from 'react-icons/lib/io/social-instagram-outline'
 import Twitter from 'react-icons/lib/io/social-twitter'
 import VGroup from '../components/VGroup'
+import Map from '../components/Map'
 
 import logo from '../img/logo.png'
 
@@ -16,13 +17,6 @@ const FooterWrapper = styled.footer`
   color: #fff;
   display: flex;
   flex-direction: column;
-`
-
-const MapWrapper = styled.div`
-  clear: both;
-  height: 400px;
-  margin-top: 100px;
-  width: 100%;
 `
 
 const SocialLinks = styled(HGroup)`
@@ -35,7 +29,7 @@ const SocialLinks = styled(HGroup)`
     color: inherit;
 
     &:hover {
-      color: #835FE2;
+      color: #835fe2;
     }
   }
 
@@ -60,29 +54,148 @@ const Copyrights = styled(VGroup)`
   }
 `
 
+const center = { lat: -23.4989234, lng: -47.4748664 }
+const mapProps = {
+  options: {
+    zoom: 15,
+    center,
+    styles: [
+      {
+        featureType: 'water',
+        elementType: 'geometry',
+        stylers: [
+          {
+            color: '#193341',
+          },
+        ],
+      },
+      {
+        featureType: 'landscape',
+        elementType: 'geometry',
+        stylers: [
+          {
+            color: '#2c5a71',
+          },
+        ],
+      },
+      {
+        featureType: 'road',
+        elementType: 'geometry',
+        stylers: [
+          {
+            color: '#29768a',
+          },
+          {
+            lightness: -37,
+          },
+        ],
+      },
+      {
+        featureType: 'poi',
+        elementType: 'geometry',
+        stylers: [
+          {
+            color: '#406d80',
+          },
+        ],
+      },
+      {
+        featureType: 'transit',
+        elementType: 'geometry',
+        stylers: [
+          {
+            color: '#406d80',
+          },
+        ],
+      },
+      {
+        elementType: 'labels.text.stroke',
+        stylers: [
+          {
+            visibility: 'on',
+          },
+          {
+            color: '#3e606f',
+          },
+          {
+            weight: 2,
+          },
+          {
+            gamma: 0.84,
+          },
+        ],
+      },
+      {
+        elementType: 'labels.text.fill',
+        stylers: [
+          {
+            color: '#ffffff',
+          },
+        ],
+      },
+      {
+        featureType: 'administrative',
+        elementType: 'geometry',
+        stylers: [
+          {
+            weight: 0.6,
+          },
+          {
+            color: '#1a3541',
+          },
+        ],
+      },
+      {
+        elementType: 'labels.icon',
+        stylers: [
+          {
+            visibility: 'off',
+          },
+        ],
+      },
+      {
+        featureType: 'poi.park',
+        elementType: 'geometry',
+        stylers: [
+          {
+            color: '#2c5a71',
+          },
+        ],
+      },
+    ],
+  },
+  onMount: map => {
+    new window.google.maps.Marker({
+      position: center,
+      map,
+      title: 'Astro Base',
+    })
+  },
+}
+
 const Footer = () => (
-    <FooterWrapper>
-      <MapWrapper id="map"></MapWrapper>
-      <Wrapper>
-        <HGroup paddingTop="30px" paddingBottom="30px" wrap="wrap">
-          <SocialLinks>
-            <a href="https://github.com/Astrocoders" target="_blank">
-              <Github/>
-            </a>
-            <a href="https://instagram.com/astrocoders" target="_blank">
-              <Instagram/>
-            </a>
-            <a href="https://instagram.com/astrocoders" target="_blank">
-              <Twitter/>
-            </a>
-          </SocialLinks>
-          <Copyrights>
-            Copyright 2018 © Astrocoders Desenvolvimento LTDA
-            <img src={logo}/>
-          </Copyrights>
-        </HGroup>
-      </Wrapper>
-    </FooterWrapper>
-  )
+  <FooterWrapper>
+    <Map id="contactMap" {...mapProps} />
+    <Wrapper>
+      <HGroup paddingTop="30px" paddingBottom="30px" wrap="wrap">
+        <SocialLinks>
+          <a href="https://github.com/Astrocoders" target="_blank">
+            <Github />
+          </a>
+          <a href="https://instagram.com/astrocoders" target="_blank">
+            <Instagram />
+          </a>
+          <a href="https://instagram.com/astrocoders" target="_blank">
+            <Twitter />
+          </a>
+        </SocialLinks>
+        <Copyrights>
+          Copyright 2018 © Astrocoders Desenvolvimento LTDA
+          <img src={logo} />
+        </Copyrights>
+      </HGroup>
+    </Wrapper>
+  </FooterWrapper>
+)
 
 export default Footer

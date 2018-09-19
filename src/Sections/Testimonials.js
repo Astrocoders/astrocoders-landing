@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 import Title from '../components/Title'
 import Wrapper from '../components/Wrapper'
 import HGroup from '../components/HGroup'
 import Testimonial from '../components/Testimonial'
 
+import pamPhoto from '../img/testimonials/pam.jpg'
+import zuraPhoto from '../img/testimonials/ky-js.jpg'
+import imadPhoto from '../img/testimonials/imad.jpg'
 
 const TestimonialsWrapper = styled.section`
   align-items: center;
@@ -21,19 +24,40 @@ const TestimonialsList = styled(HGroup)`
   }
 `
 
-const Testimonials = ({ testimonials }) => (
+const Testimonials = () => (
   <TestimonialsWrapper>
     <Wrapper alignItems="center">
-      <Title textAlign="center" textTransform="uppercase" marginBottom="50px"><FormattedMessage id="testimonialsTitle" /></Title>
+      <Title textAlign="center" textTransform="uppercase" marginBottom="50px">
+        <FormattedMessage id="testimonialsTitle" />
+      </Title>
       <TestimonialsList>
-        {
-          testimonials.map(testimonial => (
-            <Testimonial key={testimonial.link} {...testimonial} />
-          ))
-        }
+        <Testimonial
+          key="https://lion-tax.com/"
+          name="Pamela Borges"
+          company="Lion Tax"
+          quote="Astrocoders reminds me fast response and awesome solutions"
+          link="https://lion-tax.com/"
+          photo={pamPhoto}
+        />
+        <Testimonial
+          key="https://zurahealth.com/"
+          name="Kylie and Jess McBeath"
+          company="Zura Health"
+          quote="Astrocoders helps us to transform ideas in reality"
+          link="https://zurahealth.com/"
+          photo={zuraPhoto}
+        />
+        <Testimonial
+          key="https://fractalflows.com/"
+          name="Imad Abdallah"
+          company="Fractal Flows"
+          quote="Work with Astrocoders means quality and fast development of our needs"
+          link="https://fractalflows.com/"
+          photo={imadPhoto}
+        />
       </TestimonialsList>
-      </Wrapper>
-    </TestimonialsWrapper>
-  )
+    </Wrapper>
+  </TestimonialsWrapper>
+)
 
 export default Testimonials

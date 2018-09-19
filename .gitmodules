@@ -1,3 +1,0 @@
-[submodule "public/css/_nib"]
-	path = src/Styles/_nib
-	url = https://github.com/tj/nib.git

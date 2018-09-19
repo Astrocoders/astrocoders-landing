@@ -20,14 +20,24 @@ const Avatar = styled.img`
   margin: 40px 0;
 `
 
+const Link = styled.a`
+  text-decoration: none;
+`
+
 const Testimonial = ({ name, company, quote, link, photo }) => (
   <TestimonialWrapper>
-    <Avatar src={photo} alt="Astrocoders Testimonials Person" alt={company}/>
-    <a href={link} target="_blank">
-      <Title fontSize="1.8em" fontWeight="300" textAlign="center">{company}</Title>
-    </a>
-    <Title fontWeight="300" textAlign="center">{name}</Title>
-    <Text align="center" weight="300">{quote}</Text>
+    <Avatar src={photo} alt="Astrocoders Testimonials Person" alt={company} />
+    <Link href={link} target="_blank">
+      <Title fontSize="1.8em" fontWeight="300" textAlign="center">
+        {company}
+      </Title>
+    </Link>
+    <Title fontWeight="300" textAlign="center">
+      {name}
+    </Title>
+    <Text align="center" weight="300">
+      {quote}
+    </Text>
   </TestimonialWrapper>
 )
 
