@@ -4,10 +4,10 @@ import { withIntl } from '../i18n'
 import data from '../data.json'
 
 import PageWrapper from '../components/PageWrapper'
-import Hero from '../sections/Hero'
-import AboutUs from '../sections/AboutUs'
-import OurStack from '../sections/OurStack'
-import Testimonials from '../sections/Testimonials'
+import Hero from '../Sections/Hero'
+import AboutUs from '../Sections/AboutUs'
+import OurStack from '../Sections/OurStack'
+import Testimonials from '../Sections/Testimonials'
 
 const IndexPage = () => (
   <PageWrapper isHome={true}>
