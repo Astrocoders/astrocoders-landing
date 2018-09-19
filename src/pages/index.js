@@ -6,7 +6,6 @@ import data from '../data.json'
 import PageWrapper from '../components/PageWrapper'
 import Hero from '../sections/Hero'
 import AboutUs from '../sections/AboutUs'
-import HireUs from '../sections/HireUs'
 import OurStack from '../sections/OurStack'
 import Testimonials from '../sections/Testimonials'
 
@@ -16,7 +15,6 @@ const IndexPage = () => (
     <OurStack {...data} />
     <AboutUs {...data} />
     <Testimonials {...data} />
-    <HireUs {...data} />
   </PageWrapper>
 )
 
