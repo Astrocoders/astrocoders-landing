@@ -23,6 +23,21 @@ module.exports = {
         showSpinner: true,
       },
     },
+    {
+      resolve: 'gatsby-plugin-drift',
+      options: {
+        appId: 'bkbfytvikwtr',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-122635460-1',
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: 'astrocoders.com',
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
   ],
