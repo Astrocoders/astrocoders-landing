@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 import Title from '../components/Title'
 import Wrapper from '../components/Wrapper'
@@ -15,14 +15,16 @@ const AboutUsWrapper = styled.section`
 `
 
 const AboutUs = () => (
-    <AboutUsWrapper>
-      <Wrapper alignItems="center">
-        <Title textAlign="center" textTransform="uppercase" marginBottom="100px"><FormattedMessage id="whoWeAre"/></Title>
-          <Text>
-            <FormattedMessage id="aboutText"/>
-          </Text>
-      </Wrapper>
-    </AboutUsWrapper>
-  )
+  <AboutUsWrapper>
+    <Wrapper alignItems="center">
+      <Title align="center" transform="uppercase" marginBottom="100px">
+        <FormattedMessage id="whoWeAre" />
+      </Title>
+      <Text>
+        <FormattedMessage id="aboutText" />
+      </Text>
+    </Wrapper>
+  </AboutUsWrapper>
+)
 
 export default AboutUs

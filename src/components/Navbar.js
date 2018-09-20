@@ -19,7 +19,7 @@ const HeaderWrapper = styled.div`
   display: ${props => props.show};
   transition: 0.35s;
   padding: 25px 7.5vw;
-  z-index: 2;
+  z-index: 5;
 `
 
 const HeaderContainer = styled.div`
@@ -107,11 +107,10 @@ const Navbar = ({ isHome, isShowed, setMenuOpened, isMenuOpened }) => (
         </Link>
 
         <HeaderLinkWrapper>
-          <HeaderLink to="#services-article">HOW WE WORK</HeaderLink>
-          <HeaderLink to="#team-wrapper">OPEN SOURCE</HeaderLink>
-          <HeaderLink to="#testimonials-wrapper">JOIN US</HeaderLink>
+          <HeaderLink to="/how-we-work">HOW WE WORK</HeaderLink>
+          <HeaderLink to="/open-source">OPEN SOURCE</HeaderLink>
           <HeaderLink to="/cases">CASES</HeaderLink>
-          <HeaderLink to="#contact-wrapper">CONTACT</HeaderLink>
+          <HeaderLink to="/contact">CONTACT</HeaderLink>
         </HeaderLinkWrapper>
         <MobileMenu>
           <HeaderContainer>
@@ -121,11 +120,10 @@ const Navbar = ({ isHome, isShowed, setMenuOpened, isMenuOpened }) => (
           </HeaderContainer>
           {isMenuOpened && (
             <MenuDialog>
-              <HeaderLink to="#services-article">HOW WE WORK</HeaderLink>
-              <HeaderLink to="#team-wrapper">OPEN SOURCE</HeaderLink>
-              <HeaderLink to="#testimonials-wrapper">JOIN US</HeaderLink>
+              <HeaderLink to="/how-we-work">HOW WE WORK</HeaderLink>
+              <HeaderLink to="/open-source">OPEN SOURCE</HeaderLink>
               <HeaderLink to="/cases">CASES</HeaderLink>
-              <HeaderLink to="#contact-wrapper">CONTACT</HeaderLink>
+              <HeaderLink to="/contact">CONTACT</HeaderLink>
             </MenuDialog>
           )}
         </MobileMenu>

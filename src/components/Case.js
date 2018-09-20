@@ -12,30 +12,68 @@ const CaseWrapper = styled(HGroup)`
   display: flex;
   justify-content: center;
   width: 100%;
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+
+    h2,
+    span {
+      text-align: right;
+    }
+  }
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 960px) {
+    height: 300px;
+  }
 `
 
-const PreviewScreen = styled.img`
-  background: #fff;
+const PreviewScreen = styled.div`
+  align-items: center;
+  background-color: ${props => props.bgColor || '#fff'};
   border: none;
-  height: 200px;
-  width: 50%;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+
+  img {
+    height: 200px;
+    margin: 0;
+    width: 200px;
+  }
+
+  @media (min-width: 960px) {
+    width: 50%;
+  }
 `
 
 const CaseContent = styled.div`
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 60px;
+  padding-left: 60px;
+
+  @media (min-width: 960px) {
+    width: 50%;
+  }
 `
 
-const Testimonial = ({ name, company, description, link, cover }) => (
+const Testimonial = ({ bgColor, company, description, link, cover }) => (
   <CaseWrapper>
-    <PreviewScreen src={cover} alt={company} alt={company} />
+    <PreviewScreen bgColor={bgColor}>
+      <img src={cover} alt={company} alt={company} />
+    </PreviewScreen>
     <CaseContent>
       <Link href={link} target="_blank">
-        <Title fontSize="1.8em" fontWeight="300" textAlign="center">
+        <Title fontWeight="300" align="left" weight="700">
           {company}
         </Title>
       </Link>
 
-      <Text align="center" weight="300">
+      <Text size="1em" weight="300">
         {description}
       </Text>
     </CaseContent>

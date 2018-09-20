@@ -4,17 +4,18 @@ export default styled.span`
   color: ${props => props.color || '#fff'};
   font-family: Roboto;
   font-style: normal;
-  font-weight: ${props => props.weight || '400'};
-  line-height: 150%;
+  font-weight: ${props => props.weight || '300'};
+  line-height: 2.5em;
   margin-top: ${props => props.marginTop || props.margin || 0};
   margin-bottom: ${props => props.marginBottom || props.margin || 0};
   margin-right: ${props => props.marginRight || props.margin || 0};
   margin-left: ${props => props.marginLeft || props.margin || 0};
-  font-size: ${props => props.fontSize || '1.2em'};
+  font-size: ${props => props.size || '1.2em'};
   text-align: ${props => props.align};
+  word-spacing: 0.15em;
 
   em {
-    color: #835FE2;
+    color: #835fe2;
     font-style: normal;
   }
 `

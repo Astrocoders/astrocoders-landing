@@ -4,11 +4,11 @@ import compose from 'recompose/compose'
 import styled from 'styled-components'
 import { stripIndent } from 'common-tags'
 
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 import Wrapper from '../components/Wrapper'
 import Title from '../components/Title'
-import FormField    from '../components/FormField'
+import FormField from '../components/FormField'
 import Textarea from '../components/Textarea'
 import Button from '../components/Button'
 
@@ -20,7 +20,7 @@ const HireUsWrapper = styled.section`
   background-image: url(${footerBg});
   background-repeat: no-repeat;
   background-position: left center;
-  clear:both;
+  clear: both;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -51,32 +51,31 @@ const TitleCta = styled(Title)`
 `
 
 function HireUs({ isSending, handleSubmit }) {
-
   return (
     <HireUsWrapper>
-      <Title marginBottom="100px" textTransform="uppercase"><FormattedMessage id="hireUs" /></Title>
+      <Title marginBottom="100px" transform="uppercase">
+        <FormattedMessage id="hireUs" />
+      </Title>
       <Wrapper alignItems="flex-end">
         <FormWrapper>
           <form id="hireUsForm" className="validate" onSubmit={handleSubmit}>
-            {
-              !isSending && [
-                <FormField label="Name" name="name" placeholder="John Doe" required="required" />,
-                <FormField label="Email" name="email" placeholder="email@provider.co" required="required" />,
-                <Textarea
-                  name="subject"
-                  label="Your Message"
-                  placeholder="What do you want to build? How much is your budget?"
-                  required="required"
-                />,
-              ]
-            }
-            <Button disabled={isSending}>
-              {isSending ? 'Sent' : 'Send'}
-            </Button>
+            {!isSending && [
+              <FormField label="Name" name="name" placeholder="John Doe" required="required" />,
+              <FormField label="Email" name="email" placeholder="email@provider.co" required="required" />,
+              <Textarea
+                name="subject"
+                label="Your Message"
+                placeholder="What do you want to build? How much is your budget?"
+                required="required"
+              />,
+            ]}
+            <Button disabled={isSending}>{isSending ? 'Sent' : 'Send'}</Button>
           </form>
         </FormWrapper>
       </Wrapper>
-      <TitleCta><FormattedMessage id="hireUsCta" /></TitleCta>
+      <TitleCta>
+        <FormattedMessage id="hireUsCta" />
+      </TitleCta>
     </HireUsWrapper>
   )
 }
@@ -113,8 +112,7 @@ export default compose(
             }
         `,
         }),
-      })
-        .catch(err => props.isSending(false))
+      }).catch(err => props.isSending(false))
     },
   })),
 )(HireUs)
