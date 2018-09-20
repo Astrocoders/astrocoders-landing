@@ -12,6 +12,7 @@ import HGroup from '../components/HGroup'
 import theme from '../utils/theme'
 
 import galaxyBg from '../img/galaxy.jpg'
+import check from '../img/check-circle.svg'
 
 const Content = styled.section`
   margin-top: 100px;
@@ -25,8 +26,7 @@ const Timeline = styled.ul`
   background-size: contain;
   background-position: center;
   list-style-type: none;
-  margin-top: 40px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   padding: 70px 0 60px;
   position: relative;
 `
@@ -135,15 +135,15 @@ const VerticalLine = styled.div`
   }
 
   &:after {
-    bottom: 0;
+    background-image: url(${check});
+    background-size: cover;
+    bottom: -40px;
     content: '';
-    width: 18px;
-    height: 18px;
+    width: 48px;
+    height: 48px;
     display: block;
-    border-radius: 50%;
-    margin-left: -7px;
+    margin-left: -21px;
     position: absolute;
-    background: ${theme.colors.primary};
   }
 
   @media (min-width: 960px) {
