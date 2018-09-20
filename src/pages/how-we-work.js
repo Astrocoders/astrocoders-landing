@@ -39,67 +39,81 @@ const Process = styled(HGroup)`
   transition: 0.2s;
   width: 100%;
 
-  &:nth-child(odd) {
-    flex-direction: row-reverse;
+  @media (max-width: 960px) {
+    flex-direction: column;
+    margin-left: 30px;
+  }
 
-    h3 {
+  @media (min-width: 960px) {
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+
+      h3 {
+        text-align: left;
+      }
+
+      & .content {
+        text-align: right;
+        padding-right: 30px;
+        width: 50%;
+      }
+    }
+
+    &:nth-child(even) {
       text-align: left;
+      margin-left: 0;
+
+      h3 {
+        text-align: right;
+      }
+
+      & .content {
+        text-align: left;
+        padding-left: 30px;
+        width: 50%;
+      }
     }
 
-    & .content {
-      text-align: right;
-      padding-right: 30px;
-      width: 50%;
-    }
-  }
-
-  &:nth-child(even) {
-    text-align: left;
-    margin-left: 0;
-
-    h3 {
-      text-align: right;
+    &:after {
+      right: 50%;
+      width: 12px;
+      content: '';
+      height: 12px;
+      display: block;
+      border-radius: 50%;
+      margin-right: -6px;
+      position: absolute;
+      background-color: ${theme.colors.primary};
     }
 
-    & .content {
-      text-align: left;
-      padding-left: 30px;
-      width: 50%;
+    &:first-child > .content,
+    &:hover > .content {
+      opacity: 1;
     }
-  }
-
-  &:after {
-    right: 50%;
-    width: 12px;
-    content: '';
-    height: 12px;
-    display: block;
-    border-radius: 50%;
-    margin-right: -6px;
-    position: absolute;
-    background-color: ${theme.colors.primary};
-  }
-
-  &:first-child > .content,
-  &:hover > .content {
-    opacity: 1;
   }
 `
 
 const ProcessTitle = styled.h3`
   margin: 0;
-  padding: 30px;
-  width: 50%;
+  padding: 30px 0;
+  width: 100%;
+
+  @media (min-width: 960px) {
+    padding: 30px;
+    width: 50%;
+  }
 `
 
 const ProcessDescription = styled.div`
   transition: all 0.2s ease-in-out;
-  opacity: 0;
+
+  @media (min-width: 960px) {
+    opacity: 0;
+  }
 `
 
 const VerticalLine = styled.div`
   top: 10px;
-  left: 50%;
   width: 3px;
   height: 100%;
   display: block;
@@ -130,6 +144,10 @@ const VerticalLine = styled.div`
     margin-left: -7px;
     position: absolute;
     background: ${theme.colors.primary};
+  }
+
+  @media (min-width: 960px) {
+    left: 50%;
   }
 `
 
