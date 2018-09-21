@@ -13,21 +13,21 @@ const CaseWrapper = styled(HGroup)`
   justify-content: center;
   width: 100%;
 
-  &:nth-child(odd) {
-    flex-direction: row-reverse;
-
-    h2,
-    span {
-      text-align: right;
-    }
-  }
-
   @media (max-width: 960px) {
     flex-direction: column;
   }
 
   @media (min-width: 960px) {
     height: 300px;
+
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+
+      h2,
+      span {
+        text-align: right;
+      }
+    }
   }
 `
 
@@ -38,6 +38,7 @@ const PreviewScreen = styled.div`
   display: flex;
   height: 100%;
   justify-content: center;
+  width: 100%;
 
   img {
     height: 200px;
@@ -68,12 +69,12 @@ const Testimonial = ({ bgColor, company, description, link, cover }) => (
     </PreviewScreen>
     <CaseContent>
       <Link href={link} target="_blank">
-        <Title fontWeight="300" align="left" weight="700">
+        <Title fontWeight="300" align="left" weight="700" marginTop="30px" marginBottom="30px">
           {company}
         </Title>
       </Link>
 
-      <Text size="1em" weight="300">
+      <Text size="1em" weight="300" marginBottom="30px">
         {description}
       </Text>
     </CaseContent>
