@@ -50,6 +50,7 @@ const Copyrights = styled(VGroup)`
 
   @media (max-width: 960px) {
     margin-top: 30px;
+    text-align: center;
     width: 100%;
   }
 `
