@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 import HGroup from './HGroup'
 import VGroup from './VGroup'
@@ -31,7 +31,7 @@ const Image = styled.img`
 `
 
 const Title = styled.h1`
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Open Sans;
   font-style: normal;
   font-size: 3.2em;
@@ -40,10 +40,14 @@ const Title = styled.h1`
   line-height: normal;
   margin: 0;
   text-transform: uppercase;
+
+  @media (max-width: 960px) {
+    font-size: 2em;
+  }
 `
 
 const Subtitle = styled.h3`
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
@@ -56,10 +60,12 @@ const Subtitle = styled.h3`
 
 const Logo = () => (
   <LogoWrapper>
-    <Image src={logoImg} alt="Astrocoders Logo"/>
+    <Image src={logoImg} alt="Astrocoders Logo" />
     <TitleWrapper>
       <Title>Astrocoders</Title>
-      <Subtitle><FormattedMessage id="subtitle" /></Subtitle>
+      <Subtitle>
+        <FormattedMessage id="subtitle" />
+      </Subtitle>
     </TitleWrapper>
   </LogoWrapper>
 )

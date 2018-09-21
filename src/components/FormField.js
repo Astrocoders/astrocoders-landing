@@ -32,6 +32,7 @@ const Input = styled.input`
   border: none;
   border-bottom: 1px solid #ccc;
   border-radius: 0;
+  color: #fff;
   display: block;
   font-family: Open Sans, sans-serif;
   outline: none;
@@ -55,7 +56,7 @@ const Label = styled.label`
   z-index: 0;
 
   @media (max-width: 960px) {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 `
 
@@ -92,7 +93,7 @@ const FormField = ({
 }) => (
   <FieldWrapper marginBottom={marginBottom} marginLeft={marginLeft} marginRight={marginRight} marginTop={marginTop}>
     <Input name={name} type={type} placeholder={placeholder} required={required} />
-    {!label ? null : <Label for={name}>{label}</Label>}
+    {!label ? null : <Label htmlFor={name}>{label}</Label>}
     <InputBar className="form-bar" />
     {!helperText ? null : <HelperText>{helperText}</HelperText>}
   </FieldWrapper>

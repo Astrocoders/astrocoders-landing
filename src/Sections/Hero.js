@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 import Logo from '../components/Logo'
 
@@ -24,32 +24,35 @@ const HeroWrapper = styled.section`
 
 const Description = styled.h3`
   align-self: flex-start;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Ubuntu;
   font-style: normal;
   font-weight: normal;
-  font-size: 2.5em;
+  font-size: 1.5em;
   line-height: normal;
   margin: 30px 0;
   text-transform: uppercase;
   text-align: center;
 
   @media (min-width: 960px) {
+    font-size: 2.5em;
     width: 45%;
     text-align: left;
   }
 
   em {
-    color: #835FE2;
+    color: #835fe2;
     font-style: normal;
   }
 `
 
 const Hero = () => (
-    <HeroWrapper>
-      <Logo />
-      <Description><FormattedMessage id="headerTitle"/></Description>
-    </HeroWrapper>
-  )
+  <HeroWrapper>
+    <Logo />
+    <Description>
+      <FormattedMessage id="headerTitle" />
+    </Description>
+  </HeroWrapper>
+)
 
 export default Hero
