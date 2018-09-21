@@ -22,18 +22,11 @@ const OpenSourcePage = () => (
           Open Source Projects
         </Title>
         <VGroup>
-          <ProjectOpenSource
-            number="01"
-            title="ReForm"
-            description="Reasonably making forms sound good again (pun 100% intended)"
-            link="https://github.com/Astrocoders/reform"
-          />
-          <ProjectOpenSource
-            number="02"
-            title="epitath"
-            description="Compose HOCs imperatively like async/await. No callback hell!"
-            link="https://github.com/Astrocoders/epitath"
-          />
+          <ProjectOpenSource name="reform" />
+          <ProjectOpenSource name="nubank-api" />
+          <ProjectOpenSource name="epitath" />
+          <ProjectOpenSource name="react-image-smooth-loading" />
+          <ProjectOpenSource name="bs-reason-apollo" />
         </VGroup>
       </Wrapper>
     </OpenSourceWrapper>
