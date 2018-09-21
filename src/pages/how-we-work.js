@@ -34,7 +34,7 @@ const Timeline = styled.ul`
 const Process = styled(HGroup)`
   align-items: center;
   cursor: pointer;
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
   margin-bottom: 40px;
   transition: 0.2s;
   width: 100%;
@@ -137,12 +137,12 @@ const VerticalLine = styled.div`
   &:after {
     background-image: url(${check});
     background-size: cover;
-    bottom: -40px;
+    bottom: -35px;
     content: '';
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
     display: block;
-    margin-left: -21px;
+    margin-left: -16px;
     position: absolute;
   }
 
