@@ -110,7 +110,8 @@ const Navbar = ({ isHome, isShowed, setMenuOpened, isMenuOpened }) => (
           <HeaderLink to="/how-we-work">HOW WE WORK</HeaderLink>
           <HeaderLink to="/open-source">OPEN SOURCE</HeaderLink>
           <HeaderLink to="/cases">CASES</HeaderLink>
-          <HeaderLink to="/contact">CONTACT</HeaderLink>
+          <HeaderLink to="/join-us">JOIN US</HeaderLink>
+          <HeaderLink to="/#hireUs">CONTACT</HeaderLink>
         </HeaderLinkWrapper>
         <MobileMenu>
           <HeaderContainer>
@@ -123,7 +124,8 @@ const Navbar = ({ isHome, isShowed, setMenuOpened, isMenuOpened }) => (
               <HeaderLink to="/how-we-work">HOW WE WORK</HeaderLink>
               <HeaderLink to="/open-source">OPEN SOURCE</HeaderLink>
               <HeaderLink to="/cases">CASES</HeaderLink>
-              <HeaderLink to="/contact">CONTACT</HeaderLink>
+              <HeaderLink to="/join-us">JOIN US</HeaderLink>
+              <HeaderLink to="/#hireUs">CONTACT</HeaderLink>
             </MenuDialog>
           )}
         </MobileMenu>

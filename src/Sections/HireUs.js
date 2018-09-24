@@ -52,7 +52,7 @@ const TitleCta = styled(Title)`
 
 function HireUs({ isSending, handleSubmit }) {
   return (
-    <HireUsWrapper>
+    <HireUsWrapper id="hireUs">
       <Title marginBottom="100px" transform="uppercase">
         <FormattedMessage id="hireUs" />
       </Title>
