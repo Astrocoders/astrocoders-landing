@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { FormattedMessage } from 'react-intl'
+import { FormattedHTMLMessage } from 'react-intl'
 
 import Title from '../components/Title'
 import Wrapper from '../components/Wrapper'
@@ -18,10 +18,10 @@ const AboutUs = () => (
   <AboutUsWrapper>
     <Wrapper alignItems="center">
       <Title align="center" transform="uppercase" marginBottom="100px">
-        <FormattedMessage id="whoWeAre" />
+        <FormattedHTMLMessage id="whoWeAre" />
       </Title>
       <Text>
-        <FormattedMessage id="aboutText" />
+        <FormattedHTMLMessage id="aboutText" />
       </Text>
     </Wrapper>
   </AboutUsWrapper>
