@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import StarIcon from 'react-icons/lib/go/star'
+import Emoji from 'react-emoji-render'
 
 import HGroup from './HGroup'
 import Text from './Text'
@@ -117,7 +118,9 @@ class ProjectOpenSource extends React.Component {
             {this.props.name}
           </Link>
         </ProjectTitle>
-        <ProjectDescription>{repo.description}</ProjectDescription>
+        <ProjectDescription>
+          <Emoji text={repo.description} />
+        </ProjectDescription>
       </ProjectWrapper>
     )
   }
