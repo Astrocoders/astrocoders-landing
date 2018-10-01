@@ -16,6 +16,7 @@
     "gatsby-plugin-styled-components": "^2.0.11",
     "intl": "^1.2.5",
     "react-click-outside": "tj/react-click-outside",
+    "react-emoji-render": "^0.4.6",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
     "react-intl": "^2.4.0",
