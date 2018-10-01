@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
+import theme from '../utils/theme'
+
 export default styled.h2`
   color: ${props => props.color || '#fff'};
   font-family: Ubuntu;
   font-style: normal;
-  font-weight: ${props => props.weight || '400'};
+  font-weight: ${props => props.weight || '700'};
   line-height: normal;
   margin-top: ${props => props.marginTop || props.margin || 0};
   margin-bottom: ${props => props.marginBottom || props.margin || '10px'};
@@ -15,7 +17,16 @@ export default styled.h2`
   text-transform: ${props => props.transform || 'none'};
 
   em {
-    color: #835fe2;
+    color: ${theme.colors.primary};
     font-style: normal;
+  }
+
+  &:after {
+    content: '';
+    display: ${props => (props.withStripe ? 'block' : 'none') || 'none'};
+    background: ${theme.colors.primary};
+    height: 4px;
+    margin: 10px auto;
+    width: 30px;
   }
 `

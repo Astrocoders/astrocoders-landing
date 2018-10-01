@@ -190,10 +190,7 @@ const Footer = () => (
             <Twitter />
           </a>
         </SocialLinks>
-        <Copyrights>
-          Copyright 2018 © Astrocoders Desenvolvimento LTDA
-          <img src={logo} />
-        </Copyrights>
+        <Copyrights>Copyright 2018 © Astrocoders Desenvolvimento LTDA</Copyrights>
       </HGroup>
     </Wrapper>
   </FooterWrapper>

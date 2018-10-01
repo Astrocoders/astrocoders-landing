@@ -17,7 +17,7 @@ const AboutUsWrapper = styled.section`
 const AboutUs = () => (
   <AboutUsWrapper>
     <Wrapper alignItems="center">
-      <Title align="center" transform="uppercase" marginBottom="100px">
+      <Title align="center" transform="uppercase" marginBottom="100px" withStripe={true}>
         <FormattedHTMLMessage id="whoWeAre" />
       </Title>
       <Text>
