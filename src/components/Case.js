@@ -68,7 +68,7 @@ const Testimonial = ({ bgColor, company, description, link, cover }) => (
       <img src={cover} alt={company} alt={company} />
     </PreviewScreen>
     <CaseContent>
-      <Link href={link} target="_blank">
+      <Link to={`/case/${link}`}>
         <Title fontWeight="300" align="left" weight="700" marginTop="30px" marginBottom="30px">
           {company}
         </Title>

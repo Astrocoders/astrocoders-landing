@@ -29,23 +29,27 @@ const CasesPage = () => (
         <Case
           cover={cleanioCover}
           company="Cleanio"
+          link="cleanio"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt mauris et justo sollicitudin consectetur. Donec sit amet facilisis magna. Suspendisse vitae ligula ornare, volutpat neque et, posuere nunc. Etiam semper justo ut sagittis placerat. Integer congue augue vitae purus mollis sollicitudin. Sed quis neque vel turpis luctus rutrum at ac ligula."
         />
         <Case
           cover={lilasCover}
           bgColor="#8a2371"
           company="Lilas"
+          link="lilas"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt mauris et justo sollicitudin consectetur. Donec sit amet facilisis magna. Suspendisse vitae ligula ornare, volutpat neque et, posuere nunc. Etiam semper justo ut sagittis placerat. Integer congue augue vitae purus mollis sollicitudin. Sed quis neque vel turpis luctus rutrum at ac ligula."
         />
         <Case
           cover={zuraCover}
           company="Zura Health"
           bgColor="#70ccac"
+          link="zura"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt mauris et justo sollicitudin consectetur. Donec sit amet facilisis magna. Suspendisse vitae ligula ornare, volutpat neque et, posuere nunc. Etiam semper justo ut sagittis placerat. Integer congue augue vitae purus mollis sollicitudin. Sed quis neque vel turpis luctus rutrum at ac ligula."
         />
         <Case
           cover={liontaxCover}
           company="Lion Tax"
+          link="lion-tax"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt mauris et justo sollicitudin consectetur. Donec sit amet facilisis magna. Suspendisse vitae ligula ornare, volutpat neque et, posuere nunc. Etiam semper justo ut sagittis placerat. Integer congue augue vitae purus mollis sollicitudin. Sed quis neque vel turpis luctus rutrum at ac ligula."
         />
       </VGroup>
