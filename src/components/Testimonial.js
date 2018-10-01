@@ -28,11 +28,11 @@ const Testimonial = ({ name, company, quote, link, photo }) => (
   <TestimonialWrapper>
     <Avatar src={photo} alt="Astrocoders Testimonials Person" alt={company} />
     <Link href={link} target="_blank">
-      <Title fontSize="1.8em" fontWeight="300" textAlign="center">
+      <Title Size="1.8rem" fontWeight="300" align="center">
         {company}
       </Title>
     </Link>
-    <Title fontWeight="300" textAlign="center">
+    <Title weight="300" size="1.2rem" align="center">
       {name}
     </Title>
     <Text align="center" weight="300">
