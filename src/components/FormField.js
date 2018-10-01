@@ -52,7 +52,7 @@ const FormField = ({
   marginTop,
 }) => (
   <FieldWrapper marginBottom={marginBottom} marginLeft={marginLeft} marginRight={marginRight} marginTop={marginTop}>
-    {!label ? null : <Label for={name}>{label}</Label>}
+    {!label ? null : <Label htmlFor={name}>{label}</Label>}
     <Input name={name} type={type} placeholder={placeholder} required={required} />
     {!helperText ? null : <HelperText>{helperText}</HelperText>}
   </FieldWrapper>

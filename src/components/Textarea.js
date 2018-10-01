@@ -8,6 +8,9 @@ const FieldWrapper = styled.div`
   margin-right: ${props => props.marginRight || '10px'};
   margin-left: ${props => props.marginLeft || '10px'};
   margin-top: ${props => props.marginTop || '20px'};
+  @media (max-width: 960px) {
+    width: 100%;
+  }
 `
 
 const Input = styled.textarea`
@@ -53,7 +56,7 @@ const Textarea = ({
   marginTop,
 }) => (
   <FieldWrapper marginBottom={marginBottom} marginLeft={marginLeft} marginRight={marginRight} marginTop={marginTop}>
-    {!label ? null : <Label for={name}>{label}</Label>}
+    {!label ? null : <Label htmlFor={name}>{label}</Label>}
     <Input name={name} type={type} placeholder={placeholder} required={required} />
     {!helperText ? null : <HelperText>{helperText}</HelperText>}
   </FieldWrapper>

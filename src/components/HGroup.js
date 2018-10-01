@@ -15,4 +15,8 @@ export default styled.div`
   margin-bottom: ${props => props.marginBottom || props.margin || 0};
   margin-right: ${props => props.marginRight || props.margin || 0};
   margin-left: ${props => props.marginLeft || props.margin || 0};
+
+  @media (max-width: 960px) {
+    flex-direction: ${props => (props.columnOnMobile ? 'column' : 'row')};
+  }
 `

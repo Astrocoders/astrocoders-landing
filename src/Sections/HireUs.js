@@ -53,7 +53,7 @@ function HireUs({ isSending, handleSubmit }) {
         <FormWrapper>
           <form id="hireUsForm" className="validate" onSubmit={handleSubmit}>
             {!isSending && [
-              <HGroup>
+              <HGroup columnOnMobile={true}>
                 <FormField label="Name" name="name" placeholder="John Doe" required="required" />
                 <FormField label="Email" name="email" placeholder="email@provider.co" required="required" />
               </HGroup>,

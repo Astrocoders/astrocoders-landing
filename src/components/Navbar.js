@@ -16,7 +16,7 @@ const HeaderWrapper = styled.div`
   position: fixed;
   top: 0;
   background-color: #000;
-  display: ${props => props.show};
+  display: ${props => props.show || 'block'};
   transition: 0.35s;
   padding: 25px 7.5vw;
   z-index: 5;
