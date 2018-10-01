@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const ButtonWrapper = styled.button`
   align-self: ${props => props.alignSelf || 'inherit'};
-  background-color: rgba(105, 95, 226, .47);
+  background-color: rgba(105, 95, 226, 0.47);
   border-radius: 30px;
   border: none;
   color: #fff;
@@ -11,6 +11,10 @@ const ButtonWrapper = styled.button`
   font-family: Ubuntu;
   font-weight: normal;
   outline: none;
+  margin-bottom: ${props => props.marginBottom};
+  margin-right: ${props => props.marginRight};
+  margin-left: ${props => props.marginLeft};
+  margin-top: ${props => props.marginTop};
   padding: 15px 25px;
   touch-action: manipulation;
   text-align: center;
@@ -25,8 +29,16 @@ const ButtonWrapper = styled.button`
   }
 `
 
-const Button = ({ link, theme, raised, alignSelf, children }) => (
-  <ButtonWrapper alignSelf={alignSelf} theme={theme} raised={raised}>
+const Button = ({ link, theme, raised, alignSelf, children, marginBottom, marginLeft, marginRight, marginTop }) => (
+  <ButtonWrapper
+    alignSelf={alignSelf}
+    theme={theme}
+    raised={raised}
+    marginBottom={marginBottom}
+    marginLeft={marginLeft}
+    marginRight={marginRight}
+    marginTop={marginTop}
+  >
     {link ? <a href={link}>{children}</a> : children}
   </ButtonWrapper>
 )
