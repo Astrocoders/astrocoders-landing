@@ -1,20 +1,18 @@
 import React from 'react'
 import { withIntl } from '../i18n'
 
-import data from '../data.json'
-
 import PageWrapper from '../components/PageWrapper'
-import Hero from '../Sections/Hero'
-import AboutUs from '../Sections/AboutUs'
-import OurStack from '../Sections/OurStack'
-import Testimonials from '../Sections/Testimonials'
+import Hero from '../components/Hero'
+import AboutUs from '../components/AboutUs'
+import OurStack from '../components/OurStack'
+import Testimonials from '../components/Testimonials'
 
 const IndexPage = () => (
   <PageWrapper isHome={true}>
-    <Hero {...data} />
-    <OurStack {...data} />
-    <AboutUs {...data} />
-    <Testimonials {...data} />
+    <Hero />
+    <OurStack />
+    <AboutUs />
+    <Testimonials />
   </PageWrapper>
 )
 

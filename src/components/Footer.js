@@ -1,15 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import HGroup from '../components/HGroup'
-import Wrapper from '../components/Wrapper'
+import HGroup from './HGroup'
+import Wrapper from './Wrapper'
 
 import Github from 'react-icons/lib/io/social-github'
 import Instagram from 'react-icons/lib/io/social-instagram-outline'
 import Twitter from 'react-icons/lib/io/social-twitter'
-import VGroup from '../components/VGroup'
-import Map from '../components/Map'
-
-import logo from '../img/logo.png'
+import VGroup from './VGroup'
+import Map from './Map'
 
 const FooterWrapper = styled.footer`
   justify-content: center;

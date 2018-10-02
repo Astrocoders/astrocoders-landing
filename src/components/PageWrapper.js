@@ -2,16 +2,14 @@ import React from 'react'
 import { injectIntl } from 'react-intl'
 
 import Navbar from './Navbar'
-import Footer from '../Sections/Footer'
-import HireUs from '../Sections/HireUs'
-
-import data from '../data.json'
+import Footer from './Footer'
+import HireUs from './HireUs'
 
 const PageWrapper = ({ children, isHome }) => (
   <div>
     <Navbar isHome={isHome} />
     {children}
-    <HireUs {...data} />
+    <HireUs />
     <Footer />
   </div>
 )

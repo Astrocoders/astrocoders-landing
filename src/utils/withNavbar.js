@@ -1,13 +1,13 @@
 import { compose, withStateHandlers, lifecycle } from 'recompose'
 
-const el = document.scrollingElement || document.documentElement
+const element = window.document.scrollingElement || window.document.documentElement
 
 export default compose(
   withStateHandlers(
     { isShowed: false },
     {
       showNavbar: () => ({ target: { documentElement } }) => ({
-        isShowed: el.scrollTop > documentElement.offsetHeight / 8,
+        isShowed: element.scrollTop > documentElement.offsetHeight / 8,
       }),
     },
   ),

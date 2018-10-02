@@ -3,9 +3,9 @@ import styled from 'styled-components'
 
 import { FormattedHTMLMessage } from 'react-intl'
 
-import Title from '../components/Title'
-import Wrapper from '../components/Wrapper'
-import Text from '../components/Text'
+import Title from './Title'
+import Wrapper from './Wrapper'
+import Text from './Text'
 
 const AboutUsWrapper = styled.section`
   align-items: center;

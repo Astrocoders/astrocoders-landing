@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { FormattedMessage } from 'react-intl'
 
-import Logo from '../components/Logo'
+import Logo from './Logo'
 
 import galaxy from '../img/galaxy.jpg'
 

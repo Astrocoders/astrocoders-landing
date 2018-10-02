@@ -5,4 +5,5 @@ yarn-error.log
 
 # Build directory
 /public
+/build
 .DS_Store

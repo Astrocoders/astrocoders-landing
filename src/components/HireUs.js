@@ -5,14 +5,14 @@ import styled from 'styled-components'
 import { stripIndent } from 'common-tags'
 import { FormattedMessage } from 'react-intl'
 
-import Wrapper from '../components/Wrapper'
-import Title from '../components/Title'
-import FormField from '../components/FormField'
-import Textarea from '../components/Textarea'
-import Button from '../components/Button'
+import Wrapper from './Wrapper'
+import Title from './Title'
+import FormField from './FormField'
+import Textarea from './Textarea'
+import Button from './Button'
 
 import footerBg from '../img/launching.jpg'
-import HGroup from '../components/HGroup'
+import HGroup from './HGroup'
 
 const HireUsWrapper = styled.section`
   align-items: center;

@@ -1,7 +1,7 @@
 Astrocoders landing
 ===================
 
-Hello! For our landing page we are using a React application powered by Webpack.
+Hello! For our landing page we are using a React application powered by Gatsby.
 Pretty cool static site build with the hotest techs in JS lands.
 
 Follow the instructions bellow to build our landing page in your computer.
@@ -25,16 +25,5 @@ $ npm start
 ### Deploy
 
 ```
-$ ./build.sh
+$ yarn build
 ```
-
-Things we need to improve:
-
-### TODO
-
-- Add favicon
-- For now getting pictures from [Isaac](https://www.facebook.com/IsaacGautschiPhotography/photos_stream)
-
-
-
-

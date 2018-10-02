@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
 import { compose, withStateHandlers } from 'recompose'
 import ClickOutside from 'react-click-outside'
