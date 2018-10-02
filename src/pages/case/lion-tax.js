@@ -28,26 +28,36 @@ const ProjectImagesRow = styled.div`
 `
 
 const ProjectImage = styled.img`
-  max-width: 200px;
+  width: 150px;
 `
 
-const Cleanio = () => (
+const LionTax = () => (
   <PageWrapper isHome={false}>
     <ProjectCover>
       <ProjectImage src={liontaxCover} />
       <Title color="#000" weight="700" align="center">
-        Zura Health
+        Lion Tax
       </Title>
     </ProjectCover>
-    <Wrapper marginTop="150px" alignItems="">
+    <Wrapper marginTop="150px" marginBottom="150px" alignItems="">
+      <h1>Lion Calendar</h1>
       <Text>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id omnis possimus asperiores amet, ea nostrum aut et
-        ducimus quia neque quisquam excepturi, dignissimos cum, iure saepe facilis qui voluptas mollitia? Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Id omnis possimus asperiores amet, ea nostrum aut et ducimus quia
-        neque quisquam excepturi, dignissimos cum, iure saepe facilis qui voluptas mollitia?
+        We developed a calendar system for expatriates to control their time stayed on countries. Allowing a better
+        management that mitigate tax/fees/fines due to extent time.
       </Text>
+      <hr />
+      <h1>Carne Lion</h1>
+
+      <Text>
+        State of the art tax calculator. We developed, using the most advanced tools, an easy to use tax calculator and
+        bill generator for tax eligible workers.{' '}
+      </Text>
+      <hr />
+      <h1>IRPRONTO</h1>
+
+      <Text>AI system that read files from a variety sources and generate the yearly Brazilian income tax </Text>
     </Wrapper>
   </PageWrapper>
 )
 
-export default withIntl(Cleanio)
+export default withIntl(LionTax)

@@ -19,7 +19,7 @@ export default styled.span`
   }
 
   @media (min-width: 960px) {
-    line-height: 2.5em;
+    line-height: 2em;
     word-spacing: 0.15em;
   }
 `

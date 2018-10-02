@@ -4,5 +4,6 @@ const localeData = [...require('react-intl/locale-data/en'), ...require('react-i
 
 module.exports = {
   localeData,
-  languages: [{ value: 'en', text: 'English' }, { value: 'br', text: 'Português (Brasil)' }],
+  // just English for now
+  languages: [{ value: 'en', text: 'English' }],
 }

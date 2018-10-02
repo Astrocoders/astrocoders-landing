@@ -13,6 +13,7 @@ const HeroWrapper = styled.section`
   background-image: url(${galaxy});
   background-repeat: no-repeat;
   background-position: right center;
+  background-origin: content-box;
   display: flex;
   flex-direction: column;
   height: 100vh;

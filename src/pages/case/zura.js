@@ -28,26 +28,41 @@ const ProjectImagesRow = styled.div`
 `
 
 const ProjectImage = styled.img`
-  max-width: 200px;
+  width: 150px;
 `
 
-const Cleanio = () => (
+const OList = styled.ol`
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.8em;
+`
+
+const ZuraHealth = () => (
   <PageWrapper isHome={false}>
     <ProjectCover>
       <ProjectImage src={zuraCover} />
       <Title weight="700" align="center">
-        Lion Tax
+        Zura Health
       </Title>
     </ProjectCover>
-    <Wrapper marginTop="150px" alignItems="">
-      <Text>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id omnis possimus asperiores amet, ea nostrum aut et
-        ducimus quia neque quisquam excepturi, dignissimos cum, iure saepe facilis qui voluptas mollitia? Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Id omnis possimus asperiores amet, ea nostrum aut et ducimus quia
-        neque quisquam excepturi, dignissimos cum, iure saepe facilis qui voluptas mollitia?
-      </Text>
+    <Wrapper marginTop="150px" marginBottom="150px" alignItems="">
+      <Text>We developed a multi-program education system with complete features</Text>
+      <OList>
+        <li>content drip for phases/lessons</li>
+        <li>users / coaches management</li>
+        <li>payment management for users and company</li>
+        <li>video calls meetings management</li>
+        <li>analytics widgets managment</li>
+        <li>news feed</li>
+        <li>extra curriculum assets management</li>
+        <li>Community feature</li>
+        <li>Messaging 1:1</li>
+        <li>Notifications</li>
+        <li>Discounts</li>
+      </OList>
     </Wrapper>
   </PageWrapper>
 )
 
-export default withIntl(Cleanio)
+export default withIntl(ZuraHealth)

@@ -28,7 +28,7 @@ const ProjectImagesRow = styled.div`
 `
 
 const ProjectImage = styled.img`
-  max-width: 200px;
+  width: 150px;
 `
 
 const Cleanio = () => (
@@ -39,12 +39,10 @@ const Cleanio = () => (
         Cleanio
       </Title>
     </ProjectCover>
-    <Wrapper marginTop="150px" alignItems="">
+    <Wrapper marginTop="150px" marginBottom="150px" alignItems="">
       <Text>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id omnis possimus asperiores amet, ea nostrum aut et
-        ducimus quia neque quisquam excepturi, dignissimos cum, iure saepe facilis qui voluptas mollitia? Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Id omnis possimus asperiores amet, ea nostrum aut et ducimus quia
-        neque quisquam excepturi, dignissimos cum, iure saepe facilis qui voluptas mollitia?
+        We developed the whole backend that runs the service, web applications & mobile APIs. Company was sold to
+        Zipnet.
       </Text>
     </Wrapper>
   </PageWrapper>

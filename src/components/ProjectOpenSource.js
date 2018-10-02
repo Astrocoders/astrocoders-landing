@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import StarIcon from 'react-icons/lib/go/star'
+import { GoStar as StarIcon } from 'react-icons/go'
 import Emoji from 'react-emoji-render'
 
 import HGroup from './HGroup'
@@ -102,6 +102,7 @@ class ProjectOpenSource extends React.Component {
           <StarIcon />
           {repo.stars}
           <iframe
+            title="stars"
             src={
               'https://ghbtns.com/github-btn.html?user=astrocoders&repo=' +
               this.props.name +

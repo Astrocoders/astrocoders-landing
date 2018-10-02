@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FormattedMessage } from 'react-intl'
 
 import { withIntl } from '../i18n'
 import PageWrapper from '../components/PageWrapper'

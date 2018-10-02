@@ -3,11 +3,12 @@ import styled from 'styled-components'
 import HGroup from './HGroup'
 import Wrapper from './Wrapper'
 
-import Github from 'react-icons/lib/io/social-github'
-import Instagram from 'react-icons/lib/io/social-instagram-outline'
-import Twitter from 'react-icons/lib/io/social-twitter'
+import { IoLogoGithub as Github } from 'react-icons/io'
+import { IoLogoInstagram as Instagram } from 'react-icons/io'
+import { IoLogoTwitter as Twitter } from 'react-icons/io'
+
 import VGroup from './VGroup'
-import Map from './Map'
+import AstroMap from './AstroMap'
 
 const FooterWrapper = styled.footer`
   justify-content: center;
@@ -174,17 +175,17 @@ const mapProps = {
 
 const Footer = () => (
   <FooterWrapper>
-    <Map id="contactMap" {...mapProps} />
+    <AstroMap id="contactMap" {...mapProps} />
     <Wrapper>
       <HGroup paddingTop="30px" paddingBottom="30px" wrap="wrap">
         <SocialLinks>
-          <a href="https://github.com/Astrocoders" target="_blank">
+          <a href="https://github.com/Astrocoders" target="_blank" rel="noopener noreferrer">
             <Github />
           </a>
-          <a href="https://instagram.com/astrocoders" target="_blank">
+          <a href="https://instagram.com/astrocoders" target="_blank" rel="noopener noreferrer">
             <Instagram />
           </a>
-          <a href="https://instagram.com/astrocoders" target="_blank">
+          <a href="https://instagram.com/astrocoders" target="_blank" rel="noopener noreferrer">
             <Twitter />
           </a>
         </SocialLinks>

@@ -26,7 +26,7 @@ const Link = styled.a`
 
 const Testimonial = ({ name, company, quote, link, photo }) => (
   <TestimonialWrapper>
-    <Avatar src={photo} alt="Astrocoders Testimonials Person" alt={company} />
+    <Avatar src={photo} alt={`Astrocoders Testimonials from ${name}`} />
     <Link href={link} target="_blank">
       <Title Size="1.8rem" fontWeight="300" align="center">
         {company}
@@ -35,7 +35,7 @@ const Testimonial = ({ name, company, quote, link, photo }) => (
     <Title weight="300" size="1.2rem" align="center">
       {name}
     </Title>
-    <Text align="center" weight="300">
+    <Text align="center" weight="300" marginTop="1.4rem">
       {quote}
     </Text>
   </TestimonialWrapper>

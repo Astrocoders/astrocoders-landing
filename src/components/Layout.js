@@ -2,8 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import './Layout.css'
-
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -34,52 +32,32 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <main>
-        <Helmet
-          title={data.title}
-          meta={[
-            { name: 'description', content: data.description },
-            { name: 'keywords', content: data.keywords },
-            { name: 'author', content: data.author },
+        <Helmet>
+          <title>{data.title}</title>
+          <meta name="keywords" content={data.keywords} />
+          <meta name="author" content={data.author} />
 
-            { itemprop: 'name', content: data.nameGoogle },
-            { itemprop: 'description', content: data.descriptionGoogle },
-            { itemprop: 'image', content: data.imageGoogle },
+          <meta name="name" content={data.nameGoogle} />
+          <meta name="description" content={data.descriptionGoogle} />
+          <meta name="image" content={data.imageGoogle} />
 
-            { name: 'twitter:card', content: data.cardTwitter },
-            { name: 'twitter:site', content: data.siteTwitter },
-            { name: 'twitter:creator', content: data.creatorTwitter },
-            { name: 'twitter:title', content: data.titleTwitter },
-            { name: 'twitter:description', content: data.descriptionTwitter },
-            { name: 'twitter:image', content: data.imageTwitter },
+          <meta name="twitter:card" content={data.cardTwitter} />
+          <meta name="twitter:site" content={data.siteTwitter} />
+          <meta name="twitter:creator" content={data.creatorTwitter} />
+          <meta name="twitter:title" content={data.titleTwitter} />
+          <meta name="twitter:description" content={data.descriptionTwitter} />
+          <meta name="twitter:image" content={data.imageTwitter} />
 
-            { property: 'og:title', content: data.titleFacebook },
-            { property: 'og:type', content: data.typeFacebook },
-            { property: 'og:url', content: data.urlFacebook },
-            { property: 'og:description', content: data.descriptionFacebook },
-            { property: 'og:image', content: data.imageFacebook },
-            { property: 'og:site_name', content: data.siteNameFacebook },
-            { property: 'og:app_id', content: data.appIdFacebook },
+          <meta name="og:title" content={data.titleFacebook} />
+          <meta name="og:type" content={data.typeFacebook} />
+          <meta name="og:url" content={data.urlFacebook} />
+          <meta name="og:description" content={data.descriptionFacebook} />
+          <meta name="og:image" content={data.imageFacebook} />
+          <meta name="og:site_name" content={data.siteNameFacebook} />
+          <meta name="og:app_id" content={data.appIdFacebook} />
 
-            {
-              name: 'viewport',
-              content: 'width=device-width, maximum-scale=1',
-            },
-          ]}
-          link={[
-            {
-              href: 'https://fonts.googleapis.com/css?family=Ubuntu:300,400,700',
-              rel: 'stylesheet',
-            },
-            {
-              href: 'https://fonts.googleapis.com/css?family=Open+Sans',
-              rel: 'stylesheet',
-            },
-            {
-              href: 'https://fonts.googleapis.com/css?family=Roboto:300,400',
-              rel: 'stylesheet',
-            },
-          ]}
-        />
+          <meta name="viewport" content="width=device-width, maximum-scale=1" />
+        </Helmet>
         {children}
       </main>
     )}

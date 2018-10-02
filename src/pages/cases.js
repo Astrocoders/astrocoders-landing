@@ -10,11 +10,16 @@ import Case from '../components/Case'
 import cleanioCover from '../img/projects/cleanio.svg'
 import zuraCover from '../img/projects/zura.svg'
 import liontaxCover from '../img/projects/lion-tax.png'
-import lilasCover from '../img/projects/lilas.svg'
 
 const CasesWrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 100px;
-  padding: 50px 0;
+  padding-top: 50px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 `
 
 const CasesPage = () => (
@@ -26,31 +31,19 @@ const CasesPage = () => (
 
       <VGroup>
         <Case
-          cover={cleanioCover}
-          company="Cleanio"
-          link="cleanio"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt mauris et justo sollicitudin consectetur. Donec sit amet facilisis magna. Suspendisse vitae ligula ornare, volutpat neque et, posuere nunc. Etiam semper justo ut sagittis placerat. Integer congue augue vitae purus mollis sollicitudin. Sed quis neque vel turpis luctus rutrum at ac ligula."
-        />
-        <Case
-          cover={lilasCover}
-          bgColor="#8a2371"
-          company="Lilas"
-          link="lilas"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt mauris et justo sollicitudin consectetur. Donec sit amet facilisis magna. Suspendisse vitae ligula ornare, volutpat neque et, posuere nunc. Etiam semper justo ut sagittis placerat. Integer congue augue vitae purus mollis sollicitudin. Sed quis neque vel turpis luctus rutrum at ac ligula."
+          cover={liontaxCover}
+          company="Lion Tax"
+          link="lion-tax"
+          description="Leading the revolution on the Tax sector in Brazil thru smart applications & systems"
         />
         <Case
           cover={zuraCover}
           company="Zura Health"
           bgColor="#70ccac"
           link="zura"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt mauris et justo sollicitudin consectetur. Donec sit amet facilisis magna. Suspendisse vitae ligula ornare, volutpat neque et, posuere nunc. Etiam semper justo ut sagittis placerat. Integer congue augue vitae purus mollis sollicitudin. Sed quis neque vel turpis luctus rutrum at ac ligula."
+          description="Wellbeing education system"
         />
-        <Case
-          cover={liontaxCover}
-          company="Lion Tax"
-          link="lion-tax"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt mauris et justo sollicitudin consectetur. Donec sit amet facilisis magna. Suspendisse vitae ligula ornare, volutpat neque et, posuere nunc. Etiam semper justo ut sagittis placerat. Integer congue augue vitae purus mollis sollicitudin. Sed quis neque vel turpis luctus rutrum at ac ligula."
-        />
+        <Case cover={cleanioCover} company="Cleanio" link="cleanio" description="French laundry delivery system" />
       </VGroup>
     </CasesWrapper>
   </PageWrapper>

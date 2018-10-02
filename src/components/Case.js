@@ -6,7 +6,7 @@ import Text from './Text'
 import Link from './Link'
 import HGroup from './HGroup'
 
-const CaseWrapper = styled(HGroup)`
+const CaseWrapper = styled(Link)`
   align-items: center;
   color: #fff;
   display: flex;
@@ -19,15 +19,6 @@ const CaseWrapper = styled(HGroup)`
 
   @media (min-width: 960px) {
     height: 300px;
-
-    &:nth-child(odd) {
-      flex-direction: row-reverse;
-
-      h2,
-      span {
-        text-align: right;
-      }
-    }
   }
 `
 
@@ -63,21 +54,19 @@ const CaseContent = styled.div`
 `
 
 const Testimonial = ({ bgColor, company, description, link, cover }) => (
-  <CaseWrapper>
-    <PreviewScreen bgColor={bgColor}>
-      <img src={cover} alt={company} alt={company} />
-    </PreviewScreen>
+  <CaseWrapper to={`/case/${link}`}>
     <CaseContent>
-      <Link to={`/case/${link}`}>
-        <Title fontWeight="300" align="left" weight="700" marginTop="30px" marginBottom="30px">
-          {company}
-        </Title>
-      </Link>
+      <Title fontWeight="300" align="left" weight="700" marginTop="30px" marginBottom="30px">
+        {company}
+      </Title>
 
       <Text size="1em" weight="300" marginBottom="30px">
         {description}
       </Text>
     </CaseContent>
+    <PreviewScreen bgColor={bgColor}>
+      <img src={cover} alt={company} />
+    </PreviewScreen>
   </CaseWrapper>
 )
 

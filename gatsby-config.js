@@ -62,5 +62,22 @@ module.exports = {
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: 'Ubuntu',
+          },
+          {
+            family: 'Open Sans',
+          },
+          {
+            family: 'Roboto',
+            variants: ['300', '400'],
+          },
+        ],
+      },
+    },
   ],
 }

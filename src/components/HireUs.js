@@ -52,18 +52,20 @@ function HireUs({ isSending, handleSubmit }) {
       <Wrapper alignItems="flex-end">
         <FormWrapper>
           <form id="hireUsForm" className="validate" onSubmit={handleSubmit}>
-            {!isSending && [
-              <HGroup columnOnMobile={true}>
-                <FormField label="Name" name="name" placeholder="John Doe" required="required" />
-                <FormField label="Email" name="email" placeholder="email@provider.co" required="required" />
-              </HGroup>,
-              <Textarea
-                name="subject"
-                label="Your Message"
-                placeholder="What do you want to build? How much is your budget?"
-                required="required"
-              />,
-            ]}
+            {!isSending && (
+              <div>
+                <HGroup columnOnMobile={true}>
+                  <FormField label="Name" name="name" placeholder="John Doe" required="required" />
+                  <FormField label="Email" name="email" placeholder="email@provider.co" required="required" />
+                </HGroup>
+                <Textarea
+                  name="subject"
+                  label="Your Message"
+                  placeholder="What do you want to build? How much is your budget?"
+                  required="required"
+                />
+              </div>
+            )}
             <Button disabled={isSending} marginLeft="10px" alignSelf="flex-end">
               {isSending ? 'Sent' : 'Send'}
             </Button>
