@@ -1,26 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
-import { compose, withStateHandlers } from 'recompose'
 import ClickOutside from 'react-click-outside'
+import { compose, withStateHandlers } from 'recompose'
+import Headroom from 'react-headroom'
 
-import withNavbar from '../utils/withNavbar'
 import navLogo from '../img/navLogo.svg'
 import Link from './Link'
 
 import theme from '../utils/theme'
-
-const HeaderWrapper = styled.div`
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background-color: #000;
-  display: ${props => props.show || 'block'};
-  transition: 0.35s;
-  padding: 25px 7.5vw;
-  z-index: 5;
-`
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -66,7 +54,7 @@ const MenuDialog = styled.div`
   padding-top: 20px;
   position: fixed;
   right: 0;
-  top: 100px;
+  top: 76px;
   width: 100%;
   z-index: 2;
 `
@@ -98,9 +86,14 @@ const MenuIconClose = () => (
   </svg>
 )
 
-const Navbar = ({ isHome, isShowed, setMenuOpened, isMenuOpened }) => (
+const Navbar = ({ isHome, setMenuOpened, isMenuOpened }) => (
   <ClickOutside onClickOutside={() => setMenuOpened(false)}>
-    <HeaderWrapper show={isHome ? (isShowed ? 'block' : 'none') : '#000'}>
+    <Headroom
+      disable={!isHome}
+      style={{ background: 'rgb(0, 0, 0)' }}
+      onPin={() => console.log('pinned')}
+      onUnpin={() => console.log('unpinned')}
+    >
       <HeaderContainer>
         <Link to="/">
           <Logo src={navLogo} />
@@ -130,7 +123,7 @@ const Navbar = ({ isHome, isShowed, setMenuOpened, isMenuOpened }) => (
           )}
         </MobileMenu>
       </HeaderContainer>
-    </HeaderWrapper>
+    </Headroom>
   </ClickOutside>
 )
 
@@ -141,7 +134,6 @@ Navbar.propTypes = {
 }
 
 export default compose(
-  withNavbar,
   withStateHandlers(
     { isMenuOpened: false },
     {

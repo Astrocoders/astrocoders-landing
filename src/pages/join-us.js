@@ -13,7 +13,6 @@ import TeamMember from '../components/TeamMember'
 import galaxyBg from '../img/galaxy.jpg'
 
 const ContactWrapper = styled.section`
-  margin-top: 100px;
   padding: 50px 0;
 `
 

@@ -14,7 +14,6 @@ import liontaxCover from '../img/projects/lion-tax.png'
 import lilasCover from '../img/projects/lilas.svg'
 
 const CasesWrapper = styled.section`
-  margin-top: 100px;
   padding: 50px 0;
 `
 

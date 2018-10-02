@@ -42,7 +42,7 @@ const DefaultLayout = ({ children }) => (
         { href: 'https://fonts.googleapis.com/css?family=Roboto:300,400', rel: 'stylesheet' },
       ]}
     />
-    {children()}
+    <scroll-container>{children()}</scroll-container>
   </main>
 )
 

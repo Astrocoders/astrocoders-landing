@@ -107,7 +107,7 @@ class ProjectOpenSource extends React.Component {
               this.props.name +
               '&type=star&count=false&size=large'
             }
-            frameborder="0"
+            frameBorder="0"
             scrolling="0"
             width="100%"
             height="30px"

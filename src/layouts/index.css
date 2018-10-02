@@ -625,3 +625,7 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+scroll-container {
+  scroll-behavior: smooth;
+}
