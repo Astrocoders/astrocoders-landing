@@ -7,7 +7,7 @@ import { IoLogoTwitter as Twitter } from 'react-icons/io'
 import HGroup from './HGroup'
 import Wrapper from './Wrapper'
 import VGroup from './VGroup'
-import { AstroMap } from './AstroMap'
+import AstroMap from './AstroMap'
 
 const FooterWrapper = styled.footer`
   justify-content: center;
@@ -52,9 +52,12 @@ const Copyrights = styled(VGroup)`
     width: 100%;
   }
 `
+
 const Footer = () => (
   <FooterWrapper>
-    <AstroMap />
+    <div>
+      <AstroMap />
+    </div>
     <Wrapper>
       <HGroup paddingTop="30px" paddingBottom="30px" wrap="wrap">
         <SocialLinks>

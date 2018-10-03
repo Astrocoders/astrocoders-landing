@@ -1,9 +1,9 @@
-const React = require('react')
-const { Map, Marker, TileLayer } = require('react-leaflet')
-const logo = require('../img/logo.png')
-const leaflet = require('leaflet')
+import React from 'react'
+import { Map, Marker, TileLayer } from 'react-leaflet'
+import leaflet from 'leaflet'
+import logo from '../img/logo.png'
 
-require('leaflet/dist/leaflet.css')
+import 'leaflet/dist/leaflet.css'
 
 const image =
   Object.keys(leaflet).length === 0
@@ -27,6 +27,4 @@ const AstroMap = () =>
     </Map>
   )
 
-module.exports = {
-  AstroMap,
-}
+export default AstroMap
