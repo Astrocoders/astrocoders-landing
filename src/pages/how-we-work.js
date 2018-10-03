@@ -14,7 +14,6 @@ import galaxyBg from '../img/galaxy.jpg'
 import check from '../img/check-circle.svg'
 
 const Content = styled.section`
-  margin-top: 100px;
   padding: 50px 0;
 `
 

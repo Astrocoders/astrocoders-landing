@@ -12,7 +12,6 @@ import TeamMember from '../components/TeamMember'
 import galaxyBg from '../img/galaxy.jpg'
 
 const ContactWrapper = styled.section`
-  margin-top: 100px;
   padding: 50px 0;
 `
 
@@ -47,30 +46,35 @@ const CasesPage = () => (
           <TeamMember
             profilePicture="https://avatars0.githubusercontent.com/u/4806269?s=460&v=4"
             name="Guilherme Decampo"
+            // eslint-disable-next-line
             role="Head of Business Development"
             github="guilhermedecampo"
           />
           <TeamMember
             profilePicture="https://avatars3.githubusercontent.com/u/1283200?s=460&v=4"
             name="Gabriel Rubens"
+            // eslint-disable-next-line
             role="Head of Research and Development"
             github="grsabreu"
           />
           <TeamMember
             profilePicture="https://avatars3.githubusercontent.com/u/16995184?s=460&v=4"
             name="George Lima"
+            // eslint-disable-next-line
             role="Fullstack JavaScript Developer"
             github="georgelima"
           />
           <TeamMember
             profilePicture="https://avatars0.githubusercontent.com/u/17956325?s=400&v=4"
             name="Medson Oliveira"
+            // eslint-disable-next-line
             role="Fullstack JavaScript Developer"
             github="medson10"
           />
           <TeamMember
             profilePicture="https://avatars0.githubusercontent.com/u/8146889?s=460&v=4"
             name="Eliabe Junior"
+            // eslint-disable-next-line
             role="Fullstack JavaScript Developer"
             github="eliabejr"
           />

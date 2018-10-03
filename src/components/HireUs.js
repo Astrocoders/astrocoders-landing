@@ -45,33 +45,35 @@ const FormWrapper = styled.div`
 
 function HireUs({ isSending, handleSubmit }) {
   return (
-    <HireUsWrapper id="hireUs">
-      <Title marginBottom="100px" transform="uppercase" withStripe={true}>
-        <FormattedMessage id="hireUs" />
-      </Title>
-      <Wrapper alignItems="flex-end">
-        <FormWrapper>
-          <form id="hireUsForm" className="validate" onSubmit={handleSubmit}>
-            {!isSending && (
-              <div>
-                <HGroup columnOnMobile={true}>
-                  <FormField label="Name" name="name" placeholder="John Doe" required="required" />
-                  <FormField label="Email" name="email" placeholder="email@provider.co" required="required" />
-                </HGroup>
-                <Textarea
-                  name="subject"
-                  label="Your Message"
-                  placeholder="What do you want to build? How much is your budget?"
-                  required="required"
-                />
-              </div>
-            )}
-            <Button disabled={isSending} marginLeft="10px" alignSelf="flex-end">
-              {isSending ? 'Sent' : 'Send'}
-            </Button>
-          </form>
-        </FormWrapper>
-      </Wrapper>
+    <HireUsWrapper>
+      <scroll-page id="hireUs">
+        <Title align="center" marginBottom="100px" transform="uppercase" withStripe={true}>
+          <FormattedMessage id="hireUs" />
+        </Title>
+        <Wrapper alignItems="flex-end">
+          <FormWrapper>
+            <form id="hireUsForm" className="validate" onSubmit={handleSubmit}>
+              {!isSending && (
+                <div>
+                  <HGroup columnOnMobile={true}>
+                    <FormField label="Name" name="name" placeholder="John Doe" required="required" />
+                    <FormField label="Email" name="email" placeholder="email@provider.co" required="required" />
+                  </HGroup>
+                  <Textarea
+                    name="subject"
+                    label="Your Message"
+                    placeholder="What do you want to build? How much is your budget?"
+                    required="required"
+                  />
+                </div>
+              )}
+              <Button disabled={isSending} marginLeft="10px" alignSelf="flex-end">
+                {isSending ? 'Sent' : 'Send'}
+              </Button>
+            </form>
+          </FormWrapper>
+        </Wrapper>
+      </scroll-page>
     </HireUsWrapper>
   )
 }

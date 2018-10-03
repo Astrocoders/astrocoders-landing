@@ -5,9 +5,9 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import HireUs from './HireUs'
 
-const PageWrapper = ({ children, isHome }) => (
+const PageWrapper = ({ children, isHome, isAfterHero }) => (
   <div>
-    <Navbar isHome={isHome} />
+    <Navbar isHome={isHome} isAfterHero={isAfterHero} />
     {children}
     <HireUs />
     <Footer />

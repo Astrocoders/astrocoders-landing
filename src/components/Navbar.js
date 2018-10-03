@@ -1,30 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { compose, withStateHandlers } from 'recompose'
 import ClickOutside from 'react-click-outside'
+import { compose, withStateHandlers } from 'recompose'
 
-import withNavbar from '../utils/withNavbar'
 import navLogo from '../img/navLogo.svg'
 import Link from './Link'
 
 import theme from '../utils/theme'
 
-const HeaderWrapper = styled.div`
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background-color: #000;
-  display: ${props => props.show || 'block'};
-  transition: 0.35s;
-  padding: 25px 7.5vw;
-  z-index: 5;
-`
-
 const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
 `
 
 const Logo = styled.img`
@@ -65,7 +55,7 @@ const MenuDialog = styled.div`
   padding-top: 20px;
   position: fixed;
   right: 0;
-  top: 100px;
+  top: 76px;
   width: 100%;
   z-index: 2;
 `
@@ -97,40 +87,44 @@ const MenuIconClose = () => (
   </svg>
 )
 
-const Navbar = ({ isHome, isShowed, setMenuOpened, isMenuOpened }) => (
-  <ClickOutside onClickOutside={() => setMenuOpened(false)}>
-    <HeaderWrapper show={isHome ? (isShowed ? 'block' : 'none') : '#000'}>
-      <HeaderContainer>
-        <Link to="/">
-          <Logo src={navLogo} />
-        </Link>
+const ClickOutsideStyled = styled(ClickOutside)`
+  position: ${props => (props.isAfterHero ? 'sticky' : 'initial')};
+  display: ${props => (props.isHome && !props.isAfterHero ? 'none' : 'block')};
+  top: 0;
+  background-color: #000;
+  z-index: 2;
+`
 
-        <HeaderLinkWrapper>
-          <HeaderLink to="/how-we-work">HOW WE WORK</HeaderLink>
-          <HeaderLink to="/open-source">OPEN SOURCE</HeaderLink>
-          <HeaderLink to="/cases">CASES</HeaderLink>
-          <HeaderLink to="/join-us">JOIN US</HeaderLink>
-          <HeaderLink to="/#hireUs">CONTACT</HeaderLink>
-        </HeaderLinkWrapper>
-        <MobileMenu>
-          <HeaderContainer>
-            <MenuTrigger onClick={evt => setMenuOpened()}>
-              {isMenuOpened ? <MenuIconClose /> : <MenuIcon />}
-            </MenuTrigger>
-          </HeaderContainer>
-          {isMenuOpened && (
-            <MenuDialog>
-              <HeaderLink to="/how-we-work">HOW WE WORK</HeaderLink>
-              <HeaderLink to="/open-source">OPEN SOURCE</HeaderLink>
-              <HeaderLink to="/cases">CASES</HeaderLink>
-              <HeaderLink to="/join-us">JOIN US</HeaderLink>
-              <HeaderLink to="/#hireUs">CONTACT</HeaderLink>
-            </MenuDialog>
-          )}
-        </MobileMenu>
-      </HeaderContainer>
-    </HeaderWrapper>
-  </ClickOutside>
+const Navbar = ({ isHome, isAfterHero = false, setMenuOpened, isMenuOpened }) => (
+  <ClickOutsideStyled isHome={isHome} isAfterHero={isAfterHero} onClickOutside={() => setMenuOpened(false)}>
+    <HeaderContainer>
+      <Link to="/">
+        <Logo src={navLogo} />
+      </Link>
+
+      <HeaderLinkWrapper>
+        <HeaderLink to="/how-we-work">HOW WE WORK</HeaderLink>
+        <HeaderLink to="/open-source">OPEN SOURCE</HeaderLink>
+        <HeaderLink to="/cases">CASES</HeaderLink>
+        <HeaderLink to="/join-us">JOIN US</HeaderLink>
+        <HeaderLink to="/#hireUs">CONTACT</HeaderLink>
+      </HeaderLinkWrapper>
+      <MobileMenu>
+        <HeaderContainer>
+          <MenuTrigger onClick={evt => setMenuOpened()}>{isMenuOpened ? <MenuIconClose /> : <MenuIcon />}</MenuTrigger>
+        </HeaderContainer>
+        {isMenuOpened && (
+          <MenuDialog>
+            <HeaderLink to="/how-we-work">HOW WE WORK</HeaderLink>
+            <HeaderLink to="/open-source">OPEN SOURCE</HeaderLink>
+            <HeaderLink to="/cases">CASES</HeaderLink>
+            <HeaderLink to="/join-us">JOIN US</HeaderLink>
+            <HeaderLink to="/#hireUs">CONTACT</HeaderLink>
+          </MenuDialog>
+        )}
+      </MobileMenu>
+    </HeaderContainer>
+  </ClickOutsideStyled>
 )
 
 Navbar.propTypes = {
@@ -140,7 +134,6 @@ Navbar.propTypes = {
 }
 
 export default compose(
-  withNavbar,
   withStateHandlers(
     { isMenuOpened: false },
     {

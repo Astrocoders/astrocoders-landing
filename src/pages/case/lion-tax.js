@@ -20,13 +20,6 @@ const ProjectCover = styled.div`
   width: 100%;
 `
 
-const ProjectImagesRow = styled.div`
-  align-items: flex-start;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-`
-
 const ProjectImage = styled.img`
   width: 150px;
 `

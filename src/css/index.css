@@ -630,3 +630,7 @@ pre tt:after {
   height: 400px;
   width: 100%;
 }
+
+scroll-container {
+  scroll-behavior: smooth;
+}

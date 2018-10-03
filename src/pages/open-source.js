@@ -9,7 +9,6 @@ import VGroup from '../components/VGroup'
 import ProjectOpenSource from '../components/ProjectOpenSource'
 
 const OpenSourceWrapper = styled.section`
-  margin-top: 100px;
   padding: 50px 0;
 `
 

@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Title from './Title'
 import Text from './Text'
 import Link from './Link'
-import HGroup from './HGroup'
 
 const CaseWrapper = styled(Link)`
   align-items: center;

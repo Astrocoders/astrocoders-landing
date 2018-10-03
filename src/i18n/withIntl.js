@@ -13,8 +13,7 @@ export default ComposedComponent => {
 
     constructor(props) {
       super()
-      const { pathContext: pageContext } = props
-      const { locale, languages, originalPath } = pageContext
+      const { locale, languages, originalPath } = props.pageContext
 
       this.state = {
         language: {
