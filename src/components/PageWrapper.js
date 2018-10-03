@@ -1,17 +1,16 @@
-import React from 'react'
-import { injectIntl } from 'react-intl'
+import React, { Fragment } from 'react'
 
 import Navbar from './Navbar'
 import Footer from './Footer'
 import HireUs from './HireUs'
 
 const PageWrapper = ({ children, isHome, isAfterHero }) => (
-  <div>
+  <Fragment>
     <Navbar isHome={isHome} isAfterHero={isAfterHero} />
     {children}
     <HireUs />
     <Footer />
-  </div>
+  </Fragment>
 )
 
-export default injectIntl(PageWrapper)
+export default PageWrapper

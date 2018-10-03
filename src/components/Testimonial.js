@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Title from '../components/Title'
-import Text from '../components/Text'
+import Title from './Title'
+import Text from './Text'
 
 const TestimonialWrapper = styled.div`
   align-items: center;

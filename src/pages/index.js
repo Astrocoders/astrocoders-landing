@@ -1,5 +1,4 @@
 import React from 'react'
-import { withIntl } from '../i18n'
 import { compose, withStateHandlers } from 'recompose'
 import ScrollTrigger from 'react-scroll-trigger'
 
@@ -21,7 +20,6 @@ const IndexPage = ({ isAfterHero, setAfterHero }) => (
 )
 
 export default compose(
-  withIntl,
   withStateHandlers(
     { isAfterHero: false },
     {

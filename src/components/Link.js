@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link } from '../i18n'
+import { Link } from 'gatsby'
 import theme from '../utils/theme'
 
 export default styled(Link)`

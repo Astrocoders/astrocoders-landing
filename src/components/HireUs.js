@@ -3,7 +3,6 @@ import { withState, withProps } from 'recompose'
 import compose from 'recompose/compose'
 import styled from 'styled-components'
 import { stripIndent } from 'common-tags'
-import { FormattedMessage } from 'react-intl'
 
 import Wrapper from './Wrapper'
 import Title from './Title'
@@ -48,7 +47,7 @@ function HireUs({ isSending, handleSubmit }) {
     <HireUsWrapper>
       <scroll-page id="hireUs">
         <Title align="center" marginBottom="100px" transform="uppercase" withStripe={true}>
-          <FormattedMessage id="hireUs" />
+          Hire Us
         </Title>
         <Wrapper alignItems="flex-end">
           <FormWrapper>

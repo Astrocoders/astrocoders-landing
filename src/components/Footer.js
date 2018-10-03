@@ -1,14 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import HGroup from './HGroup'
-import Wrapper from './Wrapper'
-
 import { IoLogoGithub as Github } from 'react-icons/io'
 import { IoLogoInstagram as Instagram } from 'react-icons/io'
 import { IoLogoTwitter as Twitter } from 'react-icons/io'
 
+import HGroup from './HGroup'
+import Wrapper from './Wrapper'
 import VGroup from './VGroup'
-import AstroMap from './AstroMap'
+import { AstroMap } from './AstroMap'
 
 const FooterWrapper = styled.footer`
   justify-content: center;
@@ -53,129 +52,9 @@ const Copyrights = styled(VGroup)`
     width: 100%;
   }
 `
-
-const center = { lat: -23.4989234, lng: -47.4748664 }
-const mapProps = {
-  options: {
-    zoom: 15,
-    center,
-    styles: [
-      {
-        featureType: 'water',
-        elementType: 'geometry',
-        stylers: [
-          {
-            color: '#193341',
-          },
-        ],
-      },
-      {
-        featureType: 'landscape',
-        elementType: 'geometry',
-        stylers: [
-          {
-            color: '#2c5a71',
-          },
-        ],
-      },
-      {
-        featureType: 'road',
-        elementType: 'geometry',
-        stylers: [
-          {
-            color: '#29768a',
-          },
-          {
-            lightness: -37,
-          },
-        ],
-      },
-      {
-        featureType: 'poi',
-        elementType: 'geometry',
-        stylers: [
-          {
-            color: '#406d80',
-          },
-        ],
-      },
-      {
-        featureType: 'transit',
-        elementType: 'geometry',
-        stylers: [
-          {
-            color: '#406d80',
-          },
-        ],
-      },
-      {
-        elementType: 'labels.text.stroke',
-        stylers: [
-          {
-            visibility: 'on',
-          },
-          {
-            color: '#3e606f',
-          },
-          {
-            weight: 2,
-          },
-          {
-            gamma: 0.84,
-          },
-        ],
-      },
-      {
-        elementType: 'labels.text.fill',
-        stylers: [
-          {
-            color: '#ffffff',
-          },
-        ],
-      },
-      {
-        featureType: 'administrative',
-        elementType: 'geometry',
-        stylers: [
-          {
-            weight: 0.6,
-          },
-          {
-            color: '#1a3541',
-          },
-        ],
-      },
-      {
-        elementType: 'labels.icon',
-        stylers: [
-          {
-            visibility: 'off',
-          },
-        ],
-      },
-      {
-        featureType: 'poi.park',
-        elementType: 'geometry',
-        stylers: [
-          {
-            color: '#2c5a71',
-          },
-        ],
-      },
-    ],
-  },
-  onMount: map => {
-    new window.google.maps.Marker({
-      position: center,
-      map,
-      title: 'Astro Base',
-    })
-  },
-}
-
 const Footer = () => (
   <FooterWrapper>
-    <AstroMap id="contactMap" {...mapProps} />
+    <AstroMap />
     <Wrapper>
       <HGroup paddingTop="30px" paddingBottom="30px" wrap="wrap">
         <SocialLinks>

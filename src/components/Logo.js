@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FormattedMessage } from 'react-intl'
 
 import HGroup from './HGroup'
 import VGroup from './VGroup'
@@ -63,9 +62,7 @@ const Logo = () => (
     <Image src={logoImg} alt="Astrocoders Logo" />
     <TitleWrapper>
       <Title>Astrocoders</Title>
-      <Subtitle>
-        <FormattedMessage id="subtitle" />
-      </Subtitle>
+      <Subtitle>Go Beyond</Subtitle>
     </TitleWrapper>
   </LogoWrapper>
 )

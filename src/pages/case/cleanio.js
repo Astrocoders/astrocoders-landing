@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { withIntl } from '../../i18n'
 
 import PageWrapper from '../../components/PageWrapper'
 import Title from '../../components/Title'
@@ -41,4 +40,4 @@ const Cleanio = () => (
   </PageWrapper>
 )
 
-export default withIntl(Cleanio)
+export default Cleanio

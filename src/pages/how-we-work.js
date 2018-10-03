@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { withIntl } from '../i18n'
 import PageWrapper from '../components/PageWrapper'
 import Title from '../components/Title'
 import Wrapper from '../components/Wrapper'
@@ -205,4 +204,4 @@ const HowWeWork = () => (
   </PageWrapper>
 )
 
-export default withIntl(HowWeWork)
+export default HowWeWork

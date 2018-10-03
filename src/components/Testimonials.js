@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FormattedMessage } from 'react-intl'
 
 import Title from './Title'
 import Wrapper from './Wrapper'
@@ -28,7 +27,7 @@ const Testimonials = () => (
   <TestimonialsWrapper>
     <Wrapper alignItems="center">
       <Title align="center" transform="uppercase" marginBottom="50px" withStripe={true}>
-        <FormattedMessage id="testimonialsTitle" />
+        WHAT OUR CUSTOMERS SAY ABOUT US
       </Title>
       <TestimonialsList>
         <Testimonial

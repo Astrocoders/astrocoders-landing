@@ -1,11 +1,11 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query Layout {
+      {
         site {
           siteMetadata {
             description

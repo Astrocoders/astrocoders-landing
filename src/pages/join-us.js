@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { withIntl } from '../i18n'
 import PageWrapper from '../components/PageWrapper'
 import Title from '../components/Title'
 import Text from '../components/Text'
@@ -84,4 +83,4 @@ const CasesPage = () => (
   </PageWrapper>
 )
 
-export default withIntl(CasesPage)
+export default CasesPage
