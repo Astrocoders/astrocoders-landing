@@ -28,7 +28,7 @@ const AboutUs = () => (
         avoiding rework. <br />
         If programming is to use languages, we use a precise, straightforward vocabulary without flourishes, that solves
         problems and accepts challenges. <br />
-        If you program create <em>new worlds</em>, that they are - at least - from <em>another dimension</em>.
+        If programming creates <em>new worlds</em>, so they must be - at least - from <em>another dimension</em>.
       </Text>
     </Wrapper>
   </AboutUsWrapper>
