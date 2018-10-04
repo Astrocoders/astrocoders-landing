@@ -8,6 +8,7 @@ const Layout = ({ children }) => (
       query Layout {
         site {
           siteMetadata {
+            title
             description
             keywords
             author
