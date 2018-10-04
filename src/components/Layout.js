@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      {
+      query Layout {
         site {
           siteMetadata {
             description
@@ -30,7 +30,7 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={({ site: { siteMetadata: data } }) => (
       <main>
         <Helmet>
           <title>{data.title}</title>
