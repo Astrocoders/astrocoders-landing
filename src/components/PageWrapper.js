@@ -1,16 +1,17 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
+import Layout from './Layout'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import HireUs from './HireUs'
 
 const PageWrapper = ({ children, isHome, isAfterHero }) => (
-  <Fragment>
+  <Layout>
     <Navbar isHome={isHome} isAfterHero={isAfterHero} />
     {children}
     <HireUs />
     <Footer />
-  </Fragment>
+  </Layout>
 )
 
 export default PageWrapper
