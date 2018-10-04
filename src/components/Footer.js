@@ -67,7 +67,7 @@ const Footer = () => (
           <a href="https://instagram.com/astrocoders" target="_blank" rel="noopener noreferrer">
             <Instagram />
           </a>
-          <a href="https://instagram.com/astrocoders" target="_blank" rel="noopener noreferrer">
+          <a href="https://twitter.com/_astrocoders" target="_blank" rel="noopener noreferrer">
             <Twitter />
           </a>
         </SocialLinks>
