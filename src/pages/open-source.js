@@ -19,10 +19,11 @@ const OpenSourcePage = () => (
           Open Source Projects
         </Title>
         <VGroup>
+          <ProjectOpenSource name="epitath" />
           <ProjectOpenSource name="reform" />
           <ProjectOpenSource name="nubank-api" />
-          <ProjectOpenSource name="epitath" />
           <ProjectOpenSource name="react-image-smooth-loading" />
+          <ProjectOpenSource name="restyled" />
           <ProjectOpenSource name="bs-reason-apollo" />
         </VGroup>
       </Wrapper>
