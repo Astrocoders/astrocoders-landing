@@ -17,9 +17,14 @@ const image =
 
 const position = [-23.49916, -47.472592]
 
+const options = {
+  dragging: false,
+  tap: false,
+}
+
 const AstroMap = () =>
   typeof window === 'undefined' ? null : (
-    <Map center={position} zoom={16} scrollWheelZoom={false}>
+    <Map center={position} zoom={16} scrollWheelZoom={false} options={options}>
       <TileLayer
         url={`https://api.mapbox.com/styles/v1/guilhermedecampo/cjms7c17419142smo2l4qddjv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ3VpbGhlcm1lZGVjYW1wbyIsImEiOiJjajIybzg5Y2MwMGxwMndvNzAydmkwZjR4In0.eefxu8F9Ay7LT3h_ypYz6w`}
       />
