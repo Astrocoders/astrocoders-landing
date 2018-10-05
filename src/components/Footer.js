@@ -75,7 +75,7 @@ const Footer = () => (
             <Medium />
           </a>
         </SocialLinks>
-        <Copyrights>Copyright 2018 © Astrocoders Desenvolvimento LTDA</Copyrights>
+        <Copyrights>Copyright {new Date().getFullYear()} © Astrocoders</Copyrights>
       </HGroup>
     </Wrapper>
   </FooterWrapper>
