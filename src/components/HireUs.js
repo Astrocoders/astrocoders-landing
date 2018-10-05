@@ -45,8 +45,8 @@ const FormWrapper = styled.div`
 
 function HireUs({ isSending, handleSubmit }) {
   return (
-    <HireUsWrapper>
-      <scroll-page id="hireUs">
+    <scroll-page id="hireUs">
+      <HireUsWrapper>
         <Title align="center" marginBottom="100px" transform="uppercase" withStripe={true}>
           Hire Us
         </Title>
@@ -73,8 +73,8 @@ function HireUs({ isSending, handleSubmit }) {
             </form>
           </FormWrapper>
         </Wrapper>
-      </scroll-page>
-    </HireUsWrapper>
+      </HireUsWrapper>
+    </scroll-page>
   )
 }
 
