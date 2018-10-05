@@ -14,7 +14,6 @@ const ProjectCover = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 126px;
   padding: 80px 0;
   width: 100%;
 `
