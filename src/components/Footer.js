@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { IoLogoGithub as Github } from 'react-icons/io'
 import { IoLogoInstagram as Instagram } from 'react-icons/io'
 import { IoLogoTwitter as Twitter } from 'react-icons/io'
+import { FaMedium as Medium } from 'react-icons/fa'
 
 import HGroup from './HGroup'
 import Wrapper from './Wrapper'
@@ -69,6 +70,9 @@ const Footer = () => (
           </a>
           <a href="https://twitter.com/_astrocoders" target="_blank" rel="noopener noreferrer">
             <Twitter />
+          </a>
+          <a href="https://medium.com/astrocoders" target="_blank" rel="noopener noreferrer">
+            <Medium />
           </a>
         </SocialLinks>
         <Copyrights>Copyright 2018 © Astrocoders Desenvolvimento LTDA</Copyrights>
