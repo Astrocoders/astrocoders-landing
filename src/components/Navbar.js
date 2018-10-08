@@ -92,7 +92,7 @@ const ClickOutsideStyled = styled(ClickOutside)`
   display: ${props => (props.isHome && !props.isAfterHero ? 'none' : 'block')};
   top: 0;
   background-color: #000;
-  z-index: 2;
+  z-index: 99999;
 `
 
 const Navbar = ({ isHome, isAfterHero = false, setMenuOpened, isMenuOpened }) => (

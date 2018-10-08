@@ -27,13 +27,19 @@
     "styled-components": "^3.4.9"
   },
   "scripts": {
-    "start": "rm -rf public && rm -rf .cache && yarn dev",
+    "start": "npm run clean && yarn dev",
     "build": "gatsby build",
+    "clean": "rm -rf public && rm -rf .cache && rm -rf .docz",
     "dev": "gatsby develop --open",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
     "lint:staged": "lint-staged"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.8.0",
+    "docz": "^0.12.5",
+    "docz-plugin-css": "^0.11.0",
+    "docz-plugin-netlify": "^1.1.4",
     "lint-staged": "^7.3.0",
     "patch-package": "^5.1.1",
     "pre-commit": "^1.2.2",

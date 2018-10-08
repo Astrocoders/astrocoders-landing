@@ -1,0 +1,24 @@
+---
+name: TeamMember
+menu: Components
+route: /teammember
+---
+
+import { Playground, PropsTable } from 'docz'
+import TeamMember from '../components/TeamMember'
+
+# TeamMember
+
+<PropsTable of={TeamMember} />
+
+## Basic usage
+
+<Playground>
+  <TeamMember
+    color="#000"
+    profilePicture="https://avatars0.githubusercontent.com/u/4806269?s=460&v=4"
+    name="Guilherme Decampo"
+    role="Head of Business Development"
+    github="guilhermedecampo"
+  />
+</Playground>
