@@ -1,11 +1,28 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby'
+import { Link as L } from 'gatsby'
+import PropTypes from 'prop-types'
 import theme from '../utils/theme'
 
-export default styled(Link)`
-  color: ${props => props.color || theme.colors.primary};
+const Link = styled(L)`
+  color: ${props => props.color};
   cursor: pointer;
-  font-weight: ${props => props.fontWeight || '400'};
   font-family: ${props => props.fontFamily || theme.fonts.text};
+  font-weight: ${props => props.fontWeight || '400'};
   text-decoration: none;
 `
+
+Link.propTypes = {
+  color: PropTypes.string,
+  fontFamily: PropTypes.string,
+  fontWeight: PropTypes.string,
+  to: PropTypes.string.isRequired,
+}
+
+Link.defaultProps = {
+  color: theme.colors.primary,
+  fontFamily: theme.fonts.text,
+  fontWeight: '400',
+  to: '',
+}
+
+export default Link

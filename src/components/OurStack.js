@@ -26,7 +26,15 @@ const OurStackWrapper = styled.section`
   }
 `
 
-const StackLogo = styled.img`
+const StackLogo = styled.div`
+  display: flex;
+  @media (max-width: 960px) {
+    flex: 0 0 20%;
+    margin-bottom: 20px;
+  }
+`
+
+const StackLogoImg = styled.img`
   filter: grayscale(100%);
   transition: all 0.4s;
 
@@ -36,22 +44,43 @@ const StackLogo = styled.img`
 
   @media (max-width: 960px) {
     padding-left: 10px;
+    height: 57px;
   }
 `
 
 const OurStack = () => (
   <OurStackWrapper id="ourStack">
     <Wrapper alignItems="center" direction="row" justifyContent="space-between" wrap="wrap">
-      <StackLogo src={ocamlLogo} alt="OCaml" title="OCaml" />
-      <StackLogo src={reasonLogo} alt="ReasonML" title="ReasonML" />
-      <StackLogo src={jsLogo} alt="JavaScript" title="JavaScript" />
-      <StackLogo src={graphqlLogo} alt="GraphQL" title="GraphQL" />
-      <StackLogo src={apolloLogo} alt="Apollo" title="Apollo" />
-      <StackLogo src={rnLogo} alt="React Native" title="React Native" />
-      <StackLogo src={styledLogo} alt="Styled Components" title="Styled Components" />
-      <StackLogo src={webpackLogo} alt="Webpack" title="Webpack" />
-      <StackLogo src={mongoLogo} alt="MongoDB" title="MongoDB" />
-      <StackLogo src={meteorLogo} alt="Meteor" title="Meteor" />
+      <StackLogo>
+        <StackLogoImg src={ocamlLogo} alt="OCaml" title="OCaml" />
+      </StackLogo>
+      <StackLogo>
+        <StackLogoImg src={reasonLogo} alt="ReasonML" title="ReasonML" />
+      </StackLogo>
+      <StackLogo>
+        <StackLogoImg src={jsLogo} alt="JavaScript" title="JavaScript" />
+      </StackLogo>
+      <StackLogo>
+        <StackLogoImg src={graphqlLogo} alt="GraphQL" title="GraphQL" />
+      </StackLogo>
+      <StackLogo>
+        <StackLogoImg src={apolloLogo} alt="Apollo" title="Apollo" />
+      </StackLogo>
+      <StackLogo>
+        <StackLogoImg src={rnLogo} alt="React Native" title="React Native" />
+      </StackLogo>
+      <StackLogo>
+        <StackLogoImg src={styledLogo} alt="Styled Components" title="Styled Components" />
+      </StackLogo>
+      <StackLogo>
+        <StackLogoImg src={webpackLogo} alt="Webpack" title="Webpack" />
+      </StackLogo>
+      <StackLogo>
+        <StackLogoImg src={mongoLogo} alt="MongoDB" title="MongoDB" />
+      </StackLogo>
+      <StackLogo>
+        <StackLogoImg src={meteorLogo} alt="Meteor" title="Meteor" />
+      </StackLogo>
     </Wrapper>
   </OurStackWrapper>
 )

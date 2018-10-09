@@ -9,19 +9,19 @@ import Link from './Link'
 
 import theme from '../utils/theme'
 
-const HeaderContainer = styled.div`
+const NavbarContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 `
 
 const Logo = styled.img`
   margin: 0;
 `
 
-const HeaderLinkWrapper = styled.div`
+const NavbarLinkWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,7 +29,7 @@ const HeaderLinkWrapper = styled.div`
     display: none;
   }
 `
-const HeaderLink = styled(Link)`
+const NavbarLink = styled(Link)`
   font-size: ${props => props.fontSize || '1rem'};
   text-decoration: none;
   margin: 10px;
@@ -55,7 +55,7 @@ const MenuDialog = styled.div`
   padding-top: 20px;
   position: fixed;
   right: 0;
-  top: 76px;
+  top: 68px;
   width: 100%;
   z-index: 2;
 `
@@ -92,38 +92,38 @@ const ClickOutsideStyled = styled(ClickOutside)`
   display: ${props => (props.isHome && !props.isAfterHero ? 'none' : 'block')};
   top: 0;
   background-color: #000;
-  z-index: 2;
+  z-index: 99999;
 `
 
 const Navbar = ({ isHome, isAfterHero = false, setMenuOpened, isMenuOpened }) => (
   <ClickOutsideStyled isHome={isHome} isAfterHero={isAfterHero} onClickOutside={() => setMenuOpened(false)}>
-    <HeaderContainer>
+    <NavbarContainer>
       <Link to="/">
         <Logo src={navLogo} />
       </Link>
 
-      <HeaderLinkWrapper>
-        <HeaderLink to="/how-we-work">HOW WE WORK</HeaderLink>
-        <HeaderLink to="/open-source">OPEN SOURCE</HeaderLink>
-        <HeaderLink to="/cases">CASES</HeaderLink>
-        <HeaderLink to="/join-us">JOIN US</HeaderLink>
-        <HeaderLink to="/#hireUs">CONTACT</HeaderLink>
-      </HeaderLinkWrapper>
+      <NavbarLinkWrapper>
+        <NavbarLink to="/how-we-work">HOW WE WORK</NavbarLink>
+        <NavbarLink to="/open-source">OPEN SOURCE</NavbarLink>
+        <NavbarLink to="/cases">CASES</NavbarLink>
+        <NavbarLink to="/join-us">JOIN US</NavbarLink>
+        <NavbarLink to="/#hireUs">CONTACT</NavbarLink>
+      </NavbarLinkWrapper>
       <MobileMenu>
-        <HeaderContainer>
+        <NavbarContainer>
           <MenuTrigger onClick={evt => setMenuOpened()}>{isMenuOpened ? <MenuIconClose /> : <MenuIcon />}</MenuTrigger>
-        </HeaderContainer>
+        </NavbarContainer>
         {isMenuOpened && (
           <MenuDialog>
-            <HeaderLink to="/how-we-work">HOW WE WORK</HeaderLink>
-            <HeaderLink to="/open-source">OPEN SOURCE</HeaderLink>
-            <HeaderLink to="/cases">CASES</HeaderLink>
-            <HeaderLink to="/join-us">JOIN US</HeaderLink>
-            <HeaderLink to="/#hireUs">CONTACT</HeaderLink>
+            <NavbarLink to="/how-we-work">HOW WE WORK</NavbarLink>
+            <NavbarLink to="/open-source">OPEN SOURCE</NavbarLink>
+            <NavbarLink to="/cases">CASES</NavbarLink>
+            <NavbarLink to="/join-us">JOIN US</NavbarLink>
+            <NavbarLink to="/#hireUs">CONTACT</NavbarLink>
           </MenuDialog>
         )}
       </MobileMenu>
-    </HeaderContainer>
+    </NavbarContainer>
   </ClickOutsideStyled>
 )
 

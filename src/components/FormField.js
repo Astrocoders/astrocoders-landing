@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import theme from '../utils/theme'
@@ -57,5 +58,31 @@ const FormField = ({
     {!helperText ? null : <HelperText>{helperText}</HelperText>}
   </FieldWrapper>
 )
+
+FormField.defaultProps = {
+  name: '',
+  type: 'text',
+  label: '',
+  placeholder: '',
+  required: '',
+  helperText: '',
+  marginBottom: 0,
+  marginLeft: 0,
+  marginRight: 0,
+  marginTop: 0,
+}
+
+FormField.propTypes = {
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  placeholder: PropTypes.string,
+  required: PropTypes.string.isRequired,
+  helperText: PropTypes.string,
+  marginBottom: PropTypes.string,
+  marginLeft: PropTypes.string,
+  marginRight: PropTypes.string,
+  marginTop: PropTypes.string,
+}
 
 export default FormField

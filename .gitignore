@@ -6,4 +6,5 @@ yarn-error.log
 # Build directory
 /public
 /build
+.docz
 .DS_Store

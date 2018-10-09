@@ -11,20 +11,20 @@ import zuraCover from '../img/projects/zura.svg'
 import liontaxCover from '../img/projects/lion-tax.png'
 
 const CasesWrapper = styled.section`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
-  padding-top: 50px;
-  max-width: 1200px;
+  margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1200px;
+  padding-top: 50px;
 `
 
 const CasesPage = () => (
   <PageWrapper isHome={false}>
     <CasesWrapper>
-      <Title align="center" marginBottom="100px">
+      <Title align="center" marginBottom="100px" withStripe={true}>
         Our Cases
       </Title>
 

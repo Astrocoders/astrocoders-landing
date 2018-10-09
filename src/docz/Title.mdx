@@ -1,0 +1,28 @@
+---
+name: Title
+menu: Components
+route: /title
+---
+
+import { Playground, PropsTable } from 'docz'
+import Title from '../components/Title'
+
+# Title
+
+<PropsTable of={Title} />
+
+## Basic usage
+
+<Playground>
+  <Title color="#000">
+    Lorem Ipsum!
+  </Title>
+</Playground>
+
+## With stripe
+
+<Playground>
+  <Title color="#000" withStripe={true}>
+    Lorem Ipsum!
+  </Title>
+</Playground>

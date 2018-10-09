@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { GoStar as StarIcon } from 'react-icons/go'
 import Emoji from 'react-emoji-render'
 
@@ -24,6 +25,7 @@ const ProjectWrapper = styled(HGroup)`
   }
 `
 const ProjectNumber = styled.h3`
+  color: ${props => props.color};
   font-size: 2rem;
   width: 30%;
 
@@ -60,6 +62,8 @@ const Link = styled.a`
 `
 
 const ProjectDescription = styled(Text)`
+  color: ${props => props.color};
+
   @media (min-width: 960px) {
     width: 100%;
   }
@@ -98,7 +102,7 @@ class ProjectOpenSource extends React.Component {
 
     return (
       <ProjectWrapper>
-        <ProjectNumber>
+        <ProjectNumber color={this.props.color}>
           <StarIcon />
           {repo.stars}
           <iframe
@@ -119,12 +123,22 @@ class ProjectOpenSource extends React.Component {
             {this.props.name}
           </Link>
         </ProjectTitle>
-        <ProjectDescription>
+        <ProjectDescription color={this.props.color}>
           <Emoji text={repo.description} />
         </ProjectDescription>
       </ProjectWrapper>
     )
   }
+}
+
+ProjectOpenSource.defaultProps = {
+  color: '#fff',
+  repoUrl: '',
+}
+
+ProjectOpenSource.propTypes = {
+  color: PropTypes.string,
+  repoUrl: PropTypes.string.isRequired,
 }
 
 export default ProjectOpenSource
