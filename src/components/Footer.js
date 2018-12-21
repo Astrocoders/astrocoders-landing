@@ -41,11 +41,7 @@ const Copyrights = styled(VGroup)`
   align-items: center;
   justify-content: center;
   width: calc(80% - 200px);
-
-  img {
-    margin-top: 20px;
-    width: 24px;
-  }
+  margin-left: 10px;
 
   @media (max-width: 960px) {
     margin-top: 30px;
