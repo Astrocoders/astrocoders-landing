@@ -75,7 +75,7 @@ const Footer = () => (
             <Medium />
           </a>
         </SocialLinks>
-        <Copyrights>Copyright {new Date().getFullYear()} © Astrocoders</Copyrights>
+        <Copyrights>Copyright {new Date().getFullYear()} © Astrocoders Desenvolvimento LTDA. CNPJ 24.896.711/0001-54. Avenida Afonso Vergueiro, 2250, Sala 2, Sorocaba, São Paulo.</Copyrights>
       </HGroup>
     </Wrapper>
   </FooterWrapper>
