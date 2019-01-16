@@ -1,8 +1,9 @@
 {
   "name": "astro-site",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "browser-lang": "0.0.1",
     "common-tags": "^1.8.0",
     "gatsby": "^2.0.15",
@@ -11,7 +12,7 @@
     "gatsby-plugin-manifest": "^2.0.4",
     "gatsby-plugin-nprogress": "^2.0.5",
     "gatsby-plugin-offline": "^2.0.5",
-    "gatsby-plugin-prefetch-google-fonts": "^1.0.11",
+    "gatsby-plugin-prefetch-google-fonts": "^1.1.1",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-styled-components": "^3.0.0",
     "leaflet": "^1.3.4",
@@ -27,29 +28,47 @@
     "styled-components": "^3.4.9"
   },
   "scripts": {
-    "start": "npm run clean && yarn dev",
+    "start": "yarn clean && yarn dev",
     "build": "gatsby build",
-    "clean": "rm -rf public && rm -rf .cache && rm -rf .docz",
+    "clean": "rm -rf public && rm -rf build && rm -rf .cache && rm -rf .docz",
     "dev": "gatsby develop --open",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "test": "jest --no-cache"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "@babel/preset-react": "^7.0.0-beta.54",
+    "babel-core": "^7.0.0-0",
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "^23.4.0",
     "babel-plugin-styled-components": "^1.8.0",
     "docz": "^0.12.5",
     "docz-plugin-css": "^0.11.0",
     "docz-plugin-netlify": "^1.1.4",
     "lint-staged": "^7.3.0",
+    "jest": "^23.4.0",
+    "jest-cli": "^23.4.0",
+    "jest-dom": "^1.12.1",
+    "jest-fetch-mock": "^1.6.6",
+    "jest-localstorage-mock": "^2.2.0",
     "patch-package": "^5.1.1",
     "pre-commit": "^1.2.2",
-    "prettier": "^1.14.3"
+    "prettier": "^1.14.3",
+    "react-testing-library": "^5.1.0"
   },
   "pre-commit": "lint:staged",
   "lint-staged": {
     "*.{js,json}": [
       "prettier --write --single-quote true --trailing-comma all --print-width 120 --semi false",
       "git add"
+    ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(gatsby)/)"
     ]
   },
   "repository": {
