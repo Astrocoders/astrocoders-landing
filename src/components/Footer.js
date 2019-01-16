@@ -41,11 +41,7 @@ const Copyrights = styled(VGroup)`
   align-items: center;
   justify-content: center;
   width: calc(80% - 200px);
-
-  img {
-    margin-top: 20px;
-    width: 24px;
-  }
+  margin-left: 10px;
 
   @media (max-width: 960px) {
     margin-top: 30px;
@@ -75,7 +71,7 @@ const Footer = () => (
             <Medium />
           </a>
         </SocialLinks>
-        <Copyrights>Copyright {new Date().getFullYear()} © Astrocoders</Copyrights>
+        <Copyrights>Copyright {new Date().getFullYear()} © Astrocoders Desenvolvimento LTDA. CNPJ 24.896.711/0001-54. Avenida Afonso Vergueiro, 2250, Sala 2, Sorocaba, São Paulo.</Copyrights>
       </HGroup>
     </Wrapper>
   </FooterWrapper>
