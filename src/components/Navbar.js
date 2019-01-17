@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import ClickOutside from 'react-click-outside'
 import { compose, withStateHandlers } from 'recompose'
 
-import navLogo from '../img/navLogo.svg'
+import navLogo from '../img/navLogo.png'
 import Link from './Link'
 
 import theme from '../utils/theme'
