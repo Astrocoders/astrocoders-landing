@@ -3,11 +3,11 @@ import styled from 'styled-components'
 
 import PageWrapper from '../components/PageWrapper'
 import Title from '../components/Title'
-import VGroup from '../components/VGroup'
+import HGroup from '../components/HGroup'
 import Case from '../components/Case'
 
-import cleanioCover from '../img/projects/cleanio.svg'
-import zuraCover from '../img/projects/zura.svg'
+import cleanioCover from '../img/projects/cleanio.png'
+import zuraCover from '../img/projects/zura.png'
 import liontaxCover from '../img/projects/lion-tax.png'
 
 const CasesWrapper = styled.section`
@@ -21,6 +21,8 @@ const CasesWrapper = styled.section`
   padding-top: 50px;
 `
 
+const CasesGrid = styled(HGroup)``
+
 const CasesPage = () => (
   <PageWrapper isHome={false}>
     <CasesWrapper>
@@ -28,7 +30,7 @@ const CasesPage = () => (
         Our Cases
       </Title>
 
-      <VGroup>
+      <CasesGrid>
         <Case
           cover={liontaxCover}
           company="Lion Tax"
@@ -43,7 +45,7 @@ const CasesPage = () => (
           description="Wellbeing education system"
         />
         <Case cover={cleanioCover} company="Cleanio" link="cleanio" description="French laundry delivery system" />
-      </VGroup>
+      </CasesGrid>
     </CasesWrapper>
   </PageWrapper>
 )

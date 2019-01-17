@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import CaseLayout from '../../components/CaseLayout'
 import Text from '../../components/Text'
 
-import zuraCover from '../../img/projects/zura.svg'
+import zuraCover from '../../img/projects/zura.png'
 
 const OList = styled.ol`
   font-family: Roboto;
