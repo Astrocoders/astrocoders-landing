@@ -11,5 +11,5 @@ export default styled.div`
   margin-right: auto;
   margin-top: ${props => props.marginTop || 0};
   max-width: 1200px;
-  width: 85vw;
+  width: 83vw;
 `
