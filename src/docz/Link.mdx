@@ -1,0 +1,30 @@
+---
+name: Link
+menu: Components
+route: /link
+---
+
+import { Playground, PropsTable } from 'docz'
+import Link from '../components/Link'
+
+# Link
+
+<PropsTable of={Link} />
+
+## Basic usage
+
+<Playground>
+  <Link to="/">Simple Link</Link>
+</Playground>
+
+## Bold
+
+<Playground>
+  <Link fontWeight="900" to="/">Bold Link</Link>
+</Playground>
+
+## Another color
+
+<Playground>
+  <Link color="#f00" to="/">Color Link</Link>
+</Playground>

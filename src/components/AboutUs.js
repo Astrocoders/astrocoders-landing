@@ -13,7 +13,7 @@ const AboutUsWrapper = styled.section`
 `
 
 const AboutUs = () => (
-  <AboutUsWrapper>
+  <AboutUsWrapper data-testid="AboutUsSection">
     <Wrapper alignItems="center">
       <Title align="center" transform="uppercase" marginBottom="100px" withStripe={true}>
         WHO WE ARE
