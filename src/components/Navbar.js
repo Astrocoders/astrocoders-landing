@@ -19,6 +19,7 @@ const NavbarContainer = styled.div`
 
 const Logo = styled.img`
   margin: 0;
+  max-width: 250px;
 `
 
 const NavbarLinkWrapper = styled.div`
