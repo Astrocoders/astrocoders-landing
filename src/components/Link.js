@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link as L } from 'gatsby'
+import { Link as L } from '@reach/router'
 import PropTypes from 'prop-types'
 import theme from '../utils/theme'
 
