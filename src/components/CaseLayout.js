@@ -71,7 +71,7 @@ const CaseLayout = ({ color, logo, title, content }) => (
           <span>continue</span>
           <span>improve</span>
         </TextLoop>
-        your business? Get in touch in the below!
+        your business? Contact us!
       </CTA>
     </ProjectContent>
   </PageWrapper>
