@@ -15,10 +15,9 @@ const OList = styled.ol`
 
 const ZuraHealth = () => (
   <CaseLayout
-    bgColor="#70ccac"
-    cover={zuraCover}
+    color="#70ccac"
+    logo={zuraCover}
     title="Zura Health"
-    titleColor="#fff"
     content={
       <>
         <Text>We developed a multi-program education system with complete features</Text>

@@ -7,7 +7,8 @@ import cleanioCover from '../../img/projects/cleanio.png'
 
 const Cleanio = () => (
   <CaseLayout
-    cover={cleanioCover}
+    logo={cleanioCover}
+    color="#294A70"
     title="Cleanio"
     content={
       <Text>

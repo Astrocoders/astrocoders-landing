@@ -1,13 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { navigate } from '@reach/router'
 
-import Title from './Title'
-import Text from './Text'
+import theme from '../utils/theme'
 
 const CaseCover = styled.div`
   align-items: center;
-  background-color: ${props => props.bgColor || '#fff'};
+  background-color: ${props => props.color || '#fff'};
   border-radius: 5px;
   cursor: pointer;
   display: flex;
@@ -15,14 +15,7 @@ const CaseCover = styled.div`
   overflow: hidden;
   margin: 10px;
   width: 100%;
-
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
-
-  @media (min-width: 960px) {
-    height: 300px;
-  }
+  height: 300px;
 `
 
 const Image = styled.img`
@@ -31,22 +24,22 @@ const Image = styled.img`
   width: 160px;
 `
 
-const CaseContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding-right: 60px;
-  padding-left: 60px;
-  @media (min-width: 960px) {
-    width: 50%;
-  }
-`
-
-const Case = ({ bgColor, company, description, link, cover }) => (
-  <>
-    <CaseCover onClick={() => navigate(`/case/${link}`)} bgColor={bgColor}>
-      <Image src={cover} alt={company} />
-    </CaseCover>
-  </>
+const Case = ({ color, company, link, cover }) => (
+  <CaseCover onClick={() => navigate(`/case/${link}`)} color={color}>
+    <Image src={cover} alt={company} />
+  </CaseCover>
 )
+
+Case.propTypes = {
+  color: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired,
+  company: PropTypes.string,
+  link: PropTypes.string.isRequired,
+}
+
+Case.defaultProps = {
+  color: theme.colors.primary,
+  company: 'Astrocoders Project',
+}
 
 export default Case
