@@ -27,8 +27,6 @@ const HireUsWrapper = styled.section`
   justify-content: center;
   margin-top: 100px;
   min-height: 700px;
-  padding-left: 7.5vw;
-  padding-right: 7.5vw;
   width: 100%;
 `
 

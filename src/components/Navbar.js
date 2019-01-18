@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import ClickOutside from 'react-click-outside'
 import { compose, withStateHandlers } from 'recompose'
 
-import navLogo from '../img/navLogo.svg'
+import navLogo from '../img/navLogo.png'
 import Link from './Link'
 
 import theme from '../utils/theme'
@@ -19,6 +19,7 @@ const NavbarContainer = styled.div`
 
 const Logo = styled.img`
   margin: 0;
+  max-width: 250px;
 `
 
 const NavbarLinkWrapper = styled.div`

@@ -31,7 +31,7 @@ const Testimonials = () => (
       </Title>
       <TestimonialsList>
         <Testimonial
-          key="https://lion-tax.com/"
+          key="https://lion.tax/"
           name="Pamela Borges"
           company="Lion Tax"
           quote="Astrocoders reminds me fast response and awesome solutions"

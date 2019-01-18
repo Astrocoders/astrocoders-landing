@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import CaseLayout from '../../components/CaseLayout'
 import Text from '../../components/Text'
 
-import zuraCover from '../../img/projects/zura.svg'
+import zuraCover from '../../img/projects/zura.png'
 
 const OList = styled.ol`
   font-family: Roboto;
@@ -15,10 +15,9 @@ const OList = styled.ol`
 
 const ZuraHealth = () => (
   <CaseLayout
-    bgColor="#70ccac"
-    cover={zuraCover}
+    color="#70ccac"
+    logo={zuraCover}
     title="Zura Health"
-    titleColor="#fff"
     content={
       <>
         <Text>We developed a multi-program education system with complete features</Text>

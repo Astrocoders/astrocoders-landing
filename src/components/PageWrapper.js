@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Layout from './Layout'
 import Navbar from './Navbar'
@@ -13,5 +14,16 @@ const PageWrapper = ({ children, isHome, isAfterHero }) => (
     <Footer />
   </Layout>
 )
+
+PageWrapper.propTypes = {
+  children: PropTypes.node.isRequired,
+  isAfterHero: PropTypes.boolean,
+  isHome: PropTypes.boolean,
+}
+
+PageWrapper.defaultProps = {
+  isAfterHero: false,
+  isHome: false,
+}
 
 export default PageWrapper
