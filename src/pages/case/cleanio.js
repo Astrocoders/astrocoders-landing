@@ -12,7 +12,7 @@ const Cleanio = () => (
     title="Cleanio"
     content={
       <Text>
-        We developed the whole backend that runs the service, web applications & mobile APIs. Company was sold to
+        We developed the whole backend that runs the service, web applications & mobile APIs. Company was acquired by
         Zipnet.
       </Text>
     }
