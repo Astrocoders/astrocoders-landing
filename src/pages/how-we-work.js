@@ -160,15 +160,15 @@ const HowWeWork = () => (
             <Process>
               <ProcessTitle>We create relationships</ProcessTitle>
               <ProcessDescription className="content">
-                We work with who we like and only on projects that we love. Only in this way is it possible for
-                relationships to flow into a partnership for an exceptional outcome.
+                We accept projects only with customers that see value in the work and are really excited to built
+                excellent financial systems. Within that in mind the ultimate goal is a long and healthier partnership.
               </ProcessDescription>
             </Process>
             <Process>
               <ProcessTitle>Highly productive and focused team</ProcessTitle>
               <ProcessDescription className="content">
-                We have a young team that is part of the business. This brings motivation and focus in each project,
-                making it part of a collective effort, as a team, to exceed the next goal of excellence.
+                We have a young team and that is part of the business. This brings motivation and focus in each project,
+                making it part of a collective effort, to exceed expectations.
               </ProcessDescription>
             </Process>
             <Process>
@@ -183,17 +183,17 @@ const HowWeWork = () => (
               <ProcessTitle>Realistic deliveries</ProcessTitle>
               <ProcessDescription className="content">
                 We know how frustrating it is to have a project delayed and be the last person to know. Therefore, the
-                contact with our clients is continuous. We set realistic dates for our deliveries and keep a channel
+                contact with our customers is continuous. We set realistic dates for our deliveries and keep a channel
                 always open explaining the evolution of the work.
               </ProcessDescription>
             </Process>
             <Process>
               <ProcessTitle>Total freedom to our customers</ProcessTitle>
               <ProcessDescription className="content">
-                We create projects with clean, functional and modular code. So if at some point our client wants to
-                internalize improvements or add another professional for a new functionality, he will have no problem.
-                We want you to continue working with us for the quality of deliveries, not because you are trapped by
-                code.
+                We create projects with clean, functional and modular code. So if at some point our customers wants to
+                internalize improvements or add another professional for a new functionality, there are no problems. The
+                quality of deliveries, ideas and features are what keep our customers around and not because you are
+                trapped by our code.
               </ProcessDescription>
             </Process>
             <VerticalLine />

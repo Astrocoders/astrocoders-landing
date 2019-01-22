@@ -34,7 +34,7 @@ const Testimonials = () => (
           key="https://lion.tax/"
           name="Pamela Borges"
           company="Lion Tax"
-          quote="Astrocoders reminds me fast response and awesome solutions"
+          quote="Astrocoders is our partner that providers high quality software  and solutions for our tax platform"
           link="https://lion-tax.com/"
           photo={pamPhoto}
         />
@@ -42,7 +42,7 @@ const Testimonials = () => (
           key="https://zurahealth.com/"
           name="Kylie and Jess McBeath"
           company="Zura Health"
-          quote="Astrocoders helps us to transform ideas in reality"
+          quote="Astrocoders made our custom  payment flow works like a breeze"
           link="https://zurahealth.com/"
           photo={zuraPhoto}
         />
@@ -50,7 +50,7 @@ const Testimonials = () => (
           key="https://fractalflows.com/"
           name="Imad Abdallah"
           company="Fractal Flows"
-          quote="Work with Astrocoders means quality and fast development of our needs"
+          quote="Astrocoders has been key for us to discover how to monetize using crypto"
           link="https://fractalflows.com/"
           photo={imadPhoto}
         />

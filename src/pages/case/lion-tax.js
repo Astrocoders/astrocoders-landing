@@ -29,7 +29,6 @@ const LionTax = () => (
         </Text>
         <hr />
         <h3>Carne Lion</h3>
-
         <Text>
           State of the art tax calculator. We developed, using the most advanced tools, an easy to use tax calculator
           and bill generator for tax eligible workers.
@@ -40,7 +39,6 @@ const LionTax = () => (
         </Text>
         <hr />
         <h3>IRPRONTO</h3>
-
         <Text>
           AI system that read files from a variety sources and generate the yearly Brazilian income tax.
           <br />

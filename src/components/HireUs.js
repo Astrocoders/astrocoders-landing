@@ -46,7 +46,7 @@ function HireUs({ isSending, handleSubmit }) {
     <scroll-page id="hireUs">
       <HireUsWrapper>
         <Title align="center" marginBottom="100px" transform="uppercase" withStripe={true}>
-          Hire Us
+          Contact
         </Title>
         <Wrapper alignItems="flex-end">
           <FormWrapper>
