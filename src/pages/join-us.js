@@ -35,8 +35,8 @@ const CasesPage = () => (
           Join Us
         </Title>
         <Text marginBottom="50px">
-          We have a young team that is part of the business. This brings motivation and focus in each project, making it
-          part of a collection effort, as a team, to exceed the next goal of excellence.
+          We have a young team and that is part of the business. This brings motivation and focus in each project,
+          making it part of a collective effort, to exceed.
         </Text>
         <Title align="center" marginBottom="100px">
           Our Team

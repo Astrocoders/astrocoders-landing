@@ -47,7 +47,7 @@ const Description = styled.h3`
 const Hero = () => (
   <HeroWrapper>
     <Logo />
-    <Description>Outerspace innovation in web and mobile applications</Description>
+    <Description>Outerspace innovation in financial systems</Description>
   </HeroWrapper>
 )
 
