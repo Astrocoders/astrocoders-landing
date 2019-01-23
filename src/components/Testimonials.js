@@ -35,7 +35,7 @@ const Testimonials = () => (
           name="Pamela Borges"
           company="Lion Tax"
           quote="Astrocoders is our partner that providers high quality software  and solutions for our tax platform"
-          link="https://lion-tax.com/"
+          link="https://lion.tax/"
           photo={pamPhoto}
         />
         <Testimonial
