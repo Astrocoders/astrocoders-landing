@@ -77,13 +77,6 @@ const CasesPage = () => (
             role="Fullstack JavaScript Developer"
             github="eliabejr"
           />
-          <TeamMember
-            profilePicture="https://pbs.twimg.com/profile_images/1053962243455545344/kd2HLKSx_400x400.jpg"
-            name="Jeová Pereira"
-            // eslint-disable-next-line
-            role="Fullstack JavaScript Developer"
-            github="jeovazero"
-          />
         </Team>
       </Wrapper>
     </ContactWrapper>
