@@ -106,7 +106,6 @@ const Navbar = ({ isHome, isAfterHero = false, setMenuOpened, isMenuOpened }) =>
       <NavbarLinkWrapper>
         <NavbarLink to="/how-we-work">HOW WE WORK</NavbarLink>
         <NavbarLink to="/open-source">OPEN SOURCE</NavbarLink>
-        <NavbarLink to="/cases">CASES</NavbarLink>
         <NavbarLink to="/join-us">JOIN US</NavbarLink>
         <NavbarLink to="/#hireUs">CONTACT</NavbarLink>
       </NavbarLinkWrapper>
