@@ -38,9 +38,9 @@ const Layout = ({ children }) => (
           <meta name="keywords" content={data.keywords} />
           <meta name="author" content={data.author} />
 
-          <meta name="name" content={data.nameGoogle} />
-          <meta name="description" content={data.descriptionGoogle} />
-          <meta name="image" content={data.imageGoogle} />
+          <meta name="name" property="og:title" content={data.nameGoogle} />
+          <meta name="description" property="og:description" content={data.descriptionGoogle} />
+          <meta name="image" property="og:image" content={data.imageGoogle} />
 
           <meta name="twitter:card" content={data.cardTwitter} />
           <meta name="twitter:site" content={data.siteTwitter} />
