@@ -26,9 +26,7 @@ const TestimonialsList = styled(HGroup)`
 const Testimonials = () => (
   <TestimonialsWrapper>
     <Wrapper alignItems="center">
-      <Title align="center" transform="uppercase" marginBottom="50px" withStripe={true}>
-        WHAT OUR CUSTOMERS SAY ABOUT US
-      </Title>
+      <Title value="WHAT OUR CUSTOMERS SAY ABOUT US" align="center" transform="uppercase" withStripe={true} />
       <TestimonialsList>
         <Testimonial
           key="https://lion.tax/"

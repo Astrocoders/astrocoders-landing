@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import Title from './Title'
 import VGroup from './VGroup'
 
+import theme from '../utils/theme'
+
 const TeamMemberWrapper = styled(VGroup)`
   align-items: center;
   justify-content: center;
@@ -25,17 +27,35 @@ const Link = styled.a`
   text-decoration: none;
 `
 
+const NameTitle = styled.h2`
+  color: #fff;
+  font-family: ${theme.fonts.title};
+  font-size: 1.4em;
+  font-weight: 300;
+  margin-top: 30px;
+`
+
+const RoleTitle = styled.h3`
+  background-image: -webkit-linear-gradient(-45deg, ${theme.colors.primary} 1%, ${theme.colors.accent} 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: ${theme.fonts.title};
+  font-size: 0.8em;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+`
+
 const TeamMember = ({ name, color, profilePicture, role, github }) => (
   <TeamMemberWrapper>
     <Avatar src={profilePicture} alt={name} />
-    <Title color={color} size="1.4em" fontWeight="400" align="left" weight="700" marginTop="30px">
+    <NameTitle>
       <Link href={'https://github.com/' + github} target="_blank">
         {name}
       </Link>
-    </Title>
-    <Title color={color} size="1em" weight="300" marginBottom="30px">
-      {role}
-    </Title>
+    </NameTitle>
+    <RoleTitle>{role}</RoleTitle>
   </TeamMemberWrapper>
 )
 
