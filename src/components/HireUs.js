@@ -46,7 +46,9 @@ function HireUs({ isSending, handleSubmit }) {
   return (
     <scroll-page id="hireUs">
       <HireUsWrapper>
-        <Title value="Contact" align="center" transform="uppercase" withStripe={true} />
+        <Title align="center" transform="uppercase" withStripe={true}>
+          Contact
+        </Title>
         <Wrapper alignItems="flex-end">
           <FormWrapper>
             <form id="hireUsForm" className="validate" onSubmit={handleSubmit}>

@@ -31,12 +31,16 @@ const CasesPage = () => (
   <PageWrapper isHome={false}>
     <ContactWrapper>
       <Wrapper alignItems="center" justifyContent=" center">
-        <Title value="join us" align="center" transform="uppercase" withStripe={true} />
+        <Title align="center" transform="uppercase" withStripe={true} marginBottom="50px">
+          join us
+        </Title>
         <Text marginBottom="50px">
           We have a young team and that is part of the business. This brings motivation and focus in each project,
           making it part of a collective effort, to exceed.
         </Text>
-        <Title value="our team" align="center" transform="uppercase" withStripe={true} />
+        <Title align="center" transform="uppercase" withStripe={true} marginBottom="50px">
+          our team
+        </Title>
         <Team>
           <TeamMember
             profilePicture="https://avatars0.githubusercontent.com/u/4806269?s=460&v=4"
