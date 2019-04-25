@@ -634,3 +634,7 @@ pre tt:after {
 scroll-container {
   scroll-behavior: smooth;
 }
+
+.fullscreen {
+  overflow: hidden;
+}

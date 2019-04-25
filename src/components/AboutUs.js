@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Lightbox from './Lightbox'
 import Title from './Title'
 import Wrapper from './Wrapper'
 import Text from './Text'
@@ -15,25 +16,38 @@ const AboutUsWrapper = styled.section`
   padding: 50px 0;
 `
 
-const GameTable = styled.picture`
-  align-items: center;
-  margin-top: -50px;
-  margin-bottom: 50px;
+const GameTableWrapper = styled.div`
+  max-width: 50vw;
+  margin-bottom: 0;
 
-  @media (min-width: 960px) {
-    max-width: 50vw;
-    margin-bottom: 0;
+  @media (max-width: 960px) {
+    display: none;
+  }
+`
+
+const MobileGameTableWrapper = styled.div`
+  display: none;
+
+  @media (max-width: 960px) {
+    display: block;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 `
 
 const AboutUs = () => (
   <AboutUsWrapper data-testid="AboutUsSection">
     <Wrapper alignItems="center">
-      <Title value="Who we are" align="center" transform="uppercase" withStripe={true} />
-      <GameTable>
-        <source srcset={gameTableImg} media="(min-width: 960px)" />
-        <img src={mobileGameTableImg} alt="How we do the things" />
-      </GameTable>
+      <Title align="center" transform="uppercase" withStripe={true}>
+        we together to thrive
+      </Title>
+      <GameTableWrapper>
+        <Lightbox cover={gameTableImg} images={[{ src: gameTableImg }]} />
+      </GameTableWrapper>
+      <MobileGameTableWrapper>
+        <Lightbox cover={mobileGameTableImg} images={[{ src: mobileGameTableImg }]} />
+      </MobileGameTableWrapper>
       <Text>
         Astrocoders builds <em>mobile and web apps</em>, <em>systems</em> and <em>platforms</em> in a different way.{' '}
         <em>Simple</em>, <em>quick</em>, PCI & GDPR compliance and <em>made to last</em>. No unnecessary lines, no bends
