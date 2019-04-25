@@ -37,29 +37,31 @@ const MobileGameTableWrapper = styled.div`
 `
 
 const AboutUs = () => (
-  <AboutUsWrapper data-testid="AboutUsSection">
-    <Wrapper alignItems="center">
-      <Title align="center" transform="uppercase" withStripe={true}>
-        we together to thrive
-      </Title>
-      <GameTableWrapper>
-        <Lightbox cover={gameTableImg} images={[{ src: gameTableImg }]} />
-      </GameTableWrapper>
-      <MobileGameTableWrapper>
-        <Lightbox cover={mobileGameTableImg} images={[{ src: mobileGameTableImg }]} />
-      </MobileGameTableWrapper>
-      <Text>
-        Astrocoders builds <em>mobile and web apps</em>, <em>systems</em> and <em>platforms</em> in a different way.{' '}
-        <em>Simple</em>, <em>quick</em>, PCI & GDPR compliance and <em>made to last</em>. No unnecessary lines, no bends
-        or obstacles along the way.
-        <br /> We use technology <em>to the limit</em>. For us, innovation is about learning from the past and doing
-        better, doing it fast, doing more.
-        <br /> Solid, simple, modular and timeless software without taking forever. We <em>focus</em> on <em>speed</em>{' '}
-        and <em>efficiency</em> to first deliver a realistic navigable prototype and, after validation, the masterpiece,
-        avoiding rework. <br />
-      </Text>
-    </Wrapper>
-  </AboutUsWrapper>
+  <scroll-page id="discover">
+    <AboutUsWrapper data-testid="AboutUsSection">
+      <Wrapper alignItems="center">
+        <Title align="center" transform="uppercase" withStripe={true}>
+          we together to thrive
+        </Title>
+        <GameTableWrapper>
+          <Lightbox cover={gameTableImg} images={[{ src: gameTableImg }]} />
+        </GameTableWrapper>
+        <MobileGameTableWrapper>
+          <Lightbox cover={mobileGameTableImg} images={[{ src: mobileGameTableImg }]} />
+        </MobileGameTableWrapper>
+        <Text>
+          Astrocoders builds <em>mobile and web apps</em>, <em>systems</em> and <em>platforms</em> in a different way.{' '}
+          <em>Simple</em>, <em>quick</em>, PCI & GDPR compliance and <em>made to last</em>. No unnecessary lines, no
+          bends or obstacles along the way.
+          <br /> We use technology <em>to the limit</em>. For us, innovation is about learning from the past and doing
+          better, doing it fast, doing more.
+          <br /> Solid, simple, modular and timeless software without taking forever. We <em>focus</em> on{' '}
+          <em>speed</em> and <em>efficiency</em> to first deliver a realistic navigable prototype and, after validation,
+          the masterpiece, avoiding rework. <br />
+        </Text>
+      </Wrapper>
+    </AboutUsWrapper>
+  </scroll-page>
 )
 
 export default AboutUs

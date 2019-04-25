@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Logo from './Logo'
+import Button from './Button'
+
 import galaxy from '../img/galaxy.jpg'
 
 const HeroWrapper = styled.section`
@@ -48,6 +50,9 @@ const Hero = () => (
   <HeroWrapper>
     <Logo />
     <Description>Outerspace innovation in financial systems</Description>
+    <Button link="#discover" alignSelf="flex-start" centerInMobile={true}>
+      Discover
+    </Button>
   </HeroWrapper>
 )
 

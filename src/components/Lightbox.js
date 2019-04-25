@@ -12,6 +12,7 @@ const Button = styled.button`
   background: none;
   border: none;
   color: #fff;
+  cursor: pointer;
   display: flex;
   font-size: 1.5em;
   font-weight: 300;
