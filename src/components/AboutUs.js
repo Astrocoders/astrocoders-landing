@@ -9,6 +9,8 @@ import Text from './Text'
 import gameTableImg from '../img/our-stack-process.png'
 import mobileGameTableImg from '../img/our-stack-process_mobile.png'
 
+import theme from '../utils/theme'
+
 const AboutUsWrapper = styled.section`
   align-items: center;
   background-color: #000;
@@ -32,8 +34,15 @@ const MobileGameTableWrapper = styled.div`
     display: block;
     align-items: center;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
+`
+
+const Description = styled(Text)`
+  background-image: -webkit-linear-gradient(-45deg, ${theme.colors.primary} 1%, ${theme.colors.accent} 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: -20px auto 50px;
 `
 
 const AboutUs = () => (
@@ -49,6 +58,10 @@ const AboutUs = () => (
         <MobileGameTableWrapper>
           <Lightbox cover={mobileGameTableImg} images={[{ src: mobileGameTableImg }]} />
         </MobileGameTableWrapper>
+
+        <Description>
+          State of the art tech and design which make your customer interface delightful and unbreakable
+        </Description>
         <Text>
           Astrocoders builds <em>mobile and web apps</em>, <em>systems</em> and <em>platforms</em> in a different way.{' '}
           <em>Simple</em>, <em>quick</em>, PCI & GDPR compliance and <em>made to last</em>. No unnecessary lines, no

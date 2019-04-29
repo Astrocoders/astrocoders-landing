@@ -47,30 +47,6 @@ const FBBWrapper = styled.section`
   }
 `
 
-const FBBTitle = styled.h3`
-  align-self: flex-start;
-  color: #ffffff;
-  font-family: Ubuntu;
-  font-size: 1.8em;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  margin-top: 30px;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  text-align: center;
-
-  @media (min-width: 960px) {
-    font-size: 3em;
-    text-align: left;
-  }
-
-  em {
-    color: #835fe2;
-    font-style: normal;
-  }
-`
-
 const Description = styled(Text)`
   background-image: -webkit-linear-gradient(-45deg, ${theme.colors.primary} 1%, ${theme.colors.accent} 100%);
   -webkit-background-clip: text;
