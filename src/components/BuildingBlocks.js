@@ -48,9 +48,6 @@ const FBBWrapper = styled.section`
 `
 
 const Description = styled(Text)`
-  background-image: -webkit-linear-gradient(-45deg, ${theme.colors.primary} 1%, ${theme.colors.accent} 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin: 20px auto 40px;
 `
 
@@ -64,7 +61,7 @@ const Icon = styled.div`
 const FinancialBuildingBlocks = () => (
   <FBBWrapper>
     <Wrapper alignItems="center">
-      <Title align="center">
+      <Title align="center" transform="uppercase" withStripe={true}>
         Mobile
         <b> Building Blocks</b>
       </Title>

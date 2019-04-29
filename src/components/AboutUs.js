@@ -39,9 +39,6 @@ const MobileGameTableWrapper = styled.div`
 `
 
 const Description = styled(Text)`
-  background-image: -webkit-linear-gradient(-45deg, ${theme.colors.primary} 1%, ${theme.colors.accent} 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin: -20px auto 50px;
 `
 
