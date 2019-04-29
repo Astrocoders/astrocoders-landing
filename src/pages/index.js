@@ -5,7 +5,7 @@ import ScrollTrigger from 'react-scroll-trigger'
 import PageWrapper from '../components/PageWrapper'
 import Hero from '../components/Hero'
 import AboutUs from '../components/AboutUs'
-import FinancialBuildingBlocks from '../components/FinancialBuildingBlocks'
+import BuildingBlocks from '../components/BuildingBlocks'
 import OurStack from '../components/OurStack'
 import Testimonials from '../components/Testimonials'
 
@@ -16,7 +16,7 @@ const IndexPage = ({ isAfterHero, setAfterHero }) => (
     </ScrollTrigger>
     <OurStack />
     <AboutUs />
-    <FinancialBuildingBlocks />
+    <BuildingBlocks />
     <Testimonials />
   </PageWrapper>
 )

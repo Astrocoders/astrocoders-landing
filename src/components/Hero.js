@@ -50,9 +50,6 @@ const Hero = () => (
   <HeroWrapper>
     <Logo />
     <Description>Outerspace innovation in financial systems</Description>
-    <Button link="#discover" alignSelf="flex-start" centerInMobile={true}>
-      Discover
-    </Button>
   </HeroWrapper>
 )
 

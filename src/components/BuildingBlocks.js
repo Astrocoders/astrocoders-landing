@@ -1,15 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Button from './Button'
 import Wrapper from './Wrapper'
 import VGroup from './VGroup'
+import HGroup from './HGroup'
+import Title from './Title'
 import Text from './Text'
 
 import theme from '../utils/theme'
 
 import galaxy from '../img/fbb-bg.jpeg'
-import fbbIcon from '../img/fbb.png'
+
+import balanceComponentsIcon from '../img/balanceComponents.png'
+import transactionsComponentsIcon from '../img/transactionsComponents.png'
+import operationsComponentsIcon from '../img/operationsComponents.png'
 
 const FBBWrapper = styled.section`
   &:before {
@@ -22,6 +26,7 @@ const FBBWrapper = styled.section`
 
   align-items: center;
   background-attachment: fixed;
+  background-blend-mode: hard-light;
   background-color: #000;
   background-size: cover;
   background-image: url(${galaxy});
@@ -70,29 +75,52 @@ const Description = styled(Text)`
   background-image: -webkit-linear-gradient(-45deg, ${theme.colors.primary} 1%, ${theme.colors.accent} 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin: 20px auto 40px;
 `
 
-const FBBIcon = styled.div`
-  width: 55%;
+const Icon = styled.div`
+  display: block;
+  margin: 0 auto;
+  max-width: 330px;
+  max-height: 229px;
 `
 
 const FinancialBuildingBlocks = () => (
   <FBBWrapper>
-    <Wrapper direction="row" alignItems="center">
-      <VGroup>
-        <FBBTitle>
-          Mobile Financial
-          <br />
-          <b>Building Blocks</b>
-        </FBBTitle>
-        <Description>Mobile Solutions for your company.</Description>
-        <Button link="/building-blocks" alignSelf="flex-start" centerInMobile={true}>
-          See how it works
-        </Button>
-      </VGroup>
-      <FBBIcon>
-        <img src={fbbIcon} alt="Mobile Building Blocks" />
-      </FBBIcon>
+    <Wrapper alignItems="center">
+      <Title align="center">
+        Mobile
+        <b> Building Blocks</b>
+      </Title>
+      <Description>Mobile Solutions for your company.</Description>
+      <HGroup>
+        <VGroup alignItems="center">
+          <Icon>
+            <img src={balanceComponentsIcon} alt="Balance Components" />
+          </Icon>
+          <Title align="center" size="1.4em" marginTop="20px">
+            Balance
+          </Title>
+        </VGroup>
+
+        <VGroup alignItems="center">
+          <Icon>
+            <img src={transactionsComponentsIcon} alt="Transactions Components" />
+          </Icon>
+          <Title align="center" size="1.4em" marginTop="20px">
+            Transactions
+          </Title>
+        </VGroup>
+
+        <VGroup alignItems="center">
+          <Icon>
+            <img src={operationsComponentsIcon} alt="Operations Components" />
+          </Icon>
+          <Title align="center" size="1.4em" marginTop="20px">
+            Operations
+          </Title>
+        </VGroup>
+      </HGroup>
     </Wrapper>
   </FBBWrapper>
 )
