@@ -58,7 +58,7 @@ const Icon = styled.div`
   max-height: 229px;
 `
 
-const FinancialBuildingBlocks = () => (
+const MobileBuildingBlocks = () => (
   <FBBWrapper>
     <Wrapper alignItems="center">
       <Title align="center" transform="uppercase" withStripe={true}>
@@ -98,4 +98,4 @@ const FinancialBuildingBlocks = () => (
   </FBBWrapper>
 )
 
-export default FinancialBuildingBlocks
+export default MobileBuildingBlocks
