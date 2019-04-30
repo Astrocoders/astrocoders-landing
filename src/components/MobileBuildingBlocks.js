@@ -6,8 +6,12 @@ import VGroup from './VGroup'
 import HGroup from './HGroup'
 import Title from './Title'
 import Text from './Text'
+import BuildingBlockItem from './BuildingBlockItem'
 
-import balanceComponentsIcon from '../img/balanceComponents.png'
+import balanceOne from '../img/balance1.png'
+import balanceTwo from '../img/balance2.png'
+import balanceThree from '../img/balance3.png'
+
 import transactionsComponentsIcon from '../img/transactionsComponents.png'
 import operationsComponentsIcon from '../img/operationsComponents.png'
 
@@ -36,9 +40,7 @@ const MobileBuildingBlocks = () => (
       <Description>Mobile Solutions for your company.</Description>
       <HGroup columnOnMobile={true}>
         <VGroup alignItems="center" marginBottom="30px">
-          <Icon>
-            <img src={balanceComponentsIcon} alt="Balance Components" />
-          </Icon>
+          <Icon>{/* <BuildingBlockItem items={[balanceOne, balanceTwo, balanceThree]} /> */}</Icon>
           <Title align="center" size="1.4em" marginTop="20px">
             Balance
           </Title>
