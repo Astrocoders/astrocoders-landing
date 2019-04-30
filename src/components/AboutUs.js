@@ -9,8 +9,6 @@ import Text from './Text'
 import gameTableImg from '../img/our-stack-process.png'
 import mobileGameTableImg from '../img/our-stack-process_mobile.png'
 
-import theme from '../utils/theme'
-
 const AboutUsWrapper = styled.section`
   align-items: center;
   background-color: #000;
