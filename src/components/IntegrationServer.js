@@ -11,14 +11,13 @@ import mobileIntegrationServer from '../img/integrationServer_mobile.png'
 
 const IntegrationServerWrapper = styled.section`
   align-items: center;
-  background-color: #000;
   display: flex;
   padding: 50px 0;
 `
 
 const GameTableWrapper = styled.div`
   max-width: 50vw;
-  margin-bottom: 0;
+  margin-bottom: 45px;
 
   @media (max-width: 960px) {
     display: none;
@@ -48,7 +47,7 @@ const IntegrationServer = () => (
       <MobileGameTableWrapper>
         <Lightbox cover={mobileIntegrationServer} images={[{ src: mobileIntegrationServer }]} />
       </MobileGameTableWrapper>
-      <Text>
+      <Text align="center">
         Astrocoders builds <em>mobile and web apps</em>, <em>systems</em> and <em>platforms</em> in a different way.{' '}
         <em>Simple</em>, <em>quick</em>, PCI & GDPR compliance and <em>made to last</em>. No unnecessary lines, no bends
         or obstacles along the way.

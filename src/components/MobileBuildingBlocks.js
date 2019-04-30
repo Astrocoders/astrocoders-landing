@@ -7,44 +7,12 @@ import HGroup from './HGroup'
 import Title from './Title'
 import Text from './Text'
 
-import theme from '../utils/theme'
-
-import galaxy from '../img/fbb-bg.jpeg'
-
 import balanceComponentsIcon from '../img/balanceComponents.png'
 import transactionsComponentsIcon from '../img/transactionsComponents.png'
 import operationsComponentsIcon from '../img/operationsComponents.png'
 
-const FBBWrapper = styled.section`
-  &:before {
-    content: '';
-    background-image: -webkit-linear-gradient(-90deg, #000 1%, rgba(0, 0, 0, 0) 100%);
-    display: block;
-    height: 100px;
-    width: 100%;
-  }
-
-  align-items: center;
-  background-attachment: fixed;
-  background-blend-mode: hard-light;
-  background-color: #000;
-  background-size: cover;
-  background-image: url(${galaxy});
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-origin: content-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-
-  &:after {
-    content: '';
-    background-image: -webkit-linear-gradient(90deg, #000 1%, rgba(0, 0, 0, 0) 100%);
-    display: block;
-    height: 100px;
-    width: 100%;
-  }
+const Section = styled.section`
+  margin: 50px auto;
 `
 
 const Description = styled(Text)`
@@ -59,15 +27,15 @@ const Icon = styled.div`
 `
 
 const MobileBuildingBlocks = () => (
-  <FBBWrapper>
+  <Section>
     <Wrapper alignItems="center">
       <Title align="center" transform="uppercase" withStripe={true}>
         Mobile
         <b> Building Blocks</b>
       </Title>
       <Description>Mobile Solutions for your company.</Description>
-      <HGroup>
-        <VGroup alignItems="center">
+      <HGroup columnOnMobile={true}>
+        <VGroup alignItems="center" marginBottom="30px">
           <Icon>
             <img src={balanceComponentsIcon} alt="Balance Components" />
           </Icon>
@@ -76,7 +44,7 @@ const MobileBuildingBlocks = () => (
           </Title>
         </VGroup>
 
-        <VGroup alignItems="center">
+        <VGroup alignItems="center" marginBottom="30px">
           <Icon>
             <img src={transactionsComponentsIcon} alt="Transactions Components" />
           </Icon>
@@ -85,7 +53,7 @@ const MobileBuildingBlocks = () => (
           </Title>
         </VGroup>
 
-        <VGroup alignItems="center">
+        <VGroup alignItems="center" marginBottom="30px">
           <Icon>
             <img src={operationsComponentsIcon} alt="Operations Components" />
           </Icon>
@@ -95,7 +63,7 @@ const MobileBuildingBlocks = () => (
         </VGroup>
       </HGroup>
     </Wrapper>
-  </FBBWrapper>
+  </Section>
 )
 
 export default MobileBuildingBlocks
