@@ -1,8 +1,12 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
   position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 230px;
+  margin-bottom: 20px;
 `
 
 const Item = styled.img`
@@ -10,10 +14,11 @@ const Item = styled.img`
   transform: translateY(${p => 40 * p.index + 'px'}) translateX(${p => 40 * p.index + 'px'});
   transition: all 0.2s;
   z-index: ${p => p.zIndex};
+  max-width: 270px;
 `
 
 const BuildingBlockItem = ({ items }) => {
-  const [state, setState] = React.useState(items)
+  const [state, setState] = useState(items)
 
   return (
     <Container>

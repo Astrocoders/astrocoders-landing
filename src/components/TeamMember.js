@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import Title from './Title'
+
 import VGroup from './VGroup'
 
 import theme from '../utils/theme'

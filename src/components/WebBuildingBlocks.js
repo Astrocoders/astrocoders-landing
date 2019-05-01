@@ -7,9 +7,19 @@ import HGroup from './HGroup'
 import Title from './Title'
 import Text from './Text'
 
-import dataHandlingComponentsIcon from '../img/dataHandlingComponents.png'
-import profileComponentsIcon from '../img/profileComponents.png'
-import webOperationsComponentsIcon from '../img/webOperationsComponents.png'
+import BuildingBlockItem from './BuildingBlockItem'
+
+import dataHandlingOne from '../img/dataHandling1.png'
+import dataHandlingTwo from '../img/dataHandling2.png'
+import dataHandlingThree from '../img/dataHandling3.png'
+
+import profileOne from '../img/profile1.png'
+import profileTwo from '../img/profile2.png'
+import profileThree from '../img/profile3.png'
+
+import operationOne from '../img/operation1.png'
+import operationTwo from '../img/operation2.png'
+import operationThree from '../img/operation3.png'
 
 const Section = styled.section`
   margin: 50px auto;
@@ -36,28 +46,22 @@ const WebBuildingBlocks = () => (
       <Description>Web Applications/Backoffice Solutions for your company.</Description>
       <HGroup columnOnMobile={true}>
         <VGroup alignItems="center" marginBottom="30px">
-          <Icon>
-            <img src={dataHandlingComponentsIcon} alt="Balance Components" />
-          </Icon>
-          <Title align="center" size="1.4em" marginTop="20px">
-            Balance
+          <BuildingBlockItem items={[dataHandlingOne, dataHandlingTwo, dataHandlingThree]} />
+          <Title align="center" size="1.4em" marginBottom="20px">
+            Data Handling
           </Title>
         </VGroup>
 
         <VGroup alignItems="center" marginBottom="30px">
-          <Icon>
-            <img src={profileComponentsIcon} alt="Transactions Components" />
-          </Icon>
-          <Title align="center" size="1.4em" marginTop="20px">
-            Transactions
+          <BuildingBlockItem items={[profileOne, profileTwo, profileThree]} />
+          <Title align="center" size="1.4em" marginBottom="20px">
+            Profile
           </Title>
         </VGroup>
 
         <VGroup alignItems="center" marginBottom="30px">
-          <Icon>
-            <img src={webOperationsComponentsIcon} alt="Operations Components" />
-          </Icon>
-          <Title align="center" size="1.4em" marginTop="20px">
+          <BuildingBlockItem items={[operationOne, operationTwo, operationThree]} />
+          <Title align="center" size="1.4em" marginBottom="20px">
             Operations
           </Title>
         </VGroup>
