@@ -47,21 +47,21 @@ const WebBuildingBlocks = () => (
       <HGroup columnOnMobile={true}>
         <VGroup alignItems="center" marginBottom="30px">
           <BuildingBlockItem items={[dataHandlingOne, dataHandlingTwo, dataHandlingThree]} />
-          <Title align="center" size="1.4em" marginBottom="20px">
+          <Title align="center" size="1.4em" marginTop="20px">
             Data Handling
           </Title>
         </VGroup>
 
         <VGroup alignItems="center" marginBottom="30px">
           <BuildingBlockItem items={[profileOne, profileTwo, profileThree]} />
-          <Title align="center" size="1.4em" marginBottom="20px">
+          <Title align="center" size="1.4em" marginTop="20px">
             Profile
           </Title>
         </VGroup>
 
         <VGroup alignItems="center" marginBottom="30px">
           <BuildingBlockItem items={[operationOne, operationTwo, operationThree]} />
-          <Title align="center" size="1.4em" marginBottom="20px">
+          <Title align="center" size="1.4em" marginTop="20px">
             Operations
           </Title>
         </VGroup>
