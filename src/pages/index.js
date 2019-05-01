@@ -10,6 +10,7 @@ import MobileBuildingBlocks from '../components/MobileBuildingBlocks'
 import WebBuildingBlocks from '../components/WebBuildingBlocks'
 import IntegrationServer from '../components/IntegrationServer'
 import OurStack from '../components/OurStack'
+import Partners from '../components/Partners'
 import Testimonials from '../components/Testimonials'
 
 import galaxy from '../img/fbb-bg.jpeg'
@@ -58,6 +59,7 @@ const IndexPage = ({ isAfterHero, setAfterHero }) => (
       <WebBuildingBlocks />
       <IntegrationServer />
     </BuldingBlocksWrapper>
+    <Partners />
     <Testimonials />
   </PageWrapper>
 )
