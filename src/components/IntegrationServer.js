@@ -38,7 +38,7 @@ const MobileGameTableWrapper = styled.div`
 const IntegrationServer = () => (
   <IntegrationServerWrapper data-testid="IntegrationServerSection">
     <Wrapper alignItems="center">
-      <Title align="center" transform="uppercase" withStripe={true}>
+      <Title align="center" transform="uppercase" withStripe marginBottom="70px">
         Integration Servers
       </Title>
       <GameTableWrapper>
@@ -48,9 +48,9 @@ const IntegrationServer = () => (
         <Lightbox cover={mobileIntegrationServer} images={[{ src: mobileIntegrationServer }]} />
       </MobileGameTableWrapper>
       <Text align="center">
-        Astrocoders builds <em>mobile and web apps</em>, <em>systems</em> and <em>platforms</em> in a different way.{' '}
-        <em>Simple</em>, <em>quick</em>, PCI & GDPR compliance and <em>made to last</em>. No unnecessary lines, no bends
-        or obstacles along the way.
+        The <em>integration server</em> enable us to connect with <em>any</em> provider and APIs to <em>process</em> and{' '}
+        <em>collocate</em> just the most <em>important data</em> into the apps we build or your own apps. We are able to
+        deploy it in your infrastructure or in our cloud based high-available servers.
       </Text>
     </Wrapper>
   </IntegrationServerWrapper>

@@ -31,11 +31,10 @@ const Description = styled(Text)`
 const MobileBuildingBlocks = () => (
   <Section>
     <Wrapper alignItems="center">
-      <Title align="center" transform="uppercase" withStripe={true}>
+      <Title align="center" transform="uppercase" withStripe marginBottom="70px">
         Mobile
         <b> Building Blocks</b>
       </Title>
-      <Description>Mobile Solutions for your company.</Description>
       <HGroup columnOnMobile={true}>
         <VGroup alignItems="center" marginBottom="30px">
           <BuildingBlockItem items={[balanceOne, balanceTwo, balanceThree]} />
@@ -58,6 +57,12 @@ const MobileBuildingBlocks = () => (
           </Title>
         </VGroup>
       </HGroup>
+      <Description>
+        We <em>use</em> and <em>create</em> state of the art tech in our <em>financial mobile components</em>. With
+        hundreds of possibilities you can <em>customize</em> them for your needs. With a single codebase for native
+        mobile application and our streamlined process we can push new versions to <em>Apple Store</em> and{' '}
+        <em>Google Play</em> automatically.
+      </Description>
     </Wrapper>
   </Section>
 )

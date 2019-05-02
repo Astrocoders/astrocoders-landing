@@ -32,12 +32,20 @@ const MobileGameTableWrapper = styled.div`
     display: block;
     align-items: center;
     margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
   }
 `
 
 const Description = styled(Text)`
-  margin: -20px auto 50px;
+  margin: -20px auto 100px;
+  max-width: 450px;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+`
+
+const Em = styled.span`
+  color: #74eab7;
 `
 
 const AboutUs = () => (
@@ -55,17 +63,15 @@ const AboutUs = () => (
         </MobileGameTableWrapper>
 
         <Description>
-          State of the art tech and design which make your customer interface delightful and unbreakable
+          State of the art <Em>tech</Em> and <Em>design</Em> for <Em>delightful</Em> and <Em>unbreakable</Em> interfaces
         </Description>
         <Text>
-          Astrocoders builds <em>mobile and web apps</em>, <em>systems</em> and <em>platforms</em> in a different way.{' '}
-          <em>Simple</em>, <em>quick</em>, PCI & GDPR compliance and <em>made to last</em>. No unnecessary lines, no
-          bends or obstacles along the way.
-          <br /> We use technology <em>to the limit</em>. For us, innovation is about learning from the past and doing
-          better, doing it fast, doing more.
-          <br /> Solid, simple, modular and timeless software without taking forever. We <em>focus</em> on{' '}
-          <em>speed</em> and <em>efficiency</em> to first deliver a realistic navigable prototype and, after validation,
-          the masterpiece, avoiding rework. <br />
+          Astrocoders builds <em>mobile and web apps</em>, <em>systems</em> and <em>platforms</em>. Simple, fast, PCI &
+          GDPR compliance and <em>made to last</em>.<br /> We use technology <em>to the limit</em>. For us, innovation
+          is about learning from the past and doing better, doing it faster. <br />
+          We <em>focus</em> on <em>speed</em> and <em>efficiency</em> to first deliver a realistic navigable prototype
+          and, after validation, the masterpiece, avoiding rework. <br />
+          Solid, simple, modular and timeless software without taking forever. <br />
         </Text>
       </Wrapper>
     </AboutUsWrapper>
