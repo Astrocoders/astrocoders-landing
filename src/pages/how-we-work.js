@@ -156,7 +156,7 @@ const HowWeWork = () => (
             <Process>
               <ProcessTitle>We create relationships</ProcessTitle>
               <ProcessDescription className="content">
-                We accept only projects with engaged customers which see value in the work and are really excited to
+                We accept only projects with engaged customers whom see value in the work and are really excited to
                 build excellent financial systems. Within that in mind the ultimate goal is a long and healthy
                 partnership.
               </ProcessDescription>
