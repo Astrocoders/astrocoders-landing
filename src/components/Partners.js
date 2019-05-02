@@ -13,22 +13,17 @@ import zcashLogo from '../img/partners/zcash.png'
 
 const PartnersWrapper = styled(Wrapper)`
   align-items: center;
-  background-color: #000;
   display: flex;
   padding-bottom: 50px;
-
-  @media (max-width: 960px) {
-    & > div {
-      justify-content: normal;
-    }
-  }
 `
 
 const PartnerLogo = styled.div`
   display: flex;
-  @media (max-width: 960px) {
-    flex: 0 0 20%;
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+
+  @media (min-width: 960px) {
+    max-width: 200px;
+    margin: 10px;
   }
 `
 
@@ -48,7 +43,7 @@ const Partners = () => (
     <Title align="center" transform="uppercase" withStripe={true}>
       Partners
     </Title>
-    <HGroup justifyContent="center" alignItems="center" marginTop="30px">
+    <HGroup justifyContent="center" alignItems="center" marginTop="30px" columnOnMobile={true}>
       <PartnerLogo>
         <PartnerLogoImg src={quantoLogo} alt="Conta Quanto" title="Conta Quanto" />
       </PartnerLogo>
