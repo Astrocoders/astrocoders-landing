@@ -6,6 +6,7 @@ import { stripIndent } from 'common-tags'
 import { FormattedMessage, injectIntl } from 'gatsby-plugin-intl'
 
 import Wrapper from './Wrapper'
+import Text from './Text'
 import Title from './Title'
 import FormField from './FormField'
 import Textarea from './Textarea'
@@ -46,13 +47,13 @@ function HireUsForm({ intl, isSending, handleSubmit }) {
   return (
     <scroll-page id="hireUs">
       <HireUsWrapper>
-        <Title align="center" marginBottom="100px" transform="uppercase" withStripe={true}>
+        <Title align="center" transform="uppercase" withStripe={true}>
           <FormattedMessage id="contact" />
         </Title>
         <Wrapper alignItems="flex-end">
           <FormWrapper>
             <form id="hireUsForm" className="validate" onSubmit={handleSubmit}>
-              {!isSending && (
+              {!isSending ? (
                 <div>
                   <HGroup columnOnMobile={true}>
                     <FormField
@@ -75,6 +76,10 @@ function HireUsForm({ intl, isSending, handleSubmit }) {
                     required="required"
                   />
                 </div>
+              ) : (
+                <Wrapper marginBottom="50px" alignItems="center">
+                  <Text>Thanks for the message! We will respond soon.</Text>
+                </Wrapper>
               )}
               <Button disabled={isSending} marginLeft="10px" alignSelf="flex-end">
                 {isSending ? intl.formatMessage({ id: 'sent' }) : intl.formatMessage({ id: 'send' })}

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { FormattedMessage } from 'gatsby-plugin-intl'
 
 import Logo from './Logo'
+
 import galaxy from '../img/galaxy.jpg'
 
 const HeroWrapper = styled.section`

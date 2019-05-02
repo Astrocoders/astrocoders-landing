@@ -90,7 +90,7 @@ module.exports = {
           },
           {
             family: 'Montserrat',
-            variants: ['300', '900'],
+            variants: ['300', '700', '900'],
           },
         ],
       },

@@ -15,7 +15,7 @@ const OpenSourcePage = () => (
   <PageWrapper isHome={false}>
     <OpenSourceWrapper>
       <Wrapper alignItems="center" justifyContent=" center">
-        <Title align="center" marginBottom="50px">
+        <Title align="center" marginBottom="50px" withStripe={true}>
           Open Source Projects
         </Title>
         <VGroup>

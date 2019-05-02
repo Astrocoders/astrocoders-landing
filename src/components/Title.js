@@ -15,12 +15,10 @@ const Title = styled.h2`
   font-size: ${props => props.size};
   text-align: ${props => (props.withStripe ? 'center' : 'inherit')};
   text-transform: ${props => props.transform || 'none'};
-
   em {
     color: ${theme.colors.primary};
     font-style: normal;
   }
-
   &:after {
     content: '';
     display: ${props => (props.withStripe ? 'block' : 'none') || 'none'};
