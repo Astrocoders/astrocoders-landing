@@ -29,9 +29,24 @@ const ButtonWrapper = styled.button`
     font-size: 18px;
     text-decoration: none;
   }
+
+  @media (max-width: 960px) {
+    align-self: ${props => (props.centerInMobile ? 'center' : props.alignSelf)};
+  }
 `
 
-const Button = ({ link, theme, raised, alignSelf, children, marginBottom, marginLeft, marginRight, marginTop }) => (
+const Button = ({
+  link,
+  centerInMobile,
+  theme,
+  raised,
+  alignSelf,
+  children,
+  marginBottom,
+  marginLeft,
+  marginRight,
+  marginTop,
+}) => (
   <ButtonWrapper
     alignSelf={alignSelf}
     theme={theme}
@@ -40,6 +55,7 @@ const Button = ({ link, theme, raised, alignSelf, children, marginBottom, margin
     marginLeft={marginLeft}
     marginRight={marginRight}
     marginTop={marginTop}
+    centerInMobile={centerInMobile}
   >
     {link ? <a href={link}>{children}</a> : children}
   </ButtonWrapper>
@@ -47,22 +63,24 @@ const Button = ({ link, theme, raised, alignSelf, children, marginBottom, margin
 
 Button.defaultProps = {
   alignSelf: 'inherit',
-  theme: 'rgba(105, 95, 226, 0.47)',
+  centerInMobile: false,
   raised: false,
   marginBottom: 0,
   marginLeft: 0,
   marginRight: 0,
   marginTop: 0,
+  theme: 'rgba(105, 95, 226, 0.47)',
 }
 
 Button.propTypes = {
   alignSelf: PropTypes.string,
-  theme: PropTypes.string.isRequired,
-  raised: PropTypes.string,
+  centerInMobile: PropTypes.bool,
+  raised: PropTypes.bool,
   marginBottom: PropTypes.string,
   marginLeft: PropTypes.string,
   marginRight: PropTypes.string,
   marginTop: PropTypes.string,
+  theme: PropTypes.string.isRequired,
 }
 
 export default Button

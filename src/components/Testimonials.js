@@ -26,7 +26,7 @@ const TestimonialsList = styled(HGroup)`
 const Testimonials = () => (
   <TestimonialsWrapper>
     <Wrapper alignItems="center">
-      <Title align="center" transform="uppercase" marginBottom="50px" withStripe={true}>
+      <Title align="center" transform="uppercase" withStripe={true}>
         WHAT OUR CUSTOMERS SAY ABOUT US
       </Title>
       <TestimonialsList>

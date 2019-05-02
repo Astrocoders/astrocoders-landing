@@ -152,7 +152,7 @@ const HowWeWork = () => (
   <PageWrapper isHome={false}>
     <Content>
       <Wrapper alignItems="center" justifyContent=" center">
-        <Title align="center" marginBottom="100px">
+        <Title align="center" marginBottom="100px" withStripe={true}>
           How we Work
         </Title>
         <VGroup>
