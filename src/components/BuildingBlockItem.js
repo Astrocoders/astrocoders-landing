@@ -2,19 +2,25 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-  position: relative;
   display: flex;
-  width: 100%;
-  min-height: 230px;
+  position: relative;
   margin-bottom: 20px;
+  min-height: 230px;
+  width: 100%;
 `
 
 const Item = styled.img`
-  position: absolute;
-  transform: translateY(${p => 40 * p.index + 'px'}) translateX(${p => 40 * p.index + 'px'});
-  transition: all 0.2s;
-  z-index: ${p => p.zIndex};
+  border-radius: 10px;
+  box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.25);
   max-width: 270px;
+  position: absolute;
+  transition: all 0.2s;
+  transform: translateY(${p => 40 * p.index + 'px'}) translateX(${p => 40 * p.index + 'px'});
+  z-index: ${p => p.zIndex};
+
+  @media (max-width: 960px) {
+    max-width: 250px;
+  }
 `
 
 const BuildingBlockItem = ({ items }) => {
