@@ -13,9 +13,6 @@ import OurStack from '../components/OurStack'
 import Partners from '../components/Partners'
 import Testimonials from '../components/Testimonials'
 
-<<<<<<< HEAD
-const IndexPage = ({ intl, isAfterHero, setAfterHero }) => (
-=======
 import galaxy from '../img/fbb-bg.jpeg'
 
 const BuldingBlocksWrapper = styled.section`
@@ -49,9 +46,7 @@ const BuldingBlocksWrapper = styled.section`
     width: 100%;
   }
 `
-
 const IndexPage = ({ isAfterHero, setAfterHero }) => (
->>>>>>> 0c8005c8eae3c00d421cf6e0d30af205089dc176
   <PageWrapper isHome={true} isAfterHero={isAfterHero}>
     <ScrollTrigger onEnter={() => setAfterHero(false)} onExit={() => setAfterHero(true)}>
       <Hero />

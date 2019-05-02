@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 
 import PageWrapper from '../components/PageWrapper'
 import Title from '../components/Title'
@@ -32,14 +33,13 @@ const CasesPage = () => (
     <ContactWrapper>
       <Wrapper alignItems="center" justifyContent=" center">
         <Title align="center" transform="uppercase" withStripe={true} marginBottom="50px">
-          join us
+          <FormattedMessage id="joinUs" />
         </Title>
-        <Text marginBottom="50px">
-          We have a young team and that is part of the business. This brings motivation and focus in each project,
-          making it part of a collective effort, to exceed.
+        <Text align="center" marginBottom="50px">
+          <FormattedMessage id="joinUsText" />
         </Text>
         <Title align="center" transform="uppercase" withStripe={true} marginBottom="50px">
-          our team
+          <FormattedMessage id="ourTeam" />
         </Title>
         <Team>
           <TeamMember

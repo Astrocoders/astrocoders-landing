@@ -2,11 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import ClickOutside from 'react-click-outside'
-import { FormattedMessage, injectIntl } from 'gatsby-plugin-intl'
+import { FormattedMessage, Link, injectIntl } from 'gatsby-plugin-intl'
 import { compose, withStateHandlers } from 'recompose'
 
 import navLogo from '../img/navLogo.png'
-import Link from './Link'
 
 import theme from '../utils/theme'
 

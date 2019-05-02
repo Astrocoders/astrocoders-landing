@@ -27,7 +27,7 @@ const HireUsWrapper = styled.section`
   flex-direction: column;
   height: 100vh;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 20px;
   min-height: 700px;
   width: 100%;
 `
