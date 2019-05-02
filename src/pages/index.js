@@ -8,7 +8,7 @@ import AboutUs from '../components/AboutUs'
 import OurStack from '../components/OurStack'
 import Testimonials from '../components/Testimonials'
 
-const IndexPage = ({ isAfterHero, setAfterHero }) => (
+const IndexPage = ({ intl, isAfterHero, setAfterHero }) => (
   <PageWrapper isHome={true} isAfterHero={isAfterHero}>
     <ScrollTrigger onEnter={() => setAfterHero(false)} onExit={() => setAfterHero(true)}>
       <Hero />

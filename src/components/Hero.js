@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 
 import Logo from './Logo'
 import galaxy from '../img/galaxy.jpg'
@@ -47,7 +48,9 @@ const Description = styled.h3`
 const Hero = () => (
   <HeroWrapper>
     <Logo />
-    <Description>Outerspace innovation in financial systems</Description>
+    <Description>
+      <FormattedMessage id="heroDescription" />
+    </Description>
   </HeroWrapper>
 )
 

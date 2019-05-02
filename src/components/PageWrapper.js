@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { injectIntl } from 'gatsby-plugin-intl'
 
 import Layout from './Layout'
 import Navbar from './Navbar'
