@@ -164,7 +164,7 @@ const HowWeWork = () => (
             <Process>
               <ProcessTitle>Highly productive and focused team</ProcessTitle>
               <ProcessDescription className="content">
-                We have a top notch team that are up to any challenge in the financial world. We have always the
+                We are a top notch team that are up to any challenge in the financial world. We have always the
                 willingness to deliver the best work and exceed expectations.
               </ProcessDescription>
             </Process>
