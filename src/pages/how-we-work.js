@@ -152,14 +152,9 @@ const VerticalLine = styled.div`
 const HowWeWork = () => (
   <PageWrapper isHome={false}>
     <Content>
-      <Wrapper alignItems="center" justifyContent=" center">
-<<<<<<< HEAD
+      <Wrapper alignItems="center" justifyContent="center">
         <Title align="center" marginBottom="100px">
           <FormattedMessage id="howWeWork" />
-=======
-        <Title align="center" marginBottom="100px" withStripe={true}>
-          How we Work
->>>>>>> 0c8005c8eae3c00d421cf6e0d30af205089dc176
         </Title>
         <VGroup>
           <Timeline>

@@ -78,7 +78,9 @@ function HireUsForm({ intl, isSending, handleSubmit }) {
                 </div>
               ) : (
                 <Wrapper marginBottom="50px" alignItems="center">
-                  <Text>Thanks for the message! We will respond soon.</Text>
+                  <Text>
+                    <FormattedMessage id="formThanks" />
+                  </Text>
                 </Wrapper>
               )}
               <Button disabled={isSending} marginLeft="10px" alignSelf="flex-end">

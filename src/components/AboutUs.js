@@ -39,6 +39,7 @@ const MobileGameTableWrapper = styled.div`
 
 const Description = styled(Text)`
   margin: -20px auto 50px;
+  text-align: center;
 `
 
 const AboutUs = () => (
@@ -56,7 +57,7 @@ const AboutUs = () => (
         </MobileGameTableWrapper>
 
         <Description>
-          State of the art tech and design which make your customer interface delightful and unbreakable
+          <FormattedMessage id="tableDescription" />
         </Description>
         <Text>
           <FormattedHTMLMessage id="aboutText" />
