@@ -46,7 +46,6 @@ const BuldingBlocksWrapper = styled.section`
     width: 100%;
   }
 `
-
 const IndexPage = ({ isAfterHero, setAfterHero }) => (
   <PageWrapper isHome={true} isAfterHero={isAfterHero}>
     <ScrollTrigger onEnter={() => setAfterHero(false)} onExit={() => setAfterHero(true)}>

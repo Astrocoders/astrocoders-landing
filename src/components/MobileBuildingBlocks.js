@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 
 import Wrapper from './Wrapper'
 import VGroup from './VGroup'
@@ -35,26 +36,28 @@ const MobileBuildingBlocks = () => (
         Mobile
         <b> Building Blocks</b>
       </Title>
-      <Description>Mobile Solutions for your company.</Description>
+      <Description>
+        <FormattedMessage id="mobileSolutions" />
+      </Description>
       <HGroup columnOnMobile={true}>
         <VGroup alignItems="center" marginBottom="30px">
           <BuildingBlockItem items={[balanceOne, balanceTwo, balanceThree]} />
           <Title align="center" size="1.4em" marginTop="20px">
-            Balance
+            <FormattedMessage id="balance" />
           </Title>
         </VGroup>
 
         <VGroup alignItems="center" marginBottom="30px">
           <BuildingBlockItem items={[transactionOne, transactionTwo, transactionThree]} />
           <Title align="center" size="1.4em" marginTop="20px">
-            Transactions
+            <FormattedMessage id="transactions" />
           </Title>
         </VGroup>
 
         <VGroup alignItems="center" marginBottom="30px">
           <BuildingBlockItem items={[operationOne, operationTwo, operationThree]} />
           <Title align="center" size="1.4em" marginTop="20px">
-            Operations
+            <FormattedMessage id="operations" />
           </Title>
         </VGroup>
       </HGroup>

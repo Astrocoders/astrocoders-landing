@@ -9,6 +9,7 @@
     "gatsby": "^2.3.34",
     "gatsby-plugin-drift": "^1.0.0",
     "gatsby-plugin-google-analytics": "^2.0.19",
+    "gatsby-plugin-intl": "^0.1.7",
     "gatsby-plugin-manifest": "^2.0.4",
     "gatsby-plugin-nprogress": "^2.0.5",
     "gatsby-plugin-offline": "^2.0.5",
