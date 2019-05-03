@@ -16,6 +16,7 @@
   "webSolutions": "Веб-приложения / Решения Backoffice для вашей компании.",
   "dataHandling": "Обработка данных",
   "profile": "Профиль",
+  "integrationServersText": "The <em>integration server</em> enable us to connect with <em>any</em> provider and APIs to <em>process</em> and <em>collocate</em> just the most <em>important data</em> into the apps we build or your own apps. We are able to deploy it in your infrastructure or in our cloud based high-available servers.",
   "partners": "партнеры",
   "contact": "контакт",
   "name": "имя",
