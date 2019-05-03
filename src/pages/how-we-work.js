@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 
 import PageWrapper from '../components/PageWrapper'
 import Title from '../components/Title'
@@ -147,50 +148,50 @@ const VerticalLine = styled.div`
 const HowWeWork = () => (
   <PageWrapper isHome={false}>
     <Content>
-      <Wrapper alignItems="center" justifyContent=" center">
-        <Title align="center" marginBottom="100px" withStripe={true}>
-          How we Work
+      <Wrapper alignItems="center" justifyContent="center">
+        <Title align="center" marginBottom="100px">
+          <FormattedMessage id="howWeWork" />
         </Title>
         <VGroup>
           <Timeline>
             <Process>
-              <ProcessTitle>We create relationships</ProcessTitle>
+              <ProcessTitle>
+                <FormattedMessage id="processOneTitle" />
+              </ProcessTitle>
               <ProcessDescription className="content">
-                We accept only projects with engaged customers whom see value in the work and are really excited to
-                build excellent financial systems. With that in mind the ultimate goal is a long and healthy
-                partnership.
+                <FormattedMessage id="processOneText" />
               </ProcessDescription>
             </Process>
             <Process>
-              <ProcessTitle>Highly productive and focused team</ProcessTitle>
+              <ProcessTitle>
+                <FormattedMessage id="processTwoTitle" />
+              </ProcessTitle>
               <ProcessDescription className="content">
-                We are a top notch team that are up to any challenge in the financial world. We have always the
-                willingness to deliver the best work and exceed expectations.
+                <FormattedMessage id="processTwoText" />
               </ProcessDescription>
             </Process>
             <Process>
-              <ProcessTitle>Transparency with your money</ProcessTitle>
+              <ProcessTitle>
+                <FormattedMessage id="processThreeTitle" />
+              </ProcessTitle>
               <ProcessDescription className="content">
-                We work with packages of hours in modules or sprints designed for your project. Our customers know
-                exactly how many hours we invested to develop each part of their project. This leads us to total
-                transparency, with no hidden fees.
+                <FormattedMessage id="processThreeText" />
               </ProcessDescription>
             </Process>
             <Process>
-              <ProcessTitle>Realistic deliveries</ProcessTitle>
+              <ProcessTitle>
+                <FormattedMessage id="processFourTitle" />
+              </ProcessTitle>
               <ProcessDescription className="content">
-                We know how frustrating it's to have a project delayed and be the last person to know. Therefore, the
-                contact with our customers is continuous. We set realistic dates for our deliveries and keep a channel
-                always opened to explain the evolution of the work.
+                <FormattedMessage id="processFourText" />
               </ProcessDescription>
             </Process>
             <Process>
-              <ProcessTitle>Total freedom</ProcessTitle>
+              <ProcessTitle>
+                <FormattedMessage id="processFiveTitle" />
+              </ProcessTitle>
               <ProcessDescription className="content">
-                We create projects with clean, functional and modular code. So if at some point our customers wants to
-                internalize improvements or add another professional for a new functionality, there will be no problems.
-                The quality, ideas and snappiness are what keep our customers around and not because you are trapped by
-                our code.
+                <FormattedMessage id="processFiveText" />
               </ProcessDescription>
             </Process>
             <VerticalLine />

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 
 import HGroup from './HGroup'
 import VGroup from './VGroup'
@@ -62,7 +63,9 @@ const Logo = () => (
     <Image src={logoImg} alt="Astrocoders Logo" />
     <TitleWrapper>
       <Title>Astrocoders</Title>
-      <Subtitle>Go Beyond</Subtitle>
+      <Subtitle>
+        <FormattedMessage id="subtitle" />
+      </Subtitle>
     </TitleWrapper>
   </LogoWrapper>
 )

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FormattedMessage, FormattedHTMLMessage } from 'gatsby-plugin-intl'
 
 import Wrapper from './Wrapper'
 import VGroup from './VGroup'
@@ -27,6 +28,7 @@ const Section = styled.section`
 
 const Description = styled(Text)`
   margin: 20px auto 40px;
+  text-align: center;
 `
 
 const WebBuildingBlocks = () => (
@@ -39,28 +41,26 @@ const WebBuildingBlocks = () => (
         <VGroup alignItems="center" marginBottom="30px">
           <BuildingBlockItem items={[dataHandlingOne, dataHandlingTwo, dataHandlingThree]} />
           <Title align="center" size="1.4em" marginTop="20px">
-            Data Handling
+            <FormattedMessage id="dataHandling" />
           </Title>
         </VGroup>
 
         <VGroup alignItems="center" marginBottom="30px">
           <BuildingBlockItem items={[profileOne, profileTwo, profileThree]} />
           <Title align="center" size="1.4em" marginTop="20px">
-            Profile
+            <FormattedMessage id="profile" />
           </Title>
         </VGroup>
 
         <VGroup alignItems="center" marginBottom="30px">
           <BuildingBlockItem items={[operationOne, operationTwo, operationThree]} />
           <Title align="center" size="1.4em" marginTop="20px">
-            Operations
+            <FormattedMessage id="operations" />
           </Title>
         </VGroup>
       </HGroup>
       <Description>
-        We have the <em>web building blocks</em> to help you build your <em>financial web application</em>. Imagine
-        balances, profiles, all kinds of operations, tons of visual elements <em>ready</em> to be customized with{' '}
-        <em>your brand</em>.
+        <FormattedHTMLMessage id="webSolutions" />
       </Description>
     </Wrapper>
   </Section>

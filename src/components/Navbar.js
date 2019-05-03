@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import ClickOutside from 'react-click-outside'
+import { FormattedMessage, Link, injectIntl } from 'gatsby-plugin-intl'
 import { compose, withStateHandlers } from 'recompose'
 
 import navLogo from '../img/navLogo.png'
-import Link from './Link'
 
 import theme from '../utils/theme'
 
@@ -36,6 +36,7 @@ const NavbarLink = styled(Link)`
   margin: 10px;
   color: ${props => props.color || '#fff'};
   transition: 0.25s;
+  text-transform: uppercase;
 
   &:hover {
     color: ${theme.colors.primary};
@@ -96,7 +97,7 @@ const ClickOutsideStyled = styled(ClickOutside)`
   z-index: 99999;
 `
 
-const Navbar = ({ isHome, isAfterHero = false, setMenuOpened, isMenuOpened }) => (
+const Nav = ({ isHome, isAfterHero, setMenuOpened, isMenuOpened }) => (
   <ClickOutsideStyled isHome={isHome} isAfterHero={isAfterHero} onClickOutside={() => setMenuOpened(false)}>
     <NavbarContainer>
       <Link to="/">
@@ -104,10 +105,18 @@ const Navbar = ({ isHome, isAfterHero = false, setMenuOpened, isMenuOpened }) =>
       </Link>
 
       <NavbarLinkWrapper>
-        <NavbarLink to="/how-we-work">HOW WE WORK</NavbarLink>
-        <NavbarLink to="/open-source">OPEN SOURCE</NavbarLink>
-        <NavbarLink to="/join-us">JOIN US</NavbarLink>
-        <NavbarLink to="/#hireUs">CONTACT</NavbarLink>
+        <NavbarLink to="/how-we-work">
+          <FormattedMessage id="howWeWork" />
+        </NavbarLink>
+        <NavbarLink to="/open-source">
+          <FormattedMessage id="openSource" />
+        </NavbarLink>
+        <NavbarLink to="/join-us">
+          <FormattedMessage id="joinUs" />
+        </NavbarLink>
+        <NavbarLink to="/#hireUs">
+          <FormattedMessage id="contact" />
+        </NavbarLink>
       </NavbarLinkWrapper>
       <MobileMenu>
         <NavbarContainer>
@@ -115,10 +124,18 @@ const Navbar = ({ isHome, isAfterHero = false, setMenuOpened, isMenuOpened }) =>
         </NavbarContainer>
         {isMenuOpened && (
           <MenuDialog>
-            <NavbarLink to="/how-we-work">HOW WE WORK</NavbarLink>
-            <NavbarLink to="/open-source">OPEN SOURCE</NavbarLink>
-            <NavbarLink to="/join-us">JOIN US</NavbarLink>
-            <NavbarLink to="/#hireUs">CONTACT</NavbarLink>
+            <NavbarLink to="/how-we-work">
+              <FormattedMessage id="howWeWork" />
+            </NavbarLink>
+            <NavbarLink to="/open-source">
+              <FormattedMessage id="openSource" />
+            </NavbarLink>
+            <NavbarLink to="/join-us">
+              <FormattedMessage id="howWeWork" />
+            </NavbarLink>
+            <NavbarLink to="/#hireUs">
+              <FormattedMessage id="contact" />
+            </NavbarLink>
           </MenuDialog>
         )}
       </MobileMenu>
@@ -126,11 +143,18 @@ const Navbar = ({ isHome, isAfterHero = false, setMenuOpened, isMenuOpened }) =>
   </ClickOutsideStyled>
 )
 
-Navbar.propTypes = {
+Nav.propTypes = {
+  isAfterHero: PropTypes.bool,
   isColorChanged: PropTypes.bool,
   isMenuOpened: PropTypes.bool,
   setMenuOpened: PropTypes.func.isRequired,
 }
+
+Nav.defaultProps = {
+  isAfterHero: false,
+}
+
+const Navbar = injectIntl(Nav)
 
 export default compose(
   withStateHandlers(

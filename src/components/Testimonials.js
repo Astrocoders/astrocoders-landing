@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FormattedMessage, injectIntl } from 'gatsby-plugin-intl'
 
 import Title from './Title'
 import Wrapper from './Wrapper'
@@ -23,18 +24,18 @@ const TestimonialsList = styled(HGroup)`
   }
 `
 
-const Testimonials = () => (
+const Testimonials = ({ intl }) => (
   <TestimonialsWrapper>
     <Wrapper alignItems="center">
       <Title align="center" transform="uppercase" withStripe={true}>
-        WHAT OUR CUSTOMERS SAY ABOUT US
+        <FormattedMessage id="whatOurCustomersSay" />
       </Title>
       <TestimonialsList>
         <Testimonial
           key="https://lion.tax/"
           name="Pamela Borges"
           company="Lion Tax"
-          quote="Astrocoders is our partner that providers high quality software  and solutions for our tax platform"
+          quote={intl.formatMessage({ id: 'quote1' })}
           link="https://lion.tax/"
           photo={pamPhoto}
         />
@@ -42,7 +43,7 @@ const Testimonials = () => (
           key="https://zurahealth.com/"
           name="Kylie and Jess McBeath"
           company="Zura Health"
-          quote="Astrocoders made our custom  payment flow works like a breeze"
+          quote={intl.formatMessage({ id: 'quote2' })}
           link="https://zurahealth.com/"
           photo={zuraPhoto}
         />
@@ -50,7 +51,7 @@ const Testimonials = () => (
           key="https://fractalflows.com/"
           name="Imad Abdallah"
           company="Fractal Flows"
-          quote="Astrocoders has been key for us to discover how to monetize using crypto"
+          quote={intl.formatMessage({ id: 'quote3' })}
           link="https://fractalflows.com/"
           photo={imadPhoto}
         />
@@ -59,4 +60,4 @@ const Testimonials = () => (
   </TestimonialsWrapper>
 )
 
-export default Testimonials
+export default injectIntl(Testimonials)

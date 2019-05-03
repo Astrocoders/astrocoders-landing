@@ -3,6 +3,7 @@ import { withState, withProps } from 'recompose'
 import compose from 'recompose/compose'
 import styled from 'styled-components'
 import { stripIndent } from 'common-tags'
+import { FormattedMessage, injectIntl } from 'gatsby-plugin-intl'
 
 import Wrapper from './Wrapper'
 import Text from './Text'
@@ -26,7 +27,7 @@ const HireUsWrapper = styled.section`
   flex-direction: column;
   height: 100vh;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 20px;
   min-height: 700px;
   width: 100%;
 `
@@ -42,12 +43,12 @@ const FormWrapper = styled.div`
   }
 `
 
-function HireUs({ isSending, handleSubmit }) {
+function HireUsForm({ intl, isSending, handleSubmit }) {
   return (
     <scroll-page id="hireUs">
       <HireUsWrapper>
         <Title align="center" transform="uppercase" withStripe={true}>
-          Contact
+          <FormattedMessage id="contact" />
         </Title>
         <Wrapper alignItems="flex-end">
           <FormWrapper>
@@ -55,23 +56,35 @@ function HireUs({ isSending, handleSubmit }) {
               {!isSending ? (
                 <div>
                   <HGroup columnOnMobile={true}>
-                    <FormField label="Name" name="name" placeholder="John Doe" required="required" />
-                    <FormField label="Email" name="email" placeholder="email@provider.co" required="required" />
+                    <FormField
+                      label={intl.formatMessage({ id: 'name' })}
+                      name="name"
+                      placeholder="John Doe"
+                      required="required"
+                    />
+                    <FormField
+                      label={intl.formatMessage({ id: 'email' })}
+                      name="email"
+                      placeholder="email@provider.co"
+                      required="required"
+                    />
                   </HGroup>
                   <Textarea
                     name="subject"
-                    label="Your Message"
-                    placeholder="What do you want to build? How much is your budget?"
+                    label={intl.formatMessage({ id: 'subject' })}
+                    placeholder={intl.formatMessage({ id: 'subjectPlaceholder' })}
                     required="required"
                   />
                 </div>
               ) : (
                 <Wrapper marginBottom="50px" alignItems="center">
-                  <Text>Thanks for the message! We will respond soon.</Text>
+                  <Text>
+                    <FormattedMessage id="formThanks" />
+                  </Text>
                 </Wrapper>
               )}
               <Button disabled={isSending} marginLeft="10px" alignSelf="flex-end">
-                {isSending ? 'Sent' : 'Send'}
+                {isSending ? intl.formatMessage({ id: 'sent' }) : intl.formatMessage({ id: 'send' })}
               </Button>
             </form>
           </FormWrapper>
@@ -80,6 +93,8 @@ function HireUs({ isSending, handleSubmit }) {
     </scroll-page>
   )
 }
+
+const HireUs = injectIntl(HireUsForm)
 
 export default compose(
   withState('isSending', 'setIsSending', false),

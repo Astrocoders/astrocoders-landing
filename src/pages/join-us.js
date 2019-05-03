@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FormattedMessage, FormattedHTMLMessage } from 'gatsby-plugin-intl'
 
 import PageWrapper from '../components/PageWrapper'
 import Title from '../components/Title'
@@ -32,19 +33,13 @@ const CasesPage = () => (
     <ContactWrapper>
       <Wrapper alignItems="center" justifyContent=" center">
         <Title align="center" transform="uppercase" withStripe={true} marginBottom="50px">
-          join us
+          <FormattedMessage id="joinUs" />
         </Title>
-        <Text marginBottom="50px">
-          Over the years we have developed our own way to deal and help with each other. We like to enable dreams and
-          let each team member to be the most they can be. Our environment is relaxed and built over trust.
-          <br /> We ❤ people that knows how to search on search-engines and are independent. Every thought, question and
-          doubt matter for us and we encorage everyone to participate into core decisions.
-          <br />
-          <br />
-          If you liked what you read above please contact us! We would love to meet you (in-person or online).
+        <Text align="center" marginBottom="50px">
+          <FormattedHTMLMessage id="joinUsText" />
         </Text>
         <Title align="center" transform="uppercase" withStripe={true} marginBottom="50px">
-          our team
+          <FormattedMessage id="ourTeam" />
         </Title>
         <Team>
           <TeamMember

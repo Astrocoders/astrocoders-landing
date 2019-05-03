@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FormattedMessage, FormattedHTMLMessage } from 'gatsby-plugin-intl'
 
 import Wrapper from './Wrapper'
 import VGroup from './VGroup'
@@ -26,6 +27,7 @@ const Section = styled.section`
 
 const Description = styled(Text)`
   margin: 20px auto 40px;
+  text-align: center;
 `
 
 const MobileBuildingBlocks = () => (
@@ -39,29 +41,26 @@ const MobileBuildingBlocks = () => (
         <VGroup alignItems="center" marginBottom="30px">
           <BuildingBlockItem items={[balanceOne, balanceTwo, balanceThree]} />
           <Title align="center" size="1.4em" marginTop="20px">
-            Balance
+            <FormattedMessage id="balance" />
           </Title>
         </VGroup>
 
         <VGroup alignItems="center" marginBottom="30px">
           <BuildingBlockItem items={[transactionOne, transactionTwo, transactionThree]} />
           <Title align="center" size="1.4em" marginTop="20px">
-            Transactions
+            <FormattedMessage id="transactions" />
           </Title>
         </VGroup>
 
         <VGroup alignItems="center" marginBottom="30px">
           <BuildingBlockItem items={[operationOne, operationTwo, operationThree]} />
           <Title align="center" size="1.4em" marginTop="20px">
-            Operations
+            <FormattedMessage id="operations" />
           </Title>
         </VGroup>
       </HGroup>
       <Description>
-        We <em>use</em> and <em>create</em> state of the art tech in our <em>financial mobile components</em>. With
-        hundreds of possibilities you can <em>customize</em> them for your needs. With a single codebase for native
-        mobile application and our streamlined process we can push new versions to <em>Apple Store</em> and{' '}
-        <em>Google Play</em> automatically.
+        <FormattedHTMLMessage id="mobileSolutions" />
       </Description>
     </Wrapper>
   </Section>

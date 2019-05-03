@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 
 import Title from './Title'
 import Wrapper from './Wrapper'
@@ -41,7 +42,7 @@ const PartnerLogoImg = styled.img`
 const Partners = () => (
   <PartnersWrapper id="partners">
     <Title align="center" transform="uppercase" withStripe={true}>
-      Partners
+      <FormattedMessage id="partners" />
     </Title>
     <HGroup justifyContent="center" alignItems="center" marginTop="30px" columnOnMobile={true}>
       <PartnerLogo>

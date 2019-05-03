@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FormattedMessage, FormattedHTMLMessage } from 'gatsby-plugin-intl'
 
 import Lightbox from './Lightbox'
 import Title from './Title'
@@ -48,9 +49,7 @@ const IntegrationServer = () => (
         <Lightbox cover={mobileIntegrationServer} images={[{ src: mobileIntegrationServer }]} />
       </MobileGameTableWrapper>
       <Text align="center">
-        The <em>integration server</em> enable us to connect with <em>any</em> provider and APIs to <em>process</em> and{' '}
-        <em>collocate</em> just the most <em>important data</em> into the apps we build or your own apps. We are able to
-        deploy it in your infrastructure or in our cloud based high-available servers.
+        <FormattedHTMLMessage id="integrationServersText" />
       </Text>
     </Wrapper>
   </IntegrationServerWrapper>

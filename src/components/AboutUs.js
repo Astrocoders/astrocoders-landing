@@ -1,10 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FormattedMessage, FormattedHTMLMessage } from 'gatsby-plugin-intl'
 
 import Lightbox from './Lightbox'
 import Title from './Title'
 import Wrapper from './Wrapper'
 import Text from './Text'
+
+import theme from '../utils/theme'
 
 import gameTableImg from '../img/our-stack-process.png'
 import mobileGameTableImg from '../img/our-stack-process_mobile.png'
@@ -42,10 +45,10 @@ const Description = styled(Text)`
   text-transform: uppercase;
   font-weight: 500;
   text-align: center;
-`
 
-const Em = styled.span`
-  color: #74eab7;
+  em {
+    color: ${theme.colors.accent};
+  }
 `
 
 const AboutUs = () => (
@@ -53,7 +56,7 @@ const AboutUs = () => (
     <AboutUsWrapper data-testid="AboutUsSection">
       <Wrapper alignItems="center">
         <Title align="center" transform="uppercase" withStripe={true}>
-          we together to thrive
+          <FormattedMessage id="whoWeAre" />
         </Title>
         <GameTableWrapper>
           <Lightbox cover={gameTableImg} images={[{ src: gameTableImg }]} />
@@ -63,15 +66,10 @@ const AboutUs = () => (
         </MobileGameTableWrapper>
 
         <Description>
-          State of the art <Em>tech</Em> and <Em>design</Em> for <Em>delightful</Em> and <Em>unbreakable</Em> interfaces
+          <FormattedHTMLMessage id="tableDescription" />
         </Description>
         <Text>
-          Astrocoders builds <em>mobile and web apps</em>, <em>systems</em> and <em>platforms</em>. Simple, fast, PCI &
-          GDPR compliance and <em>made to last</em>.<br /> We use technology <em>to the limit</em>. For us, innovation
-          is about learning from the past and doing better, doing it faster. <br />
-          We <em>focus</em> on <em>speed</em> and <em>efficiency</em> to first deliver a realistic navigable prototype
-          and, after validation, the masterpiece, avoiding rework. <br />
-          Solid, simple, modular and timeless software without taking forever. <br />
+          <FormattedHTMLMessage id="aboutText" />
         </Text>
       </Wrapper>
     </AboutUsWrapper>
