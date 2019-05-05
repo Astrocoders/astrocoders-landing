@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FormattedMessage } from 'gatsby-plugin-intl'
+import { FormattedMessage, navigate } from 'gatsby-plugin-intl'
 
 import Title from './Title'
 import Wrapper from './Wrapper'
@@ -18,7 +18,7 @@ const PartnersWrapper = styled(Wrapper)`
   padding-bottom: 50px;
 `
 
-const PartnerLogo = styled.div`
+const PartnerLogo = styled.a`
   display: flex;
   margin-bottom: 20px;
 
@@ -45,19 +45,19 @@ const Partners = () => (
       <FormattedMessage id="partners" />
     </Title>
     <HGroup justifyContent="center" alignItems="center" marginTop="30px" columnOnMobile={true}>
-      <PartnerLogo>
+      <PartnerLogo href="https://contaquanto.com.br">
         <PartnerLogoImg src={quantoLogo} alt="Conta Quanto" title="Conta Quanto" />
       </PartnerLogo>
-      <PartnerLogo>
+      <PartnerLogo href="https://pismo.io/">
         <PartnerLogoImg src={pismoLogo} alt="Pismo Tech" title="Pismo Tech" />
       </PartnerLogo>
-      <PartnerLogo>
+      <PartnerLogo href="http://www.cateno.com.br">
         <PartnerLogoImg src={catenoLogo} alt="Cateno" title="Cateno" />
       </PartnerLogo>
-      <PartnerLogo>
+      <PartnerLogo href="http://www.boxpag.com.br/">
         <PartnerLogoImg src={boxpagLogo} alt="BoxPag" title="BoxPag" />
       </PartnerLogo>
-      <PartnerLogo>
+      <PartnerLogo href="https://z.cash/">
         <PartnerLogoImg src={zcashLogo} alt="ZCash" title="ZCash" />
       </PartnerLogo>
     </HGroup>
