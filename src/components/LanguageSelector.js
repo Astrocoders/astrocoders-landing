@@ -1,70 +1,59 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
+import { IntlContextConsumer, changeLocale } from 'gatsby-plugin-intl'
 import styled from 'styled-components'
 
-const Select = styled.select`
-  background: transparent;
-  border-color: transparent;
-  border-radius: 0;
-  color: ${props => props.color};
-  font-family: Roboto;
-  padding: 10px !important;
-  margin-left: 30px;
+import theme from '../utils/theme'
+
+const Wrapper = styled.div`
+  @media (max-width: 960px) {
+    display: ${p => (p.hideOnMobile ? 'none' : 'block')};
+    margin: 15px;
+  }
 `
 
-class LanguageSelector extends Component {
-  static contextTypes = {
-    language: PropTypes.object,
-    color: PropTypes.string,
-  }
+const LanguageLink = styled.a`
+  color: ${p => p.color};
+  cursor: pointer;
+  text-transform: uppercase;
 
-  state = {
-    value: '',
-    color: '',
-  }
-
-  componentDidMount() {
-    const { language } = this.context
-
-    this.setState({
-      value: language.locale || language.detected,
-    })
-  }
-
-  handleChange = event => {
-    const { language } = this.context
-    const { originalPath } = language
-    const { value } = event.target
-
-    if (value === this.state.value) {
-      return
+  &:not(:last-child) {
+    &:after {
+      content: '/';
+      color: rgba(255, 255, 255, 0.37);
+      font-size: 10px;
+      margin: 10px;
+      vertical-align: middle;
     }
-
-    this.setState({ value }, () => {
-      localStorage.setItem('language', value)
-      window.location.href = `/${value}${originalPath}`
-    })
   }
+`
 
-  render() {
-    const { language } = this.context
-    const { languages } = language
-    const { value } = this.state
+const LanguageSelector = ({ hideOnMobile }) => {
+  return (
+    <Wrapper hideOnMobile={hideOnMobile}>
+      <IntlContextConsumer>
+        {({ languages, language: currentLocale }) =>
+          languages.map(language => (
+            <LanguageLink
+              key={language}
+              onClick={() => changeLocale(language)}
+              color={currentLocale === language ? theme.colors.accent : theme.colors.primary}
+            >
+              {language}
+            </LanguageLink>
+          ))
+        }
+      </IntlContextConsumer>
+    </Wrapper>
+  )
+}
 
-    if (!value) {
-      return null
-    }
+LanguageSelector.defaultProps = {
+  hideOnMobile: false,
+}
 
-    return (
-      <Select color={this.props.color} value={value} onChange={this.handleChange}>
-        {languages.map(({ value, text }) => (
-          <option key={value} value={value}>
-            {text}
-          </option>
-        ))}
-      </Select>
-    )
-  }
+LanguageSelector.propTypes = {
+  hideOnMobile: PropTypes.bool,
 }
 
 export default LanguageSelector

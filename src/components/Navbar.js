@@ -5,6 +5,8 @@ import ClickOutside from 'react-click-outside'
 import { FormattedMessage, Link, injectIntl } from 'gatsby-plugin-intl'
 import { compose, withStateHandlers } from 'recompose'
 
+import LanguageSelector from './LanguageSelector'
+
 import navLogo from '../img/navLogo.png'
 
 import theme from '../utils/theme'
@@ -118,6 +120,7 @@ const Nav = ({ isHome, isAfterHero, setMenuOpened, isMenuOpened }) => (
           <FormattedMessage id="contact" />
         </NavbarLink>
       </NavbarLinkWrapper>
+      <LanguageSelector hideOnMobile />
       <MobileMenu>
         <NavbarContainer>
           <MenuTrigger onClick={evt => setMenuOpened()}>{isMenuOpened ? <MenuIconClose /> : <MenuIcon />}</MenuTrigger>
@@ -131,11 +134,12 @@ const Nav = ({ isHome, isAfterHero, setMenuOpened, isMenuOpened }) => (
               <FormattedMessage id="openSource" />
             </NavbarLink>
             <NavbarLink to="/join-us">
-              <FormattedMessage id="howWeWork" />
+              <FormattedMessage id="joinUs" />
             </NavbarLink>
             <NavbarLink to="/#hireUs">
               <FormattedMessage id="contact" />
             </NavbarLink>
+            <LanguageSelector hideOnMobile={false} />
           </MenuDialog>
         )}
       </MobileMenu>
