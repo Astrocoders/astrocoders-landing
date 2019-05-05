@@ -68,7 +68,7 @@ const AboutUs = () => (
         <Description>
           <FormattedHTMLMessage id="tableDescription" />
         </Description>
-        <Text>
+        <Text align="center">
           <FormattedHTMLMessage id="aboutText" />
         </Text>
       </Wrapper>
