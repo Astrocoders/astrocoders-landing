@@ -23,7 +23,7 @@ const PartnerLogo = styled.div`
   margin-bottom: 20px;
 
   @media (min-width: 960px) {
-    max-width: 200px;
+    max-width: 260px;
     margin: 10px;
   }
 `
@@ -32,7 +32,7 @@ const PartnerLogoImg = styled.img`
   filter: grayscale(100%);
   transition: all 0.4s;
   padding: 20px;
-  height: 70px;
+  height: 80px;
 
   &:hover {
     filter: grayscale(0%);
