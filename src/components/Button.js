@@ -36,7 +36,6 @@ const ButtonWrapper = styled.button`
 `
 
 const Button = ({
-  link,
   centerInMobile,
   theme,
   raised,
@@ -57,7 +56,7 @@ const Button = ({
     marginTop={marginTop}
     centerInMobile={centerInMobile}
   >
-    {link ? <a href={link}>{children}</a> : children}
+    {children}
   </ButtonWrapper>
 )
 

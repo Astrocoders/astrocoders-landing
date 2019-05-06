@@ -40,5 +40,8 @@
   "processFourTitle": "Entregas realistas",
   "processFourText": "Sabemos que é frustrante ter um projeto atrasado e ser uma última pessoa um sabre. Portanto, o contato com nossos clientes é contínuo. Definimos datas realistas para nossas entregas e mantemos um canal sempre aberto explicando a evolução do trabalho.",
   "processFiveTitle": "Total liberdade",
-  "processFiveText": "Criamos projetos com código limpo, funcional e modular. Portanto, se em algum momento nossos clientes quiserem internalizar melhorias ou adicionar outro profissional para uma nova funcionalidade, não haverá problemas. A qualidade, as ideias e a rapidez são o que mantém nossos clientes por perto e não porque você está preso ao nosso código."
+  "processFiveText": "Criamos projetos com código limpo, funcional e modular. Portanto, se em algum momento nossos clientes quiserem internalizar melhorias ou adicionar outro profissional para uma nova funcionalidade, não haverá problemas. A qualidade, as ideias e a rapidez são o que mantém nossos clientes por perto e não porque você está preso ao nosso código.",
+  "notFound": "Página não encontrada",
+  "whoops": "Eita! Esta página não foi encontrada em nossa galáxia!",
+  "backToHome": "Voltar para Home"
 }

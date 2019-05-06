@@ -41,10 +41,10 @@ const PartnerLogoImg = styled.img`
 
 const Partners = () => (
   <PartnersWrapper id="partners">
-    <Title align="center" transform="uppercase" withStripe={true}>
+    <Title align="center" transform="uppercase" withStripe>
       <FormattedMessage id="partners" />
     </Title>
-    <HGroup justifyContent="center" alignItems="center" marginTop="30px" columnOnMobile={true}>
+    <HGroup justifyContent="center" alignItems="center" marginTop="30px" columnOnMobile>
       <PartnerLogo href="https://contaquanto.com.br">
         <PartnerLogoImg src={quantoLogo} alt="Conta Quanto" title="Conta Quanto" />
       </PartnerLogo>

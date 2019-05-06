@@ -146,7 +146,7 @@ const VerticalLine = styled.div`
 `
 
 const HowWeWork = () => (
-  <PageWrapper isHome={false}>
+  <PageWrapper>
     <Content>
       <Wrapper alignItems="center" justifyContent="center">
         <Title align="center" marginBottom="100px" withStripe>

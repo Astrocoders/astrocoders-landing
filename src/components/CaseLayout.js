@@ -66,7 +66,7 @@ const CaseLayout = ({ color, logo, title, content }) => (
       {content}
       <CTA marginTop="100px">
         Ready to
-        <TextLoop interval={2000} mask={true}>
+        <TextLoop interval={2000} mask>
           <span>start</span>
           <span>continue</span>
           <span>improve</span>

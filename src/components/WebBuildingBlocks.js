@@ -37,7 +37,7 @@ const WebBuildingBlocks = () => (
       <Title align="center" transform="uppercase" withStripe marginBottom="70px">
         Web Building Blocks
       </Title>
-      <HGroup columnOnMobile={true}>
+      <HGroup columnOnMobile>
         <VGroup alignItems="center" marginBottom="30px">
           <BuildingBlockItem items={[dataHandlingOne, dataHandlingTwo, dataHandlingThree]} />
           <Title align="center" size="1.4em" marginTop="20px">

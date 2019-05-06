@@ -29,16 +29,16 @@ const Team = styled(HGroup)`
 `
 
 const CasesPage = () => (
-  <PageWrapper isHome={false}>
+  <PageWrapper>
     <ContactWrapper>
       <Wrapper alignItems="center" justifyContent=" center">
-        <Title align="center" transform="uppercase" withStripe={true} marginBottom="50px">
+        <Title align="center" transform="uppercase" withStripe marginBottom="50px">
           <FormattedMessage id="joinUs" />
         </Title>
         <Text align="center" marginBottom="50px">
           <FormattedHTMLMessage id="joinUsText" />
         </Text>
-        <Title align="center" transform="uppercase" withStripe={true} marginBottom="50px">
+        <Title align="center" transform="uppercase" withStripe marginBottom="50px">
           <FormattedMessage id="ourTeam" />
         </Title>
         <Team>

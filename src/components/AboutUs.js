@@ -55,7 +55,7 @@ const AboutUs = () => (
   <scroll-page id="discover">
     <AboutUsWrapper data-testid="AboutUsSection">
       <Wrapper alignItems="center">
-        <Title align="center" transform="uppercase" withStripe={true}>
+        <Title align="center" transform="uppercase" withStripe>
           <FormattedMessage id="whoWeAre" />
         </Title>
         <GameTableWrapper>
