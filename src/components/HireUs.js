@@ -47,7 +47,7 @@ function HireUsForm({ intl, isSending, handleSubmit }) {
   return (
     <scroll-page id="hireUs">
       <HireUsWrapper>
-        <Title align="center" transform="uppercase" withStripe={true}>
+        <Title align="center" transform="uppercase" withStripe>
           <FormattedMessage id="contact" />
         </Title>
         <Wrapper alignItems="flex-end">
@@ -55,7 +55,7 @@ function HireUsForm({ intl, isSending, handleSubmit }) {
             <form id="hireUsForm" className="validate" onSubmit={handleSubmit}>
               {!isSending ? (
                 <div>
-                  <HGroup columnOnMobile={true}>
+                  <HGroup columnOnMobile>
                     <FormField
                       label={intl.formatMessage({ id: 'name' })}
                       name="name"

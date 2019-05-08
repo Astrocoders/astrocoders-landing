@@ -23,9 +23,9 @@ const CasesGrid = styled(HGroup)`
 `
 
 const CasesPage = () => (
-  <PageWrapper isHome={false}>
+  <PageWrapper>
     <CasesWrapper>
-      <Title align="center" marginBottom="100px" withStripe={true}>
+      <Title align="center" marginBottom="100px" withStripe>
         Our Cases
       </Title>
 

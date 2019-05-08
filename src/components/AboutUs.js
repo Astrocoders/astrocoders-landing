@@ -7,6 +7,8 @@ import Title from './Title'
 import Wrapper from './Wrapper'
 import Text from './Text'
 
+import theme from '../utils/theme'
+
 import gameTableImg from '../img/our-stack-process.png'
 import mobileGameTableImg from '../img/our-stack-process_mobile.png'
 
@@ -33,20 +35,27 @@ const MobileGameTableWrapper = styled.div`
     display: block;
     align-items: center;
     margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
   }
 `
 
 const Description = styled(Text)`
-  margin: -20px auto 50px;
+  margin: -20px auto 100px;
+  max-width: 450px;
+  text-transform: uppercase;
+  font-weight: 500;
   text-align: center;
+
+  em {
+    color: ${theme.colors.accent};
+  }
 `
 
 const AboutUs = () => (
   <scroll-page id="discover">
     <AboutUsWrapper data-testid="AboutUsSection">
       <Wrapper alignItems="center">
-        <Title align="center" transform="uppercase" withStripe={true}>
+        <Title align="center" transform="uppercase" withStripe>
           <FormattedMessage id="whoWeAre" />
         </Title>
         <GameTableWrapper>
@@ -57,9 +66,9 @@ const AboutUs = () => (
         </MobileGameTableWrapper>
 
         <Description>
-          <FormattedMessage id="tableDescription" />
+          <FormattedHTMLMessage id="tableDescription" />
         </Description>
-        <Text>
+        <Text align="center">
           <FormattedHTMLMessage id="aboutText" />
         </Text>
       </Wrapper>

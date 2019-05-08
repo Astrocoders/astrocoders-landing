@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FormattedMessage, FormattedHTMLMessage } from 'gatsby-plugin-intl'
 
 import Lightbox from './Lightbox'
 import Title from './Title'
@@ -38,7 +39,7 @@ const MobileGameTableWrapper = styled.div`
 const IntegrationServer = () => (
   <IntegrationServerWrapper data-testid="IntegrationServerSection">
     <Wrapper alignItems="center">
-      <Title align="center" transform="uppercase" withStripe={true}>
+      <Title align="center" transform="uppercase" withStripe marginBottom="70px">
         Integration Servers
       </Title>
       <GameTableWrapper>
@@ -48,9 +49,7 @@ const IntegrationServer = () => (
         <Lightbox cover={mobileIntegrationServer} images={[{ src: mobileIntegrationServer }]} />
       </MobileGameTableWrapper>
       <Text align="center">
-        Astrocoders builds <em>mobile and web apps</em>, <em>systems</em> and <em>platforms</em> in a different way.{' '}
-        <em>Simple</em>, <em>quick</em>, PCI & GDPR compliance and <em>made to last</em>. No unnecessary lines, no bends
-        or obstacles along the way.
+        <FormattedHTMLMessage id="integrationServersText" />
       </Text>
     </Wrapper>
   </IntegrationServerWrapper>

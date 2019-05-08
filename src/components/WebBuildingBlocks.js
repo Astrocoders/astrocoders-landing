@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FormattedMessage } from 'gatsby-plugin-intl'
+import { FormattedMessage, FormattedHTMLMessage } from 'gatsby-plugin-intl'
 
 import Wrapper from './Wrapper'
 import VGroup from './VGroup'
@@ -28,26 +28,16 @@ const Section = styled.section`
 
 const Description = styled(Text)`
   margin: 20px auto 40px;
-`
-
-const Icon = styled.div`
-  display: block;
-  margin: 0 auto;
-  max-width: 330px;
-  max-height: 229px;
+  text-align: center;
 `
 
 const WebBuildingBlocks = () => (
   <Section>
     <Wrapper alignItems="center">
-      <Title align="center" transform="uppercase" withStripe={true}>
-        Web
-        <b> Building Blocks</b>
+      <Title align="center" transform="uppercase" withStripe marginBottom="70px">
+        Web Building Blocks
       </Title>
-      <Description>
-        <FormattedMessage id="webSolutions" />
-      </Description>
-      <HGroup columnOnMobile={true}>
+      <HGroup columnOnMobile>
         <VGroup alignItems="center" marginBottom="30px">
           <BuildingBlockItem items={[dataHandlingOne, dataHandlingTwo, dataHandlingThree]} />
           <Title align="center" size="1.4em" marginTop="20px">
@@ -69,6 +59,9 @@ const WebBuildingBlocks = () => (
           </Title>
         </VGroup>
       </HGroup>
+      <Description>
+        <FormattedHTMLMessage id="webSolutions" />
+      </Description>
     </Wrapper>
   </Section>
 )

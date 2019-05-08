@@ -1,10 +1,22 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import PropTypes from 'prop-types'
 
 import VGroup from './VGroup'
 
 import theme from '../utils/theme'
+
+const gradient = keyframes`
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+`
 
 const TeamMemberWrapper = styled(VGroup)`
   align-items: center;
@@ -36,7 +48,9 @@ const NameTitle = styled.h2`
 `
 
 const RoleTitle = styled.h3`
-  background-image: -webkit-linear-gradient(-45deg, ${theme.colors.primary} 1%, ${theme.colors.accent} 100%);
+  animation: ${gradient} 2s ease infinite;
+  background-image: linear-gradient(-45deg, ${theme.colors.primary}, ${theme.colors.accent});
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: ${theme.fonts.title};

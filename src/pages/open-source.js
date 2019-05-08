@@ -12,10 +12,10 @@ const OpenSourceWrapper = styled.section`
 `
 
 const OpenSourcePage = () => (
-  <PageWrapper isHome={false}>
+  <PageWrapper>
     <OpenSourceWrapper>
       <Wrapper alignItems="center" justifyContent=" center">
-        <Title align="center" marginBottom="50px" withStripe={true}>
+        <Title align="center" marginBottom="50px" withStripe>
           Open Source Projects
         </Title>
         <VGroup>

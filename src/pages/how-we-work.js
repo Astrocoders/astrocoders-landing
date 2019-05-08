@@ -104,10 +104,6 @@ const ProcessTitle = styled.h3`
 
 const ProcessDescription = styled.div`
   transition: all 0.2s ease-in-out;
-
-  @media (min-width: 960px) {
-    opacity: 0;
-  }
 `
 
 const VerticalLine = styled.div`
@@ -150,10 +146,10 @@ const VerticalLine = styled.div`
 `
 
 const HowWeWork = () => (
-  <PageWrapper isHome={false}>
+  <PageWrapper>
     <Content>
       <Wrapper alignItems="center" justifyContent="center">
-        <Title align="center" marginBottom="100px">
+        <Title align="center" marginBottom="100px" withStripe>
           <FormattedMessage id="howWeWork" />
         </Title>
         <VGroup>
