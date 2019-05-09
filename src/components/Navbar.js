@@ -92,7 +92,7 @@ const MenuIconClose = () => (
 )
 
 const ClickOutsideStyled = styled(ClickOutside)`
-  position: fixed;
+  position: ${props => (props.isHome ? 'fixed' : 'initial')};
   display: ${props => (props.isHome && !props.isAfterHero ? 'none' : 'block')};
   top: 0;
   background-color: #000;
