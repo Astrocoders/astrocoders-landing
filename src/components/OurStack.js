@@ -44,7 +44,12 @@ const StackLogoImg = styled.img`
 
   @media (max-width: 960px) {
     padding-left: 10px;
-    height: 57px;
+  }
+
+  @media (max-width: 600px) {
+    height: 48px;
+    padding: 0;
+    width: 48px;
   }
 `
 

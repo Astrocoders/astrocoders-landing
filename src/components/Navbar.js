@@ -92,11 +92,12 @@ const MenuIconClose = () => (
 )
 
 const ClickOutsideStyled = styled(ClickOutside)`
-  position: ${props => (props.isAfterHero ? 'sticky' : 'initial')};
+  position: ${props => (props.isHome ? 'fixed' : 'initial')};
   display: ${props => (props.isHome && !props.isAfterHero ? 'none' : 'block')};
   top: 0;
   background-color: #000;
   z-index: 99999;
+  width: 100%;
 `
 
 const Nav = ({ isHome, isAfterHero, setMenuOpened, isMenuOpened }) => (
