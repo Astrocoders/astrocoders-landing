@@ -48,14 +48,14 @@ const NameTitle = styled.h2`
 `
 
 const RoleTitle = styled.h3`
-  animation: ${gradient} 2s ease infinite;
+  animation: ${gradient} 10s ease infinite;
   background-image: linear-gradient(-45deg, ${theme.colors.primary}, ${theme.colors.accent});
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: ${theme.fonts.title};
   font-size: 0.8em;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
