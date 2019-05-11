@@ -13,7 +13,7 @@ import OurStack from '../components/OurStack'
 import Partners from '../components/Partners'
 import Testimonials from '../components/Testimonials'
 
-import galaxy from '../img/fbb-bg.jpeg'
+import galaxy from '../img/fbb-bg.jpg'
 
 const BuldingBlocksWrapper = styled.section`
   &:before {
