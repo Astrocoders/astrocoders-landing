@@ -38,7 +38,7 @@ const LightboxModal = styled.div`
   background: rgba(0, 0, 0, 0.8);
   opacity: ${props => (props.visible ? '1' : '0')};
   visibility: ${props => (props.visible ? 'visible' : 'hidden')};
-  z-index: 2;
+  z-index: 99999;
 `
 const LightboxContent = styled.div`
   margin: 15px;

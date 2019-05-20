@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FormattedMessage, navigate } from 'gatsby-plugin-intl'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 
 import Title from './Title'
 import Wrapper from './Wrapper'
@@ -10,7 +10,7 @@ import quantoLogo from '../img/partners/quanto.png'
 import pismoLogo from '../img/partners/pismo.png'
 import catenoLogo from '../img/partners/cateno.png'
 import boxpagLogo from '../img/partners/boxpag.png'
-import zcashLogo from '../img/partners/zcash.png'
+import zcashLogo from '../img/partners/zfnd.png'
 
 const PartnersWrapper = styled(Wrapper)`
   align-items: center;
@@ -57,7 +57,7 @@ const Partners = () => (
       <PartnerLogo href="http://www.boxpag.com.br/">
         <PartnerLogoImg src={boxpagLogo} alt="BoxPag" title="BoxPag" />
       </PartnerLogo>
-      <PartnerLogo href="https://z.cash/">
+      <PartnerLogo href="https://www.zfnd.org/">
         <PartnerLogoImg src={zcashLogo} alt="ZCash" title="ZCash" />
       </PartnerLogo>
     </HGroup>
