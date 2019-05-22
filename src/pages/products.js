@@ -7,9 +7,9 @@ import HGroup from '../components/HGroup'
 import Case from '../components/Case'
 import Wrapper from '../components/Wrapper'
 
-import cleanioCover from '../img/projects/cleanio.png'
-import zuraCover from '../img/projects/zura.png'
-import liontaxCover from '../img/projects/lion-tax.png'
+import summhubCover from '../img/products/summhub-logo-white.png'
+import pagzenCover from '../img/products/pagzen.png'
+import lendhubCover from '../img/products/lendhub.png'
 
 const CasesWrapper = styled(Wrapper)`
   align-items: center;
@@ -30,9 +30,9 @@ const ProductsPage = () => (
       </Title>
 
       <CasesGrid>
-        <Case cover={liontaxCover} company="Lion Tax" link="lion-tax" color="#FF8525" />
-        <Case cover={zuraCover} company="Zura Health" color="#70ccac" link="zura" />
-        <Case cover={cleanioCover} company="Cleanio" link="cleanio" color="#294A70" />
+        <Case cover={summhubCover} company="Summhub" link="#" color="#000" />
+        <Case cover={pagzenCover} company="Pagzen" link="#" color="#000" />
+        <Case cover={lendhubCover} company="LendHub" link="#" color="#000" />
       </CasesGrid>
     </CasesWrapper>
   </PageWrapper>
