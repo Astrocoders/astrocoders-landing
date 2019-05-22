@@ -150,6 +150,9 @@ const Nav = ({ isHome, isSupermenuOpened, isAfterHero, setMenuOpened, setSuperme
         </NavbarContainer>
         {isMenuOpened && (
           <MenuDialog>
+            <SupermenuTrigger onClick={evt => setSupermenuOpened()}>
+              <FormattedMessage id="products" />
+            </SupermenuTrigger>
             <NavbarLink to="/how-we-work">
               <FormattedMessage id="howWeWork" />
             </NavbarLink>

@@ -14,6 +14,7 @@ const SupermenuWrapper = styled.div`
   position: absolute;
   top: 100px;
   transition: all 0.2s;
+  z-index: 999;
 
   &:before {
     content: '';
@@ -30,9 +31,9 @@ const SupermenuWrapper = styled.div`
 
   @media (max-width: 960px) {
     flex-direction: column;
-    padding: 20px;
-    left: 15%;
+    left: 16%;
     width: 70%;
+    top: 150px;
   }
 
   @media (min-width: 960px) {
@@ -76,6 +77,11 @@ const Cases = styled.div`
   background-color: #ebebeb;
   border-radius: 0px 3px 3px 0px;
   padding: 30px;
+
+  @media (max-width: 960px) {
+    border-radius: 0px 0px 3px 3px;
+    flex-direction: column;
+  }
 `
 
 const CaseHeading = styled.h4`
