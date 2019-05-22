@@ -8,6 +8,7 @@ const theme = {
   colors: {
     primary: '#835FE2',
     accent: '#21edba',
+    astrogreen: '#00B45C',
   },
 }
 
