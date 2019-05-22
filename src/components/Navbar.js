@@ -6,6 +6,7 @@ import { FormattedMessage, Link, injectIntl } from 'gatsby-plugin-intl'
 import { compose, withStateHandlers } from 'recompose'
 
 import LanguageSelector from './LanguageSelector'
+import Supermenu from './Supermenu'
 
 import navLogo from '../img/navLogo.png'
 
@@ -33,6 +34,23 @@ const NavbarLinkWrapper = styled.div`
   }
 `
 const NavbarLink = styled(Link)`
+  font-size: ${props => props.fontSize || '1rem'};
+  text-decoration: none;
+  margin: 10px;
+  color: ${props => props.color || '#fff'};
+  transition: 0.25s;
+  text-transform: uppercase;
+
+  &:hover {
+    color: ${theme.colors.primary};
+    @media (max-width: 960px) {
+      color: #fff;
+    }
+  }
+`
+
+const SupermenuTrigger = styled.span`
+  cursor: pointer;
   font-size: ${props => props.fontSize || '1rem'};
   text-decoration: none;
   margin: 10px;
@@ -100,7 +118,7 @@ const ClickOutsideStyled = styled(ClickOutside)`
   width: 100%;
 `
 
-const Nav = ({ isHome, isAfterHero, setMenuOpened, isMenuOpened }) => (
+const Nav = ({ isHome, isSupermenuOpened, isAfterHero, setMenuOpened, setSupermenuOpened, isMenuOpened }) => (
   <ClickOutsideStyled isHome={isHome} isAfterHero={isAfterHero} onClickOutside={() => setMenuOpened(false)}>
     <NavbarContainer>
       <Link to="/">
@@ -114,6 +132,9 @@ const Nav = ({ isHome, isAfterHero, setMenuOpened, isMenuOpened }) => (
         <NavbarLink to="/open-source">
           <FormattedMessage id="openSource" />
         </NavbarLink>
+        <SupermenuTrigger onClick={evt => setSupermenuOpened()}>
+          <FormattedMessage id="products" />
+        </SupermenuTrigger>
         <NavbarLink to="/join-us">
           <FormattedMessage id="joinUs" />
         </NavbarLink>
@@ -122,6 +143,7 @@ const Nav = ({ isHome, isAfterHero, setMenuOpened, isMenuOpened }) => (
         </NavbarLink>
       </NavbarLinkWrapper>
       <LanguageSelector hideOnMobile />
+      <Supermenu isShowed={isSupermenuOpened} />
       <MobileMenu>
         <NavbarContainer>
           <MenuTrigger onClick={evt => setMenuOpened()}>{isMenuOpened ? <MenuIconClose /> : <MenuIcon />}</MenuTrigger>
@@ -153,6 +175,7 @@ Nav.propTypes = {
   isColorChanged: PropTypes.bool,
   isMenuOpened: PropTypes.bool,
   setMenuOpened: PropTypes.func.isRequired,
+  setSupermenuOpened: PropTypes.func.isRequired,
 }
 
 Nav.defaultProps = {
@@ -163,10 +186,16 @@ const Navbar = injectIntl(Nav)
 
 export default compose(
   withStateHandlers(
-    { isMenuOpened: false },
+    {
+      isMenuOpened: false,
+      isSupermenuOpened: false,
+    },
     {
       setMenuOpened: ({ isMenuOpened }) => (newState = !isMenuOpened) => ({
         isMenuOpened: newState,
+      }),
+      setSupermenuOpened: ({ isSupermenuOpened }) => (newState = !isSupermenuOpened) => ({
+        isSupermenuOpened: newState,
       }),
     },
   ),
