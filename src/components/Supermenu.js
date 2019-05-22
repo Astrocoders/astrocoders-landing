@@ -100,8 +100,8 @@ const CaseDescription = styled.span`
     width: 6px;
     height: 6px;
     position: absolute;
-    margin-top: 3px;
-    margin-left: -10px;
+    margin-top: 6px;
+    margin-left: -13px;
   }
 `
 
