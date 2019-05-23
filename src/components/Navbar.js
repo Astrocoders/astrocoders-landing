@@ -118,6 +118,10 @@ const ClickOutsideStyled = styled(ClickOutside)`
   width: 100%;
 `
 
+const ClickOutsideSupermenu = styled(ClickOutside)`
+  display: ${props => (props.isShowed ? 'none' : 'block')};
+`
+
 const Nav = ({ isHome, isSupermenuOpened, isAfterHero, setMenuOpened, setSupermenuOpened, isMenuOpened }) => (
   <ClickOutsideStyled isHome={isHome} isAfterHero={isAfterHero} onClickOutside={() => setMenuOpened(false)}>
     <NavbarContainer>
@@ -143,7 +147,9 @@ const Nav = ({ isHome, isSupermenuOpened, isAfterHero, setMenuOpened, setSuperme
         </NavbarLink>
       </NavbarLinkWrapper>
       <LanguageSelector hideOnMobile />
-      <Supermenu isShowed={isSupermenuOpened} />
+      <ClickOutsideSupermenu isHome={isSupermenuOpened} onClickOutside={() => setSupermenuOpened(false)}>
+        <Supermenu isShowed={isSupermenuOpened} />
+      </ClickOutsideSupermenu>
       <MobileMenu>
         <NavbarContainer>
           <MenuTrigger onClick={evt => setMenuOpened()}>{isMenuOpened ? <MenuIconClose /> : <MenuIcon />}</MenuTrigger>

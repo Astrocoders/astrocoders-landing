@@ -12,7 +12,7 @@ const SupermenuWrapper = styled.div`
   color: black;
   display: ${props => (props.isShowed === true ? 'flex' : 'none')};
   position: absolute;
-  top: 100px;
+  top: 70px;
   transition: all 0.2s;
   z-index: 999;
 
@@ -38,7 +38,7 @@ const SupermenuWrapper = styled.div`
 
   @media (min-width: 960px) {
     flex-direction: row;
-    left: 33.5%;
+    left: 28.5%;
   }
 `
 
@@ -56,7 +56,7 @@ const ProductTitle = styled.h4`
   color: ${theme.colors.astrogreen};
   font-family: ${theme.fonts.caseTitle};
   font-weight: 700;
-  margin-bototm: 10px;
+  margin-bottom: 0.5rem;
 `
 
 const ProductDescription = styled.span`
