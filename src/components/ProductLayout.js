@@ -64,6 +64,7 @@ const ProjectContent = styled(Wrapper)`
 
 const CTA = styled(Title)`
   font-family: ${theme.fonts.caseTitle};
+  margin: 100px auto;
 
   span {
     padding-left: 10px;
@@ -82,7 +83,7 @@ const ProductLayout = ({ color, logo, title, subtitle, content }) => (
     </ProjectCover>
     <ProjectContent color={color}>
       {content}
-      <CTA marginTop="100px">
+      <CTA>
         Ready to
         <TextLoop interval={2000} mask>
           <span>start</span>

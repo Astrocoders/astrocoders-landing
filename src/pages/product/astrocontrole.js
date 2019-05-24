@@ -5,6 +5,7 @@ import ProductLayout from '../../components/ProductLayout'
 import Button from '../../components/Button'
 import Title from '../../components/Title'
 import Text from '../../components/Text'
+import Testimonials from '../../components/Testimonials'
 import HGroup from '../../components/HGroup'
 import VGroup from '../../components/VGroup'
 
@@ -16,6 +17,18 @@ import theme from '../../utils/theme'
 const Link = styled.a`
   color: ${props => props.color};
   text-decoration: none;
+`
+
+const WhatIsThis = styled(HGroup)`
+  align-items: center;
+  justifycontent: center;
+  margin-top: 100px;
+
+  @media (max-width: 960px) {
+    div:first-child {
+      order: 1;
+    }
+  }
 `
 
 const Preview = styled.div`
@@ -41,7 +54,7 @@ const Preview = styled.div`
 const Image = styled.img`
   display: block;
   height: auto;
-  transition: all 0.4s ease-in-out;
+  transition: all 2s ease-in-out;
 `
 
 const Astrocontrole = () => (
@@ -57,7 +70,7 @@ const Astrocontrole = () => (
           management that mitigate tax/fees/fines due to extent time.
         </Text>
 
-        <HGroup marginTop="100px" alignItems="center" justifyContent="center" columnOnMobile>
+        <WhatIsThis columnOnMobile>
           <VGroup>
             <Title>What is this?</Title>
             <Text marginTop="20px" marginBottom="20px">
@@ -70,7 +83,9 @@ const Astrocontrole = () => (
           <Preview>
             <Image src={astrocontrolePreview} alt="Astrocontrole" />
           </Preview>
-        </HGroup>
+        </WhatIsThis>
+
+        <Testimonials />
       </>
     }
   />
