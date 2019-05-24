@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { navigate } from '@reach/router'
 
-import theme from '../utils/theme'
-
 const CaseCover = styled.div`
   align-items: center;
   background-color: ${props => props.color || '#fff'};
@@ -21,7 +19,7 @@ const CaseCover = styled.div`
 const Image = styled.img`
   display: block;
   height: auto;
-  width: 160px;
+  width: 250px;
 `
 
 const Case = ({ color, company, link, cover }) => (
@@ -38,7 +36,7 @@ Case.propTypes = {
 }
 
 Case.defaultProps = {
-  color: theme.colors.primary,
+  color: '#000',
   company: 'Astrocoders Project',
 }
 
