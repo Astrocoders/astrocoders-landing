@@ -7,8 +7,8 @@ import theme from '../utils/theme'
 
 const FeatureWrapper = styled.div`
   align-items: center;
-  background-color: #fff;
-  border-radius: 3px;
+  background-color: #262a41;
+  border-radius: 5px;
   color: #1e1e1e;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@ const Icon = styled.img`
 `
 
 const FeatureTitle = styled(Title)`
-  color: #1e1e1e;
+  color: #fff;
   font-size: 1.4rem;
   font-weight: 700;
   font-family: ${theme.fonts.caseTitle};
@@ -37,10 +37,11 @@ const FeatureTitle = styled(Title)`
 `
 
 const FeatureText = styled(Text)`
-  color: #1e1e1e;
+  color: #fff;
   font-size: 1rem;
   font-weight: 300;
   font-family: ${theme.fonts.caseTitle};
+  opacity: 0.6;
   text-align: center;
 `
 

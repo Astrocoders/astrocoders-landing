@@ -28,18 +28,26 @@ const WhatIsThis = styled(HGroup)`
     div:first-child {
       order: 1;
     }
+
+    h2 {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    span {
+      text-align: center;
+    }
   }
 `
 
 const Preview = styled.div`
   background-color: #262a41;
   border-radius: 5px;
-  height: 600px;
+  height: 300px;
   overflow: hidden;
   margin-bottom: 50px;
 
   @media (min-width: 960px) {
-    height: 300px;
     margin-bottom: 0;
     margin-left: 50px;
 
@@ -100,7 +108,9 @@ const Astrocontrole = ({ intl }) => (
               We developed a calendar system for expatriates to control their time stayed on countries. Allowing a
               better management that mitigate tax/fees/fines due to extent time.
             </Text>
-            <Button theme={theme.colors.astrogreen}>Try It</Button>
+            <Button centerInMobile theme={theme.colors.astrogreen}>
+              Try It
+            </Button>
           </VGroup>
 
           <Preview>
@@ -109,11 +119,7 @@ const Astrocontrole = ({ intl }) => (
         </WhatIsThis>
 
         <Features>
-          <Title align="center" transform="uppercase" withStripe>
-            What is in the package?
-          </Title>
-
-          <HGroup>
+          <HGroup columnOnMobile>
             <Feature name="Easy to use" icon="https://image.flaticon.com/icons/svg/1642/1642303.svg" />
             <Feature name="Complete Control" icon="https://image.flaticon.com/icons/svg/1642/1642284.svg" />
             <Feature name="Fully Scalable" icon="https://image.flaticon.com/icons/svg/1642/1642314.svg" />
@@ -124,7 +130,7 @@ const Astrocontrole = ({ intl }) => (
           <Title align="center" transform="uppercase" withStripe>
             What our partners built with us
           </Title>
-          <TestimonialsList>
+          <TestimonialsList columnOnMobile>
             <ProductTestimonial
               key="https://lion.tax/"
               name="Pamela Borges"
@@ -143,7 +149,9 @@ const Astrocontrole = ({ intl }) => (
             />
           </TestimonialsList>
         </TestimonialsWrapper>
-        <Button theme={theme.colors.astrogreen}>Try It</Button>
+        <Button alignSelf="center" theme={theme.colors.astrogreen}>
+          Try It
+        </Button>
       </>
     }
   />
