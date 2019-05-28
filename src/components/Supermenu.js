@@ -57,6 +57,11 @@ const ProductTitle = styled.h4`
   font-family: ${theme.fonts.caseTitle};
   font-weight: 700;
   margin-bottom: 0.5rem;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 `
 
 const ProductDescription = styled.span`
@@ -115,11 +120,15 @@ const Supermenu = ({ isShowed }) => (
   <SupermenuWrapper isShowed={isShowed}>
     <Products>
       <Product>
-        <ProductTitle>Astral</ProductTitle>
+        <ProductTitle>
+          <Link to="/product/astral">Astral</Link>
+        </ProductTitle>
         <ProductDescription>Astral is our product to control you app in a easy way and Lorem Ipsum.</ProductDescription>
       </Product>
       <Product>
-        <ProductTitle>Astrocontrole</ProductTitle>
+        <ProductTitle>
+          <Link to="/product/astrocontrole">Astrocontrole</Link>
+        </ProductTitle>
         <ProductDescription>
           With astrocontrole you can do X, Y and Z. Control your company finances etc.
         </ProductDescription>
