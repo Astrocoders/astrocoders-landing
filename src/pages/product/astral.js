@@ -19,6 +19,23 @@ import zuraPhoto from '../../img/testimonials/ky-js.jpg'
 
 import theme from '../../utils/theme'
 
+const WhatIsThis = styled(HGroup)`
+  align-items: center;
+  justifycontent: center;
+  margin-top: 100px;
+
+  @media (max-width: 960px) {
+    h2 {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    span {
+      text-align: center;
+    }
+  }
+`
+
 const Preview = styled.div`
   background-color: #262a41;
   border-radius: 5px;
@@ -54,9 +71,6 @@ const TestimonialsWrapper = styled.section`
 
 const TestimonialsList = styled(HGroup)`
   margin-top: 50px;
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
 `
 
 const Features = styled.section`
@@ -65,6 +79,10 @@ const Features = styled.section`
   flex-direction: column;
   padding: 80px 0;
   width: 100%;
+
+  @media (max-width: 960px) {
+    padding-bottom: 40px;
+  }
 `
 
 const AstralPanel = ({ intl }) => (
@@ -80,7 +98,7 @@ const AstralPanel = ({ intl }) => (
           management that mitigate tax/fees/fines due to extent time.
         </Text>
 
-        <HGroup marginTop="50px" alignItems="center" justifyContent="center" columnOnMobile>
+        <WhatIsThis columnOnMobile>
           <Preview>
             <Image src={astralPreview} alt="Astral" />
           </Preview>
@@ -91,16 +109,14 @@ const AstralPanel = ({ intl }) => (
               We developed a calendar system for expatriates to control their time stayed on countries. Allowing a
               better management that mitigate tax/fees/fines due to extent time.
             </Text>
-            <Button theme={theme.colors.astrogreen}>Try It</Button>
+            <Button centerInMobile theme={theme.colors.astrogreen}>
+              Try It
+            </Button>
           </VGroup>
-        </HGroup>
+        </WhatIsThis>
 
         <Features>
-          <Title align="center" transform="uppercase" withStripe>
-            What is in the package?
-          </Title>
-
-          <HGroup>
+          <HGroup columnOnMobile>
             <Feature name="Easy to use" icon="https://image.flaticon.com/icons/svg/1642/1642303.svg" />
             <Feature name="Complete Control" icon="https://image.flaticon.com/icons/svg/1642/1642284.svg" />
             <Feature name="Fully Scalable" icon="https://image.flaticon.com/icons/svg/1642/1642314.svg" />
@@ -111,7 +127,7 @@ const AstralPanel = ({ intl }) => (
           <Title align="center" transform="uppercase" withStripe>
             What our partners built with us
           </Title>
-          <TestimonialsList>
+          <TestimonialsList columnOnMobile>
             <ProductTestimonial
               key="https://lion.tax/"
               name="Pamela Borges"
@@ -130,6 +146,9 @@ const AstralPanel = ({ intl }) => (
             />
           </TestimonialsList>
         </TestimonialsWrapper>
+        <Button alignSelf="center" theme={theme.colors.astrogreen}>
+          Try It
+        </Button>
       </>
     }
   />

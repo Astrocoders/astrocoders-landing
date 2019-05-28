@@ -143,6 +143,7 @@ const Astrocontrole = ({ intl }) => (
             />
           </TestimonialsList>
         </TestimonialsWrapper>
+        <Button theme={theme.colors.astrogreen}>Try It</Button>
       </>
     }
   />
