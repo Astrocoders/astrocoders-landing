@@ -89,13 +89,13 @@ const AstralPanel = ({ intl }) => (
   <ProductLayout
     logo={astroGreen}
     title="Astral Panel"
-    subtitle="The Next generation of Application Management"
+    subtitle="Servidor de integração para aplicativos mobile e web com foco em encantamento de clientes"
     color="#27AE60"
     content={
       <>
         <Text align="center">
-          We developed a calendar system for expatriates to control their time stayed on countries. Allowing a better
-          management that mitigate tax/fees/fines due to extent time.
+          Servidor de integração que fornece controle de funcionalidades por feature flags, insights, analytics, ajuda
+          na contínua otimização de aplicações e controle de reputação online.
         </Text>
 
         <WhatIsThis columnOnMobile>
@@ -106,20 +106,40 @@ const AstralPanel = ({ intl }) => (
           <VGroup>
             <Title>What is this?</Title>
             <Text marginTop="20px" marginBottom="20px">
-              We developed a calendar system for expatriates to control their time stayed on countries. Allowing a
-              better management that mitigate tax/fees/fines due to extent time.
+              Astral Panel é o servidor de integração de APIs da Astrocoders que também age como um centro de
+              monitoramento, feature flags, analytics e customer relationship. Funcionalidades essenciais para levar uma
+              experiência incrível para usuários cada vez mais exigentes.
             </Text>
             <Button centerInMobile theme={theme.colors.astrogreen}>
-              Try It
+              Try It Out
             </Button>
           </VGroup>
         </WhatIsThis>
 
+        <VGroup>
+          <Text align="center">
+            Para que os produtos de nossos clientes tenham a melhor performance e encantem seus usuários, precisamos de
+            informações de todos os lados. Tempo de respostas de APIs, histórico de uso do aplicativo e até mesmo o que
+            usuários comentam na internet são importantes para esse objetivo. Com um setup rápido e uma interface
+            simples e direta, operadores conseguem avaliar e atuar rapidamente para conter ou predizer situações. O
+            sistema conta também com alertas e feature flags para um controle maior da aplicação.
+          </Text>
+        </VGroup>
+
         <Features>
           <HGroup columnOnMobile>
-            <Feature name="Easy to use" icon="https://image.flaticon.com/icons/svg/1642/1642303.svg" />
-            <Feature name="Complete Control" icon="https://image.flaticon.com/icons/svg/1642/1642284.svg" />
-            <Feature name="Fully Scalable" icon="https://image.flaticon.com/icons/svg/1642/1642314.svg" />
+            <Feature
+              name="Integração de APIs para aplicativos mobile e web usando GraphQL para consulta e mutação de dados."
+              icon="https://image.flaticon.com/icons/svg/1642/1642303.svg"
+            />
+            <Feature
+              name="Análise e insights do uso das APIs conectadas e timeline de ações do usuário na aplicação. Para que alertas automáticos sejam certeiros."
+              icon="https://image.flaticon.com/icons/svg/1642/1642284.svg"
+            />
+            <Feature
+              name="Central de relacionamento com usuários que comentam nas lojas de aplicativos, redes sociais e sistemas de reclamação."
+              icon="https://image.flaticon.com/icons/svg/1642/1642314.svg"
+            />
           </HGroup>
         </Features>
 
@@ -147,7 +167,7 @@ const AstralPanel = ({ intl }) => (
           </TestimonialsList>
         </TestimonialsWrapper>
         <Button alignSelf="center" theme={theme.colors.astrogreen}>
-          Try It
+          Try It Out
         </Button>
       </>
     }

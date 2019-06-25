@@ -92,24 +92,24 @@ const Astrocontrole = ({ intl }) => (
   <ProductLayout
     logo={astroGreen}
     title="Astrocontrole"
-    subtitle="The Next generation of Application Management"
+    subtitle="Finanças e contabilidade 100% automatizadas"
     color="#27AE60"
     content={
       <>
         <Text align="center">
-          We developed a calendar system for expatriates to control their time stayed on countries. Allowing a better
-          management that mitigate tax/fees/fines due to extent time.
+          Astrocontrole é um sistema financeiro-contábil totalmente automatizado para pequenas e médias empresas. Seu
+          foco 100% no que é importante, use Astrocontrole para Cobrar, Receber, Analisar, Pagar e Lucrar.
         </Text>
 
         <WhatIsThis columnOnMobile>
           <VGroup>
             <Title transform="uppercase">What is this?</Title>
             <Text marginTop="20px" marginBottom="20px">
-              We developed a calendar system for expatriates to control their time stayed on countries. Allowing a
-              better management that mitigate tax/fees/fines due to extent time.
+              Astrocontrole é um sistema financeiro-contábil totalmente automatizado para pequenas e médias empresas.
+              Seu foco 100% no que é importante, use Astrocontrole para Cobrar, Receber, Analisar, Pagar e Lucrar.
             </Text>
             <Button centerInMobile theme={theme.colors.astrogreen}>
-              Try It
+              Try It Out
             </Button>
           </VGroup>
 
@@ -118,11 +118,30 @@ const Astrocontrole = ({ intl }) => (
           </Preview>
         </WhatIsThis>
 
+        <VGroup>
+          <Title transform="uppercase">More Information</Title>
+          <Text align="center">
+            A idéia de um sistema financeiro-contábil surgiu da insatisfação com os atuais serviços e suas limitações.
+            Alguns focam apenas na área contábil, outros apenas na area financeira e nenhum faz o serviço para você.
+            Enviar OFX, fazer conciliação bancária, pagar inúmeras contas e colaboradores faz parte de um pedaço do mês
+            de empreendedores. Simplicidade e automação são pontos chave que ganham e fidelizam nossos clientes.
+          </Text>
+        </VGroup>
+
         <Features>
           <HGroup columnOnMobile>
-            <Feature name="Easy to use" icon="https://image.flaticon.com/icons/svg/1642/1642303.svg" />
-            <Feature name="Complete Control" icon="https://image.flaticon.com/icons/svg/1642/1642284.svg" />
-            <Feature name="Fully Scalable" icon="https://image.flaticon.com/icons/svg/1642/1642314.svg" />
+            <Feature
+              name="Cobranças e recorrência por cartão de crédito e boleto"
+              icon="https://image.flaticon.com/icons/svg/1642/1642303.svg"
+            />
+            <Feature
+              name="Análise e projeção de saúde financeira"
+              icon="https://image.flaticon.com/icons/svg/1642/1642284.svg"
+            />
+            <Feature
+              name="Pagamentos automático de colaboradores, contas e tributos"
+              icon="https://image.flaticon.com/icons/svg/1642/1642314.svg"
+            />
           </HGroup>
         </Features>
 
@@ -150,7 +169,7 @@ const Astrocontrole = ({ intl }) => (
           </TestimonialsList>
         </TestimonialsWrapper>
         <Button alignSelf="center" theme={theme.colors.astrogreen}>
-          Try It
+          Try It Out
         </Button>
       </>
     }

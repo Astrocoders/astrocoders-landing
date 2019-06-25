@@ -47,6 +47,7 @@ const ProductsPage = () => (
       <Title align="center" marginBottom="30px" withStripe>
         Our Products
       </Title>
+      <Text>Here we explain better how the products we are building are different, the best features and whys.</Text>
 
       <ProductsGrid>
         <ProductCover onClick={() => navigate(`/product/astrocontrole`)}>
