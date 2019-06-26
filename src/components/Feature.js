@@ -30,7 +30,7 @@ const Icon = styled.img`
 
 const FeatureTitle = styled(Title)`
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
   font-family: ${theme.fonts.caseTitle};
   text-align: center;

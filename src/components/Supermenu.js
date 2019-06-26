@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { FormattedMessage, Link } from 'gatsby-plugin-intl'
+import { FormattedMessage, Link, navigate } from 'gatsby-plugin-intl'
 
 import theme from '../utils/theme'
 
@@ -43,6 +43,7 @@ const SupermenuWrapper = styled.div`
 `
 
 const Products = styled.div`
+  cursor: pointer;
   padding: 30px;
 `
 
@@ -119,18 +120,18 @@ const CaseDescription = styled.span`
 const Supermenu = ({ isShowed }) => (
   <SupermenuWrapper isShowed={isShowed}>
     <Products>
-      <Product>
-        <ProductTitle>
-          <Link to="/product/astral">Astral</Link>
-        </ProductTitle>
-        <ProductDescription>Astral is our product to control you app in a easy way and Lorem Ipsum.</ProductDescription>
-      </Product>
-      <Product>
-        <ProductTitle>
-          <Link to="/product/astrocontrole">Astrocontrole</Link>
-        </ProductTitle>
+      <Product onClick={() => navigate('/product/astral')}>
+        <ProductTitle>Astral</ProductTitle>
         <ProductDescription>
-          With astrocontrole you can do X, Y and Z. Control your company finances etc.
+          Servidor de integração que fornece controle de funcionalidades por feature flags, insights, analytics, ajuda
+          na contínua otimização de aplicações e controle de reputação online.
+        </ProductDescription>
+      </Product>
+      <Product onClick={() => navigate('/product/astrocontrole')}>
+        <ProductTitle>Astrocontrole</ProductTitle>
+        <ProductDescription>
+          Astrocontrole é um sistema financeiro-contábil totalmente automatizado para pequenas e médias empresas. Seu
+          foco 100% no que é importante, use Astrocontrole para Cobrar, Receber, Analisar, Pagar e Lucrar.
         </ProductDescription>
       </Product>
       <SeeMoreButton to="/products">+ See more products</SeeMoreButton>

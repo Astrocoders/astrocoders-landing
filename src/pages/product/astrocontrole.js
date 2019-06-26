@@ -101,6 +101,13 @@ const Astrocontrole = ({ intl }) => (
           foco 100% no que é importante, use Astrocontrole para Cobrar, Receber, Analisar, Pagar e Lucrar.
         </Text>
 
+        <Text marginTop="30px" align="center">
+          A idéia de um sistema financeiro-contábil surgiu da insatisfação com os atuais serviços e suas limitações.
+          Alguns focam apenas na área contábil, outros apenas na area financeira e nenhum faz o serviço para você.
+          Enviar OFX, fazer conciliação bancária, pagar inúmeras contas e colaboradores faz parte de um pedaço do mês de
+          empreendedores. Simplicidade e automação são pontos chave que ganham e fidelizam nossos clientes.
+        </Text>
+
         <WhatIsThis columnOnMobile>
           <VGroup>
             <Title transform="uppercase">What is this?</Title>
@@ -117,16 +124,6 @@ const Astrocontrole = ({ intl }) => (
             <Image src={astrocontrolePreview} alt="Astrocontrole" />
           </Preview>
         </WhatIsThis>
-
-        <VGroup>
-          <Title transform="uppercase">More Information</Title>
-          <Text align="center">
-            A idéia de um sistema financeiro-contábil surgiu da insatisfação com os atuais serviços e suas limitações.
-            Alguns focam apenas na área contábil, outros apenas na area financeira e nenhum faz o serviço para você.
-            Enviar OFX, fazer conciliação bancária, pagar inúmeras contas e colaboradores faz parte de um pedaço do mês
-            de empreendedores. Simplicidade e automação são pontos chave que ganham e fidelizam nossos clientes.
-          </Text>
-        </VGroup>
 
         <Features>
           <HGroup columnOnMobile>

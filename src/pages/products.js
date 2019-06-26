@@ -4,6 +4,7 @@ import { navigate } from '@reach/router'
 
 import PageWrapper from '../components/PageWrapper'
 import Title from '../components/Title'
+import Text from '../components/Text'
 import HGroup from '../components/HGroup'
 import Wrapper from '../components/Wrapper'
 

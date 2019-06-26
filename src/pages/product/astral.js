@@ -116,7 +116,10 @@ const AstralPanel = ({ intl }) => (
           </VGroup>
         </WhatIsThis>
 
-        <VGroup>
+        <VGroup marginTop="50px">
+          <Title marginRight="auto" marginLeft="auto">
+            More Information
+          </Title>
           <Text align="center">
             Para que os produtos de nossos clientes tenham a melhor performance e encantem seus usuários, precisamos de
             informações de todos os lados. Tempo de respostas de APIs, histórico de uso do aplicativo e até mesmo o que
