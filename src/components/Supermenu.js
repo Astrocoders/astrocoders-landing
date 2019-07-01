@@ -123,15 +123,13 @@ const Supermenu = ({ isShowed }) => (
       <Product onClick={() => navigate('/product/astral')}>
         <ProductTitle>Astral</ProductTitle>
         <ProductDescription>
-          Servidor de integração que fornece controle de funcionalidades por feature flags, insights, analytics, ajuda
-          na contínua otimização de aplicações e controle de reputação online.
+          <FormattedMessage id="astralDescription" />
         </ProductDescription>
       </Product>
       <Product onClick={() => navigate('/product/astrocontrole')}>
         <ProductTitle>Astrocontrole</ProductTitle>
         <ProductDescription>
-          Astrocontrole é um sistema financeiro-contábil totalmente automatizado para pequenas e médias empresas. Seu
-          foco 100% no que é importante, use Astrocontrole para Cobrar, Receber, Analisar, Pagar e Lucrar.
+          <FormattedMessage id="astrocontroleDescription" />
         </ProductDescription>
       </Product>
       <SeeMoreButton to="/products">+ See more products</SeeMoreButton>

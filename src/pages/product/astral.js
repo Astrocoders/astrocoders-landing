@@ -82,7 +82,10 @@ const AstralPanel = ({ intl }) => (
     color="#27AE60"
     content={
       <>
-        <Text align="center">
+        <Title transform="uppercase">
+          <FormattedMessage id="knowTheProduct" />
+        </Title>
+        <Text marginTop="20px" marginBottom="20px">
           <FormattedMessage id="astralMoreInfo" />
         </Text>
 
@@ -92,8 +95,8 @@ const AstralPanel = ({ intl }) => (
           </Preview>
 
           <VGroup>
-            <Title>
-              <FormattedMessage id="whatDoesItdo" />
+            <Title transform="uppercase">
+              <FormattedMessage id="moreInfo" />
             </Title>
             <Text marginTop="20px" marginBottom="20px">
               <FormattedMessage id="astralDescription" />

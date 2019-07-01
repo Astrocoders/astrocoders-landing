@@ -81,14 +81,17 @@ const Astrocontrole = ({ intl }) => (
     color="#27AE60"
     content={
       <>
-        <Text align="center">
+        <Title transform="uppercase">
+          <FormattedMessage id="knowTheProduct" />
+        </Title>
+        <Text marginTop="20px" marginBottom="20px">
           <FormattedMessage id="astrocontroleMoreInfo" />
         </Text>
 
         <WhatIsThis columnOnMobile>
           <VGroup>
             <Title transform="uppercase">
-              <FormattedMessage id="whatDoesItdo" />
+              <FormattedMessage id="moreInfo" />
             </Title>
             <Text marginTop="20px" marginBottom="20px">
               <FormattedMessage id="astrocontroleDescription" />
