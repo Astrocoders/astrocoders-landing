@@ -44,5 +44,13 @@
   "processFiveText": "我们使用干净，功能和模块化的代码创建项目。 因此，如果在某些时候我们的客户想要内化改进或为新功能添加另一个专业人员，那么就没有问题。 质量，想法和快捷是让我们的客户四处奔走的原因，而不是因为您被我们的代码所困。",
   "notFound": "网页未找到",
   "whoops": "这个页面在我们的银河系中找不到！",
-  "backToHome": "回到家"
+  "backToHome": "回到家",
+  "whatDoesItdo": "它有什么作用？",
+  "tryItOut": "试试看",
+  "astrocontroleSubheadline": "100％自动财务和会计",
+  "astrocontroleMoreInfo": "财务会计系统的想法源于对当前服务及其局限性的不满。 有些只关注会计领域，有些只关注财务领域，没有人为你服务。 发送OFX，进行银行对账，支付众多账户和员工是一个月的企业家的一部分。 简单性和自动化是赢得和留住客户的关键点。",
+  "astrocontroleDescription": "Astrocontrole是一个面向中小型企业的全自动财务会计系统。 您100％专注于重要事项，使用Astro Control来收费，接收，分析，支付和利润。",
+  "astrocontroleFeatureOne": "通过信用卡和机票收费和再次发生",
+  "astrocontroleFeatureTwo": "财务健康的分析与预测",
+  "astrocontroleFeatureThree": "自动支付员工，帐户和税金"
 }

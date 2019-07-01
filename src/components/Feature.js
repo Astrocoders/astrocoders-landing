@@ -49,7 +49,6 @@ const Feature = ({ name, icon }) => (
   <FeatureWrapper>
     <Icon src={icon} alt={name} />
     <FeatureTitle>{name}</FeatureTitle>
-    <FeatureText>Some simple text here</FeatureText>
   </FeatureWrapper>
 )
 

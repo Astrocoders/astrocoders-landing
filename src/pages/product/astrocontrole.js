@@ -97,11 +97,6 @@ const Astrocontrole = ({ intl }) => (
     content={
       <>
         <Text align="center">
-          Astrocontrole é um sistema financeiro-contábil totalmente automatizado para pequenas e médias empresas. Seu
-          foco 100% no que é importante, use Astrocontrole para Cobrar, Receber, Analisar, Pagar e Lucrar.
-        </Text>
-
-        <Text marginTop="30px" align="center">
           A idéia de um sistema financeiro-contábil surgiu da insatisfação com os atuais serviços e suas limitações.
           Alguns focam apenas na área contábil, outros apenas na area financeira e nenhum faz o serviço para você.
           Enviar OFX, fazer conciliação bancária, pagar inúmeras contas e colaboradores faz parte de um pedaço do mês de
@@ -142,29 +137,6 @@ const Astrocontrole = ({ intl }) => (
           </HGroup>
         </Features>
 
-        <TestimonialsWrapper>
-          <Title align="center" transform="uppercase" withStripe>
-            What our partners built with us
-          </Title>
-          <TestimonialsList columnOnMobile>
-            <ProductTestimonial
-              key="https://lion.tax/"
-              name="Pamela Borges"
-              company="Lion Tax"
-              quote={intl.formatMessage({ id: 'quote1' })}
-              link="https://lion.tax/"
-              photo={pamPhoto}
-            />
-            <ProductTestimonial
-              key="https://zurahealth.com/"
-              name="Kylie and Jess McBeath"
-              company="Zura Health"
-              quote={intl.formatMessage({ id: 'quote2' })}
-              link="https://zurahealth.com/"
-              photo={zuraPhoto}
-            />
-          </TestimonialsList>
-        </TestimonialsWrapper>
         <Button alignSelf="center" theme={theme.colors.astrogreen}>
           Try It Out
         </Button>

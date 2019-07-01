@@ -44,5 +44,13 @@
   "processFiveText": "We create projects with clean, functional and modular code. So if at some point our customers wants to internalize improvements or add another professional for a new functionality, there will be no problems. The quality, ideas and snappiness are what keep our customers around and not because you are trapped by our code.",
   "notFound": "Page not Found",
   "whoops": "Whoops! This page was not found in our galaxy!",
-  "backToHome": "Back to Home"
+  "backToHome": "Back to Home",
+  "whatDoesItdo": "What does it do?",
+  "tryItOut": "Try It Out",
+  "astrocontroleSubheadline": "100% Automated Finance and Accounting",
+  "astrocontroleMoreInfo": "The idea of a financial-accounting system arose out of dissatisfaction with current services and their limitations. Some focus only on the accounting area, others only in the financial area and none do the service for you. Sending OFX, doing bank reconciliation, paying numerous accounts and employees is part of a month's piece of entrepreneurs. Simplicity and automation are key points that win and retain our customers.",
+  "astrocontroleDescription": "Astrocontrole is a fully automated financial-accounting system for small and medium-sized businesses. Your 100% focus on what matters, use Astro Control to Charge, Receive, Analyze, Pay and Profit.",
+  "astrocontroleFeatureOne": "Charges and recurrence by credit card and ticket",
+  "astrocontroleFeatureTwo": "Analysis and projection of financial health",
+  "astrocontroleFeatureThree": "Automatic payments for employees, accounts and taxes"
 }

@@ -98,6 +98,14 @@ const AstralPanel = ({ intl }) => (
           na contínua otimização de aplicações e controle de reputação online.
         </Text>
 
+        <Text align="center" marginTop="50px">
+          Para que os produtos de nossos clientes tenham a melhor performance e encantem seus usuários, precisamos de
+          informações de todos os lados. Tempo de respostas de APIs, histórico de uso do aplicativo e até mesmo o que
+          usuários comentam na internet são importantes para esse objetivo. Com um setup rápido e uma interface simples
+          e direta, operadores conseguem avaliar e atuar rapidamente para conter ou predizer situações. O sistema conta
+          também com alertas e feature flags para um controle maior da aplicação.
+        </Text>
+
         <WhatIsThis columnOnMobile>
           <Preview>
             <Image src={astralPreview} alt="Astral" />
@@ -116,19 +124,6 @@ const AstralPanel = ({ intl }) => (
           </VGroup>
         </WhatIsThis>
 
-        <VGroup marginTop="50px">
-          <Title marginRight="auto" marginLeft="auto">
-            More Information
-          </Title>
-          <Text align="center">
-            Para que os produtos de nossos clientes tenham a melhor performance e encantem seus usuários, precisamos de
-            informações de todos os lados. Tempo de respostas de APIs, histórico de uso do aplicativo e até mesmo o que
-            usuários comentam na internet são importantes para esse objetivo. Com um setup rápido e uma interface
-            simples e direta, operadores conseguem avaliar e atuar rapidamente para conter ou predizer situações. O
-            sistema conta também com alertas e feature flags para um controle maior da aplicação.
-          </Text>
-        </VGroup>
-
         <Features>
           <HGroup columnOnMobile>
             <Feature
@@ -146,29 +141,6 @@ const AstralPanel = ({ intl }) => (
           </HGroup>
         </Features>
 
-        <TestimonialsWrapper>
-          <Title align="center" transform="uppercase" withStripe>
-            What our partners built with us
-          </Title>
-          <TestimonialsList columnOnMobile>
-            <ProductTestimonial
-              key="https://lion.tax/"
-              name="Pamela Borges"
-              company="Lion Tax"
-              quote={intl.formatMessage({ id: 'quote1' })}
-              link="https://lion.tax/"
-              photo={pamPhoto}
-            />
-            <ProductTestimonial
-              key="https://zurahealth.com/"
-              name="Kylie and Jess McBeath"
-              company="Zura Health"
-              quote={intl.formatMessage({ id: 'quote2' })}
-              link="https://zurahealth.com/"
-              photo={zuraPhoto}
-            />
-          </TestimonialsList>
-        </TestimonialsWrapper>
         <Button alignSelf="center" theme={theme.colors.astrogreen}>
           Try It Out
         </Button>
