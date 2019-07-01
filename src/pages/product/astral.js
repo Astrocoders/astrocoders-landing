@@ -94,11 +94,6 @@ const AstralPanel = ({ intl }) => (
     content={
       <>
         <Text align="center">
-          Servidor de integração que fornece controle de funcionalidades por feature flags, insights, analytics, ajuda
-          na contínua otimização de aplicações e controle de reputação online.
-        </Text>
-
-        <Text align="center" marginTop="50px">
           Para que os produtos de nossos clientes tenham a melhor performance e encantem seus usuários, precisamos de
           informações de todos os lados. Tempo de respostas de APIs, histórico de uso do aplicativo e até mesmo o que
           usuários comentam na internet são importantes para esse objetivo. Com um setup rápido e uma interface simples

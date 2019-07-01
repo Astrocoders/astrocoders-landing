@@ -52,5 +52,11 @@
   "astrocontroleDescription": "Astrocontrole是一个面向中小型企业的全自动财务会计系统。 您100％专注于重要事项，使用Astro Control来收费，接收，分析，支付和利润。",
   "astrocontroleFeatureOne": "通过信用卡和机票收费和再次发生",
   "astrocontroleFeatureTwo": "财务健康的分析与预测",
-  "astrocontroleFeatureThree": "自动支付员工，帐户和税金"
+  "astrocontroleFeatureThree": "自动支付员工，帐户和税金",
+  "astralSubheadline": "用于移动和Web应用程序的集成服务器，专注于客户咒语",
+  "astralMoreInfo": "为了使我们客户的产品表现更好并使用户满意，我们需要来自各方的信息.API响应时间，应用程序使用历史记录，甚至用户在Internet上发表评论的内容对此都很重要。通过快速设置 和简单直接的界面，操作员可以快速评估并采取行动来控制或预测情况。系统还具有警报和功能标志，可以更好地控制应用程序。",
+  "astralDescription": "Astral Panel是Astrocoders API集成服务器，它还充当监控中心，功能标志，分析和客户关系。 为要求更高的用户带来难以置信的体验的基本功能。",
+  "astralFeatureOne": "使用GraphQL集成用于移动和Web应用程序的API，用于查询和数据变异。",
+  "astralFeatureTwo": "分析和洞察在应用程序中使用连接的API和用户操作的时间表。 对于自动警报，请确保。",
+  "astralFeatureThree": "与评论应用商店，社交网络和投诉系统的用户建立关系的核心。"
 }

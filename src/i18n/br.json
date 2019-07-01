@@ -52,5 +52,11 @@
   "astrocontroleDescription": "Astrocontrole é um sistema financeiro-contábil totalmente automatizado para pequenas e médias empresas. Seu foco 100% no que é importante, use Astrocontrole para Cobrar, Receber, Analisar, Pagar e Lucrar.",
   "astrocontroleFeatureOne": "Cobranças e recorrência por cartão de crédito e boleto",
   "astrocontroleFeatureTwo": "Análise e projeção de saúde financeira",
-  "astrocontroleFeatureThree": "Pagamentos automático de colaboradores, contas e tributos"
+  "astrocontroleFeatureThree": "Pagamentos automático de colaboradores, contas e tributos",
+  "astralSubheadline": "Servidor de integração para aplicativos mobile e web com foco em encantamento de clientes",
+  "astralMoreInfo": "Para que os produtos de nossos clientes tenham a melhor performance e encantem seus usuários, precisamos de informações de todos os lados. Tempo de respostas de APIs, histórico de uso do aplicativo e até mesmo o que usuários comentam na internet são importantes para esse objetivo. Com um setup rápido e uma interface simples e direta, operadores conseguem avaliar e atuar rapidamente para conter ou predizer situações. O sistema conta também com alertas e feature flags para um controle maior da aplicação.",
+  "astralDescription": "Astral Panel é o servidor de integração de APIs da Astrocoders que também age como um centro de monitoramento, feature flags, analytics e customer relationship. Funcionalidades essenciais para levar uma experiência incrível para usuários cada vez mais exigentes.",
+  "astralFeatureOne": "Integração de APIs para aplicativos mobile e web usando GraphQL para consulta e mutação de dados.",
+  "astralFeatureTwo": "Análise e insights do uso das APIs conectadas e timeline de ações do usuário na aplicação. Para que alertas automáticos sejam certeiros.",
+  "astralFeatureThree": "Central de relacionamento com usuários que comentam nas lojas de aplicativos, redes sociais e sistemas de reclamação."
 }
