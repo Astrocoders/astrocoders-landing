@@ -14,8 +14,9 @@ import Feature from '../../components/Feature'
 import astroGreen from '../../img/astroGreen.png'
 import astralPreview from '../../img/products/astralPreview.png'
 
-import pamPhoto from '../../img/testimonials/pam.jpg'
-import zuraPhoto from '../../img/testimonials/ky-js.jpg'
+import api from '../../img/api.svg'
+import alert from '../../img/alert.svg'
+import relationship from '../../img/relationship.svg'
 
 import theme from '../../utils/theme'
 
@@ -61,18 +62,6 @@ const Image = styled.img`
   transition: all 0.2s ease-in-out;
 `
 
-const TestimonialsWrapper = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  padding: 80px 0;
-  width: 100%;
-`
-
-const TestimonialsList = styled(HGroup)`
-  margin-top: 50px;
-`
-
 const Features = styled.section`
   align-items: center;
   display: flex;
@@ -89,16 +78,12 @@ const AstralPanel = ({ intl }) => (
   <ProductLayout
     logo={astroGreen}
     title="Astral Panel"
-    subtitle="Servidor de integração para aplicativos mobile e web com foco em encantamento de clientes"
+    subtitle={intl.formatMessage({ id: 'astralSubheadline' })}
     color="#27AE60"
     content={
       <>
         <Text align="center">
-          Para que os produtos de nossos clientes tenham a melhor performance e encantem seus usuários, precisamos de
-          informações de todos os lados. Tempo de respostas de APIs, histórico de uso do aplicativo e até mesmo o que
-          usuários comentam na internet são importantes para esse objetivo. Com um setup rápido e uma interface simples
-          e direta, operadores conseguem avaliar e atuar rapidamente para conter ou predizer situações. O sistema conta
-          também com alertas e feature flags para um controle maior da aplicação.
+          <FormattedMessage id="astralMoreInfo" />
         </Text>
 
         <WhatIsThis columnOnMobile>
@@ -107,37 +92,28 @@ const AstralPanel = ({ intl }) => (
           </Preview>
 
           <VGroup>
-            <Title>What is this?</Title>
+            <Title>
+              <FormattedMessage id="whatDoesItdo" />
+            </Title>
             <Text marginTop="20px" marginBottom="20px">
-              Astral Panel é o servidor de integração de APIs da Astrocoders que também age como um centro de
-              monitoramento, feature flags, analytics e customer relationship. Funcionalidades essenciais para levar uma
-              experiência incrível para usuários cada vez mais exigentes.
+              <FormattedMessage id="astralDescription" />
             </Text>
             <Button centerInMobile theme={theme.colors.astrogreen}>
-              Try It Out
+              <FormattedMessage id="tryItOut" />
             </Button>
           </VGroup>
         </WhatIsThis>
 
         <Features>
           <HGroup columnOnMobile>
-            <Feature
-              name="Integração de APIs para aplicativos mobile e web usando GraphQL para consulta e mutação de dados."
-              icon="https://image.flaticon.com/icons/svg/1642/1642303.svg"
-            />
-            <Feature
-              name="Análise e insights do uso das APIs conectadas e timeline de ações do usuário na aplicação. Para que alertas automáticos sejam certeiros."
-              icon="https://image.flaticon.com/icons/svg/1642/1642284.svg"
-            />
-            <Feature
-              name="Central de relacionamento com usuários que comentam nas lojas de aplicativos, redes sociais e sistemas de reclamação."
-              icon="https://image.flaticon.com/icons/svg/1642/1642314.svg"
-            />
+            <Feature name={intl.formatMessage({ id: 'astralFeatureOne' })} icon={api} />
+            <Feature name={intl.formatMessage({ id: 'astralFeatureTwo' })} icon={alert} />
+            <Feature name={intl.formatMessage({ id: 'astralFeatureThree' })} icon={relationship} />
           </HGroup>
         </Features>
 
         <Button alignSelf="center" theme={theme.colors.astrogreen}>
-          Try It Out
+          <FormattedMessage id="tryItOut" />
         </Button>
       </>
     }

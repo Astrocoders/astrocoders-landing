@@ -58,5 +58,10 @@
   "astralDescription": "Astral Panel是Astrocoders API集成服务器，它还充当监控中心，功能标志，分析和客户关系。 为要求更高的用户带来难以置信的体验的基本功能。",
   "astralFeatureOne": "使用GraphQL集成用于移动和Web应用程序的API，用于查询和数据变异。",
   "astralFeatureTwo": "分析和洞察在应用程序中使用连接的API和用户操作的时间表。 对于自动警报，请确保。",
-  "astralFeatureThree": "与评论应用商店，社交网络和投诉系统的用户建立关系的核心。"
+  "astralFeatureThree": "与评论应用商店，社交网络和投诉系统的用户建立关系的核心。",
+  "readyTo": "准备",
+  "readyToPartTwo": "你的事？ 联系我们！",
+  "start": "开始",
+  "continue": "继续",
+  "improve": "提高"
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import TextLoop from 'react-text-loop'
+import { FormattedMessage } from 'react-intl'
 
 import PageWrapper from './PageWrapper'
 import Title from './Title'
@@ -66,7 +67,7 @@ const CTA = styled(Title)`
   font-family: ${theme.fonts.caseTitle};
   margin: 100px auto;
 
-  span {
+  b {
     padding-left: 10px;
     padding-right: 10px;
     color: ${theme.colors.primary};
@@ -84,13 +85,19 @@ const ProductLayout = ({ color, logo, title, subtitle, content }) => (
     <ProjectContent color={color}>
       {content}
       <CTA>
-        Ready to
+        <FormattedMessage id="readyTo" />
         <TextLoop interval={2000} mask>
-          <span>start</span>
-          <span>continue</span>
-          <span>improve</span>
+          <b>
+            <FormattedMessage id="start" />
+          </b>
+          <b>
+            <FormattedMessage id="continue" />
+          </b>
+          <b>
+            <FormattedMessage id="improve" />
+          </b>
         </TextLoop>
-        your business? Contact us!
+        <FormattedMessage id="readyToPartTwo" />
       </CTA>
     </ProjectContent>
   </PageWrapper>

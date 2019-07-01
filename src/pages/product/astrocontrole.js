@@ -6,7 +6,6 @@ import ProductLayout from '../../components/ProductLayout'
 import Button from '../../components/Button'
 import Title from '../../components/Title'
 import Text from '../../components/Text'
-import ProductTestimonial from '../../components/ProductTestimonial'
 import HGroup from '../../components/HGroup'
 import VGroup from '../../components/VGroup'
 import Feature from '../../components/Feature'
@@ -14,8 +13,9 @@ import Feature from '../../components/Feature'
 import astroGreen from '../../img/astroGreen.png'
 import astrocontrolePreview from '../../img/products/astrocontrolePreview.png'
 
-import pamPhoto from '../../img/testimonials/pam.jpg'
-import zuraPhoto from '../../img/testimonials/ky-js.jpg'
+import charging from '../../img/charging.svg'
+import income from '../../img/income.svg'
+import payments from '../../img/payments.svg'
 
 import theme from '../../utils/theme'
 
@@ -65,21 +65,6 @@ const Image = styled.img`
   transition: all 2s ease-in-out;
 `
 
-const TestimonialsWrapper = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  padding: 80px 0;
-  width: 100%;
-`
-
-const TestimonialsList = styled(HGroup)`
-  margin-top: 50px;
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
-`
-
 const Features = styled.section`
   align-items: center;
   display: flex;
@@ -92,26 +77,24 @@ const Astrocontrole = ({ intl }) => (
   <ProductLayout
     logo={astroGreen}
     title="Astrocontrole"
-    subtitle="Finanças e contabilidade 100% automatizadas"
+    subtitle={intl.formatMessage({ id: 'astrocontroleSubheadline' })}
     color="#27AE60"
     content={
       <>
         <Text align="center">
-          A idéia de um sistema financeiro-contábil surgiu da insatisfação com os atuais serviços e suas limitações.
-          Alguns focam apenas na área contábil, outros apenas na area financeira e nenhum faz o serviço para você.
-          Enviar OFX, fazer conciliação bancária, pagar inúmeras contas e colaboradores faz parte de um pedaço do mês de
-          empreendedores. Simplicidade e automação são pontos chave que ganham e fidelizam nossos clientes.
+          <FormattedMessage id="astrocontroleMoreInfo" />
         </Text>
 
         <WhatIsThis columnOnMobile>
           <VGroup>
-            <Title transform="uppercase">What is this?</Title>
+            <Title transform="uppercase">
+              <FormattedMessage id="whatDoesItdo" />
+            </Title>
             <Text marginTop="20px" marginBottom="20px">
-              Astrocontrole é um sistema financeiro-contábil totalmente automatizado para pequenas e médias empresas.
-              Seu foco 100% no que é importante, use Astrocontrole para Cobrar, Receber, Analisar, Pagar e Lucrar.
+              <FormattedMessage id="astrocontroleDescription" />
             </Text>
             <Button centerInMobile theme={theme.colors.astrogreen}>
-              Try It Out
+              <FormattedMessage id="tryItOut" />
             </Button>
           </VGroup>
 
@@ -122,23 +105,14 @@ const Astrocontrole = ({ intl }) => (
 
         <Features>
           <HGroup columnOnMobile>
-            <Feature
-              name="Cobranças e recorrência por cartão de crédito e boleto"
-              icon="https://image.flaticon.com/icons/svg/1642/1642303.svg"
-            />
-            <Feature
-              name="Análise e projeção de saúde financeira"
-              icon="https://image.flaticon.com/icons/svg/1642/1642284.svg"
-            />
-            <Feature
-              name="Pagamentos automático de colaboradores, contas e tributos"
-              icon="https://image.flaticon.com/icons/svg/1642/1642314.svg"
-            />
+            <Feature name={intl.formatMessage({ id: 'astrocontroleFeatureOne' })} icon={charging} />
+            <Feature name={intl.formatMessage({ id: 'astrocontroleFeatureTwo' })} icon={income} />
+            <Feature name={intl.formatMessage({ id: 'astrocontroleFeatureThree' })} icon={payments} />
           </HGroup>
         </Features>
 
         <Button alignSelf="center" theme={theme.colors.astrogreen}>
-          Try It Out
+          <FormattedMessage id="tryItOut" />
         </Button>
       </>
     }

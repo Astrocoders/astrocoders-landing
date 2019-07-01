@@ -58,5 +58,10 @@
   "astralDescription": "Astral Panel is the Astrocoders API integration server that also acts as a monitoring center, feature flags, analytics and customer relationship. Essential features to bring an incredible experience to ever more demanding users.",
   "astralFeatureOne": "Integration of APIs for mobile and web applications using GraphQL for query and mutation of data.",
   "astralFeatureTwo": "Analysis and insights of the use of connected APIs and timeline of user actions in the application. For automatic alerts to be sure.",
-  "astralFeatureThree": "Central to relationships with users who comment on app stores, social networks and complaint systems."
+  "astralFeatureThree": "Central to relationships with users who comment on app stores, social networks and complaint systems.",
+  "readyTo": "Ready to",
+  "readyToPartTwo": "your business? Contact us!",
+  "start": "start",
+  "continue": "continue",
+  "improve": "improve"
 }
