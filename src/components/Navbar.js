@@ -119,64 +119,66 @@ const ClickOutsideStyled = styled(ClickOutside)`
 `
 
 const ClickOutsideSupermenu = styled(ClickOutside)`
-  display: ${props => (props.isShowed ? 'none' : 'block')};
+  display: ${props => (props.isShowed ? 'block' : 'none')};
 `
 
 const Nav = ({ isHome, isSupermenuOpened, isAfterHero, setMenuOpened, setSupermenuOpened, isMenuOpened }) => (
-  <ClickOutsideStyled isHome={isHome} isAfterHero={isAfterHero} onClickOutside={() => setMenuOpened(false)}>
-    <NavbarContainer>
-      <Link to="/">
-        <Logo src={navLogo} />
-      </Link>
+  <>
+    <ClickOutsideStyled isHome={isHome} isAfterHero={isAfterHero} onClickOutside={() => setMenuOpened(false)}>
+      <NavbarContainer>
+        <Link to="/">
+          <Logo src={navLogo} />
+        </Link>
 
-      <NavbarLinkWrapper>
-        <NavbarLink to="/how-we-work">
-          <FormattedMessage id="howWeWork" />
-        </NavbarLink>
-        <NavbarLink to="/open-source">
-          <FormattedMessage id="openSource" />
-        </NavbarLink>
-        <SupermenuTrigger onClick={evt => setSupermenuOpened()}>
-          <FormattedMessage id="products" />
-        </SupermenuTrigger>
-        <NavbarLink to="/join-us">
-          <FormattedMessage id="joinUs" />
-        </NavbarLink>
-        <NavbarLink to="/#hireUs">
-          <FormattedMessage id="contact" />
-        </NavbarLink>
-      </NavbarLinkWrapper>
-      <LanguageSelector hideOnMobile />
-      <ClickOutsideSupermenu isHome={isSupermenuOpened} onClickOutside={() => setSupermenuOpened(false)}>
-        <Supermenu isShowed={isSupermenuOpened} />
-      </ClickOutsideSupermenu>
-      <MobileMenu>
-        <NavbarContainer>
-          <MenuTrigger onClick={evt => setMenuOpened()}>{isMenuOpened ? <MenuIconClose /> : <MenuIcon />}</MenuTrigger>
-        </NavbarContainer>
-        {isMenuOpened && (
-          <MenuDialog>
-            <SupermenuTrigger onClick={evt => setSupermenuOpened()}>
-              <FormattedMessage id="products" />
-            </SupermenuTrigger>
-            <NavbarLink to="/how-we-work">
-              <FormattedMessage id="howWeWork" />
-            </NavbarLink>
-            <NavbarLink to="/open-source">
-              <FormattedMessage id="openSource" />
-            </NavbarLink>
-            <NavbarLink to="/join-us">
-              <FormattedMessage id="joinUs" />
-            </NavbarLink>
-            <NavbarLink to="/#hireUs">
-              <FormattedMessage id="contact" />
-            </NavbarLink>
-            <LanguageSelector hideOnMobile={false} />
-          </MenuDialog>
-        )}
-      </MobileMenu>
-    </NavbarContainer>
-  </ClickOutsideStyled>
+        <NavbarLinkWrapper>
+          <NavbarLink to="/how-we-work">
+            <FormattedMessage id="howWeWork" />
+          </NavbarLink>
+          <NavbarLink to="/open-source">
+            <FormattedMessage id="openSource" />
+          </NavbarLink>
+          <SupermenuTrigger onClick={() => setSupermenuOpened()}>
+            <FormattedMessage id="products" />
+          </SupermenuTrigger>
+          <NavbarLink to="/join-us">
+            <FormattedMessage id="joinUs" />
+          </NavbarLink>
+          <NavbarLink to="/#hireUs">
+            <FormattedMessage id="contact" />
+          </NavbarLink>
+        </NavbarLinkWrapper>
+        <LanguageSelector hideOnMobile />
+        <MobileMenu>
+          <NavbarContainer>
+            <MenuTrigger onClick={() => setMenuOpened()}>{isMenuOpened ? <MenuIconClose /> : <MenuIcon />}</MenuTrigger>
+          </NavbarContainer>
+          {isMenuOpened && (
+            <MenuDialog>
+              <SupermenuTrigger onClick={() => setSupermenuOpened()}>
+                <FormattedMessage id="products" />
+              </SupermenuTrigger>
+              <NavbarLink to="/how-we-work">
+                <FormattedMessage id="howWeWork" />
+              </NavbarLink>
+              <NavbarLink to="/open-source">
+                <FormattedMessage id="openSource" />
+              </NavbarLink>
+              <NavbarLink to="/join-us">
+                <FormattedMessage id="joinUs" />
+              </NavbarLink>
+              <NavbarLink to="/#hireUs">
+                <FormattedMessage id="contact" />
+              </NavbarLink>
+              <LanguageSelector hideOnMobile={false} />
+            </MenuDialog>
+          )}
+        </MobileMenu>
+      </NavbarContainer>
+    </ClickOutsideStyled>
+    <ClickOutsideSupermenu isShowed={isSupermenuOpened} onClickOutside={() => setSupermenuOpened(false)}>
+      <Supermenu isShowed={isSupermenuOpened} />
+    </ClickOutsideSupermenu>
+  </>
 )
 
 Nav.propTypes = {

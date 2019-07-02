@@ -38,7 +38,7 @@ const SupermenuWrapper = styled.div`
 
   @media (min-width: 960px) {
     flex-direction: row;
-    left: 28.5%;
+    left: 33%;
   }
 `
 
