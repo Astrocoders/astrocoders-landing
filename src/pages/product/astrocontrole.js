@@ -107,6 +107,9 @@ const Astrocontrole = ({ intl }) => (
         </WhatIsThis>
 
         <Features>
+          <Title transform="uppercase">
+            <FormattedMessage id="mainFeatures" />
+          </Title>
           <HGroup columnOnMobile>
             <Feature name={intl.formatMessage({ id: 'astrocontroleFeatureOne' })} icon={charging} />
             <Feature name={intl.formatMessage({ id: 'astrocontroleFeatureTwo' })} icon={income} />

@@ -108,6 +108,9 @@ const AstralPanel = ({ intl }) => (
         </WhatIsThis>
 
         <Features>
+          <Title transform="uppercase">
+            <FormattedMessage id="mainFeatures" />
+          </Title>
           <HGroup columnOnMobile>
             <Feature name={intl.formatMessage({ id: 'astralFeatureOne' })} icon={api} />
             <Feature name={intl.formatMessage({ id: 'astralFeatureTwo' })} icon={alert} />
