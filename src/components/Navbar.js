@@ -176,7 +176,7 @@ const Nav = ({ isHome, isSupermenuOpened, isAfterHero, setMenuOpened, setSuperme
       </NavbarContainer>
     </ClickOutsideStyled>
     <ClickOutsideSupermenu isShowed={isSupermenuOpened} onClickOutside={() => setSupermenuOpened(false)}>
-      <Supermenu isShowed={isSupermenuOpened} />
+      <Supermenu isAfterHero={isAfterHero} isShowed={isSupermenuOpened} />
     </ClickOutsideSupermenu>
   </>
 )

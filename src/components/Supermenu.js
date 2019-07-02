@@ -10,9 +10,9 @@ const SupermenuWrapper = styled.div`
   border-radius: 3px;
   box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.25);
   color: black;
-  display: ${props => (props.isShowed === true ? 'flex' : 'none')};
-  position: absolute;
-  top: 70px;
+  display: ${props => (props.isAfterHero && props.isShowed === true ? 'flex' : 'none')};
+  position: fixed;
+  top: 80px;
   transition: all 0.2s;
   z-index: 999;
 
@@ -117,8 +117,8 @@ const CaseDescription = styled.span`
   }
 `
 
-const Supermenu = ({ isShowed }) => (
-  <SupermenuWrapper isShowed={isShowed}>
+const Supermenu = ({ isShowed, isAfterHero }) => (
+  <SupermenuWrapper isAfterHero={isAfterHero} isShowed={isShowed}>
     <Products>
       <Product onClick={() => navigate('/product/astral')}>
         <ProductTitle>Astral</ProductTitle>
@@ -143,10 +143,12 @@ const Supermenu = ({ isShowed }) => (
 
 Supermenu.propTypes = {
   isShowed: PropTypes.bool,
+  isAfterHero: PropTypes.bool,
 }
 
 Supermenu.defaultProps = {
   isShowed: false,
+  isAfterHero: true,
 }
 
 export default Supermenu
