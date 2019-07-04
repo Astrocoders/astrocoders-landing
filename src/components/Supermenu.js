@@ -38,6 +38,7 @@ const SupermenuContent = styled.div`
     left: 16%;
     width: 70%;
     top: 150px;
+    position: absolute;
   }
 
   @media (min-width: 960px) {
@@ -129,10 +130,10 @@ const ClickOutside = styled.label`
   left: 0;
 `
 
-const Supermenu = ({ isHome, isShowed, isAfterHero }) => (
+const Supermenu = ({ isHome, isAfterHero }) => (
   <SupermenuWrapper>
     <ClickOutside htmlFor="show-supermenu" />
-    <SupermenuContent isHome={isHome} isAfterHero={isAfterHero} isShowed={isShowed}>
+    <SupermenuContent isHome={isHome} isAfterHero={isAfterHero}>
       <Products>
         <Product onClick={() => navigate('/product/astral')}>
           <ProductTitle>Astral</ProductTitle>
@@ -157,13 +158,12 @@ const Supermenu = ({ isHome, isShowed, isAfterHero }) => (
 )
 
 Supermenu.propTypes = {
-  isShowed: PropTypes.bool,
+  isHome: PropTypes.bool,
   isAfterHero: PropTypes.bool,
 }
 
 Supermenu.defaultProps = {
-  isShowed: false,
-  isAfterHero: true,
+  isAfterHero: false,
 }
 
 export default Supermenu

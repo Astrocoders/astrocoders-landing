@@ -125,11 +125,7 @@ const ClickOutsideStyled = styled(ClickOutside)`
   width: 100%;
 `
 
-const ClickOutsideSupermenu = styled(ClickOutside)`
-  display: ${props => (props.isShowed ? 'block' : 'none')};
-`
-
-const Nav = ({ isHome, isSupermenuOpened, isAfterHero, setMenuOpened, setSupermenuOpened, isMenuOpened }) => (
+const Nav = ({ isHome, isAfterHero, setMenuOpened, isMenuOpened }) => (
   <>
     <ClickOutsideStyled isHome={isHome} isAfterHero={isAfterHero} onClickOutside={() => setMenuOpened(false)}>
       <NavbarContainer>
@@ -161,7 +157,7 @@ const Nav = ({ isHome, isSupermenuOpened, isAfterHero, setMenuOpened, setSuperme
           </NavbarContainer>
           {isMenuOpened && (
             <MenuDialog>
-              <SupermenuTrigger onClick={() => setSupermenuOpened()}>
+              <SupermenuTrigger htmlFor="show-supermenu">
                 <FormattedMessage id="products" />
               </SupermenuTrigger>
               <NavbarLink to="/how-we-work">
@@ -189,11 +185,8 @@ const Nav = ({ isHome, isSupermenuOpened, isAfterHero, setMenuOpened, setSuperme
 
 Nav.propTypes = {
   isAfterHero: PropTypes.bool,
-  isColorChanged: PropTypes.bool,
   isMenuOpened: PropTypes.bool,
-  isSupermenuOpened: PropTypes.bool,
   setMenuOpened: PropTypes.func.isRequired,
-  setSupermenuOpened: PropTypes.func.isRequired,
 }
 
 Nav.defaultProps = {
@@ -206,14 +199,10 @@ export default compose(
   withStateHandlers(
     {
       isMenuOpened: false,
-      isSupermenuOpened: false,
     },
     {
       setMenuOpened: ({ isMenuOpened }) => (newState = !isMenuOpened) => ({
         isMenuOpened: newState,
-      }),
-      setSupermenuOpened: ({ isSupermenuOpened }) => (newState = !isSupermenuOpened) => ({
-        isSupermenuOpened: newState,
       }),
     },
   ),
