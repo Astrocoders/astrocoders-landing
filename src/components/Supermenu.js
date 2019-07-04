@@ -6,7 +6,7 @@ import { FormattedMessage, Link, navigate } from 'gatsby-plugin-intl'
 import theme from '../utils/theme'
 
 const SupermenuWrapper = styled.div`
-  display: ${p => (p.isHome ? (p.isAfterHero ? 'none' : 'none!important') : 'none')};
+  display: ${p => (p.isHome && !p.isAfterHero ? 'none!important' : 'none')};
 `
 
 const SupermenuContent = styled.div`
@@ -37,8 +37,10 @@ const SupermenuContent = styled.div`
     flex-direction: column;
     left: 16%;
     width: 70%;
-    top: 150px;
-    position: absolute;
+    top: 130px;
+    z-index: 99999;
+    height: 510px;
+    overflow-y: scroll;
   }
 
   @media (min-width: 960px) {
