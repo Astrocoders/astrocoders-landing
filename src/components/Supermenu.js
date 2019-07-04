@@ -6,11 +6,15 @@ import { FormattedMessage, Link, navigate } from 'gatsby-plugin-intl'
 import theme from '../utils/theme'
 
 const SupermenuWrapper = styled.div`
+  display: ${p => (p.isHome ? (p.isAfterHero ? 'none' : 'none!important') : 'none')};
+`
+
+const SupermenuContent = styled.div`
   background-color: white;
   border-radius: 3px;
   box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.25);
   color: black;
-  display: ${props => (props.isAfterHero && props.isShowed === true ? 'flex' : 'none')};
+  display: flex;
   position: fixed;
   top: 80px;
   transition: all 0.2s;
@@ -117,27 +121,38 @@ const CaseDescription = styled.span`
   }
 `
 
-const Supermenu = ({ isShowed, isAfterHero }) => (
-  <SupermenuWrapper isAfterHero={isAfterHero} isShowed={isShowed}>
-    <Products>
-      <Product onClick={() => navigate('/product/astral')}>
-        <ProductTitle>Astral</ProductTitle>
-        <ProductDescription>
-          <FormattedMessage id="astralDescription" />
-        </ProductDescription>
-      </Product>
-      <Product onClick={() => navigate('/product/astrocontrole')}>
-        <ProductTitle>Astrocontrole</ProductTitle>
-        <ProductDescription>
-          <FormattedMessage id="astrocontroleDescription" />
-        </ProductDescription>
-      </Product>
-      <SeeMoreButton to="/products">+ See more products</SeeMoreButton>
-    </Products>
-    <Cases>
-      <CaseHeading>Cases</CaseHeading>
-      <CaseDescription>How we helped a Health Coach company to sell their products online</CaseDescription>
-    </Cases>
+const ClickOutside = styled.label`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+`
+
+const Supermenu = ({ isHome, isShowed, isAfterHero }) => (
+  <SupermenuWrapper>
+    <ClickOutside htmlFor="show-supermenu" />
+    <SupermenuContent isHome={isHome} isAfterHero={isAfterHero} isShowed={isShowed}>
+      <Products>
+        <Product onClick={() => navigate('/product/astral')}>
+          <ProductTitle>Astral</ProductTitle>
+          <ProductDescription>
+            <FormattedMessage id="astralDescription" />
+          </ProductDescription>
+        </Product>
+        <Product onClick={() => navigate('/product/astrocontrole')}>
+          <ProductTitle>Astrocontrole</ProductTitle>
+          <ProductDescription>
+            <FormattedMessage id="astrocontroleDescription" />
+          </ProductDescription>
+        </Product>
+        <SeeMoreButton to="/products">+ See more products</SeeMoreButton>
+      </Products>
+      <Cases>
+        <CaseHeading>Cases</CaseHeading>
+        <CaseDescription>How we helped a Health Coach company to sell their products online</CaseDescription>
+      </Cases>
+    </SupermenuContent>
   </SupermenuWrapper>
 )
 

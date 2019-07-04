@@ -49,7 +49,7 @@ const NavbarLink = styled(Link)`
   }
 `
 
-const SupermenuTrigger = styled.span`
+const SupermenuTrigger = styled.label`
   cursor: pointer;
   font-size: ${props => props.fontSize || '1rem'};
   text-decoration: none;
@@ -63,6 +63,13 @@ const SupermenuTrigger = styled.span`
     @media (max-width: 960px) {
       color: #fff;
     }
+  }
+`
+
+const SupermenuHandler = styled.input`
+  &:checked + div {
+    display: flex;
+    visibility: visible;
   }
 `
 
@@ -137,7 +144,7 @@ const Nav = ({ isHome, isSupermenuOpened, isAfterHero, setMenuOpened, setSuperme
           <NavbarLink to="/open-source">
             <FormattedMessage id="openSource" />
           </NavbarLink>
-          <SupermenuTrigger onClick={() => setSupermenuOpened()}>
+          <SupermenuTrigger htmlFor="show-supermenu">
             <FormattedMessage id="products" />
           </SupermenuTrigger>
           <NavbarLink to="/join-us">
@@ -175,9 +182,8 @@ const Nav = ({ isHome, isSupermenuOpened, isAfterHero, setMenuOpened, setSuperme
         </MobileMenu>
       </NavbarContainer>
     </ClickOutsideStyled>
-    <ClickOutsideSupermenu isShowed={isSupermenuOpened} onClickOutside={() => setSupermenuOpened(false)}>
-      <Supermenu isAfterHero={isAfterHero} isShowed={isSupermenuOpened} />
-    </ClickOutsideSupermenu>
+    <SupermenuHandler id="show-supermenu" type="checkbox" hidden />
+    <Supermenu isAfterHero={isAfterHero} isHome={isHome} />
   </>
 )
 
@@ -185,6 +191,7 @@ Nav.propTypes = {
   isAfterHero: PropTypes.bool,
   isColorChanged: PropTypes.bool,
   isMenuOpened: PropTypes.bool,
+  isSupermenuOpened: PropTypes.bool,
   setMenuOpened: PropTypes.func.isRequired,
   setSupermenuOpened: PropTypes.func.isRequired,
 }
