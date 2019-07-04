@@ -123,7 +123,7 @@ const CaseDescription = styled.span`
 `
 
 const ClickOutside = styled.label`
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -131,9 +131,9 @@ const ClickOutside = styled.label`
 `
 
 const Supermenu = ({ isHome, isAfterHero }) => (
-  <SupermenuWrapper>
+  <SupermenuWrapper isHome={isHome} isAfterHero={isAfterHero}>
     <ClickOutside htmlFor="show-supermenu" />
-    <SupermenuContent isHome={isHome} isAfterHero={isAfterHero}>
+    <SupermenuContent>
       <Products>
         <Product onClick={() => navigate('/product/astral')}>
           <ProductTitle>Astral</ProductTitle>
