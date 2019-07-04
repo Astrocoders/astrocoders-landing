@@ -6,6 +6,7 @@ import { FormattedMessage, Link, injectIntl } from 'gatsby-plugin-intl'
 import { compose, withStateHandlers } from 'recompose'
 
 import LanguageSelector from './LanguageSelector'
+import Supermenu from './Supermenu'
 
 import navLogo from '../img/navLogo.png'
 
@@ -45,6 +46,30 @@ const NavbarLink = styled(Link)`
     @media (max-width: 960px) {
       color: #fff;
     }
+  }
+`
+
+const SupermenuTrigger = styled.label`
+  cursor: pointer;
+  font-size: ${props => props.fontSize || '1rem'};
+  text-decoration: none;
+  margin: 10px;
+  color: ${props => props.color || '#fff'};
+  transition: 0.25s;
+  text-transform: uppercase;
+
+  &:hover {
+    color: ${theme.colors.primary};
+    @media (max-width: 960px) {
+      color: #fff;
+    }
+  }
+`
+
+const SupermenuHandler = styled.input`
+  &:checked + div {
+    display: flex;
+    visibility: visible;
   }
 `
 
@@ -101,56 +126,65 @@ const ClickOutsideStyled = styled(ClickOutside)`
 `
 
 const Nav = ({ isHome, isAfterHero, setMenuOpened, isMenuOpened }) => (
-  <ClickOutsideStyled isHome={isHome} isAfterHero={isAfterHero} onClickOutside={() => setMenuOpened(false)}>
-    <NavbarContainer>
-      <Link to="/">
-        <Logo src={navLogo} />
-      </Link>
+  <>
+    <ClickOutsideStyled isHome={isHome} isAfterHero={isAfterHero} onClickOutside={() => setMenuOpened(false)}>
+      <NavbarContainer>
+        <Link to="/">
+          <Logo src={navLogo} />
+        </Link>
 
-      <NavbarLinkWrapper>
-        <NavbarLink to="/how-we-work">
-          <FormattedMessage id="howWeWork" />
-        </NavbarLink>
-        <NavbarLink to="/open-source">
-          <FormattedMessage id="openSource" />
-        </NavbarLink>
-        <NavbarLink to="/join-us">
-          <FormattedMessage id="joinUs" />
-        </NavbarLink>
-        <NavbarLink to="/#hireUs">
-          <FormattedMessage id="contact" />
-        </NavbarLink>
-      </NavbarLinkWrapper>
-      <LanguageSelector hideOnMobile />
-      <MobileMenu>
-        <NavbarContainer>
-          <MenuTrigger onClick={evt => setMenuOpened()}>{isMenuOpened ? <MenuIconClose /> : <MenuIcon />}</MenuTrigger>
-        </NavbarContainer>
-        {isMenuOpened && (
-          <MenuDialog>
-            <NavbarLink to="/how-we-work">
-              <FormattedMessage id="howWeWork" />
-            </NavbarLink>
-            <NavbarLink to="/open-source">
-              <FormattedMessage id="openSource" />
-            </NavbarLink>
-            <NavbarLink to="/join-us">
-              <FormattedMessage id="joinUs" />
-            </NavbarLink>
-            <NavbarLink to="/#hireUs">
-              <FormattedMessage id="contact" />
-            </NavbarLink>
-            <LanguageSelector hideOnMobile={false} />
-          </MenuDialog>
-        )}
-      </MobileMenu>
-    </NavbarContainer>
-  </ClickOutsideStyled>
+        <NavbarLinkWrapper>
+          <NavbarLink to="/how-we-work">
+            <FormattedMessage id="howWeWork" />
+          </NavbarLink>
+          <NavbarLink to="/open-source">
+            <FormattedMessage id="openSource" />
+          </NavbarLink>
+          <SupermenuTrigger htmlFor="show-supermenu">
+            <FormattedMessage id="products" />
+          </SupermenuTrigger>
+          <NavbarLink to="/join-us">
+            <FormattedMessage id="joinUs" />
+          </NavbarLink>
+          <NavbarLink to="/#hireUs">
+            <FormattedMessage id="contact" />
+          </NavbarLink>
+        </NavbarLinkWrapper>
+        <LanguageSelector hideOnMobile />
+        <MobileMenu>
+          <NavbarContainer>
+            <MenuTrigger onClick={() => setMenuOpened()}>{isMenuOpened ? <MenuIconClose /> : <MenuIcon />}</MenuTrigger>
+          </NavbarContainer>
+          {isMenuOpened && (
+            <MenuDialog>
+              <SupermenuTrigger htmlFor="show-supermenu">
+                <FormattedMessage id="products" />
+              </SupermenuTrigger>
+              <NavbarLink to="/how-we-work">
+                <FormattedMessage id="howWeWork" />
+              </NavbarLink>
+              <NavbarLink to="/open-source">
+                <FormattedMessage id="openSource" />
+              </NavbarLink>
+              <NavbarLink to="/join-us">
+                <FormattedMessage id="joinUs" />
+              </NavbarLink>
+              <NavbarLink to="/#hireUs">
+                <FormattedMessage id="contact" />
+              </NavbarLink>
+              <LanguageSelector hideOnMobile={false} />
+            </MenuDialog>
+          )}
+        </MobileMenu>
+      </NavbarContainer>
+    </ClickOutsideStyled>
+    <SupermenuHandler id="show-supermenu" type="checkbox" hidden />
+    <Supermenu isAfterHero={isAfterHero} isHome={isHome} />
+  </>
 )
 
 Nav.propTypes = {
   isAfterHero: PropTypes.bool,
-  isColorChanged: PropTypes.bool,
   isMenuOpened: PropTypes.bool,
   setMenuOpened: PropTypes.func.isRequired,
 }
@@ -163,7 +197,9 @@ const Navbar = injectIntl(Nav)
 
 export default compose(
   withStateHandlers(
-    { isMenuOpened: false },
+    {
+      isMenuOpened: false,
+    },
     {
       setMenuOpened: ({ isMenuOpened }) => (newState = !isMenuOpened) => ({
         isMenuOpened: newState,

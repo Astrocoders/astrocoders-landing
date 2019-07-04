@@ -38,15 +38,26 @@ const SocialLinks = styled(HGroup)`
 `
 
 const Copyrights = styled(VGroup)`
-  align-items: center;
-  justify-content: center;
   width: calc(80% - 200px);
-  margin-left: 10px;
+  margin-left: 30px;
 
   @media (max-width: 960px) {
     margin-top: 30px;
     text-align: center;
     width: 100%;
+  }
+`
+
+const CopyrightIcons = styled.span`
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.7rem;
+  justify-content: center;
+  margin-top: 10px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 `
 
@@ -71,7 +82,24 @@ const Footer = () => (
             <Medium />
           </a>
         </SocialLinks>
-        <Copyrights>Copyright {new Date().getFullYear()} © Astrocoders Desenvolvimento LTDA. CNPJ 24.896.711/0001-54. Avenida Afonso Vergueiro, 2250, Sala 2, Sorocaba, São Paulo.</Copyrights>
+        <Copyrights>
+          Copyright {new Date().getFullYear()} © Astrocoders Desenvolvimento LTDA. CNPJ 24.896.711/0001-54. Avenida
+          Afonso Vergueiro, 2250, Sala 2, Sorocaba, São Paulo.
+          <CopyrightIcons>
+            Icons made by{' '}
+            <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">
+              Eucalyp
+            </a>{' '}
+            from{' '}
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com
+            </a>{' '}
+            is licensed by{' '}
+            <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">
+              CC 3.0 BY
+            </a>
+          </CopyrightIcons>
+        </Copyrights>
       </HGroup>
     </Wrapper>
   </FooterWrapper>

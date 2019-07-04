@@ -11,6 +11,9 @@ const LogoWrapper = styled(HGroup)`
   @media (max-width: 960px) {
     flex-direction: column;
   }
+  @media (min-width: 960px) {
+    padding-top: 8vh;
+  }
 `
 
 const TitleWrapper = styled(VGroup)`

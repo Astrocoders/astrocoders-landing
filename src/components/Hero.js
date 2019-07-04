@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { FormattedMessage } from 'gatsby-plugin-intl'
 
 import Logo from './Logo'
+import LanguageSelector from './LanguageSelector'
 
 import galaxy from '../img/galaxy.jpg'
 
@@ -46,13 +47,24 @@ const Description = styled.h3`
   }
 `
 
+const Translation = styled.div`
+  text-align: right;
+  padding-right: 0.5rem;
+  padding-top: 25px;
+`
+
 const Hero = () => (
-  <HeroWrapper>
-    <Logo />
-    <Description>
-      <FormattedMessage id="heroDescription" />
-    </Description>
-  </HeroWrapper>
+  <>
+    <Translation>
+      <LanguageSelector hideOnMobile />
+    </Translation>
+    <HeroWrapper>
+      <Logo />
+      <Description>
+        <FormattedMessage id="heroDescription" />
+      </Description>
+    </HeroWrapper>
+  </>
 )
 
 export default Hero
