@@ -45,7 +45,7 @@ const SupermenuContent = styled.div`
 
   @media (min-width: 960px) {
     flex-direction: row;
-    left: 33%;
+    left: 45%;
   }
 `
 
@@ -151,10 +151,6 @@ const Supermenu = ({ isHome, isAfterHero }) => (
         </Product>
         <SeeMoreButton to="/products">+ See more products</SeeMoreButton>
       </Products>
-      <Cases>
-        <CaseHeading>Cases</CaseHeading>
-        <CaseDescription>How we helped a Health Coach company to sell their products online</CaseDescription>
-      </Cases>
     </SupermenuContent>
   </SupermenuWrapper>
 )
