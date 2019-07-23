@@ -33,7 +33,12 @@ const SupermenuContent = styled.div`
     margin-left: 45%;
   }
 
-  @media (max-width: 960px) {
+  @media (min-width: 601px) {
+    flex-direction: row;
+    left: 37vw;
+  }
+
+  @media (max-width: 1200px) {
     flex-direction: column;
     left: 16%;
     width: 70%;
@@ -43,9 +48,9 @@ const SupermenuContent = styled.div`
     overflow-y: scroll;
   }
 
-  @media (min-width: 960px) {
+  @media (min-width: 1200px) {
     flex-direction: row;
-    left: 45.58345vw;
+    left: 44.58345vw;
   }
 `
 
