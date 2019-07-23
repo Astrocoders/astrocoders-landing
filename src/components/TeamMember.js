@@ -56,6 +56,7 @@ const RoleTitle = styled.h3`
   font-family: ${theme.fonts.title};
   font-size: 0.8em;
   font-weight: 700;
+  line-height: 150%;
   letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
