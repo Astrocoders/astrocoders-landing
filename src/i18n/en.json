@@ -66,7 +66,7 @@
   "reconciliaSummary": "Integrated transaction reconciliation tool for systems using different partner operations. Audit and conflict resolution to reconcile banking system transactions, transaction engines, credit cards, debit cards, payments, digital wallets, gateways and more.",
   "reconciliaSubheadline": "Transaction reconciliation for the financial sector",
   "reconciliaMoreInfo": "Reconcilia is the tool for auditing and conflict resolution that facilitates the integration of different partners and operations. The need for a solid and well-built system becomes clear when critical information is transacted. For this we built Reconcilia the tool that has the best results.",
-  "reconciliaDescription": "In addition to the high degree of customization in reconciling transaction information, Reconcilia has a great user control and management interface for resolving conflicts and viewing general information. Severity-driven alarms levels, automatic resolutions, reconciliations for any period of time are some of the extra features of this system.",
+  "reconciliaDescription": "In addition to the high degree of customization in reconciling transaction information, Reconcilia has a great user control and management interface for resolving conflicts and viewing general information. Severity-based alarms levels, automatic resolutions, reconciliations for any period of time are some of the extra features of this system.",
   "reconciliaFeatureOne": "Quick setup and initialization of reconciliation parties",
   "reconciliaFeatureTwo": "Custom user management",
   "reconciliaFeatureThree": "State-of-the-art reconciliation analysis and calculation with alarms and actions configuration",
