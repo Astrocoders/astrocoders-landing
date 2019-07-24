@@ -16,6 +16,7 @@ const Item = styled.img`
   position: absolute;
   transition: all 0.2s;
   transform: translateY(${p => 40 * p.index + 'px'}) translateX(${p => 40 * p.index + 'px'});
+  will-change: transform;
   z-index: ${p => p.zIndex};
 
   @media (max-width: 960px) {

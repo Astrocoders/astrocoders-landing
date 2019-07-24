@@ -11,11 +11,11 @@ import VGroup from '../../components/VGroup'
 import Feature from '../../components/Feature'
 
 import astroGreen from '../../img/astroGreen.png'
-import astralPreview from '../../img/products/astralPreview.png'
+import reconciliaPreview from '../../img/products/reconciliaDashboard.jpg'
 
-import api from '../../img/api.svg'
-import alert from '../../img/alert.svg'
-import relationship from '../../img/relationship.svg'
+import setup from '../../img/setup.svg'
+import team from '../../img/team.svg'
+import chart from '../../img/chart.svg'
 
 import theme from '../../utils/theme'
 
@@ -49,7 +49,7 @@ const Preview = styled.div`
 
     &:hover {
       img {
-        margin-top: -30%;
+        margin-top: -39%;
       }
     }
   }
@@ -73,11 +73,11 @@ const Features = styled.section`
   }
 `
 
-const AstralPanel = ({ intl }) => (
+const ReconciliaAi = ({ intl }) => (
   <ProductLayout
     logo={astroGreen}
-    title="Astral Panel"
-    subtitle={intl.formatMessage({ id: 'astralSubheadline' })}
+    title="Reconcilia"
+    subtitle={intl.formatMessage({ id: 'reconciliaSubheadline' })}
     color="#27AE60"
     content={
       <>
@@ -85,12 +85,12 @@ const AstralPanel = ({ intl }) => (
           <FormattedMessage id="knowTheProduct" />
         </Title>
         <Text marginTop="20px" marginBottom="20px">
-          <FormattedMessage id="astralMoreInfo" />
+          <FormattedMessage id="reconciliaMoreInfo" />
         </Text>
 
         <WhatIsThis columnOnMobile>
           <Preview>
-            <Image src={astralPreview} alt="Astral" />
+            <Image src={reconciliaPreview} alt="Reconcilia" />
           </Preview>
 
           <VGroup>
@@ -98,7 +98,7 @@ const AstralPanel = ({ intl }) => (
               <FormattedMessage id="moreInfo" />
             </Title>
             <Text marginTop="20px" marginBottom="20px">
-              <FormattedMessage id="astralDescription" />
+              <FormattedMessage id="reconciliaDescription" />
             </Text>
             <Button centerInMobile theme={theme.colors.astrogreen}>
               <FormattedMessage id="tryItOut" />
@@ -111,9 +111,9 @@ const AstralPanel = ({ intl }) => (
             <FormattedMessage id="mainFeatures" />
           </Title>
           <HGroup columnOnMobile>
-            <Feature name={intl.formatMessage({ id: 'astralFeatureOne' })} icon={api} />
-            <Feature name={intl.formatMessage({ id: 'astralFeatureTwo' })} icon={alert} />
-            <Feature name={intl.formatMessage({ id: 'astralFeatureThree' })} icon={relationship} />
+            <Feature name={intl.formatMessage({ id: 'reconciliaFeatureOne' })} icon={setup} />
+            <Feature name={intl.formatMessage({ id: 'reconciliaFeatureTwo' })} icon={team} />
+            <Feature name={intl.formatMessage({ id: 'reconciliaFeatureThree' })} icon={chart} />
           </HGroup>
         </Features>
 
@@ -125,4 +125,4 @@ const AstralPanel = ({ intl }) => (
   />
 )
 
-export default injectIntl(AstralPanel)
+export default injectIntl(ReconciliaAi)

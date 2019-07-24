@@ -10,7 +10,9 @@ import Wrapper from '../components/Wrapper'
 
 import astrocontroleCover from '../img/products/astrocontrole.png'
 import astralCover from '../img/products/astral.png'
+import reconciliaCover from '../img/products/reconciliaLogo.png'
 import lendhubCover from '../img/products/lendhub.png'
+import { FormattedMessage } from 'react-intl'
 
 const ProductsWrapper = styled(Wrapper)`
   align-items: center;
@@ -46,9 +48,11 @@ const ProductsPage = () => (
   <PageWrapper>
     <ProductsWrapper>
       <Title align="center" marginBottom="30px" withStripe>
-        Our Products
+        <FormattedMessage id="ourProducts" />
       </Title>
-      <Text>Here we explain better how the products we are building are different, the best features and whys.</Text>
+      <Text>
+        <FormattedMessage id="ourProductsDescription" />
+      </Text>
 
       <ProductsGrid>
         <ProductCover onClick={() => navigate(`/product/astrocontrole`)}>
@@ -56,6 +60,9 @@ const ProductsPage = () => (
         </ProductCover>
         <ProductCover onClick={() => navigate(`/product/astral`)}>
           <Image src={astralCover} alt="Astral" />
+        </ProductCover>
+        <ProductCover onClick={() => navigate(`/product/reconcilia`)}>
+          <Image src={reconciliaCover} alt="Reconcilia" />
         </ProductCover>
         <ProductCover>
           <Image src={lendhubCover} alt="LendHub" />

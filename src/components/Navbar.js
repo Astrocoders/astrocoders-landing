@@ -49,6 +49,22 @@ const NavbarLink = styled(Link)`
   }
 `
 
+const AnchorLink = styled.a`
+  font-size: ${props => props.fontSize || '1rem'};
+  text-decoration: none;
+  margin: 10px;
+  color: ${props => props.color || '#fff'};
+  transition: 0.25s;
+  text-transform: uppercase;
+
+  &:hover {
+    color: ${theme.colors.primary};
+    @media (max-width: 960px) {
+      color: #fff;
+    }
+  }
+`
+
 const SupermenuTrigger = styled.label`
   cursor: pointer;
   font-size: ${props => props.fontSize || '1rem'};
@@ -146,9 +162,9 @@ const Nav = ({ isHome, isAfterHero, setMenuOpened, isMenuOpened }) => (
           <NavbarLink to="/join-us">
             <FormattedMessage id="joinUs" />
           </NavbarLink>
-          <NavbarLink to="/#hireUs">
+          <AnchorLink href="#hireUs">
             <FormattedMessage id="contact" />
-          </NavbarLink>
+          </AnchorLink>
         </NavbarLinkWrapper>
         <LanguageSelector hideOnMobile />
         <MobileMenu>
@@ -169,9 +185,9 @@ const Nav = ({ isHome, isAfterHero, setMenuOpened, isMenuOpened }) => (
               <NavbarLink to="/join-us">
                 <FormattedMessage id="joinUs" />
               </NavbarLink>
-              <NavbarLink to="/#hireUs">
+              <AnchorLink href="#hireUs">
                 <FormattedMessage id="contact" />
-              </NavbarLink>
+              </AnchorLink>
               <LanguageSelector hideOnMobile={false} />
             </MenuDialog>
           )}
