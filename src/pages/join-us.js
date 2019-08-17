@@ -54,7 +54,7 @@ const CasesPage = () => (
             name="Gabriel Rubens"
             // eslint-disable-next-line
             role="Head of Research and Development"
-            github="grsabreu"
+            github="fakenickels"
           />
           <TeamMember
             profilePicture="https://avatars3.githubusercontent.com/u/16995184?s=460&v=4"
