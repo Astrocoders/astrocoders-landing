@@ -34,7 +34,7 @@ const Description = styled(Text)`
 const WebBuildingBlocks = () => (
   <Section>
     <Wrapper alignItems="center">
-      <Title align="center" transform="uppercase" withStripe marginBottom="70px">
+      <Title size="1.6rem" align="center" transform="uppercase" withStripe marginBottom="70px">
         Web Building Blocks
       </Title>
       <HGroup columnOnMobile>

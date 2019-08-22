@@ -39,7 +39,7 @@ const MobileGameTableWrapper = styled.div`
 const IntegrationServer = () => (
   <IntegrationServerWrapper data-testid="IntegrationServerSection">
     <Wrapper alignItems="center">
-      <Title align="center" transform="uppercase" withStripe marginBottom="70px">
+      <Title size="1.6rem" align="center" transform="uppercase" withStripe marginBottom="70px">
         Integration Servers
       </Title>
       <GameTableWrapper>
