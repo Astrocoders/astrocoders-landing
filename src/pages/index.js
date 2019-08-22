@@ -6,12 +6,14 @@ import ScrollTrigger from 'react-scroll-trigger'
 import PageWrapper from '../components/PageWrapper'
 import Hero from '../components/Hero'
 import AboutUs from '../components/AboutUs'
+import BuildingBlocks from '../components/BuildingBlocks'
 import MobileBuildingBlocks from '../components/MobileBuildingBlocks'
 import WebBuildingBlocks from '../components/WebBuildingBlocks'
 import IntegrationServer from '../components/IntegrationServer'
 import OurStack from '../components/OurStack'
 import Partners from '../components/Partners'
 import Testimonials from '../components/Testimonials'
+import Products from '../components/Products'
 
 import galaxy from '../img/fbb-bg.jpg'
 
@@ -46,6 +48,7 @@ const BuldingBlocksWrapper = styled.section`
     width: 100%;
   }
 `
+
 const IndexPage = ({ isAfterHero, setAfterHero }) => (
   <PageWrapper isHome isAfterHero={isAfterHero}>
     <ScrollTrigger onEnter={() => setAfterHero(false)} onExit={() => setAfterHero(true)}>
@@ -53,7 +56,9 @@ const IndexPage = ({ isAfterHero, setAfterHero }) => (
     </ScrollTrigger>
     <OurStack />
     <AboutUs />
+    <Products />
     <BuldingBlocksWrapper>
+      <BuildingBlocks />
       <MobileBuildingBlocks />
       <WebBuildingBlocks />
       <IntegrationServer />
