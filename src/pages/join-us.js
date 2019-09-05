@@ -92,6 +92,13 @@ const CasesPage = () => (
             github="JeffersonCarvalh0"
           />
           <TeamMember
+            profilePicture="https://avatars3.githubusercontent.com/u/24661951?s=460&v=4"
+            name="Luiz Augusto Moratelli"
+            // eslint-disable-next-line
+            role="Fullstack JavaScript Developer"
+            github="LuizMoratelli"
+          />
+          <TeamMember
             profilePicture="https://avatars1.githubusercontent.com/u/13984388?s=460&v=4"
             name="Lucas Besen"
             // eslint-disable-next-line
