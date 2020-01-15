@@ -156,9 +156,6 @@ const Nav = ({ isHome, isAfterHero, setMenuOpened, isMenuOpened }) => (
           <NavbarLink to="/open-source">
             <FormattedMessage id="openSource" />
           </NavbarLink>
-          <SupermenuTrigger htmlFor="show-supermenu">
-            <FormattedMessage id="products" />
-          </SupermenuTrigger>
           <NavbarLink to="/join-us">
             <FormattedMessage id="joinUs" />
           </NavbarLink>
@@ -173,9 +170,6 @@ const Nav = ({ isHome, isAfterHero, setMenuOpened, isMenuOpened }) => (
           </NavbarContainer>
           {isMenuOpened && (
             <MenuDialog>
-              <SupermenuTrigger htmlFor="show-supermenu">
-                <FormattedMessage id="products" />
-              </SupermenuTrigger>
               <NavbarLink to="/how-we-work">
                 <FormattedMessage id="howWeWork" />
               </NavbarLink>
