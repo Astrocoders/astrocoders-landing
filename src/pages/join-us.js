@@ -112,6 +112,13 @@ const CasesPage = () => (
             role="Fullstack JavaScript Developer"
             github="jrquadros"
           />
+          <TeamMember
+            profilePicture="https://avatars3.githubusercontent.com/u/25514401?s=460&v=4"
+            name="Ramon Souza"
+            // eslint-disable-next-line
+            role="Fullstack JavaScript Developer"
+            github="souzaramon"
+          />
         </Team>
       </Wrapper>
     </ContactWrapper>
