@@ -1,12 +1,8 @@
 import React from 'react'
-import { withState, withProps } from 'recompose'
-import compose from 'recompose/compose'
 import styled from 'styled-components'
-import { stripIndent } from 'common-tags'
 import { FormattedMessage, injectIntl } from 'gatsby-plugin-intl'
 
 import Wrapper from './Wrapper'
-import Text from './Text'
 import Title from './Title'
 import FormField from './FormField'
 import Textarea from './Textarea'
@@ -43,7 +39,7 @@ const FormWrapper = styled.div`
   }
 `
 
-function HireUsForm({ intl, isSending, handleSubmit }) {
+function HireUsForm({ intl }) {
   return (
     <scroll-page id="hireUs">
       <HireUsWrapper>
@@ -52,39 +48,38 @@ function HireUsForm({ intl, isSending, handleSubmit }) {
         </Title>
         <Wrapper alignItems="flex-end">
           <FormWrapper>
-            <form id="hireUsForm" className="validate" onSubmit={handleSubmit}>
-              {!isSending ? (
-                <div>
-                  <HGroup columnOnMobile>
-                    <FormField
-                      label={intl.formatMessage({ id: 'name' })}
-                      name="name"
-                      placeholder="John Doe"
-                      required="required"
-                    />
-                    <FormField
-                      label={intl.formatMessage({ id: 'email' })}
-                      name="email"
-                      placeholder="email@provider.co"
-                      required="required"
-                    />
-                  </HGroup>
-                  <Textarea
-                    name="subject"
-                    label={intl.formatMessage({ id: 'subject' })}
-                    placeholder={intl.formatMessage({ id: 'subjectPlaceholder' })}
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              action="/thank-you"
+            >
+              <div>
+                <HGroup columnOnMobile>
+                  <FormField
+                    label={intl.formatMessage({ id: 'name' })}
+                    name="name"
+                    placeholder="John Doe"
                     required="required"
                   />
-                </div>
-              ) : (
-                <Wrapper marginBottom="50px" alignItems="center">
-                  <Text>
-                    <FormattedMessage id="formThanks" />
-                  </Text>
-                </Wrapper>
-              )}
-              <Button disabled={isSending} marginLeft="10px" alignSelf="flex-end">
-                {isSending ? intl.formatMessage({ id: 'sent' }) : intl.formatMessage({ id: 'send' })}
+                  <FormField
+                    label={intl.formatMessage({ id: 'email' })}
+                    name="email"
+                    placeholder="email@provider.co"
+                    required="required"
+                  />
+                </HGroup>
+                <Textarea
+                  name="message"
+                  label={intl.formatMessage({ id: 'subject' })}
+                  placeholder={intl.formatMessage({ id: 'subjectPlaceholder' })}
+                  required="required"
+                />
+              </div>
+
+              <Button marginLeft="10px" alignSelf="flex-end">
+                {intl.formatMessage({ id: 'send' })}
               </Button>
             </form>
           </FormWrapper>
@@ -96,39 +91,4 @@ function HireUsForm({ intl, isSending, handleSubmit }) {
 
 const HireUs = injectIntl(HireUsForm)
 
-export default compose(
-  withState('isSending', 'setIsSending', false),
-  withProps(props => ({
-    handleSubmit(event) {
-      event.preventDefault()
-      props.setIsSending(true)
-      const form = (formData => {
-        const obj = {}
-        for (const [key, value] of formData) {
-          obj[key] = value
-        }
-        return obj
-      })(new FormData(event.target))
-      fetch('https://server.astrocoders.com/graphql', {
-        method: 'POST',
-        headers: {
-          Accept: '*/*',
-          'Content-type': 'application/json',
-        },
-        body: JSON.stringify({
-          query: stripIndent`
-            mutation {
-              SendEmailToAstro(
-                name: "${form.name}",
-                email: "${form.email}",
-                subject: "${form.subject}"
-              ) {
-                success
-              }
-            }
-        `,
-        }),
-      }).catch(err => props.isSending(false))
-    },
-  })),
-)(HireUs)
+export default HireUs
