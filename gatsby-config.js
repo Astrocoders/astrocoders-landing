@@ -1,25 +1,30 @@
 module.exports = {
   siteMetadata: {
     title: 'Astrocoders - Go Beyond',
-    description: 'Go Beyond',
+    description:
+      'Astrocoders desenvolve aplicativos mobile e web, sistemas, plataformas, servidores de integração para o setor financeiro',
     keywords: 'Go Beyond',
     author: 'Astrocoders',
     analytics: 'XXXXXX',
     site: 'astrocoders.com',
     nameGoogle: 'Astrocoders - Go Beyond',
-    descriptionGoogle: 'Astrocoders - Go Beyond',
+    descriptionGoogle:
+      'Astrocoders desenvolve aplicativos mobile e web, sistemas, plataformas, servidores de integração para o setor financeiro',
     imageGoogle: 'https://astrocoders.com/panel.png',
     cardTwitter: 'summary',
     siteTwitter: '@astrocoders',
     creatorTwitter: '@astrocoders',
     titleTwitter: 'Astrocoders - Go Beyond',
-    descriptionTwitter: 'Go Beyond',
+    descriptionTwitter:
+      'Astrocoders desenvolve aplicativos mobile e web, sistemas, plataformas, servidores de integração para o setor financeiro',
     imageTwitter: 'https://astrocoders.com/panel.png',
-    titleFacebook: 'Astrocoders - Go Beyond',
+    titleFacebook:
+      'Astrocoders desenvolve aplicativos mobile e web, sistemas, plataformas, servidores de integração para o setor financeiro',
     siteNameFacebook: 'Astrocoders',
     typeFacebook: 'website',
     urlFacebook: 'https://astrocoders.com/',
-    descriptionFacebook: 'Go Beyond',
+    descriptionFacebook:
+      'Astrocoders desenvolve aplicativos mobile e web, sistemas, plataformas, servidores de integração para o setor financeiro',
     imageFacebook: 'https://astrocoders.com/panel.png',
     appIdFacebook: 'XXXXXXXXXXX',
     hireUsFormAction: 'https://astromail.astrocoders.com/mail/kAGu38vSsJe4i546T',

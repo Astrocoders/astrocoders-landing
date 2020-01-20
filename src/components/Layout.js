@@ -17,12 +17,9 @@ const Layout = ({ children, intl }) => (
         }
       }
     `}
-    render={({ site: { siteMetadata: data } }) => (
+    render={() => (
       <main>
-        <SEO
-          title={`${intl.formatMessage({ id: 'title' })} - ${intl.formatMessage({ id: 'subtitle' })}`}
-          description={intl.formatMessage({ id: 'heroDescription' })}
-        />
+        <SEO title={`${intl.formatMessage({ id: 'title' })} - ${intl.formatMessage({ id: 'subtitle' })}`} />
         {children}
       </main>
     )}
