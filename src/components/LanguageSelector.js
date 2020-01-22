@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import theme from '../utils/theme'
 
 const Wrapper = styled.div`
+  background-color: ${props => props.theme.colors.primary};
   @media (max-width: 960px) {
     display: ${p => (p.hideOnMobile ? 'none' : 'block')};
     margin: 15px;

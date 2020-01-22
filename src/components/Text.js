@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import theme from '../utils/theme'
 
 export default styled.span`
-  color: ${props => props.color || '#fff'};
+  color: ${theme.colors.primary};
   font-family: Roboto;
   font-style: normal;
   font-weight: ${props => props.weight || '300'};

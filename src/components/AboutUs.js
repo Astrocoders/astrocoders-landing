@@ -14,14 +14,15 @@ import mobileGameTableImg from '../img/our-stack-process_mobile.png'
 
 const AboutUsWrapper = styled.section`
   align-items: center;
-  background-color: #000;
+  background-color: ${props => props.theme.colors.secondary};
   display: flex;
   padding: 50px 0;
 `
 
 const GameTableWrapper = styled.div`
-  max-width: 50vw;
-  margin-bottom: 0;
+  max-width: 800px;
+  margin-top: 60px;
+  margin-bottom: 30px;
 
   @media (max-width: 960px) {
     display: none;
@@ -40,7 +41,8 @@ const MobileGameTableWrapper = styled.div`
 `
 
 const Description = styled(Text)`
-  margin: -20px auto 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   max-width: 450px;
   text-transform: uppercase;
   font-weight: 500;

@@ -6,7 +6,8 @@ const theme = {
     caseTitle: 'Montserrat, sans-serif',
   },
   colors: {
-    primary: '#835FE2',
+    primary: '#000',
+    secondary: '#fff',
     accent: '#21edba',
     astrogreen: '#00B45C',
   },

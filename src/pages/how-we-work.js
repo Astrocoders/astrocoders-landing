@@ -81,7 +81,6 @@ const Process = styled(HGroup)`
       border-radius: 50%;
       margin-right: -6px;
       position: absolute;
-      background-color: ${theme.colors.primary};
     }
 
     &:first-child > .content,

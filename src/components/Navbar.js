@@ -18,6 +18,7 @@ const NavbarContainer = styled.div`
   justify-content: space-between;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  background-color: ${props => props.theme.colors.primary};
 `
 
 const Logo = styled.img`
@@ -29,6 +30,7 @@ const NavbarLinkWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: ${props => props.theme.colors.primary};
   @media (max-width: 960px) {
     display: none;
   }

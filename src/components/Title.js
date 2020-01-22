@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import theme from '../utils/theme'
 
 const Title = styled.h2`
-  color: ${props => props.color || '#fff'};
+  color: ${theme.colors.primary};
   font-family: ${theme.fonts.title};
   font-style: normal;
   font-weight: ${props => props.weight};
