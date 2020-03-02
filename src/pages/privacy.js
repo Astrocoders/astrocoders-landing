@@ -23,7 +23,7 @@ const PrivacyPage = () => (
 
           Reconhecemos a relevância da privacidade. Seus dados pessoais não serão comercializados, distribuídos ou compartilhados com terceiros, exceto em casos de cumprimento de ordens judiciais.
 
-          Todas as informações pessoais relativas a membros, assinantes, clientes ou visitantes que usem o Bot&Hold serão tratadas em concordância com a Lei da Proteção de Dados Pessoais de 26 de outubro de 1998 (Lei n.º 67/98).
+          Todas as informações pessoais relativas a membros, assinantes, clientes ou visitantes que usem os serviços da Astrocoders serão tratadas em concordância com a Lei da Proteção de Dados Pessoais de 26 de outubro de 1998 (Lei n.º 67/98).
 
           Os dados relativos a pagamentos utilizados nas compras nunca são armazenados em nossos servidores, e as senhas são armazenadas em bancos de dados na sua forma criptografada.
 
