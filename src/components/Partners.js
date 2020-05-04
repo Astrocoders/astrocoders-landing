@@ -7,6 +7,7 @@ import Wrapper from './Wrapper'
 import HGroup from './HGroup'
 
 import quantoLogo from '../img/partners/quanto.png'
+import dinamoLogo from '../img/partners/dinamo.png'
 import pismoLogo from '../img/partners/pismo.png'
 import catenoLogo from '../img/partners/cateno.png'
 import boxpagLogo from '../img/partners/boxpag.png'
@@ -32,7 +33,7 @@ const PartnerLogoImg = styled.img`
   filter: grayscale(100%);
   transition: all 0.4s;
   padding: 20px;
-  height: 80px;
+  max-height: 80px;
 
   &:hover {
     filter: grayscale(0%);
@@ -45,19 +46,22 @@ const Partners = () => (
       <FormattedMessage id="partners" />
     </Title>
     <HGroup justifyContent="center" alignItems="center" marginTop="30px" columnOnMobile>
-      <PartnerLogo href="https://contaquanto.com.br">
+      <PartnerLogo href="https://contaquanto.com.br" target="_blank" rel="noopener noreferrer">
         <PartnerLogoImg src={quantoLogo} alt="Conta Quanto" title="Conta Quanto" />
       </PartnerLogo>
-      <PartnerLogo href="https://pismo.io/">
+      <PartnerLogo href="https://dinamonetworks.com" target="_blank" rel="noopener noreferrer">
+        <PartnerLogoImg src={dinamoLogo} alt="DINAMO Networks" title="DINAMO Networks" />
+      </PartnerLogo>
+      <PartnerLogo href="https://pismo.io/" target="_blank" rel="noopener noreferrer">
         <PartnerLogoImg src={pismoLogo} alt="Pismo Tech" title="Pismo Tech" />
       </PartnerLogo>
-      <PartnerLogo href="http://www.cateno.com.br">
+      <PartnerLogo href="http://www.cateno.com.br" target="_blank" rel="noopener noreferrer">
         <PartnerLogoImg src={catenoLogo} alt="Cateno" title="Cateno" />
       </PartnerLogo>
-      <PartnerLogo href="http://www.boxpag.com.br/">
+      <PartnerLogo href="http://www.boxpag.com.br/" target="_blank" rel="noopener noreferrer">
         <PartnerLogoImg src={boxpagLogo} alt="BoxPag" title="BoxPag" />
       </PartnerLogo>
-      <PartnerLogo href="https://www.zfnd.org/">
+      <PartnerLogo href="https://www.zfnd.org/" target="_blank" rel="noopener noreferrer">
         <PartnerLogoImg src={zcashLogo} alt="ZCash" title="ZCash" />
       </PartnerLogo>
     </HGroup>

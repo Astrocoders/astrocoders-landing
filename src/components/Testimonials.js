@@ -7,9 +7,9 @@ import Wrapper from './Wrapper'
 import HGroup from './HGroup'
 import Testimonial from './Testimonial'
 
-import pamPhoto from '../img/testimonials/pam.jpg'
+import nicPhoto from '../img/testimonials/nic.jpg'
 import zuraPhoto from '../img/testimonials/ky-js.jpg'
-import imadPhoto from '../img/testimonials/imad.jpg'
+import cassiniPhoto from '../img/testimonials/cassini.jpg'
 
 const TestimonialsWrapper = styled.section`
   align-items: center;
@@ -32,28 +32,28 @@ const Testimonials = ({ intl }) => (
       </Title>
       <TestimonialsList>
         <Testimonial
-          key="https://lion.tax/"
-          name="Pamela Borges"
-          company="Lion Tax"
-          quote={intl.formatMessage({ id: 'quote1' })}
-          link="https://lion.tax/"
-          photo={pamPhoto}
-        />
-        <Testimonial
           key="https://zurahealth.com/"
           name="Kylie and Jess McBeath"
           company="Zura Health"
-          quote={intl.formatMessage({ id: 'quote2' })}
+          quote={intl.formatMessage({ id: 'quote1' })}
           link="https://zurahealth.com/"
           photo={zuraPhoto}
         />
         <Testimonial
-          key="https://fractalflows.com/"
-          name="Imad Abdallah"
-          company="Fractal Flows"
+          key="https://contaquanto.com.br/"
+          name="Nic Marcondes"
+          company="Quanto"
+          quote={intl.formatMessage({ id: 'quote2' })}
+          link="https://contaquanto.com.br/"
+          photo={nicPhoto}
+        />
+        <Testimonial
+          key="https://teto.app/"
+          name="Thiago Cassini"
+          company="Teto pagamentos"
           quote={intl.formatMessage({ id: 'quote3' })}
-          link="https://fractalflows.com/"
-          photo={imadPhoto}
+          link="https://teto.app/"
+          photo={cassiniPhoto}
         />
       </TestimonialsList>
     </Wrapper>

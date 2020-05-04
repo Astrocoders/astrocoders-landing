@@ -8,8 +8,8 @@ const Title = styled.h2`
   font-style: normal;
   font-weight: ${props => props.weight};
   line-height: normal;
-  margin-top: ${props => props.marginTop || props.margin || 0};
-  margin-bottom: ${props => props.marginBottom || props.margin || '10px'};
+  margin-top: ${props => props.marginTop || props.margin || '30px'};
+  margin-bottom: ${props => props.marginBottom || props.margin || '30px'};
   margin-right: ${props => props.marginRight || props.margin || 0};
   margin-left: ${props => props.marginLeft || props.margin || 0};
   font-size: ${props => props.size};
