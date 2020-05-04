@@ -24,18 +24,7 @@ const GameTableWrapper = styled.div`
   margin-bottom: 0;
 
   @media (max-width: 960px) {
-    display: none;
-  }
-`
-
-const MobileGameTableWrapper = styled.div`
-  display: none;
-
-  @media (max-width: 960px) {
-    display: block;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    max-width: 80vw;
   }
 `
 
@@ -61,10 +50,6 @@ const AboutUs = () => (
         <GameTableWrapper>
           <Lightbox cover={gameTableImg} images={[{ src: gameTableImg }]} />
         </GameTableWrapper>
-        <MobileGameTableWrapper>
-          <Lightbox cover={mobileGameTableImg} images={[{ src: mobileGameTableImg }]} />
-        </MobileGameTableWrapper>
-
         <Description>
           <FormattedHTMLMessage id="tableDescription" />
         </Description>

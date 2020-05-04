@@ -12,7 +12,7 @@ import navLogo from '../img/navLogo.png'
 
 import theme from '../utils/theme'
 
-const NavbarContainer = styled.div`
+export const NavbarContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,12 +20,12 @@ const NavbarContainer = styled.div`
   padding-right: 0.5rem;
 `
 
-const Logo = styled.img`
+export const Logo = styled.img`
   margin: 0;
   max-width: 250px;
 `
 
-const NavbarLinkWrapper = styled.div`
+export const NavbarLinkWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +33,7 @@ const NavbarLinkWrapper = styled.div`
     display: none;
   }
 `
-const NavbarLink = styled(Link)`
+export const NavbarLink = styled(Link)`
   font-size: ${props => props.fontSize || '1rem'};
   text-decoration: none;
   margin: 10px;
@@ -49,7 +49,7 @@ const NavbarLink = styled(Link)`
   }
 `
 
-const AnchorLink = styled.a`
+export const AnchorLink = styled.a`
   font-size: ${props => props.fontSize || '1rem'};
   text-decoration: none;
   margin: 10px;
@@ -150,8 +150,8 @@ const Nav = ({ isHome, isAfterHero, setMenuOpened, isMenuOpened }) => (
         </Link>
 
         <NavbarLinkWrapper>
-          <NavbarLink to="/how-we-work">
-            <FormattedMessage id="howWeWork" />
+          <NavbarLink to="/products">
+            <FormattedMessage id="products" />
           </NavbarLink>
           <NavbarLink to="/open-source">
             <FormattedMessage id="openSource" />
@@ -170,8 +170,8 @@ const Nav = ({ isHome, isAfterHero, setMenuOpened, isMenuOpened }) => (
           </NavbarContainer>
           {isMenuOpened && (
             <MenuDialog>
-              <NavbarLink to="/how-we-work">
-                <FormattedMessage id="howWeWork" />
+              <NavbarLink to="/products">
+                <FormattedMessage id="products" />
               </NavbarLink>
               <NavbarLink to="/open-source">
                 <FormattedMessage id="openSource" />

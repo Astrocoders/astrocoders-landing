@@ -164,10 +164,6 @@ const Supermenu = ({ isHome, isAfterHero }) => (
         </Product>
         <SeeMoreButton to="/products">+ See more products</SeeMoreButton>
       </Products>
-      <Cases>
-        <CaseHeading>Cases</CaseHeading>
-        <CaseDescription>How we helped a Health Coach company to sell their products online</CaseDescription>
-      </Cases>
     </SupermenuContent>
   </SupermenuWrapper>
 )

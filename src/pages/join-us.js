@@ -9,17 +9,11 @@ import Wrapper from '../components/Wrapper'
 import HGroup from '../components/HGroup'
 import TeamMember from '../components/TeamMember'
 
-import galaxyBg from '../img/galaxy.jpg'
-
 const ContactWrapper = styled.section`
   padding: 50px 0;
 `
 
 const Team = styled(HGroup)`
-  background-image: url(${galaxyBg});
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   flex-wrap: wrap;
   justify-content: center;
 
@@ -28,14 +22,14 @@ const Team = styled(HGroup)`
   }
 `
 
-const CasesPage = () => (
+const JoinUsPage = () => (
   <PageWrapper>
     <ContactWrapper>
       <Wrapper alignItems="center" justifyContent=" center">
         <Title align="center" transform="uppercase" withStripe marginBottom="50px">
           <FormattedMessage id="joinUs" />
         </Title>
-        <Text align="center" marginBottom="50px">
+        <Text align="left" marginBottom="50px">
           <FormattedHTMLMessage id="joinUsText" />
         </Text>
         <Title align="center" transform="uppercase" withStripe marginBottom="50px">
@@ -125,4 +119,4 @@ const CasesPage = () => (
   </PageWrapper>
 )
 
-export default CasesPage
+export default JoinUsPage

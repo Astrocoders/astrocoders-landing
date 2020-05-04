@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { FormattedMessage } from 'gatsby-plugin-intl'
 
 import Logo from './Logo'
+import { NavbarLinkWrapper, NavbarLink, AnchorLink } from './Navbar'
 import LanguageSelector from './LanguageSelector'
 
 import galaxy from '../img/galaxy.jpg'
@@ -16,7 +17,7 @@ const HeroWrapper = styled.section`
   background-origin: content-box;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 43px);
   justify-content: center;
   padding-left: 7.5vw;
   padding-right: 7.5vw;
@@ -47,6 +48,11 @@ const Description = styled.h3`
   }
 `
 
+const NavbarLinkWrapperStyled = styled(NavbarLinkWrapper)`
+  margin-top: auto;
+  padding-bottom: 20px;
+`
+
 const Translation = styled.div`
   text-align: right;
   padding-right: 0.5rem;
@@ -63,6 +69,20 @@ const Hero = () => (
       <Description>
         <FormattedMessage id="heroDescription" />
       </Description>
+      <NavbarLinkWrapperStyled>
+        <NavbarLink to="/products">
+          <FormattedMessage id="products" />
+        </NavbarLink>
+        <NavbarLink to="/open-source">
+          <FormattedMessage id="openSource" />
+        </NavbarLink>
+        <NavbarLink to="/join-us">
+          <FormattedMessage id="joinUs" />
+        </NavbarLink>
+        <AnchorLink href="#hireUs">
+          <FormattedMessage id="contact" />
+        </AnchorLink>
+      </NavbarLinkWrapperStyled>
     </HeroWrapper>
   </>
 )
