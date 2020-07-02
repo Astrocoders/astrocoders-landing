@@ -50,7 +50,7 @@ const ProductsPage = () => (
         <ProductCover href="https://vanna.app" target="_blank" rel="noopener noreferrer">
           <Image src={vannaAssinaCover} alt="Vanna Assina" />
         </ProductCover>
-        <ProductCover href="https://astropix.com.br" target="_blank" rel="noopener noreferrer">
+        <ProductCover href="https://bit.ly/astropix_p" target="_blank" rel="noopener noreferrer">
           <Image src={astropixCover} alt="AstroPIX" />
         </ProductCover>
       </ProductsGrid>
