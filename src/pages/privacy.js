@@ -31,6 +31,7 @@ const PrivacyPage = () => (
 
           O seu endereço de e-mail está seguro e nunca será compartilhado; nós detestamos o spam e protegemos a sua privacidade 100%.
         </Text>
+        <a style="display: none;" href="/kemel_privacidade.pdf">Privacidade Kemel</a>
       </Wrapper>
     </ContactWrapper>
   </PageWrapper>
