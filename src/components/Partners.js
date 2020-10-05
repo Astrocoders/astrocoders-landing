@@ -6,7 +6,7 @@ import Title from './Title'
 import Wrapper from './Wrapper'
 import HGroup from './HGroup'
 
-import quantoLogo from '../img/partners/quanto.png'
+import quantoLogo from '../img/partners/quanto.svg'
 import dinamoLogo from '../img/partners/dinamo.png'
 import pismoLogo from '../img/partners/pismo.png'
 import catenoLogo from '../img/partners/cateno.png'
@@ -46,8 +46,8 @@ const Partners = () => (
       <FormattedMessage id="partners" />
     </Title>
     <HGroup justifyContent="center" alignItems="center" marginTop="30px" columnOnMobile>
-      <PartnerLogo href="https://contaquanto.com.br" target="_blank" rel="noopener noreferrer">
-        <PartnerLogoImg src={quantoLogo} alt="Conta Quanto" title="Conta Quanto" />
+      <PartnerLogo href="https://quan.to/" target="_blank" rel="noopener noreferrer">
+        <PartnerLogoImg src={quantoLogo} alt="Quanto" title="Quanto" />
       </PartnerLogo>
       <PartnerLogo href="https://dinamonetworks.com" target="_blank" rel="noopener noreferrer">
         <PartnerLogoImg src={dinamoLogo} alt="DINAMO Networks" title="DINAMO Networks" />
