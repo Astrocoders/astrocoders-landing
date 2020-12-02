@@ -47,14 +47,6 @@ const Testimonials = ({ intl }) => (
           link="https://contaquanto.com.br/"
           photo={nicPhoto}
         />
-        <Testimonial
-          key="https://teto.app/"
-          name="Thiago Cassini"
-          company="Teto pagamentos"
-          quote={intl.formatMessage({ id: 'quote3' })}
-          link="https://teto.app/"
-          photo={cassiniPhoto}
-        />
       </TestimonialsList>
     </Wrapper>
   </TestimonialsWrapper>
