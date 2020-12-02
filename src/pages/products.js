@@ -8,7 +8,7 @@ import Text from '../components/Text'
 import HGroup from '../components/HGroup'
 import Wrapper from '../components/Wrapper'
 
-import vannaAssinaCover from '../img/products/vanna-assina.png'
+import vannaCover from '../img/products/vanna.png'
 import astropixCover from '../img/products/astropix.png'
 
 const ProductsWrapper = styled(Wrapper)`
@@ -37,7 +37,7 @@ const ProductCover = styled.a`
 const Image = styled.img`
   display: block;
   height: auto;
-  max-width: 350px;
+  max-height: 100px;
 `
 
 const ProductsPage = () => (
@@ -48,7 +48,7 @@ const ProductsPage = () => (
       </Title>
       <ProductsGrid>
         <ProductCover href="https://vanna.app" target="_blank" rel="noopener noreferrer">
-          <Image src={vannaAssinaCover} alt="Vanna Assina" />
+          <Image src={vannaCover} alt="Vanna" />
         </ProductCover>
         <ProductCover href="https://bit.ly/astropix_presentation" target="_blank" rel="noopener noreferrer">
           <Image src={astropixCover} alt="AstroPIX" />
