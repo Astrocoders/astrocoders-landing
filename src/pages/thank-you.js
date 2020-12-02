@@ -8,7 +8,7 @@ import PageWrapper from '../components/PageWrapper'
 import Button from '../components/Button'
 
 const ThankYou = () => (
-  <PageWrapper isHireUs={false}>
+  <PageWrapper>
     <Wrapper alignItems="center" justifyContent=" center" marginTop="50px" marginBottom="100px">
       <Title withStripe>
         <FormattedMessage id="titleThanks" />
