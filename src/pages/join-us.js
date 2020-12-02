@@ -64,55 +64,6 @@ const JoinUsPage = () => (
             role="Fullstack JavaScript Developer"
             github="medson10"
           />
-          <TeamMember
-            profilePicture="https://avatars0.githubusercontent.com/u/8146889?s=460&v=4"
-            name="Eliabe Junior"
-            // eslint-disable-next-line
-            role="Fullstack JavaScript Developer"
-            github="eliabejr"
-          />
-          <TeamMember
-            profilePicture="https://avatars0.githubusercontent.com/u/6414876?s=460&v=4"
-            name="Yuri Jean Fabris"
-            // eslint-disable-next-line
-            role="Fullstack JavaScript Developer"
-            github="yurijean"
-          />
-          <TeamMember
-            profilePicture="https://avatars1.githubusercontent.com/u/11946020?s=460&v=4"
-            name="Jefferson Carvalho"
-            // eslint-disable-next-line
-            role="Fullstack JavaScript Developer"
-            github="JeffersonCarvalh0"
-          />
-          <TeamMember
-            profilePicture="https://avatars3.githubusercontent.com/u/24661951?s=460&v=4"
-            name="Luiz Augusto Moratelli"
-            // eslint-disable-next-line
-            role="Fullstack JavaScript Developer"
-            github="LuizMoratelli"
-          />
-          <TeamMember
-            profilePicture="https://avatars1.githubusercontent.com/u/13984388?s=460&v=4"
-            name="Lucas Besen"
-            // eslint-disable-next-line
-            role="Fullstack JavaScript Developer"
-            github="lucasbesen"
-          />
-          <TeamMember
-            profilePicture="https://avatars2.githubusercontent.com/u/40250538?s=460&v=4"
-            name="Júnior Quadros"
-            // eslint-disable-next-line
-            role="Fullstack JavaScript Developer"
-            github="jrquadros"
-          />
-          <TeamMember
-            profilePicture="https://avatars3.githubusercontent.com/u/25514401?s=460&v=4"
-            name="Ramon Souza"
-            // eslint-disable-next-line
-            role="Fullstack JavaScript Developer"
-            github="souzaramon"
-          />
         </Team>
       </Wrapper>
     </ContactWrapper>

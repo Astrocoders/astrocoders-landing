@@ -79,25 +79,9 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: 'Ubuntu',
-          },
-          {
-            family: 'Open Sans',
-            variants: ['300', '700'],
-          },
-          {
-            family: 'Roboto',
-            variants: ['300', '400'],
-          },
-          {
-            family: 'Montserrat',
-            variants: ['300', '700', '900'],
-          },
-        ],
+        fonts: [`Ubuntu`, `Open Sans\:300,700`, `Roboto\:300,400`, `Montserrat\:300,700,900`],
       },
     },
   ],
