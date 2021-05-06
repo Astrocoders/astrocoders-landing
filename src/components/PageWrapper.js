@@ -7,7 +7,6 @@ import Footer from './Footer'
 
 const PageWrapper = ({ children, isHome, isAfterHero }) => (
   <Layout>
-    <Navbar isHome={isHome} isAfterHero={isAfterHero} />
     {children}
     <Footer />
   </Layout>

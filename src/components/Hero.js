@@ -61,28 +61,11 @@ const Translation = styled.div`
 
 const Hero = () => (
   <>
-    <Translation>
-      <LanguageSelector hideOnMobile />
-    </Translation>
     <HeroWrapper>
       <Logo />
       <Description>
         <FormattedMessage id="heroDescription" />
       </Description>
-      <NavbarLinkWrapperStyled>
-        <NavbarLink to="/products">
-          <FormattedMessage id="products" />
-        </NavbarLink>
-        <NavbarLink to="/open-source">
-          <FormattedMessage id="openSource" />
-        </NavbarLink>
-        <NavbarLink to="/join-us">
-          <FormattedMessage id="joinUs" />
-        </NavbarLink>
-        <AnchorLink href="#hireUs">
-          <FormattedMessage id="contact" />
-        </AnchorLink>
-      </NavbarLinkWrapperStyled>
     </HeroWrapper>
   </>
 )

@@ -15,10 +15,6 @@ const IndexPage = ({ isAfterHero, setAfterHero }) => (
     <ScrollTrigger onEnter={() => setAfterHero(false)} onExit={() => setAfterHero(true)}>
       <Hero />
     </ScrollTrigger>
-    <OurStack />
-    <AboutUs />
-    <Partners />
-    <Testimonials />
   </PageWrapper>
 )
 
