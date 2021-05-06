@@ -61,6 +61,9 @@ const Translation = styled.div`
 
 const Hero = () => (
   <>
+    <Translation>
+      <LanguageSelector hideOnMobile />
+    </Translation>
     <HeroWrapper>
       <Logo />
       <Description>
